@@ -94,8 +94,6 @@ Estructura del campo `action`:
 }
 ```
 
-📌 Incluye datos del usuario que realizó la acción.
-
 ---
 
 ## 🌱 Nuevo Lote / Campo (ID 2)
