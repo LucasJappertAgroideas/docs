@@ -185,10 +185,7 @@ La mayoría de los informes siguen esta misma estructura.
 }
 ```
 
-⚠️ Esta notificación se dispara automáticamente al detectar un archivo con:
-```
-file_type_name = "SoilOptix"
-```
+⚠️ Esta notificación se dispara automáticamente al detectar una nueva carga de un archivo de SoilOptix.
 
 ---
 
@@ -196,8 +193,6 @@ file_type_name = "SoilOptix"
 
 - 📅 Todas las fechas se envían en formato **ISO 8601**
 - 🔎 El campo `action` define inequívocamente el tipo de evento
-- 🛠️ Cambios en IDs o payloads deben reflejarse en este documento y en Make
+- 🛠️ Cambios en IDs o payloads deben reflejarse en este documento
 
 ---
-
-📄 **Documento generado a partir del código productivo**
