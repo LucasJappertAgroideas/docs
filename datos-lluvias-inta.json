@@ -4,91 +4,91 @@
 	"comparativa_lluvias": [
 		{
 			"mes": "Enero 2025",
-			"fuente_inta": 87.0,
+			"fuente_inta": 95.6,
 			"fuente_meteoblue": 27.0,
 			"fuente_apix": 64.2
 		},
 		{
 			"mes": "Febrero 2025",
-			"fuente_inta": 65.0,
+			"fuente_inta": 136.6,
 			"fuente_meteoblue": 45.0,
 			"fuente_apix": 130.09
 		},
 		{
 			"mes": "Marzo 2025",
-			"fuente_inta": 185.0,
+			"fuente_inta": 97.0,
 			"fuente_meteoblue": 58.0,
 			"fuente_apix": 145.65
 		},
 		{
 			"mes": "Abril 2025",
-			"fuente_inta": 12.0,
+			"fuente_inta": 78.2,
 			"fuente_meteoblue": 16.0,
 			"fuente_apix": 39.63
 		},
 		{
 			"mes": "Mayo 2025",
-			"fuente_inta": 135.0,
+			"fuente_inta": 52.2,
 			"fuente_meteoblue": 28.0,
 			"fuente_apix": 63.04
 		},
 		{
 			"mes": "Junio 2025",
-			"fuente_inta": 5.0,
+			"fuente_inta": 19.0,
 			"fuente_meteoblue": 9.0,
 			"fuente_apix": 16.1
 		},
 		{
 			"mes": "Julio 2025",
-			"fuente_inta": 16.0,
+			"fuente_inta": 52.6,
 			"fuente_meteoblue": 33.0,
 			"fuente_apix": 45.24
 		},
 		{
 			"mes": "Agosto 2025",
-			"fuente_inta": 1.0,
+			"fuente_inta": 97.2,
 			"fuente_meteoblue": 50.0,
 			"fuente_apix": 115.92
 		},
 		{
 			"mes": "Septiembre 2025",
-			"fuente_inta": 1.0,
+			"fuente_inta": 27.3,
 			"fuente_meteoblue": 24.0,
 			"fuente_apix": 48.3
 		},
 		{
 			"mes": "Octubre 2025",
-			"fuente_inta": 55.0,
+			"fuente_inta": 20.6,
 			"fuente_meteoblue": 34.5,
 			"fuente_apix": 40.27
 		},
 		{
 			"mes": "Noviembre 2025",
-			"fuente_inta": 245.0,
+			"fuente_inta": 232.2,
 			"fuente_meteoblue": 142.0,
 			"fuente_apix": 146.7
 		},
 		{
 			"mes": "Diciembre 2025",
-			"fuente_inta": 76.0,
+			"fuente_inta": 168.7,
 			"fuente_meteoblue": 90.0,
 			"fuente_apix": 120.27
 		},
 		{
 			"mes": "Enero 2026",
-			"fuente_inta": 175.0,
+			"fuente_inta": 91.2,
 			"fuente_meteoblue": 174.0,
 			"fuente_apix": 91.95
 		},
 		{
 			"mes": "Febrero 2026",
-			"fuente_inta": 60.5,
+			"fuente_inta": 161.2,
 			"fuente_meteoblue": 70.0,
 			"fuente_apix": 151.14
 		},
 		{
 			"mes": "Marzo 2026",
-			"fuente_inta": 64.0,
+			"fuente_inta": 46.2,
 			"fuente_meteoblue": null,
 			"fuente_apix": 47.97
 		}
