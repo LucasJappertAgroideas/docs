@@ -78,6 +78,21 @@
 			font-weight: bold;
 		}
 
+		.best-match {
+			position: relative;
+		}
+
+		.best-match::after {
+			content: '✓';
+			position: absolute;
+			right: 5px;
+			top: 50%;
+			transform: translateY(-50%);
+			color: #00ff7f;
+			font-size: 1.2em;
+			font-weight: bold;
+		}
+
 		.nota {
 			font-size: 0.85em;
 			color: #a0a0a0;
@@ -220,6 +235,10 @@
 					let totalApix = 0;
 					let hayDatosIncompletos = false;
 
+					// Variables para contar aciertos (más cerca de la referencia)
+					let aciertosMeteo = 0;
+					let aciertosApix = 0;
+
 					// Generar filas de la tabla
 					lluvias.forEach((item, index) => {
 						const tr = document.createElement('tr');
@@ -233,6 +252,22 @@
 						const diffMeteo = item.fuente_meteoblue !== null ? Math.round(item.fuente_meteoblue - item.fuente_referencia) : null;
 						const diffApix = Math.round(item.fuente_apix - item.fuente_referencia);
 
+						// Calcular diferencias absolutas para determinar el más cercano
+						const absDiffMeteo = item.fuente_meteoblue !== null ? Math.abs(item.fuente_meteoblue - item.fuente_referencia) : Infinity;
+						const absDiffApix = Math.abs(item.fuente_apix - item.fuente_referencia);
+						const isMeteoBest = absDiffMeteo < absDiffApix && item.fuente_meteoblue !== null;
+						const isApixBest = absDiffApix < absDiffMeteo;
+
+						// Contar aciertos (solo si ambas fuentes tienen datos y referencia > 0)
+						if (item.fuente_meteoblue !== null && item.fuente_referencia > 0) {
+							if (isMeteoBest) {
+								aciertosMeteo++;
+							}
+							if (isApixBest) {
+								aciertosApix++;
+							}
+						}
+
 						// Formatear celdas Meteoblue
 						let meteoCell;
 						if (item.fuente_meteoblue === null) {
@@ -240,13 +275,15 @@
 						} else {
 							const diffClass = diffMeteo >= 0 ? 'positivo' : 'negativo';
 							const diffSign = diffMeteo >= 0 ? '+' : '';
-							meteoCell = `<td>${item.fuente_meteoblue} mm (<span class="${diffClass}">${diffSign}${diffMeteo} mm</span>)</td>`;
+							const bestClass = isMeteoBest ? 'best-match' : '';
+							meteoCell = `<td class="${bestClass}">${item.fuente_meteoblue} mm (<span class="${diffClass}">${diffSign}${diffMeteo} mm</span>)</td>`;
 						}
 
 						// Formatear celdas Apix
 						const diffApixClass = diffApix >= 0 ? 'positivo' : 'negativo';
 						const diffApixSign = diffApix >= 0 ? '+' : '';
-						const apixCell = `<td>${item.fuente_apix} mm (<span class="${diffApixClass}">${diffApixSign}${diffApix} mm</span>)</td>`;
+						const bestApixClass = isApixBest ? 'best-match' : '';
+						const apixCell = `<td class="${bestApixClass}">${item.fuente_apix} mm (<span class="${diffApixClass}">${diffApixSign}${diffApix} mm</span>)</td>`;
 
 						tr.innerHTML = `
 							<td>${item.mes}</td>
@@ -270,6 +307,18 @@
 							totalApix += item.fuente_apix;
 						}
 					});
+
+					// Agregar fila de totales al final de la tabla comparativa
+					const trTotales = document.createElement('tr');
+					trTotales.style.fontWeight = 'bold';
+					trTotales.style.backgroundColor = '#0f3460';
+					trTotales.innerHTML = `
+						<td>TOTALES</td>
+						<td>${totalReferencia} mm</td>
+						<td>${totalMeteoblue} mm (<span style="color: #ffffff">${aciertosMeteo}</span>)</td>
+						<td>${totalApix} mm (<span style="color: #ffffff">${aciertosApix}</span>)</td>
+					`;
+					tablaBody.appendChild(trTotales);
 
 					// Nota para datos incompletos
 					nota.textContent = hayDatosIncompletos ? '* Nota: El registro de algunos meses está incompleto, se usa 0 mm como referencia visual.' : '';
@@ -415,7 +464,16 @@
 		}
 
 		function aplicarColoresCeldas() {
-			const cells = document.querySelectorAll('#comparativa tbody tr td:nth-child(3), #comparativa tbody tr td:nth-child(4)');
+			// Obtener todas las filas excepto la última (que es el renglón de totales)
+			const rows = document.querySelectorAll('#comparativa tbody tr');
+			const totalRows = rows.length;
+
+			// Seleccionar solo las celdas de las filas que NO son la última
+			const cells = [];
+			for (let i = 0; i < totalRows - 1; i++) {
+				const rowCells = rows[i].querySelectorAll('td:nth-child(3), td:nth-child(4)');
+				rowCells.forEach(cell => cells.push(cell));
+			}
 
 			let maxDiff = 0;
 
