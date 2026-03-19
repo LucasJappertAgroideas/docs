@@ -4,93 +4,93 @@
 	"comparativa_lluvias": [
 		{
 			"mes": "Enero 2025",
-			"fuente_inta": 95.6,
-			"fuente_meteoblue": 27.0,
-			"fuente_apix": 64.2
+			"fuente_referencia": 96,
+			"fuente_meteoblue": 27,
+			"fuente_apix": 64
 		},
 		{
 			"mes": "Febrero 2025",
-			"fuente_inta": 136.6,
-			"fuente_meteoblue": 45.0,
-			"fuente_apix": 130.09
+			"fuente_referencia": 137,
+			"fuente_meteoblue": 45,
+			"fuente_apix": 130
 		},
 		{
 			"mes": "Marzo 2025",
-			"fuente_inta": 97.0,
-			"fuente_meteoblue": 58.0,
-			"fuente_apix": 145.65
+			"fuente_referencia": 97,
+			"fuente_meteoblue": 58,
+			"fuente_apix": 146
 		},
 		{
 			"mes": "Abril 2025",
-			"fuente_inta": 78.2,
-			"fuente_meteoblue": 16.0,
-			"fuente_apix": 39.63
+			"fuente_referencia": 78,
+			"fuente_meteoblue": 16,
+			"fuente_apix": 40
 		},
 		{
 			"mes": "Mayo 2025",
-			"fuente_inta": 52.2,
-			"fuente_meteoblue": 28.0,
-			"fuente_apix": 63.04
+			"fuente_referencia": 52,
+			"fuente_meteoblue": 28,
+			"fuente_apix": 63
 		},
 		{
 			"mes": "Junio 2025",
-			"fuente_inta": 19.0,
-			"fuente_meteoblue": 9.0,
-			"fuente_apix": 16.1
+			"fuente_referencia": 19,
+			"fuente_meteoblue": 9,
+			"fuente_apix": 16
 		},
 		{
 			"mes": "Julio 2025",
-			"fuente_inta": 52.6,
-			"fuente_meteoblue": 33.0,
-			"fuente_apix": 45.24
+			"fuente_referencia": 53,
+			"fuente_meteoblue": 33,
+			"fuente_apix": 45
 		},
 		{
 			"mes": "Agosto 2025",
-			"fuente_inta": 97.2,
-			"fuente_meteoblue": 50.0,
-			"fuente_apix": 115.92
+			"fuente_referencia": 97,
+			"fuente_meteoblue": 50,
+			"fuente_apix": 116
 		},
 		{
 			"mes": "Septiembre 2025",
-			"fuente_inta": 27.3,
-			"fuente_meteoblue": 24.0,
-			"fuente_apix": 48.3
+			"fuente_referencia": 27,
+			"fuente_meteoblue": 24,
+			"fuente_apix": 48
 		},
 		{
 			"mes": "Octubre 2025",
-			"fuente_inta": 20.6,
-			"fuente_meteoblue": 34.5,
-			"fuente_apix": 40.27
+			"fuente_referencia": 21,
+			"fuente_meteoblue": 35,
+			"fuente_apix": 40
 		},
 		{
 			"mes": "Noviembre 2025",
-			"fuente_inta": 232.2,
-			"fuente_meteoblue": 142.0,
-			"fuente_apix": 146.7
+			"fuente_referencia": 232,
+			"fuente_meteoblue": 142,
+			"fuente_apix": 147
 		},
 		{
 			"mes": "Diciembre 2025",
-			"fuente_inta": 168.7,
-			"fuente_meteoblue": 90.0,
-			"fuente_apix": 120.27
+			"fuente_referencia": 169,
+			"fuente_meteoblue": 90,
+			"fuente_apix": 120
 		},
 		{
 			"mes": "Enero 2026",
-			"fuente_inta": 91.2,
-			"fuente_meteoblue": 174.0,
-			"fuente_apix": 91.95
+			"fuente_referencia": 91,
+			"fuente_meteoblue": 174,
+			"fuente_apix": 92
 		},
 		{
 			"mes": "Febrero 2026",
-			"fuente_inta": 161.2,
-			"fuente_meteoblue": 70.0,
-			"fuente_apix": 151.14
+			"fuente_referencia": 161,
+			"fuente_meteoblue": 70,
+			"fuente_apix": 151
 		},
 		{
 			"mes": "Marzo 2026",
-			"fuente_inta": 46.2,
+			"fuente_referencia": 46,
 			"fuente_meteoblue": null,
-			"fuente_apix": 47.97
+			"fuente_apix": 48
 		}
 	]
 }

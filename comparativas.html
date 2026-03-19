@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Análisis de Precipitaciones</title>
+	<!-- Importamos la librería Chart.js para el gráfico -->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 20px;
+			color: #e0e0e0;
+			background-color: #1a1a2e;
+		}
+
+		.subtitulo {
+			color: #a0a0a0;
+			text-align: center;
+			font-size: 1.1em;
+			margin-top: -10px;
+			margin-bottom: 30px;
+		}
+
+		h2,
+		h3 {
+			color: #00d9ff;
+			text-align: center;
+		}
+
+		.container {
+			max-width: 900px;
+			margin: 0 auto;
+			background: #16213e;
+			padding: 20px;
+			border-radius: 8px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+			border: 1px solid #0f3460;
+		}
+
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			margin-top: 20px;
+			margin-bottom: 40px;
+		}
+
+		th,
+		td {
+			border: 1px solid #0f3460;
+			padding: 10px;
+			text-align: center;
+			background-color: #1a1a2e;
+		}
+
+		th {
+			background-color: #0f3460;
+			color: #00d9ff;
+			font-weight: bold;
+		}
+
+		tr:nth-child(even) {
+			background-color: #1f2b4d;
+		}
+
+		tr:nth-child(odd) {
+			background-color: #16213e;
+		}
+
+		.positivo {
+			color: #00ff7f;
+			font-weight: bold;
+		}
+
+		.negativo {
+			color: #ff6b6b;
+			font-weight: bold;
+		}
+
+		.nota {
+			font-size: 0.85em;
+			color: #a0a0a0;
+			margin-top: -30px;
+			margin-bottom: 30px;
+			text-align: center;
+		}
+
+		.chart-container {
+			position: relative;
+			height: 400px;
+			width: 100%;
+			background-color: #1a1a2e;
+			border-radius: 8px;
+			padding: 10px;
+		}
+
+		.error-message {
+			text-align: center;
+			color: #ff6b6b;
+			padding: 40px;
+		}
+
+		.info-message {
+			text-align: center;
+			color: #a0a0a0;
+			padding: 20px;
+			background: #16213e;
+			border-radius: 8px;
+			margin: 20px auto;
+			max-width: 600px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="container">
+		<h2 id="titulo">Comparativa Mensual de Precipitaciones (2025 - 2026)</h2>
+		<p class="subtitulo" id="subtitulo">Cargando datos...</p>
+
+		<table id="comparativa">
+			<thead>
+				<tr>
+					<th>Mes</th>
+					<th id="th-referencia">Referencia</th>
+					<th>Meteoblue (Diferencia)</th>
+					<th>Apix (Diferencia)</th>
+				</tr>
+			</thead>
+			<tbody id="tabla-body">
+				<!-- Los datos se cargan dinámicamente desde el JSON -->
+			</tbody>
+		</table>
+		<p class="nota" id="nota"></p>
+
+		<h3>Resumen Acumulado Anual (Solo 2025)</h3>
+		<table>
+			<thead>
+				<tr>
+					<th>Fuente de Datos</th>
+					<th>Total Acumulado 2025</th>
+					<th>Diferencia con la Realidad</th>
+				</tr>
+			</thead>
+			<tbody id="resumen-body">
+				<!-- Los datos se cargan dinámicamente desde el JSON -->
+			</tbody>
+		</table>
+
+		<h3>Evolución de las Precipitaciones</h3>
+		<div class="chart-container">
+			<canvas id="miGrafico"></canvas>
+		</div>
+	</div>
+
+	<script>
+		// Determinar qué archivo JSON cargar según el query string
+		const urlParams = new URLSearchParams(window.location.search);
+		const region = urlParams.get('region');
+
+		// Mapeo de regiones a archivos JSON
+		const jsonFiles = {
+			'inta': 'datos-lluvias-inta.json',
+			'la-merced': 'datos-lluvias-la-merced.json'
+		};
+
+		// Obtener el archivo JSON correspondiente
+		let jsonFile = jsonFiles[region];
+
+		// Si no hay region válida, mostrar mensaje de error
+		if (!jsonFile) {
+			document.getElementById('tabla-body').innerHTML = `
+				<tr>
+					<td colspan="4" class="error-message">
+						<p>No se especificó una región válida.</p>
+						<p>Use: ?region=inta o ?region=la-merced</p>
+					</td>
+				</tr>
+			`;
+			document.getElementById('subtitulo').textContent = 'Región no especificada';
+		} else {
+			// Cargar datos desde el JSON
+			fetch(jsonFile)
+				.then(response => {
+					if (!response.ok) {
+						throw new Error('Archivo no encontrado');
+					}
+					return response.json();
+				})
+				.then(data => {
+					const lluvias = data.comparativa_lluvias;
+					const tablaBody = document.getElementById('tabla-body');
+					const resumenBody = document.getElementById('resumen-body');
+					const nota = document.getElementById('nota');
+					const thReferencia = document.getElementById('th-referencia');
+
+					// Actualizar títulos
+					document.getElementById('titulo').textContent = data.titulo;
+					document.getElementById('subtitulo').textContent = data.subtitulo;
+
+					// Actualizar заголовок de la columna de referencia según la región
+					if (region === 'inta') {
+						thReferencia.textContent = 'INTA Rafaela (Referencia)';
+					} else if (region === 'la-merced') {
+						thReferencia.textContent = 'Productor (Referencia)';
+					} else {
+						thReferencia.textContent = 'Referencia';
+					}
+
+					// Arrays para el gráfico
+					const labels = [];
+					const dataReferencia = [];
+					const dataMeteoblue = [];
+					const dataApix = [];
+
+					// Variables para el resumen de 2025
+					let totalReferencia = 0;
+					let totalMeteoblue = 0;
+					let totalApix = 0;
+					let hayDatosIncompletos = false;
+
+					// Generar filas de la tabla
+					lluvias.forEach((item, index) => {
+						const tr = document.createElement('tr');
+
+						// Determinar si es dato incompleto
+						const esIncompleto = item.fuente_meteoblue === null;
+						if (esIncompleto) hayDatosIncompletos = true;
+						const valorReferencia = esIncompleto ? '0 mm*' : item.fuente_referencia + ' mm';
+
+						// Calcular diferencias (convertidas a entero)
+						const diffMeteo = item.fuente_meteoblue !== null ? Math.round(item.fuente_meteoblue - item.fuente_referencia) : null;
+						const diffApix = Math.round(item.fuente_apix - item.fuente_referencia);
+
+						// Formatear celdas Meteoblue
+						let meteoCell;
+						if (item.fuente_meteoblue === null) {
+							meteoCell = '<td>Sin datos</td>';
+						} else {
+							const diffClass = diffMeteo >= 0 ? 'positivo' : 'negativo';
+							const diffSign = diffMeteo >= 0 ? '+' : '';
+							meteoCell = `<td>${item.fuente_meteoblue} mm (<span class="${diffClass}">${diffSign}${diffMeteo} mm</span>)</td>`;
+						}
+
+						// Formatear celdas Apix
+						const diffApixClass = diffApix >= 0 ? 'positivo' : 'negativo';
+						const diffApixSign = diffApix >= 0 ? '+' : '';
+						const apixCell = `<td>${item.fuente_apix} mm (<span class="${diffApixClass}">${diffApixSign}${diffApix} mm</span>)</td>`;
+
+						tr.innerHTML = `
+							<td>${item.mes}</td>
+							<td>${valorReferencia}</td>
+							${meteoCell}
+							${apixCell}
+						`;
+						tablaBody.appendChild(tr);
+
+						// Agregar a arrays para el gráfico (formato corto)
+						const mesCorto = item.mes.replace('2025', '25').replace('2026', '26').replace('Enero', 'Ene').replace('Febrero', 'Feb').replace('Marzo', 'Mar').replace('Abril', 'Abr').replace('Mayo', 'May').replace('Junio', 'Jun').replace('Julio', 'Jul').replace('Agosto', 'Ago').replace('Septiembre', 'Sep').replace('Octubre', 'Oct').replace('Noviembre', 'Nov').replace('Diciembre', 'Dic');
+						labels.push(mesCorto);
+						dataReferencia.push(item.fuente_referencia);
+						dataMeteoblue.push(item.fuente_meteoblue);
+						dataApix.push(item.fuente_apix);
+
+						// Acumular solo datos de 2025
+						if (item.mes.includes('2025')) {
+							totalReferencia += item.fuente_referencia;
+							totalMeteoblue += item.fuente_meteoblue || 0;
+							totalApix += item.fuente_apix;
+						}
+					});
+
+					// Nota para datos incompletos
+					nota.textContent = hayDatosIncompletos ? '* Nota: El registro de algunos meses está incompleto, se usa 0 mm como referencia visual.' : '';
+
+					// Generar fila de resumen (diferencias convertidas a entero)
+					const diffMeteoTotal = Math.round(totalMeteoblue - totalReferencia);
+					const diffApixTotal = Math.round(totalApix - totalReferencia);
+
+					// Etiqueta de referencia según región
+					const labelReferencia = region === 'inta' ? 'INTA Rafaela (Referencia)' : 'Productor (Referencia)';
+
+					resumenBody.innerHTML = `
+						<tr>
+							<td><strong>${labelReferencia}</strong></td>
+							<td><strong>${totalReferencia} mm</strong></td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>APIX</td>
+							<td>${totalApix} mm</td>
+							<td><span class="${diffApixTotal >= 0 ? 'positivo' : 'negativo'}">${diffApixTotal >= 0 ? '+' : ''}${diffApixTotal} mm</span></td>
+						</tr>
+						<tr>
+							<td>Meteoblue</td>
+							<td>${totalMeteoblue} mm</td>
+							<td><span class="${diffMeteoTotal >= 0 ? 'positivo' : 'negativo'}">${diffMeteoTotal >= 0 ? '+' : ''}${diffMeteoTotal} mm</span></td>
+						</tr>
+					`;
+
+					// Crear gráfico
+					crearGrafico(labels, dataReferencia, dataMeteoblue, dataApix, labelReferencia);
+
+					// Aplicar colores a las celdas después de renderizar
+					setTimeout(() => aplicarColoresCeldas(), 100);
+				})
+				.catch(error => {
+					console.error('Error al cargar los datos:', error);
+					document.getElementById('tabla-body').innerHTML = `
+						<tr>
+							<td colspan="4" class="error-message">
+								Error al cargar los datos: ${error.message}<br>
+								Asegúrese de que el archivo JSON existe.
+							</td>
+						</tr>
+					`;
+				});
+		}
+
+		function crearGrafico(labels, dataReferencia, dataMeteoblue, dataApix, labelReferencia) {
+			const ctx = document.getElementById('miGrafico').getContext('2d');
+
+			const miGrafico = new Chart(ctx, {
+				type: 'line',
+				data: {
+					labels: labels,
+					datasets: [
+						{
+							label: labelReferencia,
+							data: dataReferencia,
+							borderColor: 'rgb(160, 161, 161)',
+							backgroundColor: 'rgba(46, 204, 113, 0.1)',
+							borderWidth: 3,
+							tension: 0.3,
+							fill: false
+						},
+						{
+							label: 'APIX',
+							data: dataApix,
+							borderColor: 'rgb(22, 193, 93)',
+							backgroundColor: 'rgba(52, 152, 219, 0.1)',
+							borderWidth: 2,
+							tension: 0.3,
+							fill: false
+						},
+						{
+							label: 'Meteoblue',
+							data: dataMeteoblue,
+							borderColor: 'rgb(60, 106, 231)',
+							backgroundColor: 'rgba(231, 76, 60, 0.1)',
+							borderWidth: 2,
+							tension: 0.3,
+							fill: false
+						}
+					]
+				},
+				options: {
+					responsive: true,
+					maintainAspectRatio: false,
+					interaction: {
+						mode: 'index',
+						intersect: false,
+					},
+					plugins: {
+						legend: {
+							labels: {
+								color: '#e0e0e0'
+							}
+						},
+						tooltip: {
+							backgroundColor: '#0f3460',
+							titleColor: '#00d9ff',
+							bodyColor: '#e0e0e0',
+							borderColor: '#00d9ff',
+							borderWidth: 1,
+							callbacks: {
+								label: function (context) {
+									return context.dataset.label + ': ' + context.parsed.y + ' mm';
+								}
+							}
+						}
+					},
+					scales: {
+						y: {
+							beginAtZero: true,
+							title: {
+								display: true,
+								text: 'Milímetros (mm)',
+								color: '#00d9ff'
+							},
+							ticks: {
+								color: '#a0a0a0'
+							},
+							grid: {
+								color: 'rgba(15, 52, 96, 0.5)'
+							}
+						},
+						x: {
+							title: {
+								display: true,
+								text: 'Meses',
+								color: '#00d9ff'
+							},
+							ticks: {
+								color: '#a0a0a0'
+							},
+							grid: {
+								color: 'rgba(15, 52, 96, 0.5)'
+							}
+						}
+					}
+				}
+			});
+		}
+
+		function aplicarColoresCeldas() {
+			const cells = document.querySelectorAll('#comparativa tbody tr td:nth-child(3), #comparativa tbody tr td:nth-child(4)');
+
+			let maxDiff = 0;
+
+			// Primera pasada: calcular la máxima diferencia
+			cells.forEach(cell => {
+				const text = cell.textContent;
+				const match = text.match(/(\d+\.?\d*)\s*mm/);
+				if (match) {
+					const row = cell.closest('tr');
+					const refCell = row.cells[1];
+					const refMatch = refCell.textContent.match(/(\d+\.?\d*)/);
+					if (refMatch) {
+						const ref = parseFloat(refMatch[1]);
+						const calc = parseFloat(match[1]);
+						if (ref > 0) {
+							const diff = Math.abs(calc - ref);
+							if (diff > maxDiff) maxDiff = diff;
+						}
+					}
+				}
+			});
+
+			// Segunda pasada: aplicar los colores según la diferencia
+			cells.forEach(cell => {
+				const text = cell.textContent;
+				const match = text.match(/(\d+\.?\d*)\s*mm/);
+				if (match) {
+					const row = cell.closest('tr');
+					const refCell = row.cells[1];
+					const refMatch = refCell.textContent.match(/(\d+\.?\d*)/);
+					if (refMatch) {
+						const ref = parseFloat(refMatch[1]);
+						const calc = parseFloat(match[1]);
+						if (ref > 0) {
+							const diff = calc - ref;
+							const absDiff = Math.abs(diff);
+
+							// Intensidad: mientras mayor la diferencia, mayor la intensidad
+							const intensity = maxDiff > 0 ? 0.1 + (absDiff / maxDiff) * 0.6 : 0.3;
+
+							// Siempre ROJO para la intensidad (independientemente de sobre o subestimación)
+							cell.style.backgroundColor = `rgba(255, 100, 100, ${intensity})`;
+						}
+					}
+				}
+			});
+		}
+	</script>
+
+</body>
+
+</html>
