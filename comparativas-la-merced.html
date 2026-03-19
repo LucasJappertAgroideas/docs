@@ -249,7 +249,7 @@
 					{
 						label: 'Productor (Referencia)',
 						data: dataProductor,
-						borderColor: 'rgba(46, 204, 113, 1)',
+						borderColor: 'rgb(160, 161, 161)',
 						backgroundColor: 'rgba(46, 204, 113, 0.1)',
 						borderWidth: 3,
 						tension: 0.3,
@@ -258,7 +258,7 @@
 					{
 						label: 'APIX',
 						data: dataApix,
-						borderColor: 'rgba(52, 152, 219, 1)',
+						borderColor: 'rgb(22, 193, 93)',
 						backgroundColor: 'rgba(52, 152, 219, 0.1)',
 						borderWidth: 2,
 						tension: 0.3,
@@ -267,7 +267,7 @@
 					{
 						label: 'Meteoblue',
 						data: dataMeteoblue,
-						borderColor: 'rgba(231, 76, 60, 1)',
+						borderColor: 'rgb(60, 106, 231)',
 						backgroundColor: 'rgba(231, 76, 60, 0.1)',
 						borderWidth: 2,
 						tension: 0.3,
@@ -377,13 +377,8 @@
 							// Diferencia mínima = 0.1 intensidad, Diferencia máxima = 0.7 intensidad
 							const intensity = maxDiff > 0 ? 0.1 + (absDiff / maxDiff) * 0.6 : 0.3;
 
-							if (diff >= 0) {
-								// Sobreestimación (predicción mayor que la real) - VERDE
-								cell.style.backgroundColor = `rgba(0, 255, 127, ${intensity})`;
-							} else {
-								// Subestimación (predicción menor que la real) - ROJO
-								cell.style.backgroundColor = `rgba(255, 100, 100, ${intensity})`;
-							}
+							// Siempre ROJO para la intensidad (independientemente de sobre o subestimación)
+							cell.style.backgroundColor = `rgba(255, 100, 100, ${intensity})`;
 						}
 					}
 				}
