@@ -2,111 +2,165 @@
 	"data": {
 		"01-2024": {
 			"precipitation": 223,
-			"ndvi_average": 0.45
+			"ndvi_average": 0.2,
+			"month": 1,
+			"year": 2024
 		},
 		"02-2024": {
 			"precipitation": 109,
-			"ndvi_average": 0.52
+			"ndvi_average": 0.4,
+			"month": 2,
+			"year": 2024
 		},
 		"03-2024": {
-			"precipitation": 156,
-			"ndvi_average": 0.61
+			"precipitation": 199,
+			"ndvi_average": 0.8,
+			"month": 3,
+			"year": 2024
 		},
 		"04-2024": {
-			"precipitation": 87,
-			"ndvi_average": 0.55
+			"precipitation": 96,
+			"ndvi_average": 0.87,
+			"month": 4,
+			"year": 2024
 		},
 		"05-2024": {
-			"precipitation": 42,
-			"ndvi_average": 0.38
+			"precipitation": 25,
+			"ndvi_average": 0.32,
+			"month": 5,
+			"year": 2024
 		},
 		"06-2024": {
-			"precipitation": 28,
-			"ndvi_average": 0.25
+			"precipitation": 22,
+			"ndvi_average": 0.39,
+			"month": 6,
+			"year": 2024
 		},
 		"07-2024": {
-			"precipitation": 15,
-			"ndvi_average": 0.18
+			"precipitation": 7,
+			"ndvi_average": 0.26,
+			"month": 7,
+			"year": 2024
 		},
 		"08-2024": {
-			"precipitation": 22,
-			"ndvi_average": 0.22
+			"precipitation": 24,
+			"ndvi_average": 0.2,
+			"month": 8,
+			"year": 2024
 		},
 		"09-2024": {
-			"precipitation": 58,
-			"ndvi_average": 0.35
+			"precipitation": 31,
+			"ndvi_average": 0.21,
+			"month": 9,
+			"year": 2024
 		},
 		"10-2024": {
-			"precipitation": 95,
-			"ndvi_average": 0.48
+			"precipitation": 102,
+			"ndvi_average": 0.21,
+			"month": 10,
+			"year": 2024
 		},
 		"11-2024": {
-			"precipitation": 134,
-			"ndvi_average": 0.58
+			"precipitation": 175,
+			"ndvi_average": 0.51,
+			"month": 11,
+			"year": 2024
 		},
 		"12-2024": {
-			"precipitation": 178,
-			"ndvi_average": 0.65
+			"precipitation": 99,
+			"ndvi_average": 0.78,
+			"month": 12,
+			"year": 2024
 		},
 		"01-2025": {
-			"precipitation": 198,
-			"ndvi_average": 0.68
+			"precipitation": 50,
+			"ndvi_average": 0.35,
+			"month": 1,
+			"year": 2025
 		},
 		"02-2025": {
-			"precipitation": 124,
-			"ndvi_average": 0.72
+			"precipitation": 81,
+			"ndvi_average": 0.26,
+			"month": 2,
+			"year": 2025
 		},
 		"03-2025": {
-			"precipitation": 167,
-			"ndvi_average": 0.75
+			"precipitation": 84,
+			"ndvi_average": 0.26,
+			"month": 3,
+			"year": 2025
 		},
 		"04-2025": {
-			"precipitation": 76,
-			"ndvi_average": 0.62
+			"precipitation": 35,
+			"ndvi_average": 0.65,
+			"month": 4,
+			"year": 2025
 		},
 		"05-2025": {
-			"precipitation": 38,
-			"ndvi_average": 0.42
+			"precipitation": 145,
+			"ndvi_average": 0.29,
+			"month": 5,
+			"year": 2025
 		},
 		"06-2025": {
-			"precipitation": 25,
-			"ndvi_average": 0.28
+			"precipitation": 41,
+			"ndvi_average": 0.3,
+			"month": 6,
+			"year": 2025
 		},
 		"07-2025": {
-			"precipitation": 18,
-			"ndvi_average": 0.19
+			"precipitation": 39,
+			"ndvi_average": 0.3,
+			"month": 7,
+			"year": 2025
 		},
 		"08-2025": {
-			"precipitation": 31,
-			"ndvi_average": 0.24
+			"precipitation": 61,
+			"ndvi_average": 0.54,
+			"month": 8,
+			"year": 2025
 		},
 		"09-2025": {
-			"precipitation": 62,
-			"ndvi_average": 0.38
+			"precipitation": 136,
+			"ndvi_average": 0.82,
+			"month": 9,
+			"year": 2025
 		},
 		"10-2025": {
-			"precipitation": 102,
-			"ndvi_average": 0.52
+			"precipitation": 98,
+			"ndvi_average": 0.48,
+			"month": 10,
+			"year": 2025
 		},
 		"11-2025": {
-			"precipitation": 145,
-			"ndvi_average": 0.63
+			"precipitation": 65,
+			"ndvi_average": 0.2,
+			"month": 11,
+			"year": 2025
 		},
 		"12-2025": {
-			"precipitation": 189,
-			"ndvi_average": 0.71
+			"precipitation": 333,
+			"ndvi_average": 0.17,
+			"month": 12,
+			"year": 2025
 		},
 		"01-2026": {
-			"precipitation": 215,
-			"ndvi_average": 0.74
+			"precipitation": 173,
+			"ndvi_average": 0.24,
+			"month": 1,
+			"year": 2026
 		},
 		"02-2026": {
-			"precipitation": 118,
-			"ndvi_average": 0.78
+			"precipitation": 32,
+			"ndvi_average": 0.24,
+			"month": 2,
+			"year": 2026
 		},
 		"03-2026": {
-			"precipitation": 95,
-			"ndvi_average": 0.65
+			"precipitation": 21,
+			"ndvi_average": 0.55,
+			"month": 3,
+			"year": 2026
 		}
 	},
 	"metadata": {
@@ -114,6 +168,6 @@
 		"longitude": -59.944036,
 		"date_from": "2024-01-01",
 		"date_to": "2026-03-19",
-		"lote": "Don Avelino"
+		"data_source": "UCSB-CHG/CHIRPS/DAILY-NASA/GPM_L3/IMERG_V07"
 	}
 }
