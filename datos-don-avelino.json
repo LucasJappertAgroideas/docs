@@ -1,0 +1,119 @@
+{
+	"data": {
+		"01-2024": {
+			"precipitation": 223,
+			"ndvi_average": 0.45
+		},
+		"02-2024": {
+			"precipitation": 109,
+			"ndvi_average": 0.52
+		},
+		"03-2024": {
+			"precipitation": 156,
+			"ndvi_average": 0.61
+		},
+		"04-2024": {
+			"precipitation": 87,
+			"ndvi_average": 0.55
+		},
+		"05-2024": {
+			"precipitation": 42,
+			"ndvi_average": 0.38
+		},
+		"06-2024": {
+			"precipitation": 28,
+			"ndvi_average": 0.25
+		},
+		"07-2024": {
+			"precipitation": 15,
+			"ndvi_average": 0.18
+		},
+		"08-2024": {
+			"precipitation": 22,
+			"ndvi_average": 0.22
+		},
+		"09-2024": {
+			"precipitation": 58,
+			"ndvi_average": 0.35
+		},
+		"10-2024": {
+			"precipitation": 95,
+			"ndvi_average": 0.48
+		},
+		"11-2024": {
+			"precipitation": 134,
+			"ndvi_average": 0.58
+		},
+		"12-2024": {
+			"precipitation": 178,
+			"ndvi_average": 0.65
+		},
+		"01-2025": {
+			"precipitation": 198,
+			"ndvi_average": 0.68
+		},
+		"02-2025": {
+			"precipitation": 124,
+			"ndvi_average": 0.72
+		},
+		"03-2025": {
+			"precipitation": 167,
+			"ndvi_average": 0.75
+		},
+		"04-2025": {
+			"precipitation": 76,
+			"ndvi_average": 0.62
+		},
+		"05-2025": {
+			"precipitation": 38,
+			"ndvi_average": 0.42
+		},
+		"06-2025": {
+			"precipitation": 25,
+			"ndvi_average": 0.28
+		},
+		"07-2025": {
+			"precipitation": 18,
+			"ndvi_average": 0.19
+		},
+		"08-2025": {
+			"precipitation": 31,
+			"ndvi_average": 0.24
+		},
+		"09-2025": {
+			"precipitation": 62,
+			"ndvi_average": 0.38
+		},
+		"10-2025": {
+			"precipitation": 102,
+			"ndvi_average": 0.52
+		},
+		"11-2025": {
+			"precipitation": 145,
+			"ndvi_average": 0.63
+		},
+		"12-2025": {
+			"precipitation": 189,
+			"ndvi_average": 0.71
+		},
+		"01-2026": {
+			"precipitation": 215,
+			"ndvi_average": 0.74
+		},
+		"02-2026": {
+			"precipitation": 118,
+			"ndvi_average": 0.78
+		},
+		"03-2026": {
+			"precipitation": 95,
+			"ndvi_average": 0.65
+		}
+	},
+	"metadata": {
+		"latitude": -28.976977,
+		"longitude": -59.944036,
+		"date_from": "2024-01-01",
+		"date_to": "2026-03-19",
+		"lote": "Don Avelino"
+	}
+}

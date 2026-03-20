@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lote Don Avelino - Datos Climáticos y NDVI</title>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #1a2332 100%);
+			min-height: 100vh;
+			padding: 20px;
+			color: #e6edf3;
+		}
+
+		.container {
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+
+		.header {
+			background: rgba(22, 27, 34, 0.95);
+			border-radius: 15px;
+			padding: 25px;
+			margin-bottom: 25px;
+			box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+			border: 1px solid #30363d;
+		}
+
+		.header h1 {
+			color: #58a6ff;
+			font-size: 2em;
+			margin-bottom: 10px;
+		}
+
+		.metadata {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 15px;
+			margin-top: 15px;
+		}
+
+		.metadata-item {
+			background: #21262d;
+			padding: 12px 15px;
+			border-radius: 8px;
+			border-left: 4px solid #58a6ff;
+		}
+
+		.metadata-item label {
+			display: block;
+			font-size: 0.85em;
+			color: #8b949e;
+			margin-bottom: 5px;
+			font-weight: 600;
+		}
+
+		.metadata-item span {
+			color: #e6edf3;
+			font-size: 1.1em;
+		}
+
+		.chart-container {
+			background: rgba(22, 27, 34, 0.95);
+			border-radius: 15px;
+			padding: 25px;
+			box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+			border: 1px solid #30363d;
+		}
+
+		.chart-title {
+			color: #e6edf3;
+			font-size: 1.5em;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+
+		.chart-wrapper {
+			position: relative;
+			height: 450px;
+		}
+
+		.legend-info {
+			display: flex;
+			justify-content: center;
+			gap: 40px;
+			margin-top: 20px;
+			padding-top: 20px;
+			border-top: 1px solid #30363d;
+		}
+
+		.legend-item {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+
+		.legend-color {
+			width: 20px;
+			height: 4px;
+			border-radius: 2px;
+		}
+
+		.legend-color.precipitation {
+			background: #58a6ff;
+		}
+
+		.legend-color.ndvi {
+			background: #3fb950;
+		}
+
+		.legend-item span {
+			color: #8b949e;
+		}
+
+		.loading {
+			text-align: center;
+			padding: 50px;
+			color: #8b949e;
+			font-size: 1.2em;
+		}
+
+		.error-message {
+			background: rgba(248, 81, 73, 0.15);
+			border: 1px solid #f85149;
+			color: #f85149;
+			padding: 20px;
+			border-radius: 10px;
+			text-align: center;
+			margin: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="header">
+			<h1>📍 Lote Don Avelino</h1>
+			<div class="metadata" id="metadata">
+				<div class="metadata-item">
+					<label>Latitud</label>
+					<span id="latitude">Cargando...</span>
+				</div>
+				<div class="metadata-item">
+					<label>Longitud</label>
+					<span id="longitude">Cargando...</span>
+				</div>
+				<div class="metadata-item">
+					<label>Fecha Desde</label>
+					<span id="date_from">Cargando...</span>
+				</div>
+				<div class="metadata-item">
+					<label>Fecha Hasta</label>
+					<span id="date_to">Cargando...</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="chart-container">
+			<h2 class="chart-title">Precipitación y Promedio NDVI - Evolución Mensual</h2>
+			<div class="chart-wrapper">
+				<canvas id="donAvelinoChart"></canvas>
+			</div>
+			<div class="legend-info">
+				<div class="legend-item">
+					<div class="legend-color precipitation"></div>
+					<span>Precipitación (mm)</span>
+				</div>
+				<div class="legend-item">
+					<div class="legend-color ndvi"></div>
+					<span>NDVI Promedio</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		// Configuración global para tema oscuro en Chart.js
+		Chart.defaults.color = '#8b949e';
+		Chart.defaults.borderColor = '#30363d';
+
+		// Cargar datos del JSON
+		fetch('datos-don-avelino.json')
+			.then(response => {
+				if (!response.ok) {
+					throw new Error('Error al cargar los datos');
+				}
+				return response.json();
+			})
+			.then(data => {
+				// Mostrar metadatos
+				document.getElementById('latitude').textContent = data.metadata.latitude;
+				document.getElementById('longitude').textContent = data.metadata.longitude;
+				document.getElementById('date_from').textContent = data.metadata.date_from;
+				document.getElementById('date_to').textContent = data.metadata.date_to;
+
+				// Preparar datos para el gráfico
+				const labels = Object.keys(data.data);
+				const precipitationData = labels.map(key => data.data[key].precipitation);
+				const ndviData = labels.map(key => data.data[key].ndvi_average);
+
+				// Crear gráfico
+				const ctx = document.getElementById('donAvelinoChart').getContext('2d');
+
+				new Chart(ctx, {
+					type: 'line',
+					data: {
+						labels: labels,
+						datasets: [
+							{
+								label: 'Precipitación (mm)',
+								data: precipitationData,
+								borderColor: '#58a6ff',
+								backgroundColor: 'rgba(88, 166, 255, 0.15)',
+								borderWidth: 3,
+								fill: true,
+								tension: 0.3,
+								pointBackgroundColor: '#58a6ff',
+								pointBorderColor: '#0d1117',
+								pointBorderWidth: 2,
+								pointRadius: 4,
+								pointHoverRadius: 6,
+								yAxisID: 'y'
+							},
+							{
+								label: 'NDVI Promedio',
+								data: ndviData,
+								borderColor: '#3fb950',
+								backgroundColor: 'rgba(63, 185, 80, 0.15)',
+								borderWidth: 3,
+								fill: true,
+								tension: 0.3,
+								pointBackgroundColor: '#3fb950',
+								pointBorderColor: '#0d1117',
+								pointBorderWidth: 2,
+								pointRadius: 4,
+								pointHoverRadius: 6,
+								yAxisID: 'y1'
+							}
+						]
+					},
+					options: {
+						responsive: true,
+						maintainAspectRatio: false,
+						interaction: {
+							mode: 'index',
+							intersect: false,
+						},
+						plugins: {
+							legend: {
+								display: false
+							},
+							tooltip: {
+								backgroundColor: 'rgba(22, 27, 34, 0.95)',
+								titleColor: '#e6edf3',
+								bodyColor: '#8b949e',
+								borderColor: '#30363d',
+								borderWidth: 1,
+								padding: 12,
+								displayColors: true,
+								callbacks: {
+									label: function (context) {
+										let label = context.dataset.label || '';
+										if (label) {
+											label += ': ';
+										}
+										if (context.dataset.yAxisID === 'y') {
+											label += context.parsed.y + ' mm';
+										} else {
+											label += context.parsed.y.toFixed(2);
+										}
+										return label;
+									}
+								}
+							}
+						},
+						scales: {
+							x: {
+								grid: {
+									color: 'rgba(48, 54, 61, 0.5)',
+									drawBorder: false
+								},
+								ticks: {
+									color: '#8b949e',
+									maxRotation: 45,
+									minRotation: 45
+								}
+							},
+							y: {
+								type: 'linear',
+								display: true,
+								position: 'left',
+								title: {
+									display: true,
+									text: 'Precipitación (mm)',
+									color: '#58a6ff',
+									font: {
+										weight: 'bold'
+									}
+								},
+								grid: {
+									color: 'rgba(48, 54, 61, 0.5)',
+									drawBorder: false
+								},
+								ticks: {
+									color: '#58a6ff'
+								},
+								min: 0,
+								max: Math.max(...precipitationData) * 1.1
+							},
+							y1: {
+								type: 'linear',
+								display: true,
+								position: 'right',
+								title: {
+									display: true,
+									text: 'NDVI Promedio',
+									color: '#3fb950',
+									font: {
+										weight: 'bold'
+									}
+								},
+								grid: {
+									drawOnChartArea: false
+								},
+								ticks: {
+									color: '#3fb950',
+									callback: function (value) {
+										return value.toFixed(2);
+									}
+								},
+								min: 0,
+								max: 1
+							}
+						}
+					}
+				});
+			})
+			.catch(error => {
+				console.error('Error:', error);
+				document.body.innerHTML = `
+                    <div class="error-message">
+                        <h2>⚠️ Error al cargar los datos</h2>
+                        <p>No se pudo cargar el archivo JSON con los datos del lote Don Avelino.</p>
+                        <p>Error: ${error.message}</p>
+                    </div>
+                `;
+			});
+	</script>
+</body>
+
+</html>
