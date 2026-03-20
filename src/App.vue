@@ -5,7 +5,8 @@ import { RouterView, RouterLink } from 'vue-router'
 <template>
   <div class="app-container">
     <nav class="quick-nav">
-      <RouterLink to="/lote-don-avelino">📍 Lote Don Avelino</RouterLink>
+      <RouterLink to="/lote-don-avelino">📍Lote Don Avelino</RouterLink>
+      <RouterLink to="/lote-agroarnaudo-lote-1">📍Lote Agroarnaudo Lote 1</RouterLink>
     </nav>
     
     <main>
@@ -28,6 +29,7 @@ import { RouterView, RouterLink } from 'vue-router'
   text-decoration: none;
   font-weight: 600;
   font-size: 1.1em;
+  margin: 0 10px;
 }
 
 .quick-nav a:hover {

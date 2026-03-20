@@ -204,7 +204,7 @@ function getButtonClass(index: number): string {
 }
 
 onMounted(async () => {
-  await fetchClimateData('/don_avelino/datos-don-avelino.json')
+  await fetchClimateData('/agroarnaudo_lote1/datos-agroarnaudo-lote1.json')
   updateChartData()
 })
 </script>
@@ -222,7 +222,7 @@ onMounted(async () => {
 
     <template v-else-if="data">
       <div class="header">
-        <h1>📍 Lote Don Avelino</h1>
+        <h1>📍 Lote Agroarnaudo Lote 1</h1>
         <div class="metadata">
           <div class="metadata-item">
             <label>Latitud</label>
