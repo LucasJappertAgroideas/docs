@@ -46,6 +46,90 @@ export function useClimateData() {
         return labels.value.map(key => data.value!.data[key].infrarrojo_average);
     });
 
+    const imagesByType = computed(() => {
+        if (!data.value) return {};
+
+        const types = ['ndvi', 'ndwi', 'ndre', 'reci', 'evi', 'infrarrojo'] as const;
+        const result: Record<string, Array<{ date: string; month: number; year: number; img: string; type: string; }>> = {};
+
+        for (const type of types) {
+            const imgField = type === 'infrarrojo' ? 'infrarrojo_img' : `${type}_img`;
+            const images: Array<{ date: string; month: number; year: number; img: string; type: string; }> = [];
+            for (const key of labels.value) {
+                const item = data.value!.data[key];
+                const itemAny = item as unknown as Record<string, unknown>;
+                const img = itemAny[imgField] as string | undefined;
+
+                if (img) {
+                    images.push({
+                        date: key,
+                        month: item.month,
+                        year: item.year,
+                        img,
+                        type
+                    });
+                }
+            }
+            images.sort((a, b) => {
+                if (a.year !== b.year) return a.year - b.year;
+                return a.month - b.month;
+            });
+            result[type] = images;
+        }
+
+        return result;
+    });
+
+    const imagesByMonth = computed(() => {
+        if (!data.value) return {};
+
+        const months = [
+            'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+            'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
+        ];
+        const types = ['ndvi', 'ndwi', 'ndre', 'reci', 'evi', 'infrarrojo'] as const;
+        const result: Record<string, Array<{ date: string; month: number; year: number; img: string; type: string; }>> = {};
+
+        // First, collect all images with their types
+        const allImages: Array<{ date: string; month: number; year: number; img: string; type: string; }> = [];
+
+        for (const type of types) {
+            const imgField = type === 'infrarrojo' ? 'infrarrojo_img' : `${type}_img`;
+            for (const key of labels.value) {
+                const item = data.value!.data[key];
+                const itemAny = item as unknown as Record<string, unknown>;
+                const img = itemAny[imgField] as string | undefined;
+
+                if (img) {
+                    allImages.push({
+                        date: key,
+                        month: item.month,
+                        year: item.year,
+                        img,
+                        type
+                    });
+                }
+            }
+        }
+
+        // Sort by year and month
+        allImages.sort((a, b) => {
+            if (a.year !== b.year) return a.year - b.year;
+            return a.month - b.month;
+        });
+
+        // Group by month
+        for (const image of allImages) {
+            const monthKey = `${months[image.month - 1]} ${image.year}`;
+            if (!result[monthKey]) {
+                result[monthKey] = [];
+            }
+            result[monthKey].push(image);
+        }
+
+        return result;
+    });
+
     const maxPrecipitation = computed(() => {
         if (precipitationData.value.length === 0) return 100;
         return Math.max(...precipitationData.value) * 1.1;
@@ -95,6 +179,8 @@ export function useClimateData() {
         infrarrojoData,
         maxPrecipitation,
         maxIndex,
+        imagesByType,
+        imagesByMonth,
         fetchClimateData
     };
 }

@@ -42,8 +42,12 @@ const {
   infrarrojoData,
   maxPrecipitation,
   maxIndex,
+  imagesByType,
+  imagesByMonth,
   fetchClimateData
 } = useClimateData()
+
+const groupBy = ref<'type' | 'month'>('month')
 
 const hiddenDatasets = ref<Set<number>>(new Set())
 
@@ -200,7 +204,7 @@ function getButtonClass(index: number): string {
 }
 
 onMounted(async () => {
-  await fetchClimateData('/datos-don-avelino.json')
+  await fetchClimateData('/don_avelino/datos-don-avelino.json')
   updateChartData()
 })
 </script>
@@ -272,6 +276,216 @@ onMounted(async () => {
           </div>
         </div>
       </div>
+
+      <div class="images-section">
+        <div class="images-header">
+          <h2 class="images-title">
+            {{ groupBy === 'type' ? 'Imágenes por Tipo de Índice' : 'Imágenes por Mes' }}
+          </h2>
+          <div class="group-by-controls">
+            <button 
+              :class="['group-btn', { active: groupBy === 'type' }]"
+              @click="groupBy = 'type'"
+            >
+              Por Tipo
+            </button>
+            <button 
+              :class="['group-btn', { active: groupBy === 'month' }]"
+              @click="groupBy = 'month'"
+            >
+              Por Mes
+            </button>
+          </div>
+        </div>
+        
+        <!-- Agrupar por tipo -->
+        <template v-if="groupBy === 'type'">
+          <div 
+            v-for="(images, type) in imagesByType" 
+            :key="type" 
+            class="image-type-group"
+          >
+            <h3 class="image-type-title">{{ type.toUpperCase() }}</h3>
+            <div class="image-gallery">
+              <div 
+                v-for="item in images" 
+                :key="item.date" 
+                class="image-card"
+              >
+                <div class="image-container">
+                  <img 
+                    :src="item.img" 
+                    :alt="type.toUpperCase() + ' - ' + item.date"
+                    class="index-image"
+                  />
+                </div>
+                <div class="image-info">
+                  <span class="image-date">{{ item.date }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </template>
+        
+        <!-- Agrupar por mes -->
+        <template v-else>
+          <div 
+            v-for="(images, month) in imagesByMonth" 
+            :key="month" 
+            class="image-type-group"
+          >
+            <h3 class="image-type-title">{{ month }}</h3>
+            <div class="image-gallery">
+              <div 
+                v-for="item in images" 
+                :key="item.date + item.type" 
+                class="image-card"
+              >
+                <div class="image-container">
+                  <img 
+                    :src="item.img" 
+                    :alt="item.type.toUpperCase() + ' - ' + item.date"
+                    class="index-image"
+                  />
+                </div>
+                <div class="image-info">
+                  <span class="image-type-badge">{{ item.type.toUpperCase() }}</span>
+                  <span class="image-date">{{ item.date }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </template>
+      </div>
     </template>
   </div>
 </template>
+
+<style scoped>
+.images-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #0d1117;
+  border-radius: 8px;
+  border: 1px solid #30363d;
+}
+
+.images-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #30363d;
+  padding-bottom: 0.75rem;
+}
+
+.images-title {
+  color: #e6edf3;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.group-by-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.group-btn {
+  padding: 0.5rem 1rem;
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #8b949e;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.group-btn:hover {
+  background: #21262d;
+  color: #e6edf3;
+}
+
+.group-btn.active {
+  background: #238636;
+  border-color: #238636;
+  color: #ffffff;
+}
+
+.image-type-group {
+  margin-bottom: 2rem;
+}
+
+.image-type-group:last-child {
+  margin-bottom: 0;
+}
+
+.image-type-title {
+  color: #58a6ff;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.image-card {
+  background: #161b22;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #30363d;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 170px;
+}
+
+.image-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.image-container {
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  background: #0d1117;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.index-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: scale-down;
+}
+
+.image-info {
+  padding: 0.75rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.image-type-badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  background: #30363d;
+  border-radius: 4px;
+  color: #58a6ff;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.image-date {
+  color: #8b949e;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+</style>

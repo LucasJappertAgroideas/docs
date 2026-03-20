@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
-import LoteDonAvelino from '@/views/LoteDonAvelino.vue';
+import DonAvelino from '@/views/don_avelino/DonAvelino.vue';
 import Comparativas from '@/views/Comparativas.vue';
 import Index from '@/views/Index.vue';
 
@@ -14,7 +14,7 @@ const router = createRouter({
         {
             path: '/lote-don-avelino',
             name: 'lote-don-avelino',
-            component: LoteDonAvelino
+            component: DonAvelino
         },
         {
             path: '/comparativas',
