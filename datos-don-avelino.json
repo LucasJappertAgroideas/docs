@@ -1,172 +1,175 @@
 {
 	"data": {
-		"01-2024": {
-			"precipitation": 223,
-			"ndvi_average": 0.2,
-			"month": 1,
-			"year": 2024
-		},
-		"02-2024": {
-			"precipitation": 109,
-			"ndvi_average": 0.4,
-			"month": 2,
-			"year": 2024
-		},
-		"03-2024": {
-			"precipitation": 199,
-			"ndvi_average": 0.8,
-			"month": 3,
-			"year": 2024
-		},
-		"04-2024": {
-			"precipitation": 96,
-			"ndvi_average": 0.87,
-			"month": 4,
-			"year": 2024
-		},
-		"05-2024": {
-			"precipitation": 25,
-			"ndvi_average": 0.32,
-			"month": 5,
-			"year": 2024
-		},
-		"06-2024": {
-			"precipitation": 22,
-			"ndvi_average": 0.39,
-			"month": 6,
-			"year": 2024
-		},
-		"07-2024": {
-			"precipitation": 7,
-			"ndvi_average": 0.26,
-			"month": 7,
-			"year": 2024
-		},
-		"08-2024": {
-			"precipitation": 24,
-			"ndvi_average": 0.2,
-			"month": 8,
-			"year": 2024
-		},
-		"09-2024": {
-			"precipitation": 31,
-			"ndvi_average": 0.21,
-			"month": 9,
-			"year": 2024
-		},
-		"10-2024": {
-			"precipitation": 102,
-			"ndvi_average": 0.21,
-			"month": 10,
-			"year": 2024
-		},
-		"11-2024": {
-			"precipitation": 175,
-			"ndvi_average": 0.51,
-			"month": 11,
-			"year": 2024
-		},
-		"12-2024": {
-			"precipitation": 99,
-			"ndvi_average": 0.78,
-			"month": 12,
-			"year": 2024
-		},
 		"01-2025": {
 			"precipitation": 50,
-			"ndvi_average": 0.35,
 			"month": 1,
-			"year": 2025
+			"year": 2025,
+			"reci_average": 1.22,
+			"ndwi_average": 0.51,
+			"ndvi_average": 0.66,
+			"ndre_average": 0.61,
+			"infrarrojo_average": 0.62,
+			"evi_average": 0.71
 		},
 		"02-2025": {
 			"precipitation": 81,
-			"ndvi_average": 0.26,
 			"month": 2,
-			"year": 2025
+			"year": 2025,
+			"reci_average": 0.35,
+			"ndwi_average": 0.2,
+			"ndvi_average": 0.27,
+			"ndre_average": 0.49,
+			"infrarrojo_average": 0.52,
+			"evi_average": 0.47
 		},
 		"03-2025": {
 			"precipitation": 84,
-			"ndvi_average": 0.26,
 			"month": 3,
-			"year": 2025
+			"year": 2025,
+			"reci_average": 0.29,
+			"ndwi_average": 0.19,
+			"ndvi_average": 0.22,
+			"ndre_average": 0.47,
+			"infrarrojo_average": 0.52,
+			"evi_average": 0.46
 		},
 		"04-2025": {
 			"precipitation": 35,
-			"ndvi_average": 0.65,
 			"month": 4,
-			"year": 2025
+			"year": 2025,
+			"reci_average": 1.15,
+			"ndwi_average": 0.43,
+			"ndvi_average": 0.65,
+			"ndre_average": 0.59,
+			"infrarrojo_average": 0.56,
+			"evi_average": 0.65
 		},
 		"05-2025": {
 			"precipitation": 145,
-			"ndvi_average": 0.29,
 			"month": 5,
-			"year": 2025
+			"year": 2025,
+			"reci_average": 0.44,
+			"ndwi_average": 0.16,
+			"ndvi_average": 0.29,
+			"ndre_average": 0.5,
+			"infrarrojo_average": 0.43,
+			"evi_average": 0.43
 		},
 		"06-2025": {
 			"precipitation": 41,
-			"ndvi_average": 0.3,
 			"month": 6,
-			"year": 2025
+			"year": 2025,
+			"reci_average": 0.4,
+			"ndwi_average": 0.17,
+			"ndvi_average": 0.27,
+			"ndre_average": 0.48,
+			"infrarrojo_average": 0.47,
+			"evi_average": 0.45
 		},
 		"07-2025": {
 			"precipitation": 39,
-			"ndvi_average": 0.3,
 			"month": 7,
-			"year": 2025
+			"year": 2025,
+			"reci_average": 0.53,
+			"ndwi_average": 0.2,
+			"ndvi_average": 0.3,
+			"ndre_average": 0.5,
+			"infrarrojo_average": 0.46,
+			"evi_average": 0.45
 		},
 		"08-2025": {
 			"precipitation": 61,
-			"ndvi_average": 0.54,
 			"month": 8,
-			"year": 2025
+			"year": 2025,
+			"reci_average": 0.95,
+			"ndwi_average": 0.31,
+			"ndvi_average": 0.55,
+			"ndre_average": 0.57,
+			"infrarrojo_average": 0.49,
+			"evi_average": 0.54
 		},
 		"09-2025": {
 			"precipitation": 136,
-			"ndvi_average": 0.82,
 			"month": 9,
-			"year": 2025
+			"year": 2025,
+			"reci_average": 2.44,
+			"ndwi_average": 0.6,
+			"ndvi_average": 0.85,
+			"ndre_average": 0.7,
+			"infrarrojo_average": 0.61,
+			"evi_average": 0.76
 		},
 		"10-2025": {
 			"precipitation": 98,
-			"ndvi_average": 0.48,
 			"month": 10,
-			"year": 2025
+			"year": 2025,
+			"reci_average": 1.77,
+			"ndwi_average": 0.51,
+			"ndvi_average": 0.66,
+			"ndre_average": 0.66,
+			"infrarrojo_average": 0.56,
+			"evi_average": 0.66
 		},
 		"11-2025": {
 			"precipitation": 65,
-			"ndvi_average": 0.2,
 			"month": 11,
-			"year": 2025
+			"year": 2025,
+			"reci_average": 0.26,
+			"ndwi_average": 0.22,
+			"ndvi_average": 0.2,
+			"ndre_average": 0.45,
+			"infrarrojo_average": 0.52,
+			"evi_average": 0.44
 		},
 		"12-2025": {
 			"precipitation": 333,
-			"ndvi_average": 0.17,
 			"month": 12,
-			"year": 2025
+			"year": 2025,
+			"reci_average": 0.19,
+			"ndwi_average": 0.21,
+			"ndvi_average": 0.17,
+			"ndre_average": 0.43,
+			"infrarrojo_average": 0.5,
+			"evi_average": 0.43
 		},
 		"01-2026": {
 			"precipitation": 173,
-			"ndvi_average": 0.24,
 			"month": 1,
-			"year": 2026
+			"year": 2026,
+			"reci_average": 0.38,
+			"ndwi_average": 0.17,
+			"ndvi_average": 0.25,
+			"ndre_average": 0.48,
+			"infrarrojo_average": 0.48,
+			"evi_average": 0.45
 		},
 		"02-2026": {
 			"precipitation": 32,
-			"ndvi_average": 0.24,
 			"month": 2,
-			"year": 2026
+			"year": 2026,
+			"reci_average": 0.23,
+			"ndwi_average": 0.15,
+			"ndvi_average": 0.18,
+			"ndre_average": 0.45,
+			"infrarrojo_average": 0.49,
+			"evi_average": 0.43
 		},
 		"03-2026": {
 			"precipitation": 21,
-			"ndvi_average": 0.55,
 			"month": 3,
-			"year": 2026
+			"year": 2026,
+			"reci_average": 0.77,
+			"ndwi_average": 0.26,
+			"ndvi_average": 0.42,
+			"ndre_average": 0.55,
+			"infrarrojo_average": 0.52,
+			"evi_average": 0.53
 		}
 	},
 	"metadata": {
 		"latitude": -28.976977,
 		"longitude": -59.944036,
-		"date_from": "2024-01-01",
+		"date_from": "2025-01-01",
 		"date_to": "2026-03-19",
 		"data_source": "UCSB-CHG/CHIRPS/DAILY-NASA/GPM_L3/IMERG_V07"
 	}

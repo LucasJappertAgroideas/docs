@@ -4,7 +4,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Lote Don Avelino - Datos Climáticos y NDVI</title>
+	<link rel="icon" type="image/png"
+		href="https://imgs.search.brave.com/HS-SfbF4P5pgDjGzxOr_UpDXWQZXLUdJGcQerNXLXso/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy84/LzhkL0ROTEltZy5z/dmc">
+	<title>Lote Don Avelino - Datos Climáticos - Imágenes satelitales</title>
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<style>
 		* {
@@ -83,6 +85,35 @@
 			text-align: center;
 		}
 
+		.chart-controls {
+			display: flex;
+			justify-content: center;
+			gap: 10px;
+			margin-bottom: 20px;
+			flex-wrap: wrap;
+		}
+
+		.toggle-btn {
+			background: #21262d;
+			border: 1px solid #30363d;
+			color: #8b949e;
+			padding: 8px 16px;
+			border-radius: 6px;
+			cursor: pointer;
+			font-size: 0.85em;
+			transition: all 0.2s;
+		}
+
+		.toggle-btn:hover {
+			background: #30363d;
+		}
+
+		.toggle-btn.active {
+			background: #30363d;
+			color: #e6edf3;
+			border-color: #58a6ff;
+		}
+
 		.chart-wrapper {
 			position: relative;
 			height: 450px;
@@ -91,10 +122,11 @@
 		.legend-info {
 			display: flex;
 			justify-content: center;
-			gap: 40px;
+			gap: 30px;
 			margin-top: 20px;
 			padding-top: 20px;
 			border-top: 1px solid #30363d;
+			flex-wrap: wrap;
 		}
 
 		.legend-item {
@@ -117,8 +149,29 @@
 			background: #3fb950;
 		}
 
+		.legend-color.ndwi {
+			background: #79c0ff;
+		}
+
+		.legend-color.ndre {
+			background: #a371f7;
+		}
+
+		.legend-color.reci {
+			background: #f85149;
+		}
+
+		.legend-color.evi {
+			background: #f0883e;
+		}
+
+		.legend-color.infrarrojo {
+			background: #db61a2;
+		}
+
 		.legend-item span {
 			color: #8b949e;
+			font-size: 0.9em;
 		}
 
 		.loading {
@@ -165,7 +218,16 @@
 		</div>
 
 		<div class="chart-container">
-			<h2 class="chart-title">Precipitación y Promedio NDVI - Evolución Mensual</h2>
+			<h2 class="chart-title">Precipitación e Índices de Vegetación - Evolución Mensual</h2>
+			<div class="chart-controls">
+				<button class="toggle-btn active" data-index="precipitation">Precipitación</button>
+				<button class="toggle-btn active" data-index="ndvi">NDVI</button>
+				<button class="toggle-btn active" data-index="ndwi">NDWI</button>
+				<button class="toggle-btn active" data-index="ndre">NDRE</button>
+				<button class="toggle-btn active" data-index="reci">RECI</button>
+				<button class="toggle-btn active" data-index="evi">EVI</button>
+				<button class="toggle-btn active" data-index="infrarrojo">Infrarrojo</button>
+			</div>
 			<div class="chart-wrapper">
 				<canvas id="donAvelinoChart"></canvas>
 			</div>
@@ -176,7 +238,27 @@
 				</div>
 				<div class="legend-item">
 					<div class="legend-color ndvi"></div>
-					<span>NDVI Promedio</span>
+					<span>NDVI</span>
+				</div>
+				<div class="legend-item">
+					<div class="legend-color ndwi"></div>
+					<span>NDWI</span>
+				</div>
+				<div class="legend-item">
+					<div class="legend-color ndre"></div>
+					<span>NDRE</span>
+				</div>
+				<div class="legend-item">
+					<div class="legend-color reci"></div>
+					<span>RECI</span>
+				</div>
+				<div class="legend-item">
+					<div class="legend-color evi"></div>
+					<span>EVI</span>
+				</div>
+				<div class="legend-item">
+					<div class="legend-color infrarrojo"></div>
+					<span>Infrarrojo</span>
 				</div>
 			</div>
 		</div>
@@ -186,6 +268,8 @@
 		// Configuración global para tema oscuro en Chart.js
 		Chart.defaults.color = '#8b949e';
 		Chart.defaults.borderColor = '#30363d';
+
+		let chart;
 
 		// Cargar datos del JSON
 		fetch('datos-don-avelino.json')
@@ -206,11 +290,16 @@
 				const labels = Object.keys(data.data);
 				const precipitationData = labels.map(key => data.data[key].precipitation);
 				const ndviData = labels.map(key => data.data[key].ndvi_average);
+				const ndwiData = labels.map(key => data.data[key].ndwi_average);
+				const ndreData = labels.map(key => data.data[key].ndre_average);
+				const reciData = labels.map(key => data.data[key].reci_average);
+				const eviData = labels.map(key => data.data[key].evi_average);
+				const infrarrojoData = labels.map(key => data.data[key].infrarrojo_average);
 
 				// Crear gráfico
 				const ctx = document.getElementById('donAvelinoChart').getContext('2d');
 
-				new Chart(ctx, {
+				chart = new Chart(ctx, {
 					type: 'line',
 					data: {
 						labels: labels,
@@ -228,22 +317,104 @@
 								pointBorderWidth: 2,
 								pointRadius: 4,
 								pointHoverRadius: 6,
-								yAxisID: 'y'
+								yAxisID: 'y',
+								hidden: false
 							},
 							{
-								label: 'NDVI Promedio',
+								label: 'NDVI',
 								data: ndviData,
 								borderColor: '#3fb950',
 								backgroundColor: 'rgba(63, 185, 80, 0.15)',
-								borderWidth: 3,
-								fill: true,
+								borderWidth: 2,
+								fill: false,
 								tension: 0.3,
 								pointBackgroundColor: '#3fb950',
 								pointBorderColor: '#0d1117',
 								pointBorderWidth: 2,
-								pointRadius: 4,
-								pointHoverRadius: 6,
-								yAxisID: 'y1'
+								pointRadius: 3,
+								pointHoverRadius: 5,
+								yAxisID: 'y1',
+								hidden: false
+							},
+							{
+								label: 'NDWI',
+								data: ndwiData,
+								borderColor: '#79c0ff',
+								backgroundColor: 'rgba(121, 192, 255, 0.1)',
+								borderWidth: 2,
+								fill: false,
+								tension: 0.3,
+								pointBackgroundColor: '#79c0ff',
+								pointBorderColor: '#0d1117',
+								pointBorderWidth: 2,
+								pointRadius: 3,
+								pointHoverRadius: 5,
+								yAxisID: 'y1',
+								hidden: false
+							},
+							{
+								label: 'NDRE',
+								data: ndreData,
+								borderColor: '#a371f7',
+								backgroundColor: 'rgba(163, 113, 247, 0.1)',
+								borderWidth: 2,
+								fill: false,
+								tension: 0.3,
+								pointBackgroundColor: '#a371f7',
+								pointBorderColor: '#0d1117',
+								pointBorderWidth: 2,
+								pointRadius: 3,
+								pointHoverRadius: 5,
+								yAxisID: 'y1',
+								hidden: false
+							},
+							{
+								label: 'RECI',
+								data: reciData,
+								borderColor: '#f85149',
+								backgroundColor: 'rgba(248, 81, 73, 0.1)',
+								borderWidth: 2,
+								fill: false,
+								tension: 0.3,
+								pointBackgroundColor: '#f85149',
+								pointBorderColor: '#0d1117',
+								pointBorderWidth: 2,
+								pointRadius: 3,
+								pointHoverRadius: 5,
+								yAxisID: 'y1',
+								hidden: false
+							},
+							{
+								label: 'EVI',
+								data: eviData,
+								borderColor: '#f0883e',
+								backgroundColor: 'rgba(240, 136, 62, 0.1)',
+								borderWidth: 2,
+								fill: false,
+								tension: 0.3,
+								pointBackgroundColor: '#f0883e',
+								pointBorderColor: '#0d1117',
+								pointBorderWidth: 2,
+								pointRadius: 3,
+								pointHoverRadius: 5,
+								yAxisID: 'y1',
+								hidden: false
+							},
+							{
+								label: 'Infrarrojo',
+								data: infrarrojoData,
+								borderColor: '#db61a2',
+								backgroundColor: 'rgba(219, 97, 162, 0.1)',
+								borderWidth: 2,
+								fill: false,
+								tension: 0.3,
+								pointBackgroundColor: '#db61a2',
+								pointBorderColor: '#0d1117',
+								pointBorderWidth: 2,
+								pointRadius: 3,
+								pointHoverRadius: 5,
+								yAxisID: 'y1',
+								hidden: false
 							}
 						]
 					},
@@ -322,8 +493,8 @@
 								position: 'right',
 								title: {
 									display: true,
-									text: 'NDVI Promedio',
-									color: '#3fb950',
+									text: 'Índices de Vegetación',
+									color: '#8b949e',
 									font: {
 										weight: 'bold'
 									}
@@ -332,16 +503,38 @@
 									drawOnChartArea: false
 								},
 								ticks: {
-									color: '#3fb950',
+									color: '#8b949e',
 									callback: function (value) {
 										return value.toFixed(2);
 									}
 								},
 								min: 0,
-								max: 1
+								max: Math.max(...ndviData, ...ndwiData, ...ndreData, ...reciData, ...eviData, ...infrarrojoData) * 1.1
 							}
 						}
 					}
+				});
+
+				// Control de visibilidad de datasets
+				const toggleButtons = document.querySelectorAll('.toggle-btn');
+				const indexMap = {
+					'precipitation': 0,
+					'ndvi': 1,
+					'ndwi': 2,
+					'ndre': 3,
+					'reci': 4,
+					'evi': 5,
+					'infrarrojo': 6
+				};
+
+				toggleButtons.forEach(btn => {
+					btn.addEventListener('click', () => {
+						const datasetIndex = indexMap[btn.dataset.index];
+						const isHidden = chart.data.datasets[datasetIndex].hidden;
+						chart.data.datasets[datasetIndex].hidden = !isHidden;
+						btn.classList.toggle('active');
+						chart.update();
+					});
 				});
 			})
 			.catch(error => {
