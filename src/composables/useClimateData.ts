@@ -1,5 +1,5 @@
 import { ref, computed } from 'vue';
-import type { ClimateDataset } from '@/types/climate';
+import type { ClimateDataset, ClimateData } from '@/types/climate';
 
 export function useClimateData() {
     const data = ref<ClimateDataset | null>(null);
@@ -16,35 +16,34 @@ export function useClimateData() {
         return labels.value.map(key => data.value!.data[key].precipitation);
     });
 
-    const ndviData = computed(() => {
+    // Temperature data
+    const temperatureMaxData = computed(() => {
         if (!data.value) return [];
-        return labels.value.map(key => data.value!.data[key].ndvi_average);
+        return labels.value.map(key => data.value!.data[key].temperature.max);
     });
 
-    const ndwiData = computed(() => {
+    const temperatureMinData = computed(() => {
         if (!data.value) return [];
-        return labels.value.map(key => data.value!.data[key].ndwi_average);
+        return labels.value.map(key => data.value!.data[key].temperature.min);
     });
 
-    const ndreData = computed(() => {
+    const temperatureAvgData = computed(() => {
         if (!data.value) return [];
-        return labels.value.map(key => data.value!.data[key].ndre_average);
+        return labels.value.map(key => data.value!.data[key].temperature.avg);
     });
 
-    const reciData = computed(() => {
+    // Indices data - new format: indices.ndvi.average
+    const getIndexData = (_key: string, indexName: keyof ClimateData['indices']) => {
         if (!data.value) return [];
-        return labels.value.map(key => data.value!.data[key].reci_average);
-    });
+        return labels.value.map(k => data.value!.data[k].indices[indexName]?.average ?? 0);
+    };
 
-    const eviData = computed(() => {
-        if (!data.value) return [];
-        return labels.value.map(key => data.value!.data[key].evi_average);
-    });
-
-    const infrarrojoData = computed(() => {
-        if (!data.value) return [];
-        return labels.value.map(key => data.value!.data[key].infrarrojo_average);
-    });
+    const ndviData = computed(() => getIndexData('ndvi', 'ndvi'));
+    const ndwiData = computed(() => getIndexData('ndwi', 'ndwi'));
+    const ndreData = computed(() => getIndexData('ndre', 'ndre'));
+    const reciData = computed(() => getIndexData('reci', 'reci'));
+    const eviData = computed(() => getIndexData('evi', 'evi'));
+    const infrarrojoData = computed(() => getIndexData('infrarrojo', 'infrarrojo'));
 
     const imagesByType = computed(() => {
         if (!data.value) return {};
@@ -53,12 +52,10 @@ export function useClimateData() {
         const result: Record<string, Array<{ date: string; month: number; year: number; img: string; type: string; }>> = {};
 
         for (const type of types) {
-            const imgField = type === 'infrarrojo' ? 'infrarrojo_img' : `${type}_img`;
             const images: Array<{ date: string; month: number; year: number; img: string; type: string; }> = [];
             for (const key of labels.value) {
                 const item = data.value!.data[key];
-                const itemAny = item as unknown as Record<string, unknown>;
-                const img = itemAny[imgField] as string | undefined;
+                const img = item.indices[type]?.img;
 
                 if (img) {
                     images.push({
@@ -90,15 +87,12 @@ export function useClimateData() {
         const types = ['ndvi', 'ndwi', 'ndre', 'reci', 'evi', 'infrarrojo'] as const;
         const result: Record<string, Array<{ date: string; month: number; year: number; img: string; type: string; }>> = {};
 
-        // First, collect all images with their types
         const allImages: Array<{ date: string; month: number; year: number; img: string; type: string; }> = [];
 
         for (const type of types) {
-            const imgField = type === 'infrarrojo' ? 'infrarrojo_img' : `${type}_img`;
             for (const key of labels.value) {
                 const item = data.value!.data[key];
-                const itemAny = item as unknown as Record<string, unknown>;
-                const img = itemAny[imgField] as string | undefined;
+                const img = item.indices[type]?.img;
 
                 if (img) {
                     allImages.push({
@@ -112,13 +106,11 @@ export function useClimateData() {
             }
         }
 
-        // Sort by year and month
         allImages.sort((a, b) => {
             if (a.year !== b.year) return a.year - b.year;
             return a.month - b.month;
         });
 
-        // Group by month
         for (const image of allImages) {
             const monthKey = `${months[image.month - 1]} ${image.year}`;
             if (!result[monthKey]) {
@@ -133,6 +125,16 @@ export function useClimateData() {
     const maxPrecipitation = computed(() => {
         if (precipitationData.value.length === 0) return 100;
         return Math.max(...precipitationData.value) * 1.1;
+    });
+
+    const maxTemperature = computed(() => {
+        if (temperatureMaxData.value.length === 0) return 50;
+        return Math.max(...temperatureMaxData.value) * 1.1;
+    });
+
+    const minTemperature = computed(() => {
+        if (temperatureMinData.value.length === 0) return 0;
+        return Math.min(...temperatureMinData.value) * 0.9;
     });
 
     const maxIndex = computed(() => {
@@ -157,9 +159,11 @@ export function useClimateData() {
             if (!response.ok) {
                 throw new Error('Error al cargar los datos');
             }
-            data.value = await response.json();
+            const jsonData = await response.json();
+            data.value = jsonData;
         } catch (e) {
             error.value = e instanceof Error ? e.message : 'Error desconocido';
+            console.error('📊 [useClimateData] Error:', e);
         } finally {
             loading.value = false;
         }
@@ -171,6 +175,9 @@ export function useClimateData() {
         error,
         labels,
         precipitationData,
+        temperatureMaxData,
+        temperatureMinData,
+        temperatureAvgData,
         ndviData,
         ndwiData,
         ndreData,
@@ -178,6 +185,8 @@ export function useClimateData() {
         eviData,
         infrarrojoData,
         maxPrecipitation,
+        maxTemperature,
+        minTemperature,
         maxIndex,
         imagesByType,
         imagesByMonth,

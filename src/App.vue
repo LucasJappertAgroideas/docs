@@ -4,11 +4,11 @@ import { RouterView, RouterLink } from 'vue-router'
 
 <template>
   <div class="app-container">
-    <nav class="quick-nav">
-      <RouterLink to="/lote-don-avelino">📍Lote Don Avelino</RouterLink>
-      <RouterLink to="/lote-agroarnaudo-lote-1">📍Lote Agroarnaudo Lote 1</RouterLink>
-      <RouterLink to="/don-avelino-el-lucero-lote-14">📍Lote 14 Don Avelino El Lucero</RouterLink>
-    </nav>
+    <header class="main-header">
+      <RouterLink to="/" class="logo">
+        🌾 AgroClima
+      </RouterLink>
+    </header>
     
     <main>
       <RouterView />
@@ -21,19 +21,22 @@ import { RouterView, RouterLink } from 'vue-router'
   min-height: 100vh;
 }
 
-.quick-nav {
-  padding: 15px 20px;
+.main-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #0d1117;
+  border-bottom: 1px solid #30363d;
 }
 
-.quick-nav a {
+.logo {
   color: #58a6ff;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1.1em;
-  margin: 0 10px;
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 
-.quick-nav a:hover {
-  text-decoration: underline;
+.logo:hover {
+  color: #79c0ff;
 }
 </style>

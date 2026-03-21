@@ -12,9 +12,14 @@ const router = createRouter({
             component: Index
         },
         {
+            path: '/lotes',
+            name: 'lotes',
+            component: LoteView
+        },
+        {
             path: '/lote',
             name: 'lote',
-            component: LoteView
+            redirect: '/lotes'
         },
         // Redirecciones de rutas antiguas a nueva estructura
         {
@@ -33,6 +38,19 @@ const router = createRouter({
             path: '/comparativas',
             name: 'comparativas',
             component: Comparativas
+        },
+        // Redirecciones de rutas antiguas a nueva estructura
+        {
+            path: '/comparativas-inta.html',
+            redirect: '/comparativas?region=inta'
+        },
+        {
+            path: '/comparativas-la-merced.html',
+            redirect: '/comparativas?region=la-merced'
+        },
+        {
+            path: '/comparativas.html',
+            redirect: '/comparativas?region=inta'
         }
     ]
 });

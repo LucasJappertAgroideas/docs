@@ -15,8 +15,8 @@ export interface LoteConfig {
 export const LOTE_CONFIG: Record<number, LoteConfig> = {
     198: {
         fieldId: 198,
-        title: 'Lote Don Avelino',
-        dataUrl: '/don_avelino/datos-don-avelino.json'
+        title: 'Don Avelino Los Claros Lote 17',
+        dataUrl: '/json-lotes/datos-don-avelino-lote-17.json'
     },
     281: {
         fieldId: 281,
@@ -25,7 +25,7 @@ export const LOTE_CONFIG: Record<number, LoteConfig> = {
     },
     282: {
         fieldId: 282,
-        title: 'Lote Agroarnaudo Lote 2',
+        title: 'Don Avelino El Lucero Lote 14',
         dataUrl: '/json-lotes/don-avelino-el-lucero-lote-14.json'
     }
 };
