@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, computed, watch } from 'vue'
+import { useRoute } from 'vue-router'
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -16,6 +17,7 @@ import {
 import { Line } from 'vue-chartjs'
 import { useClimateData } from '@/composables/useClimateData'
 import { INDEX_CONFIGS } from '@/types/climate'
+import { getLoteConfig } from '@/config/lotes'
 
 ChartJS.register(
   CategoryScale,
@@ -27,6 +29,8 @@ ChartJS.register(
   Legend,
   Filler
 )
+
+const route = useRoute()
 
 const {
   data,
@@ -48,106 +52,125 @@ const {
 } = useClimateData()
 
 const groupBy = ref<'type' | 'month'>('month')
-
 const hiddenDatasets = ref<Set<number>>(new Set())
+
+// Obtener configuración del lote desde el query string
+const loteConfig = computed(() => {
+  const fieldId = Number(route.query.field_id)
+  return getLoteConfig(fieldId)
+})
+
+const pageTitle = computed(() => {
+  if (loteConfig.value) {
+    return `📍 ${loteConfig.value.title}`
+  }
+  return '📍 Lote'
+})
 
 const chartData = ref<ChartData<'line'>>({
   labels: [],
   datasets: []
 })
 
-const chartOptions = ref<ChartOptions<'line'>>({
-  responsive: true,
-  maintainAspectRatio: false,
-  interaction: {
-    mode: 'index',
-    intersect: false
-  },
-  plugins: {
-    legend: {
-      display: false
+// Base chart options factory
+function createChartOptions(maxPrecip: number, maxIdx: number): ChartOptions<'line'> {
+  return {
+    responsive: true,
+    maintainAspectRatio: false,
+    interaction: {
+      mode: 'index',
+      intersect: false
     },
-    tooltip: {
-      backgroundColor: 'rgba(22, 27, 34, 0.95)',
-      titleColor: '#e6edf3',
-      bodyColor: '#8b949e',
-      borderColor: '#30363d',
-      borderWidth: 1,
-      padding: 12,
-      displayColors: true,
-      callbacks: {
-        label: function (context) {
-          let label = context.dataset.label || ''
-          if (label) {
-            label += ': '
+    plugins: {
+      legend: {
+        display: false
+      },
+      tooltip: {
+        backgroundColor: 'rgba(22, 27, 34, 0.95)',
+        titleColor: '#e6edf3',
+        bodyColor: '#8b949e',
+        borderColor: '#30363d',
+        borderWidth: 1,
+        padding: 12,
+        displayColors: true,
+        callbacks: {
+          label: function (context) {
+            let label = context.dataset.label || ''
+            if (label) {
+              label += ': '
+            }
+            const yValue = context.parsed.y ?? 0
+            if (context.dataset.yAxisID === 'y') {
+              label += yValue + ' mm'
+            } else {
+              label += yValue.toFixed(2)
+            }
+            return label
           }
-          const yValue = context.parsed.y ?? 0
-          if (context.dataset.yAxisID === 'y') {
-            label += yValue + ' mm'
-          } else {
-            label += yValue.toFixed(2)
-          }
-          return label
         }
       }
-    }
-  },
-  scales: {
-    x: {
-      grid: {
-        color: 'rgba(48, 54, 61, 0.5)'
+    },
+    scales: {
+      x: {
+        grid: {
+          color: 'rgba(48, 54, 61, 0.5)'
+        },
+        ticks: {
+          color: '#8b949e',
+          maxRotation: 45,
+          minRotation: 45
+        }
       },
-      ticks: {
-        color: '#8b949e',
-        maxRotation: 45,
-        minRotation: 45
+      y: {
+        type: 'linear',
+        display: true,
+        position: 'left',
+        title: {
+          display: true,
+          text: 'Precipitación (mm)',
+          color: '#58a6ff',
+          font: {
+            weight: 'bold'
+          }
+        },
+        grid: {
+          color: 'rgba(48, 54, 61, 0.5)'
+        },
+        ticks: {
+          color: '#58a6ff'
+        },
+        min: 0,
+        max: maxPrecip
+      },
+      y1: {
+        type: 'linear',
+        display: true,
+        position: 'right',
+        title: {
+          display: true,
+          text: 'Índices de Vegetación',
+          color: '#8b949e',
+          font: {
+            weight: 'bold'
+          }
+        },
+        grid: {
+          drawOnChartArea: false
+        },
+        ticks: {
+          color: '#8b949e',
+          callback: function (value) {
+            return (value as number).toFixed(2)
+          }
+        },
+        min: 0,
+        max: maxIdx
       }
-    },
-    y: {
-      type: 'linear',
-      display: true,
-      position: 'left',
-      title: {
-        display: true,
-        text: 'Precipitación (mm)',
-        color: '#58a6ff',
-        font: {
-          weight: 'bold'
-        }
-      },
-      grid: {
-        color: 'rgba(48, 54, 61, 0.5)'
-      },
-      ticks: {
-        color: '#58a6ff'
-      },
-      min: 0
-    },
-    y1: {
-      type: 'linear',
-      display: true,
-      position: 'right',
-      title: {
-        display: true,
-        text: 'Índices de Vegetación',
-        color: '#8b949e',
-        font: {
-          weight: 'bold'
-        }
-      },
-      grid: {
-        drawOnChartArea: false
-      },
-      ticks: {
-        color: '#8b949e',
-        callback: function (value) {
-          return (value as number).toFixed(2)
-        }
-      },
-      min: 0
     }
   }
-})
+}
+
+const chartOptions = ref<ChartOptions<'line'>>(createChartOptions(100, 1))
 
 function updateChartData() {
   const dataArrays = [
@@ -182,12 +205,11 @@ function updateChartData() {
     }))
   }
 
-  if (chartOptions.value.scales?.y) {
-    chartOptions.value.scales.y.max = maxPrecipitation.value
-  }
-  if (chartOptions.value.scales?.y1) {
-    chartOptions.value.scales.y1.max = maxIndex.value
-  }
+  // Create new options with updated max values (rounded up to integers)
+  chartOptions.value = createChartOptions(
+    Math.ceil(maxPrecipitation.value), 
+    Math.ceil(maxIndex.value)
+  )
 }
 
 function toggleDataset(index: number) {
@@ -203,15 +225,37 @@ function getButtonClass(index: number): string {
   return hiddenDatasets.value.has(index) ? 'toggle-btn' : 'toggle-btn active'
 }
 
-onMounted(async () => {
-  await fetchClimateData('/agroarnaudo_lote1/datos-agroarnaudo-lote1.json')
+async function loadLoteData() {
+  if (!loteConfig.value) {
+    error.value = 'No se especificó un field_id válido'
+    return
+  }
+
+  await fetchClimateData(loteConfig.value.dataUrl)
   updateChartData()
+}
+
+onMounted(async () => {
+  await loadLoteData()
 })
+
+// Watch for query param changes to reload data
+watch(
+  () => route.query.field_id,
+  async () => {
+    await loadLoteData()
+  }
+)
 </script>
 
 <template>
   <div class="container">
-    <div v-if="loading" class="loading">
+    <div v-if="!loteConfig" class="error-message">
+      <h2>⚠️ Lote no encontrado</h2>
+      <p>No se encontró la configuración para este lote. Verifique el parámetro field_id.</p>
+    </div>
+
+    <div v-else-if="loading" class="loading">
       Cargando datos...
     </div>
 
@@ -222,7 +266,7 @@ onMounted(async () => {
 
     <template v-else-if="data">
       <div class="header">
-        <h1>📍 Lote Agroarnaudo Lote 1</h1>
+        <h1>{{ pageTitle }}</h1>
         <div class="metadata">
           <div class="metadata-item">
             <label>Latitud</label>
@@ -258,7 +302,11 @@ onMounted(async () => {
         </div>
 
         <div class="chart-wrapper">
-          <Line :data="chartData" :options="chartOptions" />
+          <Line 
+            :key="loteConfig?.fieldId" 
+            :data="chartData" 
+            :options="chartOptions" 
+          />
         </div>
 
         <div class="legend-info">
@@ -362,6 +410,148 @@ onMounted(async () => {
 </template>
 
 <style scoped>
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  font-size: 1.2rem;
+  color: #8b949e;
+}
+
+.error-message {
+  background: #f8514920;
+  border: 1px solid #f85149;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.error-message h2 {
+  color: #f85149;
+  margin: 0 0 1rem;
+}
+
+.error-message p {
+  color: #8b949e;
+  margin: 0;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  color: #e6edf3;
+  font-size: 2rem;
+  margin: 0 0 1rem;
+}
+
+.metadata {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  background: #0d1117;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #30363d;
+}
+
+.metadata-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.metadata-item label {
+  color: #8b949e;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.metadata-item span {
+  color: #e6edf3;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.chart-container {
+  background: #0d1117;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid #30363d;
+  margin-bottom: 2rem;
+}
+
+.chart-title {
+  color: #e6edf3;
+  font-size: 1.5rem;
+  margin: 0 0 1.5rem;
+}
+
+.chart-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.toggle-btn {
+  padding: 0.5rem 1rem;
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #8b949e;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.toggle-btn:hover {
+  background: #21262d;
+  color: #e6edf3;
+}
+
+.toggle-btn.active {
+  background: #238636;
+  border-color: #238636;
+  color: #ffffff;
+}
+
+.chart-wrapper {
+  height: 400px;
+  margin-bottom: 1.5rem;
+}
+
+.legend-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #30363d;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #8b949e;
+  font-size: 0.9rem;
+}
+
+.legend-color {
+  width: 16px;
+  height: 4px;
+  border-radius: 2px;
+}
+
 .images-section {
   margin-top: 2rem;
   padding: 1.5rem;
@@ -432,7 +622,7 @@ onMounted(async () => {
 .image-gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 2px;
 }
 
 .image-card {
@@ -441,7 +631,7 @@ onMounted(async () => {
   overflow: hidden;
   border: 1px solid #30363d;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  width: 220px;
+  width: 200px;
 }
 
 .image-card:hover {

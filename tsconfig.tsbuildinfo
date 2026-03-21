@@ -1,1 +1,1 @@
-{"root":["./src/main.ts","./src/vite-env.d.ts","./src/composables/useclimatedata.ts","./src/router/index.ts","./src/types/climate.ts","./src/app.vue","./src/views/comparativas.vue","./src/views/index.vue","./src/views/lotedonavelino.vue"],"version":"5.7.3"}
+{"root":["./src/main.ts","./src/vite-env.d.ts","./src/composables/useclimatedata.ts","./src/config/lotes.ts","./src/router/index.ts","./src/types/climate.ts","./src/app.vue","./src/views/comparativas.vue","./src/views/index.vue","./src/views/loteview.vue"],"version":"5.7.3"}

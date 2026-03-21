@@ -7,6 +7,7 @@ import { RouterView, RouterLink } from 'vue-router'
     <nav class="quick-nav">
       <RouterLink to="/lote-don-avelino">📍Lote Don Avelino</RouterLink>
       <RouterLink to="/lote-agroarnaudo-lote-1">📍Lote Agroarnaudo Lote 1</RouterLink>
+      <RouterLink to="/don-avelino-el-lucero-lote-14">📍Lote 14 Don Avelino El Lucero</RouterLink>
     </nav>
     
     <main>
