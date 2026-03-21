@@ -27,6 +27,11 @@ export const LOTE_CONFIG: Record<number, LoteConfig> = {
         fieldId: 282,
         title: 'Don Avelino El Lucero Lote 14',
         dataUrl: '/json-lotes/don-avelino-el-lucero-lote-14.json'
+    },
+    52: {
+        fieldId: 52,
+        title: 'Lote Marchetti',
+        dataUrl: '/json-lotes/datos-marchetti.json'
     }
 };
 

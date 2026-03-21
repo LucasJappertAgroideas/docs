@@ -1,0 +1,215 @@
+{
+    "data": {
+        "01-2025": {
+            "precipitation": 109.83,
+            "month": 1,
+            "year": 2025,
+            "temperature": { "max": 41.52, "min": 17.63, "avg": 29.77 },
+            "indices": {
+                "reci": { "average": 2.89, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/52_Imagen_20250108.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndwi": { "average": 0.56, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDWI/52_Imagen_20250108.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndvi": { "average": 0.77, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/52_Imagen_20250108.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndre": { "average": 0.77, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDRE/52_Imagen_20250108.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "infrarrojo": { "average": 0.66, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/Infrarrojo/52_Imagen_20250108.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "evi": { "average": 0.78, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/EVI/52_Imagen_20250108.png?v=v1.1.0", "cloud_coverage": 0.0 }
+            }
+        },
+        "02-2025": {
+            "precipitation": 169.75,
+            "month": 2,
+            "year": 2025,
+            "temperature": { "max": 45.01, "min": 17.4, "avg": 30.19 },
+            "indices": {
+                "reci": { "average": 3.92, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/52_Imagen_20250202.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndwi": { "average": 0.66, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDWI/52_Imagen_20250202.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndvi": { "average": 0.9, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/52_Imagen_20250202.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndre": { "average": 0.85, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDRE/52_Imagen_20250202.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "infrarrojo": { "average": 0.72, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/Infrarrojo/52_Imagen_20250202.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "evi": { "average": 0.89, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/EVI/52_Imagen_20250202.png?v=v1.1.0", "cloud_coverage": 0.0 }
+            }
+        },
+        "03-2025": {
+            "precipitation": 121.95,
+            "month": 3,
+            "year": 2025,
+            "temperature": { "max": 40.07, "min": 12.59, "avg": 24.64 },
+            "indices": {
+                "reci": { "average": 2.91, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/52_Imagen_20250318.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndwi": { "average": 0.62, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDWI/52_Imagen_20250318.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndvi": { "average": 0.86, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/52_Imagen_20250318.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndre": { "average": 0.78, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDRE/52_Imagen_20250318.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "infrarrojo": { "average": 0.67, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/Infrarrojo/52_Imagen_20250318.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "evi": { "average": 0.82, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/EVI/52_Imagen_20250318.png?v=v1.1.0", "cloud_coverage": 0.0 }
+            }
+        },
+        "04-2025": {
+            "precipitation": 14.2,
+            "month": 4,
+            "year": 2025,
+            "temperature": { "max": 29.88, "min": 6.82, "avg": 18.03 },
+            "indices": {
+                "reci": { "average": 0.92, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/52_Imagen_20250403.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndwi": { "average": 0.46, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDWI/52_Imagen_20250403.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndvi": { "average": 0.56, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/52_Imagen_20250403.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndre": { "average": 0.62, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDRE/52_Imagen_20250403.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "infrarrojo": { "average": 0.57, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/Infrarrojo/52_Imagen_20250403.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "evi": { "average": 0.61, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/EVI/52_Imagen_20250403.png?v=v1.1.0", "cloud_coverage": 0.0 }
+            }
+        },
+        "05-2025": {
+            "precipitation": 43.08,
+            "month": 5,
+            "year": 2025,
+            "temperature": { "max": 28.68, "min": 1.44, "avg": 17.25 },
+            "indices": {
+                "reci": { "average": 0.99, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/52_Imagen_20250510.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndwi": { "average": 0.44, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDWI/52_Imagen_20250510.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndvi": { "average": 0.6, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/52_Imagen_20250510.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndre": { "average": 0.62, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDRE/52_Imagen_20250510.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "infrarrojo": { "average": 0.58, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/Infrarrojo/52_Imagen_20250510.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "evi": { "average": 0.65, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/EVI/52_Imagen_20250510.png?v=v1.1.0", "cloud_coverage": 0.0 }
+            }
+        },
+        "06-2025": {
+            "precipitation": 25.39,
+            "month": 6,
+            "year": 2025,
+            "temperature": { "max": 23.18, "min": -1.69, "avg": 11.6 },
+            "indices": {
+                "reci": { "average": 1.25, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/52_Imagen_20250602.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndwi": { "average": 0.54, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDWI/52_Imagen_20250602.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndvi": { "average": 0.72, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/52_Imagen_20250602.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndre": { "average": 0.65, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDRE/52_Imagen_20250602.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "infrarrojo": { "average": 0.64, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/Infrarrojo/52_Imagen_20250602.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "evi": { "average": 0.75, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/EVI/52_Imagen_20250602.png?v=v1.1.0", "cloud_coverage": 0.0 }
+            }
+        },
+        "07-2025": {
+            "precipitation": 56.12,
+            "month": 7,
+            "year": 2025,
+            "temperature": { "max": 24.45, "min": -2.3, "avg": 12.74 },
+            "indices": {
+                "reci": { "average": 0.64, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/52_Imagen_20250702.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndwi": { "average": 0.32, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDWI/52_Imagen_20250702.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndvi": { "average": 0.38, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/52_Imagen_20250702.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndre": { "average": 0.57, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDRE/52_Imagen_20250702.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "infrarrojo": { "average": 0.55, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/Infrarrojo/52_Imagen_20250702.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "evi": { "average": 0.55, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/EVI/52_Imagen_20250702.png?v=v1.1.0", "cloud_coverage": 0.0 }
+            }
+        },
+        "08-2025": {
+            "precipitation": 200.94,
+            "month": 8,
+            "year": 2025,
+            "temperature": { "max": 27.59, "min": 2.56, "avg": 14.44 },
+            "indices": {
+                "reci": { "average": 0.5, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/52_Imagen_20250808.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndwi": { "average": 0.29, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDWI/52_Imagen_20250808.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndvi": { "average": 0.28, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/52_Imagen_20250808.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndre": { "average": 0.55, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDRE/52_Imagen_20250808.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "infrarrojo": { "average": 0.53, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/Infrarrojo/52_Imagen_20250808.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "evi": { "average": 0.51, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/EVI/52_Imagen_20250808.png?v=v1.1.0", "cloud_coverage": 0.0 }
+            }
+        },
+        "09-2025": {
+            "precipitation": 9.94,
+            "month": 9,
+            "year": 2025,
+            "temperature": { "max": 37.51, "min": 2.58, "avg": 19.12 },
+            "indices": {
+                "reci": { "average": 0.42, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/52_Imagen_20250912.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndwi": { "average": 0.29, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDWI/52_Imagen_20250912.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndvi": { "average": 0.24, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/52_Imagen_20250912.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndre": { "average": 0.53, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDRE/52_Imagen_20250912.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "infrarrojo": { "average": 0.56, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/Infrarrojo/52_Imagen_20250912.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "evi": { "average": 0.52, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/EVI/52_Imagen_20250912.png?v=v1.1.0", "cloud_coverage": 0.0 }
+            }
+        },
+        "10-2025": {
+            "precipitation": 49.67,
+            "month": 10,
+            "year": 2025,
+            "temperature": { "max": 38.24, "min": 5.29, "avg": 21.74 },
+            "indices": {
+                "reci": { "average": 0.25, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/52_Imagen_20251004.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndwi": { "average": 0.3, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDWI/52_Imagen_20251004.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndvi": { "average": 0.18, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/52_Imagen_20251004.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndre": { "average": 0.51, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDRE/52_Imagen_20251004.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "infrarrojo": { "average": 0.56, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/Infrarrojo/52_Imagen_20251004.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "evi": { "average": 0.5, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/EVI/52_Imagen_20251004.png?v=v1.1.0", "cloud_coverage": 0.0 }
+            }
+        },
+        "11-2025": {
+            "precipitation": 246.42,
+            "month": 11,
+            "year": 2025,
+            "temperature": { "max": 41.23, "min": 10.38, "avg": 24.09 },
+            "indices": {
+                "reci": { "average": 0.71, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/52_Imagen_20251111.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndwi": { "average": 0.38, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDWI/52_Imagen_20251111.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndvi": { "average": 0.41, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/52_Imagen_20251111.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndre": { "average": 0.59, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDRE/52_Imagen_20251111.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "infrarrojo": { "average": 0.61, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/Infrarrojo/52_Imagen_20251111.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "evi": { "average": 0.61, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/EVI/52_Imagen_20251111.png?v=v1.1.0", "cloud_coverage": 0.0 }
+            }
+        },
+        "12-2025": {
+            "precipitation": 107.92,
+            "month": 12,
+            "year": 2025,
+            "temperature": { "max": 40.46, "min": 14.82, "avg": 26.47 },
+            "indices": {
+                "reci": { "average": 3.4, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/52_Imagen_20251203.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndwi": { "average": 0.58, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDWI/52_Imagen_20251203.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndvi": { "average": 0.8, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/52_Imagen_20251203.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndre": { "average": 0.79, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDRE/52_Imagen_20251203.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "infrarrojo": { "average": 0.64, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/Infrarrojo/52_Imagen_20251203.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "evi": { "average": 0.77, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/EVI/52_Imagen_20251203.png?v=v1.1.0", "cloud_coverage": 0.0 }
+            }
+        },
+        "01-2026": {
+            "precipitation": 83.54,
+            "month": 1,
+            "year": 2026,
+            "temperature": { "max": 41.92, "min": 16.15, "avg": 29.44 },
+            "indices": {
+                "reci": { "average": 2.07, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/52_Imagen_20260103.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndwi": { "average": 0.55, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDWI/52_Imagen_20260103.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndvi": { "average": 0.71, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/52_Imagen_20260103.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndre": { "average": 0.72, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDRE/52_Imagen_20260103.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "infrarrojo": { "average": 0.19, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/Infrarrojo/52_Imagen_20260103.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "evi": { "average": 0.29, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/EVI/52_Imagen_20260103.png?v=v1.1.0", "cloud_coverage": 0.0 }
+            }
+        },
+        "02-2026": {
+            "precipitation": 86.86,
+            "month": 2,
+            "year": 2026,
+            "temperature": { "max": 41.83, "min": 17.03, "avg": 27.86 },
+            "indices": {
+                "reci": { "average": 0.67, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/52_Imagen_20260204.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndwi": { "average": 0.39, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDWI/52_Imagen_20260204.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndvi": { "average": 0.41, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/52_Imagen_20260204.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndre": { "average": 0.59, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDRE/52_Imagen_20260204.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "infrarrojo": { "average": 0.15, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/Infrarrojo/52_Imagen_20260204.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "evi": { "average": 0.15, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/EVI/52_Imagen_20260204.png?v=v1.1.0", "cloud_coverage": 0.0 }
+            }
+        },
+        "03-2026": {
+            "precipitation": 123.14,
+            "month": 3,
+            "year": 2026,
+            "temperature": { "max": 39.6, "min": 16.1, "avg": 23.77 },
+            "indices": {
+                "reci": { "average": 0.83, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/52_Imagen_20260301.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndwi": { "average": 0.39, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDWI/52_Imagen_20260301.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndvi": { "average": 0.46, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/52_Imagen_20260301.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "ndre": { "average": 0.61, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDRE/52_Imagen_20260301.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "infrarrojo": { "average": 0.12, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/Infrarrojo/52_Imagen_20260301.png?v=v1.1.0", "cloud_coverage": 0.0 },
+                "evi": { "average": 0.15, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/EVI/52_Imagen_20260301.png?v=v1.1.0", "cloud_coverage": 0.0 }
+            }
+        }
+    },
+    "metadata": { "latitude": -31.177029, "longitude": -61.921416, "date_from": "2025-01-01", "date_to": "2026-03-31", "data_source": "UCSB-CHG/CHIRPS/DAILY-NASA/GPM_L3/IMERG_V07", "field_id": 52, "nombre": "Marchetti", "parent_field": "Agroideas SA", "ha_totals": 45.3 }
+}

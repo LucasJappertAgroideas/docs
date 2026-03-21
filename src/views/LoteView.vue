@@ -24,6 +24,7 @@ const { data, loading, error, labels, precipitationData, temperatureMaxData, tem
 
 const groupBy = ref<"type" | "month">("month");
 const hiddenDatasets = ref<Set<number>>(new Set());
+const showInfoModal = ref(false);
 
 // Obtener configuración del lote desde el query string
 const loteConfig = computed(() => {
@@ -176,22 +177,38 @@ function updateChartData() {
 
     chartData.value = {
         labels: labels.value,
-        datasets: INDEX_CONFIGS.map((config, index) => ({
-            label: config.label,
-            data: dataArrays[index],
-            borderColor: config.color,
-            backgroundColor: config.fill ? `${config.color}15` : `${config.color}10`,
-            borderWidth: config.borderWidth,
-            fill: config.fill,
-            tension: config.tension,
-            pointBackgroundColor: config.color,
-            pointBorderColor: config.yAxisID === "y2" ? "#ffffff" : "#0d1117",
-            pointBorderWidth: 1,
-            pointRadius: config.pointRadius,
-            pointHoverRadius: config.pointHoverRadius,
-            yAxisID: config.yAxisID,
-            hidden: hiddenDatasets.value.has(index),
-        })),
+        datasets: INDEX_CONFIGS.map((config, index) => {
+            const isTemperatureMin = config.key === "temperature_min";
+            const isTemperatureMax = config.key === "temperature_max";
+
+            return {
+                label: config.label,
+                data: dataArrays[index],
+                borderColor: config.color,
+                backgroundColor: config.fill ? `${config.color}15` : `${config.color}10`,
+                borderWidth: config.borderWidth,
+                fill: config.fill,
+                tension: config.tension,
+                pointBackgroundColor: (ctx: any) => {
+                    const value = ctx.raw;
+                    if (isTemperatureMin && value < 5) return "#ffffff";
+                    if (isTemperatureMax && value > 35) return "#000000";
+                    return config.color;
+                },
+                pointBorderColor: (ctx: any) => {
+                    const value = ctx.raw;
+                    if (isTemperatureMin && value < 5) return "#ffffff";
+                    if (isTemperatureMax && value > 35) return "#ffd700";
+                    // return config.yAxisID === "y2" ? "#ffffff" : "#0d1117";
+                    return "#0d1117";
+                },
+                pointBorderWidth: 2,
+                pointRadius: config.pointRadius,
+                pointHoverRadius: config.pointHoverRadius,
+                yAxisID: config.yAxisID,
+                hidden: hiddenDatasets.value.has(index),
+            };
+        }),
     };
 
     // Create new options with updated max values (rounded up to integers)
@@ -209,6 +226,24 @@ function toggleDataset(index: number) {
 
 function getButtonClass(index: number): string {
     return hiddenDatasets.value.has(index) ? "toggle-btn" : "toggle-btn active";
+}
+
+// Descripciones de los tipos de índices
+const INDEX_DESCRIPTIONS: Record<string, string> = {
+    NDVI: "Normalized Difference Vegetation Index - Índice de vegetación para medir biomasa y vigor del cultivo",
+    EVI: "Enhanced Vegetation Index - Índice de vegetación mejorado, menos sensible a efectos del suelo y atmósfera",
+    Infrarrojo: "Banda NIR (Near Infrared) - Refleja contenido de biomasa y agua en la vegetación",
+    RECI: "Red Edge Chlorophyll Index - Índice de clorofila para estimar contenido de nitrógeno",
+    NDWI: "Normalized Difference Water Index - Índice de agua para detectar contenido hídrico foliar (variante de Gao)",
+    NDRE: "Normalized Difference Red Edge - Índice de borde rojo para monitoreo de cultivos densos",
+};
+
+function openInfoModal() {
+    showInfoModal.value = true;
+}
+
+function closeInfoModal() {
+    showInfoModal.value = false;
 }
 
 // Manejar cambio de selección de lote
@@ -323,9 +358,15 @@ watch(
                     <h2 class="images-title">
                         {{ groupBy === "type" ? "Imágenes por Tipo de Índice" : "Imágenes por Mes" }}
                     </h2>
-                    <div class="group-by-controls">
-                        <button :class="['group-btn', { active: groupBy === 'type' }]" @click="groupBy = 'type'">Por Tipo</button>
-                        <button :class="['group-btn', { active: groupBy === 'month' }]" @click="groupBy = 'month'">Por Mes</button>
+                    <div class="header-actions">
+                        <button class="info-btn" @click="openInfoModal" title="Información sobre tipos de índices">
+                            <span class="info-icon">ℹ️</span>
+                            Info Índices
+                        </button>
+                        <div class="group-by-controls">
+                            <button :class="['group-btn', { active: groupBy === 'type' }]" @click="groupBy = 'type'">Por Tipo</button>
+                            <button :class="['group-btn', { active: groupBy === 'month' }]" @click="groupBy = 'month'">Por Mes</button>
+                        </div>
                     </div>
                 </div>
 
@@ -368,6 +409,24 @@ watch(
             </div>
         </template>
     </div>
+
+    <!-- Modal de información de índices -->
+    <Teleport to="body">
+        <div v-if="showInfoModal" class="modal-overlay" @click="closeInfoModal">
+            <div class="modal-content" @click.stop>
+                <div class="modal-header">
+                    <h3>Información de Índices</h3>
+                    <button class="close-btn" @click="closeInfoModal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div v-for="(description, index) in INDEX_DESCRIPTIONS" :key="index" class="index-description">
+                        <h4 class="index-name">{{ index }}</h4>
+                        <p class="index-desc">{{ description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </Teleport>
 </template>
 
 <style scoped>
@@ -661,5 +720,124 @@ watch(
     padding: 2rem;
     color: #8b949e;
     font-size: 1rem;
+}
+
+/* Modal de información */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.info-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #1f6feb;
+    border: 1px solid #1f6feb;
+    border-radius: 6px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.info-btn:hover {
+    background: #388bfd;
+    border-color: #388bfd;
+}
+
+.info-icon {
+    font-size: 1rem;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    max-width: 1200px;
+    width: 90%;
+    max-height: 80vh;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    background: #0d1117;
+    border-bottom: 1px solid #30363d;
+}
+
+.modal-header h3 {
+    color: #e6edf3;
+    font-size: 1.25rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.close-btn {
+    background: transparent;
+    border: none;
+    color: #8b949e;
+    font-size: 1.75rem;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+    color: #e6edf3;
+}
+
+.modal-body {
+    padding: 1.5rem;
+    overflow-y: auto;
+    max-height: calc(80vh - 70px);
+}
+
+.index-description {
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid #30363d;
+}
+
+.index-description:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.index-name {
+    color: #58a6ff;
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem;
+    font-weight: 600;
+}
+
+.index-desc {
+    color: #8b949e;
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.5;
 }
 </style>
