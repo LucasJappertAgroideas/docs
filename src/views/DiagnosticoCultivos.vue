@@ -2,7 +2,7 @@
 import { onMounted, ref, computed, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, BarElement, Title, Tooltip, Legend, Filler, type ChartOptions, type ChartData } from "chart.js";
-import { Line, Bar } from "vue-chartjs";
+import { Line } from "vue-chartjs";
 import { DIAGNOSTICO_LOTE_CONFIG, getDiagnosticoLoteConfig } from "@/config/diagnosticoLotes";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, BarElement, Title, Tooltip, Legend, Filler);
@@ -17,6 +17,9 @@ const lotes = Object.values(DIAGNOSTICO_LOTE_CONFIG);
 const loading = ref(true);
 const error = ref<string | null>(null);
 const diagnosticoData = ref<any>(null);
+
+// Control de datasets visibles
+const hiddenDatasets = ref<Set<number>>(new Set());
 
 // Obtener configuración del lote desde el query string
 const loteConfig = computed(() => {
@@ -46,6 +49,20 @@ const SEVERITY_COLORS: Record<string, string> = {
     MEDIA: "#f0883e",
     ALTA: "#f85149",
 };
+
+// Configuración de datasets para el gráfico unificado
+const DATASET_CONFIGS = [
+    { key: "precipitation", label: "Precipitación (mm)", color: "#58a6ff", yAxisID: "y", type: "bar" as const },
+    { key: "ndvi", label: "NDVI", color: "#3fb950", yAxisID: "y1", type: "line" as const },
+    { key: "ndvi_max", label: "NDVI Máx", color: "#238636", yAxisID: "y1", type: "line" as const, borderDash: [5, 5] },
+    { key: "reci", label: "RECI", color: "#a371f7", yAxisID: "y1", type: "line" as const },
+    { key: "ndwi", label: "NDWI", color: "#00d4ff", yAxisID: "y1", type: "line" as const },
+    { key: "ndre", label: "NDRE", color: "#f0883e", yAxisID: "y1", type: "line" as const },
+    { key: "evi", label: "EVI", color: "#d2a8ff", yAxisID: "y1", type: "line" as const },
+    { key: "temp_max", label: "Temp. Máx (°C)", color: "#f85149", yAxisID: "y2", type: "line" as const },
+    { key: "temp_min", label: "Temp. Mín (°C)", color: "#79c0ff", yAxisID: "y2", type: "line" as const },
+    { key: "temp_avg", label: "Temp. Prom (°C)", color: "#ffa657", yAxisID: "y2", type: "line" as const },
+];
 
 // Datos computados para gráficos
 const monthlyLabels = computed(() => {
@@ -103,333 +120,211 @@ const tempAvgData = computed(() => {
     return diagnosticoData.value.monthly_summary.map((m: any) => m.temp_avg_c);
 });
 
-// Datos del gráfico de índices de vegetación
-const vegetationChartData = computed<ChartData<"line">>(() => ({
-    labels: monthlyLabels.value,
-    datasets: [
-        {
-            label: "NDVI",
-            data: ndviData.value,
-            borderColor: "#3fb950",
-            backgroundColor: "#3fb95015",
-            borderWidth: 2,
-            fill: true,
-            tension: 0.3,
-            pointRadius: 4,
-            pointHoverRadius: 6,
-        },
-        {
-            label: "NDVI Máx",
-            data: ndviMaxData.value,
-            borderColor: "#238636",
-            backgroundColor: "#23863610",
-            borderWidth: 2,
-            borderDash: [5, 5],
-            fill: false,
-            tension: 0.3,
-            pointRadius: 3,
-            pointHoverRadius: 5,
-        },
-        {
-            label: "RECI",
-            data: reciData.value,
-            borderColor: "#a371f7",
-            backgroundColor: "#a371f715",
-            borderWidth: 2,
-            fill: false,
-            tension: 0.3,
-            pointRadius: 4,
-            pointHoverRadius: 6,
-            yAxisID: "y1",
-        },
-        {
-            label: "NDWI",
-            data: ndwiData.value,
-            borderColor: "#58a6ff",
-            backgroundColor: "#58a6ff15",
-            borderWidth: 2,
-            fill: false,
-            tension: 0.3,
-            pointRadius: 4,
-            pointHoverRadius: 6,
-        },
-        {
-            label: "NDRE",
-            data: ndreData.value,
-            borderColor: "#f0883e",
-            backgroundColor: "#f0883e15",
-            borderWidth: 2,
-            fill: false,
-            tension: 0.3,
-            pointRadius: 4,
-            pointHoverRadius: 6,
-        },
-        {
-            label: "EVI",
-            data: eviData.value,
-            borderColor: "#d2a8ff",
-            backgroundColor: "#d2a8ff15",
-            borderWidth: 2,
-            fill: false,
-            tension: 0.3,
-            pointRadius: 4,
-            pointHoverRadius: 6,
-        },
-    ],
-}));
+// Valores máximos para escalas
+const maxPrecipitation = computed(() => {
+    if (!precipitationData.value.length) return 100;
+    return Math.ceil(Math.max(...precipitationData.value) * 1.1);
+});
 
-// Opciones del gráfico de índices de vegetación
-const vegetationChartOptions = computed<ChartOptions<"line">>(() => ({
-    responsive: true,
-    maintainAspectRatio: false,
-    interaction: {
-        mode: "index",
-        intersect: false,
-    },
-    plugins: {
-        legend: {
-            display: true,
-            position: "top",
-            labels: {
-                color: "#8b949e",
-                usePointStyle: true,
-                padding: 15,
-            },
+const maxTemperature = computed(() => {
+    if (!tempMaxData.value.length) return 50;
+    return Math.ceil(Math.max(...tempMaxData.value) + 5);
+});
+
+const minTemperature = computed(() => {
+    if (!tempMinData.value.length) return 0;
+    return Math.floor(Math.min(...tempMinData.value) - 5);
+});
+
+const maxIndex = computed(() => {
+    const allIndexData = [...ndviData.value, ...ndviMaxData.value, ...reciData.value, ...ndwiData.value, ...ndreData.value, ...eviData.value];
+    if (!allIndexData.length) return 1;
+    return Math.ceil(Math.max(...allIndexData.filter(v => v !== null && v !== undefined)) * 1.1 * 100) / 100;
+});
+
+// Datos del gráfico unificado
+const unifiedChartData = computed<ChartData<"line" | "bar">>(() => {
+    const dataArrays = [precipitationData.value, ndviData.value, ndviMaxData.value, reciData.value, ndwiData.value, ndreData.value, eviData.value, tempMaxData.value, tempMinData.value, tempAvgData.value];
+
+    return {
+        labels: monthlyLabels.value,
+        datasets: DATASET_CONFIGS.map((config, index) => {
+            const isTemperatureMin = config.key === "temp_min";
+            const isTemperatureMax = config.key === "temp_max";
+
+            return {
+                label: config.label,
+                data: dataArrays[index],
+                borderColor: config.color,
+                backgroundColor: config.type === "bar" ? `${config.color}80` : `${config.color}15`,
+                borderWidth: config.type === "bar" ? 1 : 2,
+                borderRadius: config.type === "bar" ? 4 : undefined,
+                fill: config.type === "line" && config.key === "ndvi",
+                tension: 0.3,
+                borderDash: config.borderDash,
+                pointBackgroundColor: (ctx: any) => {
+                    const value = ctx.raw;
+                    if (isTemperatureMin && value < 5) return "#ffffff";
+                    if (isTemperatureMax && value > 35) return "#000000";
+                    return config.color;
+                },
+                pointBorderColor: (ctx: any) => {
+                    const value = ctx.raw;
+                    if (isTemperatureMin && value < 5) return "#ffffff";
+                    if (isTemperatureMax && value > 35) return "#ffd700";
+                    return "#0d1117";
+                },
+                pointBorderWidth: 2,
+                pointRadius: config.type === "bar" ? 0 : 4,
+                pointHoverRadius: config.type === "bar" ? 0 : 6,
+                yAxisID: config.yAxisID,
+                hidden: hiddenDatasets.value.has(index),
+                type: config.type,
+            };
+        }),
+    };
+});
+
+// Opciones del gráfico unificado
+function createChartOptions(maxPrecip: number, maxTemp: number, minTemp: number, maxIdx: number): ChartOptions<"line" | "bar"> {
+    return {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: {
+            mode: "index",
+            intersect: false,
         },
-        tooltip: {
-            backgroundColor: "rgba(22, 27, 34, 0.95)",
-            titleColor: "#e6edf3",
-            bodyColor: "#8b949e",
-            borderColor: "#30363d",
-            borderWidth: 1,
-            padding: 12,
-            displayColors: true,
-            callbacks: {
-                label: function (context) {
-                    let label = context.dataset.label || "";
-                    if (label) label += ": ";
-                    const value = context.parsed.y ?? 0;
-                    return label + value.toFixed(3);
+        plugins: {
+            legend: {
+                display: false,
+            },
+            tooltip: {
+                backgroundColor: "rgba(22, 27, 34, 0.95)",
+                titleColor: "#e6edf3",
+                bodyColor: "#8b949e",
+                borderColor: "#30363d",
+                borderWidth: 1,
+                padding: 12,
+                displayColors: true,
+                callbacks: {
+                    label: function (context) {
+                        let label = context.dataset.label || "";
+                        if (label) {
+                            label += ": ";
+                        }
+                        const yValue = context.parsed.y ?? 0;
+                        if (context.dataset.yAxisID === "y") {
+                            label += yValue.toFixed(1) + " mm";
+                        } else if (context.dataset.yAxisID === "y2") {
+                            label += yValue.toFixed(1) + " °C";
+                        } else {
+                            label += yValue.toFixed(3);
+                        }
+                        return label;
+                    },
                 },
             },
         },
-    },
-    scales: {
-        x: {
-            grid: { color: "rgba(48, 54, 61, 0.5)" },
-            ticks: {
-                color: "#8b949e",
-                maxRotation: 45,
-                minRotation: 45,
-            },
-        },
-        y: {
-            type: "linear",
-            display: true,
-            position: "left",
-            title: {
-                display: true,
-                text: "NDVI / NDWI / NDRE / EVI",
-                color: "#3fb950",
-                font: { weight: "bold" },
-            },
-            grid: { color: "rgba(48, 54, 61, 0.5)" },
-            ticks: { color: "#3fb950" },
-            min: 0,
-        },
-        y1: {
-            type: "linear",
-            display: true,
-            position: "right",
-            title: {
-                display: true,
-                text: "RECI",
-                color: "#a371f7",
-                font: { weight: "bold" },
-            },
-            grid: { drawOnChartArea: false },
-            ticks: { color: "#a371f7" },
-            min: 0,
-        },
-    },
-}));
-
-// Datos del gráfico de precipitación
-const precipitationChartData = computed<ChartData<"bar">>(() => ({
-    labels: monthlyLabels.value,
-    datasets: [
-        {
-            label: "Precipitación (mm)",
-            data: precipitationData.value,
-            backgroundColor: "#58a6ff80",
-            borderColor: "#58a6ff",
-            borderWidth: 1,
-            borderRadius: 4,
-        },
-    ],
-}));
-
-// Opciones del gráfico de precipitación
-const precipitationChartOptions = computed<ChartOptions<"bar">>(() => ({
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-        legend: {
-            display: true,
-            position: "top",
-            labels: {
-                color: "#8b949e",
-                usePointStyle: true,
-                padding: 15,
-            },
-        },
-        tooltip: {
-            backgroundColor: "rgba(22, 27, 34, 0.95)",
-            titleColor: "#e6edf3",
-            bodyColor: "#8b949e",
-            borderColor: "#30363d",
-            borderWidth: 1,
-            padding: 12,
-            displayColors: true,
-            callbacks: {
-                label: function (context) {
-                    let label = context.dataset.label || "";
-                    if (label) label += ": ";
-                    const value = context.parsed.y ?? 0;
-                    return label + value.toFixed(1) + " mm";
+        scales: {
+            x: {
+                grid: {
+                    color: "rgba(48, 54, 61, 0.5)",
+                },
+                ticks: {
+                    color: "#8b949e",
+                    maxRotation: 45,
+                    minRotation: 45,
                 },
             },
-        },
-    },
-    scales: {
-        x: {
-            grid: { color: "rgba(48, 54, 61, 0.5)" },
-            ticks: {
-                color: "#8b949e",
-                maxRotation: 45,
-                minRotation: 45,
-            },
-        },
-        y: {
-            type: "linear",
-            display: true,
-            title: {
+            y: {
+                type: "linear",
                 display: true,
-                text: "Precipitación (mm)",
-                color: "#58a6ff",
-                font: { weight: "bold" },
-            },
-            grid: { color: "rgba(48, 54, 61, 0.5)" },
-            ticks: { color: "#58a6ff" },
-            min: 0,
-        },
-    },
-}));
-
-// Datos del gráfico de temperatura
-const temperatureChartData = computed<ChartData<"line">>(() => ({
-    labels: monthlyLabels.value,
-    datasets: [
-        {
-            label: "Temp. Máx (°C)",
-            data: tempMaxData.value,
-            borderColor: "#f85149",
-            backgroundColor: "#f8514915",
-            borderWidth: 2,
-            fill: false,
-            tension: 0.3,
-            pointRadius: 4,
-            pointHoverRadius: 6,
-        },
-        {
-            label: "Temp. Mín (°C)",
-            data: tempMinData.value,
-            borderColor: "#58a6ff",
-            backgroundColor: "#58a6ff15",
-            borderWidth: 2,
-            fill: false,
-            tension: 0.3,
-            pointRadius: 4,
-            pointHoverRadius: 6,
-        },
-        {
-            label: "Temp. Prom (°C)",
-            data: tempAvgData.value,
-            borderColor: "#f0883e",
-            backgroundColor: "#f0883e15",
-            borderWidth: 2,
-            fill: false,
-            tension: 0.3,
-            pointRadius: 4,
-            pointHoverRadius: 6,
-        },
-    ],
-}));
-
-// Opciones del gráfico de temperatura
-const temperatureChartOptions = computed<ChartOptions<"line">>(() => ({
-    responsive: true,
-    maintainAspectRatio: false,
-    interaction: {
-        mode: "index",
-        intersect: false,
-    },
-    plugins: {
-        legend: {
-            display: true,
-            position: "top",
-            labels: {
-                color: "#8b949e",
-                usePointStyle: true,
-                padding: 15,
-            },
-        },
-        tooltip: {
-            backgroundColor: "rgba(22, 27, 34, 0.95)",
-            titleColor: "#e6edf3",
-            bodyColor: "#8b949e",
-            borderColor: "#30363d",
-            borderWidth: 1,
-            padding: 12,
-            displayColors: true,
-            callbacks: {
-                label: function (context) {
-                    let label = context.dataset.label || "";
-                    if (label) label += ": ";
-                    const value = context.parsed.y ?? 0;
-                    return label + value.toFixed(1) + " °C";
+                position: "left",
+                title: {
+                    display: true,
+                    text: "Precipitación (mm)",
+                    color: "#58a6ff",
+                    font: {
+                        weight: "bold",
+                    },
                 },
+                grid: {
+                    color: "rgba(48, 54, 61, 0.5)",
+                },
+                ticks: {
+                    color: "#58a6ff",
+                },
+                min: 0,
+                max: maxPrecip,
             },
-        },
-    },
-    scales: {
-        x: {
-            grid: { color: "rgba(48, 54, 61, 0.5)" },
-            ticks: {
-                color: "#8b949e",
-                maxRotation: 45,
-                minRotation: 45,
-            },
-        },
-        y: {
-            type: "linear",
-            display: true,
-            title: {
+            y1: {
+                type: "linear",
                 display: true,
-                text: "Temperatura (°C)",
-                color: "#f0883e",
-                font: { weight: "bold" },
-            },
-            grid: { color: "rgba(48, 54, 61, 0.5)" },
-            ticks: {
-                color: "#f0883e",
-                callback: function (value) {
-                    return value + " °C";
+                position: "right",
+                title: {
+                    display: true,
+                    text: "Índices de Vegetación",
+                    color: "#3fb950",
+                    font: {
+                        weight: "bold",
+                    },
                 },
+                grid: {
+                    drawOnChartArea: false,
+                },
+                ticks: {
+                    color: "#3fb950",
+                    callback: function (value) {
+                        return (value as number).toFixed(2);
+                    },
+                },
+                min: 0,
+                max: maxIdx,
+                offset: true,
+            },
+            y2: {
+                type: "linear",
+                display: true,
+                position: "right",
+                title: {
+                    display: true,
+                    text: "Temperatura (°C)",
+                    color: "#f0883e",
+                    font: {
+                        weight: "bold",
+                    },
+                },
+                grid: {
+                    drawOnChartArea: false,
+                },
+                ticks: {
+                    color: "#f0883e",
+                    callback: function (value) {
+                        return (value as number).toFixed(1) + " °C";
+                    },
+                },
+                min: minTemp,
+                max: maxTemp,
+                offset: true,
             },
         },
-    },
-}));
+    };
+}
+
+const unifiedChartOptions = computed<ChartOptions<"line" | "bar">>(() => createChartOptions(maxPrecipitation.value, maxTemperature.value, minTemperature.value, maxIndex.value));
+
+// Toggle dataset visibility
+function toggleDataset(index: number) {
+    if (hiddenDatasets.value.has(index)) {
+        hiddenDatasets.value.delete(index);
+    } else {
+        hiddenDatasets.value.add(index);
+    }
+}
+
+function getButtonClass(index: number): string {
+    return hiddenDatasets.value.has(index) ? "toggle-btn" : "toggle-btn active";
+}
 
 // Función para obtener color de evento
 function getEventColor(tipo: string) {
@@ -617,27 +512,25 @@ watch(
                 </div>
             </div>
 
-            <!-- Gráfico de índices de vegetación -->
+            <!-- Gráfico unificado -->
             <div class="chart-section">
-                <h2 class="chart-title">📊 Evolución de Índices de Vegetación</h2>
-                <div class="chart-wrapper">
-                    <Line :data="vegetationChartData" :options="vegetationChartOptions" />
-                </div>
-            </div>
+                <h2 class="chart-title">📊 Precipitación, Temperatura e Índices de Vegetación - Evolución Mensual</h2>
 
-            <!-- Gráfico de precipitación -->
-            <div class="chart-section">
-                <h2 class="chart-title">🌧️ Precipitación Mensual</h2>
-                <div class="chart-wrapper">
-                    <Bar :data="precipitationChartData" :options="precipitationChartOptions" />
+                <div class="chart-controls">
+                    <button v-for="(config, index) in DATASET_CONFIGS" :key="config.key" :class="getButtonClass(index)" @click="toggleDataset(index)" :style="{ borderLeft: '4px solid ' + config.color }">
+                        {{ config.label }}
+                    </button>
                 </div>
-            </div>
 
-            <!-- Gráfico de temperatura -->
-            <div class="chart-section">
-                <h2 class="chart-title">🌡️ Temperatura Mensual</h2>
                 <div class="chart-wrapper">
-                    <Line :data="temperatureChartData" :options="temperatureChartOptions" />
+                    <Line :key="loteConfig?.fieldId" :data="unifiedChartData as ChartData<'line'>" :options="unifiedChartOptions as ChartOptions<'line'>" />
+                </div>
+
+                <div class="legend-info">
+                    <div v-for="(config, index) in DATASET_CONFIGS" :key="config.key" class="legend-item" :style="{ opacity: hiddenDatasets.has(index) ? 0.4 : 1 }">
+                        <div class="legend-color" :style="{ backgroundColor: config.color }"></div>
+                        <span>{{ config.label }}</span>
+                    </div>
                 </div>
             </div>
 
@@ -1117,9 +1010,60 @@ watch(
     margin: 0 0 1.5rem;
 }
 
+.chart-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.toggle-btn {
+    padding: 0.4rem 0.8rem;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    color: #8b949e;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.2s ease;
+}
+
+.toggle-btn:hover {
+    background: #21262d;
+    color: #e6edf3;
+}
+
+.toggle-btn.active {
+    background: #21262d;
+    border-color: #30363d;
+    color: #e6edf3;
+}
+
 .chart-wrapper {
-    height: 400px;
+    height: 450px;
     margin-bottom: 1.5rem;
+}
+
+.legend-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #30363d;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #8b949e;
+    font-size: 0.9rem;
+}
+
+.legend-color {
+    width: 16px;
+    height: 4px;
+    border-radius: 2px;
 }
 
 .table-container {
