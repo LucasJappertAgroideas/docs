@@ -4,7 +4,7 @@
             "precipitation": 109.83,
             "month": 1,
             "year": 2025,
-            "temperature": { "max": 41.52, "min": 17.63, "avg": 29.77 },
+            "temperature": { "max": 37.14, "min": 17.92, "avg": 27.41 },
             "indices": {
                 "reci": { "average": 2.89, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/52_Imagen_20250108.png?v=v1.1.0", "cloud_coverage": 0.0 },
                 "ndwi": { "average": 0.56, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDWI/52_Imagen_20250108.png?v=v1.1.0", "cloud_coverage": 0.0 },
@@ -18,7 +18,7 @@
             "precipitation": 169.75,
             "month": 2,
             "year": 2025,
-            "temperature": { "max": 45.01, "min": 17.4, "avg": 30.19 },
+            "temperature": { "max": 39.63, "min": 16.43, "avg": 28.74 },
             "indices": {
                 "reci": { "average": 3.92, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/52_Imagen_20250202.png?v=v1.1.0", "cloud_coverage": 0.0 },
                 "ndwi": { "average": 0.66, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDWI/52_Imagen_20250202.png?v=v1.1.0", "cloud_coverage": 0.0 },
@@ -32,7 +32,7 @@
             "precipitation": 121.95,
             "month": 3,
             "year": 2025,
-            "temperature": { "max": 40.07, "min": 12.59, "avg": 24.64 },
+            "temperature": { "max": 35.69, "min": 11.99, "avg": 23.98 },
             "indices": {
                 "reci": { "average": 2.91, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/52_Imagen_20250318.png?v=v1.1.0", "cloud_coverage": 0.0 },
                 "ndwi": { "average": 0.62, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDWI/52_Imagen_20250318.png?v=v1.1.0", "cloud_coverage": 0.0 },
@@ -46,7 +46,7 @@
             "precipitation": 14.2,
             "month": 4,
             "year": 2025,
-            "temperature": { "max": 29.88, "min": 6.82, "avg": 18.03 },
+            "temperature": { "max": 27.95, "min": 7.56, "avg": 18.27 },
             "indices": {
                 "reci": { "average": 0.92, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/52_Imagen_20250403.png?v=v1.1.0", "cloud_coverage": 0.0 },
                 "ndwi": { "average": 0.46, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDWI/52_Imagen_20250403.png?v=v1.1.0", "cloud_coverage": 0.0 },
@@ -60,7 +60,7 @@
             "precipitation": 43.08,
             "month": 5,
             "year": 2025,
-            "temperature": { "max": 28.68, "min": 1.44, "avg": 17.25 },
+            "temperature": { "max": 29.42, "min": 1.72, "avg": 18.1 },
             "indices": {
                 "reci": { "average": 0.99, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/52_Imagen_20250510.png?v=v1.1.0", "cloud_coverage": 0.0 },
                 "ndwi": { "average": 0.44, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDWI/52_Imagen_20250510.png?v=v1.1.0", "cloud_coverage": 0.0 },
@@ -74,7 +74,7 @@
             "precipitation": 25.39,
             "month": 6,
             "year": 2025,
-            "temperature": { "max": 23.18, "min": -1.69, "avg": 11.6 },
+            "temperature": { "max": 21.04, "min": -0.48, "avg": 11.49 },
             "indices": {
                 "reci": { "average": 1.25, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/52_Imagen_20250602.png?v=v1.1.0", "cloud_coverage": 0.0 },
                 "ndwi": { "average": 0.54, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDWI/52_Imagen_20250602.png?v=v1.1.0", "cloud_coverage": 0.0 },
@@ -88,7 +88,7 @@
             "precipitation": 56.12,
             "month": 7,
             "year": 2025,
-            "temperature": { "max": 24.45, "min": -2.3, "avg": 12.74 },
+            "temperature": { "max": 24.9, "min": -2.38, "avg": 13.67 },
             "indices": {
                 "reci": { "average": 0.64, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/52_Imagen_20250702.png?v=v1.1.0", "cloud_coverage": 0.0 },
                 "ndwi": { "average": 0.32, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDWI/52_Imagen_20250702.png?v=v1.1.0", "cloud_coverage": 0.0 },
@@ -102,7 +102,7 @@
             "precipitation": 200.94,
             "month": 8,
             "year": 2025,
-            "temperature": { "max": 27.59, "min": 2.56, "avg": 14.44 },
+            "temperature": { "max": 26.31, "min": 2.47, "avg": 14.08 },
             "indices": {
                 "reci": { "average": 0.5, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/52_Imagen_20250808.png?v=v1.1.0", "cloud_coverage": 0.0 },
                 "ndwi": { "average": 0.29, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDWI/52_Imagen_20250808.png?v=v1.1.0", "cloud_coverage": 0.0 },
@@ -116,7 +116,7 @@
             "precipitation": 9.94,
             "month": 9,
             "year": 2025,
-            "temperature": { "max": 37.51, "min": 2.58, "avg": 19.12 },
+            "temperature": { "max": 31.42, "min": 3.57, "avg": 17.12 },
             "indices": {
                 "reci": { "average": 0.42, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/52_Imagen_20250912.png?v=v1.1.0", "cloud_coverage": 0.0 },
                 "ndwi": { "average": 0.29, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDWI/52_Imagen_20250912.png?v=v1.1.0", "cloud_coverage": 0.0 },
@@ -130,7 +130,7 @@
             "precipitation": 49.67,
             "month": 10,
             "year": 2025,
-            "temperature": { "max": 38.24, "min": 5.29, "avg": 21.74 },
+            "temperature": { "max": 35.13, "min": 8.3, "avg": 21.15 },
             "indices": {
                 "reci": { "average": 0.25, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/52_Imagen_20251004.png?v=v1.1.0", "cloud_coverage": 0.0 },
                 "ndwi": { "average": 0.3, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDWI/52_Imagen_20251004.png?v=v1.1.0", "cloud_coverage": 0.0 },
@@ -144,7 +144,7 @@
             "precipitation": 246.42,
             "month": 11,
             "year": 2025,
-            "temperature": { "max": 41.23, "min": 10.38, "avg": 24.09 },
+            "temperature": { "max": 35.6, "min": 9.35, "avg": 22.26 },
             "indices": {
                 "reci": { "average": 0.71, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/52_Imagen_20251111.png?v=v1.1.0", "cloud_coverage": 0.0 },
                 "ndwi": { "average": 0.38, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDWI/52_Imagen_20251111.png?v=v1.1.0", "cloud_coverage": 0.0 },
@@ -158,7 +158,7 @@
             "precipitation": 107.92,
             "month": 12,
             "year": 2025,
-            "temperature": { "max": 40.46, "min": 14.82, "avg": 26.47 },
+            "temperature": { "max": 36.61, "min": 14.36, "avg": 25.56 },
             "indices": {
                 "reci": { "average": 3.4, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/52_Imagen_20251203.png?v=v1.1.0", "cloud_coverage": 0.0 },
                 "ndwi": { "average": 0.58, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDWI/52_Imagen_20251203.png?v=v1.1.0", "cloud_coverage": 0.0 },
@@ -172,7 +172,7 @@
             "precipitation": 83.54,
             "month": 1,
             "year": 2026,
-            "temperature": { "max": 41.92, "min": 16.15, "avg": 29.44 },
+            "temperature": { "max": 36.68, "min": 14.92, "avg": 25.37 },
             "indices": {
                 "reci": { "average": 2.07, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/52_Imagen_20260103.png?v=v1.1.0", "cloud_coverage": 0.0 },
                 "ndwi": { "average": 0.55, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDWI/52_Imagen_20260103.png?v=v1.1.0", "cloud_coverage": 0.0 },
@@ -186,7 +186,7 @@
             "precipitation": 86.86,
             "month": 2,
             "year": 2026,
-            "temperature": { "max": 41.83, "min": 17.03, "avg": 27.86 },
+            "temperature": { "max": 35.87, "min": 15.33, "avg": 25.09 },
             "indices": {
                 "reci": { "average": 0.67, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/52_Imagen_20260204.png?v=v1.1.0", "cloud_coverage": 0.0 },
                 "ndwi": { "average": 0.39, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDWI/52_Imagen_20260204.png?v=v1.1.0", "cloud_coverage": 0.0 },
@@ -200,7 +200,7 @@
             "precipitation": 123.14,
             "month": 3,
             "year": 2026,
-            "temperature": { "max": 39.6, "min": 16.1, "avg": 23.77 },
+            "temperature": { "max": 33.67, "min": 16.1, "avg": 23.12 },
             "indices": {
                 "reci": { "average": 0.83, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/52_Imagen_20260301.png?v=v1.1.0", "cloud_coverage": 0.0 },
                 "ndwi": { "average": 0.39, "img": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDWI/52_Imagen_20260301.png?v=v1.1.0", "cloud_coverage": 0.0 },

@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 import LoteView from '@/views/LoteView.vue';
 import Comparativas from '@/views/Comparativas.vue';
+import DiagnosticoCultivos from '@/views/DiagnosticoCultivos.vue';
 import Index from '@/views/Index.vue';
 
 const router = createRouter({
@@ -38,6 +39,11 @@ const router = createRouter({
             path: '/comparativas',
             name: 'comparativas',
             component: Comparativas
+        },
+        {
+            path: '/diagnostico-cultivos',
+            name: 'diagnostico-cultivos',
+            component: DiagnosticoCultivos
         },
         // Redirecciones de rutas antiguas a nueva estructura
         {
