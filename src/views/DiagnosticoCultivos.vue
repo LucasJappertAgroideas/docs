@@ -345,6 +345,38 @@ function formatDate(dateString: string) {
     return `${day}-${month}-${year}`;
 }
 
+// Función para filtrar eventos entre fechas de siembra y cosecha
+function getFilteredEventos(cycle: any) {
+    if (!cycle.eventos || cycle.eventos.length === 0) {
+        return [];
+    }
+
+    const fechaSiembra = cycle.fecha_siembra ? new Date(cycle.fecha_siembra) : null;
+    const fechaCosecha = cycle.fecha_cosecha ? new Date(cycle.fecha_cosecha) : null;
+
+    return cycle.eventos.filter((evento: any) => {
+        const fechaEvento = new Date(evento.fecha);
+
+        // Si ambas fechas son nulas, no mostrar eventos
+        if (!fechaSiembra && !fechaCosecha) {
+            return false;
+        }
+
+        // Si solo hay fecha de siembra, mostrar eventos desde siembra en adelante
+        if (fechaSiembra && !fechaCosecha) {
+            return fechaEvento >= fechaSiembra;
+        }
+
+        // Si solo hay fecha de cosecha, mostrar eventos hasta cosecha
+        if (!fechaSiembra && fechaCosecha) {
+            return fechaEvento <= fechaCosecha;
+        }
+
+        // Si ambas fechas existen, mostrar eventos entre siembra y cosecha
+        return fechaEvento >= fechaSiembra! && fechaEvento <= fechaCosecha!;
+    });
+}
+
 // Manejar cambio de selección de lote
 function onLoteChange(event: Event) {
     const fieldId = (event.target as HTMLSelectElement).value;
@@ -493,11 +525,11 @@ watch(
                     </div>
 
                     <!-- Eventos del ciclo -->
-                    <div v-if="cycle.eventos && cycle.eventos.length > 0" class="events-section">
+                    <div class="events-section">
                         <h4 class="events-title">📅 Eventos Registrados</h4>
-                        <div class="events-list">
+                        <div v-if="getFilteredEventos(cycle).length > 0" class="events-list">
                             <div
-                                v-for="(evento, eIndex) in cycle.eventos"
+                                v-for="(evento, eIndex) in getFilteredEventos(cycle)"
                                 :key="eIndex"
                                 class="event-card"
                                 :style="{
@@ -516,6 +548,10 @@ watch(
                                 <div class="event-date">{{ formatDate(evento.fecha) }}</div>
                                 <div class="event-description">{{ evento.descripcion }}</div>
                             </div>
+                        </div>
+                        <div v-else class="no-events-message">
+                            <span class="no-events-icon">✓</span>
+                            <span>No se registraron eventos durante el ciclo de cultivo</span>
                         </div>
                     </div>
                 </div>
@@ -1003,6 +1039,23 @@ watch(
     color: #e6edf3;
     font-size: 0.95rem;
     line-height: 1.5;
+}
+
+.no-events-message {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: #3fb95010;
+    border: 1px solid #3fb950;
+    border-radius: 8px;
+    color: #3fb950;
+    font-size: 0.95rem;
+}
+
+.no-events-icon {
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .chart-section {
