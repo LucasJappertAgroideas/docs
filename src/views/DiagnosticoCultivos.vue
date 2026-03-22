@@ -387,6 +387,15 @@ watch(
         await loadDiagnosticoData();
     },
 );
+
+// Actualizar título de la pestaña cuando cambia el lote
+watch(
+    pageTitle,
+    newTitle => {
+        document.title = newTitle;
+    },
+    { immediate: true },
+);
 </script>
 
 <template>
