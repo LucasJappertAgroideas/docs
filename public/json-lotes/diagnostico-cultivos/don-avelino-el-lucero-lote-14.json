@@ -1,0 +1,57 @@
+{
+    "field_id": 282,
+    "date_from": "2024-07-01",
+    "date_to": "2026-03-22",
+    "cycles": [
+        {
+            "cultivo": "TRIGO",
+            "fecha_siembra": "2025-06-25T00:00:00",
+            "fecha_cosecha": "2025-11-30T00:00:00",
+            "pico_ndvi": 0.795,
+            "estado_salud": "BUENO",
+            "eventos": [
+                { "tipo": "GOLPE_DE_CALOR", "fecha": "2024-09-15T00:00:00", "severidad": "MEDIA", "descripcion": "Estrés térmico: Temp máx=39.3°C" },
+                { "tipo": "GOLPE_DE_CALOR", "fecha": "2024-11-15T00:00:00", "severidad": "MEDIA", "descripcion": "Estrés térmico: Temp máx=39.1°C" },
+                { "tipo": "GOLPE_DE_CALOR", "fecha": "2025-01-15T00:00:00", "severidad": "MEDIA", "descripcion": "Estrés térmico: Temp máx=38.9°C" },
+                { "tipo": "GOLPE_DE_CALOR", "fecha": "2025-02-15T00:00:00", "severidad": "ALTA", "descripcion": "Estrés térmico: Temp máx=41.5°C" }
+            ]
+        }
+    ],
+    "monthly_summary": [
+        { "month": "09-2024", "ndvi_avg": 0.168, "ndvi_max": 0.17, "reci_avg": 0.23, "reci_max": 0.24, "ndwi_avg": 0.063, "ndre_avg": 0.348, "evi_avg": 0.35, "precipitation_mm": 124.8, "temp_max_c": 39.3, "temp_min_c": 7.0, "temp_avg_c": 20.8, "num_captures": 16 },
+        { "month": "10-2024", "ndvi_avg": 0.16, "ndvi_max": 0.165, "reci_avg": 0.202, "reci_max": 0.219, "ndwi_avg": 0.073, "ndre_avg": 0.341, "evi_avg": 0.35, "precipitation_mm": 150.3, "temp_max_c": 36.2, "temp_min_c": 11.6, "temp_avg_c": 23.0, "num_captures": 31 },
+        { "month": "11-2024", "ndvi_avg": 0.172, "ndvi_max": 0.229, "reci_avg": 0.223, "reci_max": 0.332, "ndwi_avg": 0.108, "ndre_avg": 0.349, "evi_avg": 0.361, "precipitation_mm": 123.4, "temp_max_c": 39.1, "temp_min_c": 13.3, "temp_avg_c": 24.9, "num_captures": 30 },
+        { "month": "12-2024", "ndvi_avg": 0.313, "ndvi_max": 0.391, "reci_avg": 0.495, "reci_max": 0.648, "ndwi_avg": 0.191, "ndre_avg": 0.411, "evi_avg": 0.436, "precipitation_mm": 68.4, "temp_max_c": 36.3, "temp_min_c": 13.8, "temp_avg_c": 24.6, "num_captures": 31 },
+        { "month": "01-2025", "ndvi_avg": 0.442, "ndvi_max": 0.468, "reci_avg": 0.746, "reci_max": 0.796, "ndwi_avg": 0.265, "ndre_avg": 0.468, "evi_avg": 0.505, "precipitation_mm": 84.3, "temp_max_c": 38.9, "temp_min_c": 19.8, "temp_avg_c": 28.7, "num_captures": 31 },
+        { "month": "02-2025", "ndvi_avg": 0.402, "ndvi_max": 0.432, "reci_avg": 0.661, "reci_max": 0.723, "ndwi_avg": 0.243, "ndre_avg": 0.45, "evi_avg": 0.479, "precipitation_mm": 81.3, "temp_max_c": 41.5, "temp_min_c": 20.3, "temp_avg_c": 31.0, "num_captures": 28 },
+        { "month": "03-2025", "ndvi_avg": 0.337, "ndvi_max": 0.37, "reci_avg": 0.527, "reci_max": 0.595, "ndwi_avg": 0.207, "ndre_avg": 0.42, "evi_avg": 0.44, "precipitation_mm": 77.0, "temp_max_c": 38.0, "temp_min_c": 14.3, "temp_avg_c": 26.0, "num_captures": 31 },
+        { "month": "04-2025", "ndvi_avg": 0.267, "ndvi_max": 0.301, "reci_avg": 0.385, "reci_max": 0.454, "ndwi_avg": 0.16, "ndre_avg": 0.39, "evi_avg": 0.397, "precipitation_mm": 22.5, "temp_max_c": 29.0, "temp_min_c": 9.5, "temp_avg_c": 19.6, "num_captures": 30 },
+        { "month": "05-2025", "ndvi_avg": 0.199, "ndvi_max": 0.227, "reci_avg": 0.252, "reci_max": 0.305, "ndwi_avg": 0.075, "ndre_avg": 0.362, "evi_avg": 0.348, "precipitation_mm": 14.1, "temp_max_c": 30.8, "temp_min_c": 3.5, "temp_avg_c": 19.5, "num_captures": 31 },
+        { "month": "06-2025", "ndvi_avg": 0.217, "ndvi_max": 0.289, "reci_avg": 0.362, "reci_max": 0.656, "ndwi_avg": 0.097, "ndre_avg": 0.365, "evi_avg": 0.365, "precipitation_mm": 22.1, "temp_max_c": 22.5, "temp_min_c": 2.0, "temp_avg_c": 12.5, "num_captures": 30 },
+        { "month": "07-2025", "ndvi_avg": 0.396, "ndvi_max": 0.495, "reci_avg": 1.079, "reci_max": 1.475, "ndwi_avg": 0.228, "ndre_avg": 0.461, "evi_avg": 0.471, "precipitation_mm": 13.3, "temp_max_c": 26.1, "temp_min_c": -1.2, "temp_avg_c": 14.7, "num_captures": 31 },
+        { "month": "08-2025", "ndvi_avg": 0.601, "ndvi_max": 0.701, "reci_avg": 1.898, "reci_max": 2.294, "ndwi_avg": 0.377, "ndre_avg": 0.572, "evi_avg": 0.593, "precipitation_mm": 150.7, "temp_max_c": 28.9, "temp_min_c": 4.6, "temp_avg_c": 16.2, "num_captures": 31 },
+        { "month": "09-2025", "ndvi_avg": 0.734, "ndvi_max": 0.795, "reci_avg": 2.371, "reci_max": 2.668, "ndwi_avg": 0.478, "ndre_avg": 0.643, "evi_avg": 0.671, "precipitation_mm": 75.3, "temp_max_c": 31.3, "temp_min_c": 4.8, "temp_avg_c": 18.1, "num_captures": 30 },
+        { "month": "10-2025", "ndvi_avg": 0.499, "ndvi_max": 0.629, "reci_avg": 1.134, "reci_max": 1.783, "ndwi_avg": 0.333, "ndre_avg": 0.512, "evi_avg": 0.532, "precipitation_mm": 74.5, "temp_max_c": 36.2, "temp_min_c": 9.3, "temp_avg_c": 21.8, "num_captures": 31 },
+        { "month": "11-2025", "ndvi_avg": 0.356, "ndvi_max": 0.413, "reci_avg": 0.649, "reci_max": 0.806, "ndwi_avg": 0.201, "ndre_avg": 0.438, "evi_avg": 0.453, "precipitation_mm": 197.1, "temp_max_c": 36.8, "temp_min_c": 10.6, "temp_avg_c": 23.1, "num_captures": 30 },
+        { "month": "12-2025", "ndvi_avg": 0.249, "ndvi_max": 0.295, "reci_avg": 0.361, "reci_max": 0.481, "ndwi_avg": 0.095, "ndre_avg": 0.384, "evi_avg": 0.393, "precipitation_mm": 253.8, "temp_max_c": 34.0, "temp_min_c": 14.2, "temp_avg_c": 25.3, "num_captures": 31 },
+        { "month": "01-2026", "ndvi_avg": 0.227, "ndvi_max": 0.262, "reci_avg": 0.372, "reci_max": 0.574, "ndwi_avg": 0.114, "ndre_avg": 0.372, "evi_avg": 0.382, "precipitation_mm": 255.3, "temp_max_c": 35.5, "temp_min_c": 15.8, "temp_avg_c": 26.0, "num_captures": 31 },
+        { "month": "02-2026", "ndvi_avg": 0.345, "ndvi_max": 0.5, "reci_avg": 0.967, "reci_max": 1.615, "ndwi_avg": 0.263, "ndre_avg": 0.449, "evi_avg": 0.491, "precipitation_mm": 50.7, "temp_max_c": 37.5, "temp_min_c": 18.0, "temp_avg_c": 27.5, "num_captures": 28 },
+        { "month": "03-2026", "ndvi_avg": 0.618, "ndvi_max": 0.72, "reci_avg": 2.093, "reci_max": 2.51, "ndwi_avg": 0.368, "ndre_avg": 0.61, "evi_avg": 0.595, "precipitation_mm": 83.8, "temp_max_c": 36.5, "temp_min_c": 17.6, "temp_avg_c": 24.4, "num_captures": 15 }
+    ],
+    "captures_detail": [
+        { "date": "2024-09-15", "cloud_coverage": 0.0, "ndvi": 0.17, "ndwi": 0.06, "reci": 0.24, "ndre": 0.35, "evi": 0.35 },
+        { "date": "2024-10-15", "cloud_coverage": 0.0, "ndvi": 0.16, "ndwi": 0.07, "reci": 0.2, "ndre": 0.34, "evi": 0.35 },
+        { "date": "2024-11-15", "cloud_coverage": 0.0, "ndvi": 0.15, "ndwi": 0.1, "reci": 0.18, "ndre": 0.34, "evi": 0.35 },
+        { "date": "2025-01-15", "cloud_coverage": 0.0, "ndvi": 0.47, "ndwi": 0.28, "reci": 0.8, "ndre": 0.48, "evi": 0.52 },
+        { "date": "2025-04-15", "cloud_coverage": 0.0, "ndvi": 0.27, "ndwi": 0.17, "reci": 0.39, "ndre": 0.39, "evi": 0.4 },
+        { "date": "2025-05-15", "cloud_coverage": 0.0, "ndvi": 0.19, "ndwi": 0.06, "reci": 0.23, "ndre": 0.36, "evi": 0.34 },
+        { "date": "2025-06-15", "cloud_coverage": 14.0, "ndvi": 0.19, "ndwi": 0.08, "reci": 0.26, "ndre": 0.35, "evi": 0.35 },
+        { "date": "2025-09-15", "cloud_coverage": 0.0, "ndvi": 0.8, "ndwi": 0.52, "reci": 2.69, "ndre": 0.68, "evi": 0.71 },
+        { "date": "2025-10-15", "cloud_coverage": 0.0, "ndvi": 0.48, "ndwi": 0.33, "reci": 0.99, "ndre": 0.5, "evi": 0.52 },
+        { "date": "2025-12-15", "cloud_coverage": 0.0, "ndvi": 0.24, "ndwi": 0.08, "reci": 0.33, "ndre": 0.38, "evi": 0.39 },
+        { "date": "2026-01-15", "cloud_coverage": 0.0, "ndvi": 0.21, "ndwi": 0.09, "reci": 0.29, "ndre": 0.36, "evi": 0.36 },
+        { "date": "2026-02-15", "cloud_coverage": 1.0, "ndvi": 0.31, "ndwi": 0.27, "reci": 0.84, "ndre": 0.43, "evi": 0.49 },
+        { "date": "2026-03-15", "cloud_coverage": 0.0, "ndvi": 0.72, "ndwi": 0.4, "reci": 2.51, "ndre": 0.67, "evi": 0.63 }
+    ],
+    "metadata": { "total_captures": 21, "filtered_captures": 13, "daily_points": 547 }
+}

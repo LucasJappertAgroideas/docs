@@ -1,14 +1,35 @@
 <script setup lang="ts">
-import { onMounted, ref, computed } from "vue";
+import { onMounted, ref, computed, watch } from "vue";
+import { useRoute, useRouter } from "vue-router";
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, BarElement, Title, Tooltip, Legend, Filler, type ChartOptions, type ChartData } from "chart.js";
 import { Line, Bar } from "vue-chartjs";
+import { DIAGNOSTICO_LOTE_CONFIG, getDiagnosticoLoteConfig } from "@/config/diagnosticoLotes";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, BarElement, Title, Tooltip, Legend, Filler);
+
+const route = useRoute();
+const router = useRouter();
+
+// Lista de lotes disponibles
+const lotes = Object.values(DIAGNOSTICO_LOTE_CONFIG);
 
 // Estado de carga y datos
 const loading = ref(true);
 const error = ref<string | null>(null);
 const diagnosticoData = ref<any>(null);
+
+// Obtener configuración del lote desde el query string
+const loteConfig = computed(() => {
+    const fieldId = Number(route.query.field_id) || 52; // Default: Marchetti
+    return getDiagnosticoLoteConfig(fieldId);
+});
+
+const pageTitle = computed(() => {
+    if (loteConfig.value) {
+        return `🌱 ${loteConfig.value.title}`;
+    }
+    return "🌱 Diagnóstico de Cultivos";
+});
 
 // Configuración de colores para eventos
 const EVENT_COLORS: Record<string, { bg: string; border: string; text: string }> = {
@@ -420,14 +441,19 @@ function getSeverityColor(severidad: string) {
     return SEVERITY_COLORS[severidad] || "#8b949e";
 }
 
-// Función para formatear fecha
+// Función para formatear fecha a dd-mm-yyyy
 function formatDate(dateString: string) {
     const date = new Date(dateString);
-    return date.toLocaleDateString("es-AR", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-    });
+    const day = date.getDate().toString().padStart(2, "0");
+    const month = (date.getMonth() + 1).toString().padStart(2, "0");
+    const year = date.getFullYear();
+    return `${day}-${month}-${year}`;
+}
+
+// Manejar cambio de selección de lote
+function onLoteChange(event: Event) {
+    const fieldId = (event.target as HTMLSelectElement).value;
+    router.push({ query: { field_id: Number(fieldId) } });
 }
 
 // Cargar datos del JSON
@@ -435,8 +461,14 @@ async function loadDiagnosticoData() {
     loading.value = true;
     error.value = null;
 
+    if (!loteConfig.value) {
+        error.value = "No se especificó un field_id válido";
+        loading.value = false;
+        return;
+    }
+
     try {
-        const response = await fetch("/json-lotes/diagnostico-cultivos/marchetti3.json");
+        const response = await fetch(loteConfig.value.dataUrl);
         if (!response.ok) {
             throw new Error(`Error al cargar datos: ${response.status}`);
         }
@@ -452,6 +484,14 @@ async function loadDiagnosticoData() {
 onMounted(async () => {
     await loadDiagnosticoData();
 });
+
+// Watch for query param changes to reload data
+watch(
+    () => route.query.field_id,
+    async () => {
+        await loadDiagnosticoData();
+    },
+);
 </script>
 
 <template>
@@ -466,7 +506,17 @@ onMounted(async () => {
         <template v-else-if="diagnosticoData">
             <!-- Encabezado -->
             <div class="header">
-                <h1>🌱 Diagnóstico de Cultivos</h1>
+                <div class="header-top">
+                    <h1>{{ pageTitle }}</h1>
+                    <div class="lote-selector">
+                        <label for="lote-select">Cambiar Lote:</label>
+                        <select id="lote-select" :value="loteConfig?.fieldId" @change="onLoteChange">
+                            <option v-for="lote in lotes" :key="lote.fieldId" :value="lote.fieldId">
+                                {{ lote.title }}
+                            </option>
+                        </select>
+                    </div>
+                </div>
                 <p class="subtitle">Análisis detallado de ciclos de cultivo y eventos</p>
             </div>
 
@@ -478,7 +528,7 @@ onMounted(async () => {
                 </div>
                 <div class="metadata-item">
                     <label>Período</label>
-                    <span>{{ diagnosticoData.date_from }} - {{ diagnosticoData.date_to }}</span>
+                    <span>{{ formatDate(diagnosticoData.date_from) }} - {{ formatDate(diagnosticoData.date_to) }}</span>
                 </div>
                 <div class="metadata-item">
                     <label>Total Capturas</label>
@@ -692,19 +742,54 @@ onMounted(async () => {
 
 .header {
     margin-bottom: 2rem;
-    text-align: center;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .header h1 {
     color: #e6edf3;
     font-size: 2rem;
-    margin: 0 0 0.5rem;
+    margin: 0;
 }
 
 .subtitle {
     color: #8b949e;
     font-size: 1.1rem;
     margin: 0;
+}
+
+.lote-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.lote-selector label {
+    color: #8b949e;
+    font-weight: 500;
+}
+
+.lote-selector select {
+    padding: 0.5rem 1rem;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    color: #e6edf3;
+    font-size: 0.9rem;
+    cursor: pointer;
+    min-width: 200px;
+}
+
+.lote-selector select:focus {
+    outline: none;
+    border-color: #58a6ff;
 }
 
 .metadata {
