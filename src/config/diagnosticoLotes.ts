@@ -18,6 +18,11 @@ export const DIAGNOSTICO_LOTE_CONFIG: Record<number, DiagnosticoLoteConfig> = {
         title: 'Marchetti Lote 3',
         dataUrl: '/json-lotes/diagnostico-cultivos/marchetti3.json'
     },
+    281: {
+        fieldId: 281,
+        title: 'Agroarnaudo Lote 1',
+        dataUrl: '/json-lotes/diagnostico-cultivos/agroarnaudo-lote-1.json'
+    },
     282: {
         fieldId: 282,
         title: 'Don Avelino El Lucero Lote 14',

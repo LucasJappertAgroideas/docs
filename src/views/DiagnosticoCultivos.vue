@@ -572,6 +572,22 @@ watch(
                         </div>
                     </div>
 
+                    <!-- Información adicional del ciclo -->
+                    <div class="cycle-meta">
+                        <div class="cycle-meta-item">
+                            <label>Estado</label>
+                            <span class="cycle-status" :class="cycle.status?.toLowerCase()">{{ cycle.status }}</span>
+                        </div>
+                        <div class="cycle-meta-item">
+                            <label>Confianza</label>
+                            <span class="cycle-confidence">{{ (cycle.confidence * 100).toFixed(0) }}%</span>
+                        </div>
+                        <div v-if="cycle.notes" class="cycle-meta-item cycle-notes">
+                            <label>Notas</label>
+                            <span>{{ cycle.notes }}</span>
+                        </div>
+                    </div>
+
                     <!-- Eventos del ciclo -->
                     <div v-if="cycle.eventos && cycle.eventos.length > 0" class="events-section">
                         <h4 class="events-title">📅 Eventos Registrados</h4>
@@ -696,6 +712,28 @@ watch(
                             <div class="capture-stat">
                                 <span class="stat-label">Nubes</span>
                                 <span class="stat-value">{{ capture.cloud_coverage.toFixed(1) }}%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Imágenes Satelitales -->
+            <div class="images-section" v-if="diagnosticoData.satellite_images && diagnosticoData.satellite_images.length > 0">
+                <div class="images-header">
+                    <h2 class="images-title">🛰️ Imágenes Satelitales Utilizadas</h2>
+                </div>
+                <div v-for="monthGroup in diagnosticoData.satellite_images" :key="monthGroup.month" class="image-type-group">
+                    <h3 class="image-type-title">{{ monthGroup.month }}</h3>
+                    <div class="image-gallery">
+                        <div v-for="img in monthGroup.images" :key="img.date + img.type" class="image-card">
+                            <div class="image-container">
+                                <img :src="img.url" :alt="img.type + ' - ' + img.date" class="index-image" />
+                            </div>
+                            <div class="image-info">
+                                <span class="image-type-badge">{{ img.type }}</span>
+                                <span class="image-date">{{ formatDate(img.date) }}</span>
+                                <span class="image-cloud" :class="{ 'has-clouds': img.cloud_coverage > 0 }">Nubes: {{ (img.cloud_coverage / 100).toFixed(1) }}%</span>
                             </div>
                         </div>
                     </div>
@@ -945,6 +983,69 @@ watch(
     border: 1px solid #f85149;
 }
 
+.cycle-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 1rem;
+    background: #0d1117;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+}
+
+.cycle-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.cycle-meta-item label {
+    color: #8b949e;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.cycle-meta-item span {
+    color: #e6edf3;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.cycle-status {
+    padding: 0.25rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.cycle-status.completo {
+    background: #3fb95020;
+    color: #3fb950;
+    border: 1px solid #3fb950;
+}
+
+.cycle-status.parcial {
+    background: #f0883e20;
+    color: #f0883e;
+    border: 1px solid #f0883e;
+}
+
+.cycle-confidence {
+    color: #3fb950 !important;
+}
+
+.cycle-notes {
+    flex: 1 1 100%;
+}
+
+.cycle-notes span {
+    color: #8b949e;
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
 .events-section {
     border-top: 1px solid #30363d;
     padding-top: 1.5rem;
@@ -1110,5 +1211,117 @@ watch(
     color: #e6edf3;
     font-size: 0.9rem;
     font-weight: 600;
+}
+
+/* Estilos para sección de imágenes satelitales */
+.images-section {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #0d1117;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+}
+
+.images-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 0.75rem;
+}
+
+.images-title {
+    color: #e6edf3;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.image-type-group {
+    margin-bottom: 2rem;
+}
+
+.image-type-group:last-child {
+    margin-bottom: 0;
+}
+
+.image-type-title {
+    color: #58a6ff;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+
+.image-card {
+    background: #161b22;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #30363d;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    width: 200px;
+}
+
+.image-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.image-container {
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+    background: #0d1117;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.index-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: scale-down;
+}
+
+.image-info {
+    padding: 0.75rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.image-type-badge {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    background: #30363d;
+    border-radius: 4px;
+    color: #58a6ff;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.image-date {
+    color: #8b949e;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.image-cloud {
+    color: #8b949e;
+    font-size: 0.8rem;
+}
+
+.image-cloud.has-clouds {
+    color: #f0883e;
 }
 </style>
