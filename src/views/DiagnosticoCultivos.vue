@@ -23,7 +23,7 @@ const hiddenDatasets = ref<Set<number>>(new Set());
 
 // Obtener configuración del lote desde el query string
 const loteConfig = computed(() => {
-    const fieldId = Number(route.query.field_id) || 52; // Default: Marchetti
+    const fieldId = (route.query.field_id as string) || "52"; // Default: Marchetti
     return getDiagnosticoLoteConfig(fieldId);
 });
 
@@ -337,8 +337,10 @@ function getSeverityColor(severidad: string) {
 }
 
 // Función para formatear fecha a dd-mm-yyyy
-function formatDate(dateString: string) {
+function formatDate(dateString: string | null | undefined) {
+    if (!dateString) return "Sin definir";
     const date = new Date(dateString);
+    if (isNaN(date.getTime())) return "Fecha inválida";
     const day = date.getDate().toString().padStart(2, "0");
     const month = (date.getMonth() + 1).toString().padStart(2, "0");
     const year = date.getFullYear();
@@ -380,7 +382,7 @@ function getFilteredEventos(cycle: any) {
 // Manejar cambio de selección de lote
 function onLoteChange(event: Event) {
     const fieldId = (event.target as HTMLSelectElement).value;
-    router.push({ query: { field_id: Number(fieldId) } });
+    router.push({ query: { field_id: fieldId } });
 }
 
 // Cargar datos del JSON
