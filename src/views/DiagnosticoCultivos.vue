@@ -4,6 +4,7 @@ import { useRoute, useRouter } from "vue-router";
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, BarElement, BarController, LineController, Title, Tooltip, Legend, Filler, type ChartOptions, type ChartData } from "chart.js";
 import { Line } from "vue-chartjs";
 import { DIAGNOSTICO_LOTE_CONFIG, getDiagnosticoLoteConfig } from "@/config/diagnosticoLotes";
+import IndicesInfoButton from "@/components/IndicesInfoButton.vue";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, BarElement, BarController, LineController, Title, Tooltip, Legend, Filler);
 
@@ -615,7 +616,10 @@ watch(
 
             <!-- Gráfico unificado -->
             <div class="chart-section">
-                <h2 class="chart-title">📊 Precipitación, Temperatura e Índices de Vegetación - Evolución Mensual</h2>
+                <div class="chart-header">
+                    <h2 class="chart-title">📊 Precipitación, Temperatura e Índices de Vegetación - Evolución Mensual</h2>
+                    <IndicesInfoButton />
+                </div>
 
                 <div class="chart-controls">
                     <button v-for="(config, index) in DATASET_CONFIGS" :key="config.key" :class="getButtonClass(index)" @click="toggleDataset(index)" :style="{ borderLeft: '4px solid ' + config.color }">
@@ -639,12 +643,15 @@ watch(
             <div class="images-section" v-if="diagnosticoData.satellite_images && diagnosticoData.satellite_images.length > 0">
                 <div class="images-header">
                     <h2 class="images-title">🛰️ Imágenes Satelitales Utilizadas</h2>
-                    <div class="image-filter" v-if="imageTypes.length > 1">
-                        <label for="image-type-select">Filtrar por tipo:</label>
-                        <select id="image-type-select" v-model="selectedImageType">
-                            <option value="all">Todos los tipos</option>
-                            <option v-for="type in imageTypes" :key="type" :value="type">{{ type }}</option>
-                        </select>
+                    <div class="images-header-actions">
+                        <IndicesInfoButton />
+                        <div class="image-filter" v-if="imageTypes.length > 1">
+                            <label for="image-type-select">Filtrar por tipo:</label>
+                            <select id="image-type-select" v-model="selectedImageType">
+                                <option value="all">Todos los tipos</option>
+                                <option v-for="type in imageTypes" :key="type" :value="type">{{ type }}</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
                 <div v-for="monthGroup in filteredSatelliteImages" :key="monthGroup.month" class="image-type-group">
@@ -1421,5 +1428,27 @@ watch(
 .image-filter select:focus {
     outline: none;
     border-color: #58a6ff;
+}
+
+/* Estilos para el header del gráfico */
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.chart-header .chart-title {
+    margin: 0;
+}
+
+/* Estilos para las acciones del header de imágenes */
+.images-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 </style>
