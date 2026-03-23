@@ -47,6 +47,11 @@ export const DIAGNOSTICO_LOTE_CONFIG: Record<string, DiagnosticoLoteConfig> = {
         fieldId: '283-v2',
         title: 'Don Avelino El Lucero Lote 46 N Version 2',
         dataUrl: '/json-lotes/diagnostico-cultivos/version2/don-avelino-el-lucero-lote-46-N-v2.json'
+    },
+    '52-v3': {
+        fieldId: '52-v3',
+        title: 'Marchetti Version 3',
+        dataUrl: '/json-lotes/diagnostico-cultivos/version2/marchetti-v3.json'
     }
 };
 

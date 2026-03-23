@@ -21,6 +21,9 @@ const diagnosticoData = ref<any>(null);
 // Control de datasets visibles
 const hiddenDatasets = ref<Set<number>>(new Set());
 
+// Filtro de tipo de imagen satelital
+const selectedImageType = ref<string>("all");
+
 // Obtener configuración del lote desde el query string
 const loteConfig = computed(() => {
     const fieldId = (route.query.field_id as string) || "52"; // Default: Marchetti
@@ -48,6 +51,20 @@ const SEVERITY_COLORS: Record<string, string> = {
     BAJA: "#3fb950",
     MEDIA: "#f0883e",
     ALTA: "#f85149",
+};
+
+// Configuración de colores para tipos de imágenes (basado en colores del gráfico)
+const IMAGE_TYPE_COLORS: Record<string, string> = {
+    NDVI: "#3fb950",
+    NDVI_MAX: "#238636",
+    RECI: "#a371f7",
+    NDWI: "#00d4ff",
+    NDRE: "#f0883e",
+    EVI: "#d2a8ff",
+    PRECIPITATION: "#58a6ff",
+    TEMP_MAX: "#f85149",
+    TEMP_MIN: "#79c0ff",
+    TEMP_AVG: "#ffa657",
 };
 
 // Configuración de datasets para el gráfico unificado
@@ -336,6 +353,11 @@ function getSeverityColor(severidad: string) {
     return SEVERITY_COLORS[severidad] || "#8b949e";
 }
 
+// Función para obtener color de tipo de imagen
+function getImageTypeColor(type: string) {
+    return IMAGE_TYPE_COLORS[type.toUpperCase()] || "#58a6ff";
+}
+
 // Función para formatear fecha a dd-mm-yyyy
 function formatDate(dateString: string | null | undefined) {
     if (!dateString) return "Sin definir";
@@ -346,6 +368,38 @@ function formatDate(dateString: string | null | undefined) {
     const year = date.getFullYear();
     return `${day}-${month}-${year}`;
 }
+
+// Tipos únicos de imágenes satelitales disponibles
+const imageTypes = computed(() => {
+    if (!diagnosticoData.value?.satellite_images) return [];
+    const types = new Set<string>();
+    diagnosticoData.value.satellite_images.forEach((monthGroup: any) => {
+        monthGroup.images.forEach((img: any) => {
+            if (img.type) types.add(img.type);
+        });
+    });
+    return Array.from(types).sort();
+});
+
+// Imágenes satelitales filtradas por tipo y ordenadas por fecha
+const filteredSatelliteImages = computed(() => {
+    if (!diagnosticoData.value?.satellite_images) return [];
+
+    const processMonthGroup = (monthGroup: any) => {
+        let images = monthGroup.images;
+        if (selectedImageType.value !== "all") {
+            images = images.filter((img: any) => img.type === selectedImageType.value);
+        }
+        // Ordenar imágenes por fecha de menor a mayor
+        images = [...images].sort((a: any, b: any) => new Date(a.date).getTime() - new Date(b.date).getTime());
+        return {
+            month: monthGroup.month,
+            images,
+        };
+    };
+
+    return diagnosticoData.value.satellite_images.map(processMonthGroup).filter((monthGroup: any) => monthGroup.images.length > 0);
+});
 
 // Función para filtrar eventos entre fechas de siembra y cosecha
 function getFilteredEventos(cycle: any) {
@@ -581,6 +635,35 @@ watch(
                 </div>
             </div>
 
+            <!-- Imágenes Satelitales -->
+            <div class="images-section" v-if="diagnosticoData.satellite_images && diagnosticoData.satellite_images.length > 0">
+                <div class="images-header">
+                    <h2 class="images-title">🛰️ Imágenes Satelitales Utilizadas</h2>
+                    <div class="image-filter" v-if="imageTypes.length > 1">
+                        <label for="image-type-select">Filtrar por tipo:</label>
+                        <select id="image-type-select" v-model="selectedImageType">
+                            <option value="all">Todos los tipos</option>
+                            <option v-for="type in imageTypes" :key="type" :value="type">{{ type }}</option>
+                        </select>
+                    </div>
+                </div>
+                <div v-for="monthGroup in filteredSatelliteImages" :key="monthGroup.month" class="image-type-group">
+                    <h3 class="image-type-title">{{ monthGroup.month }}</h3>
+                    <div class="image-gallery">
+                        <div v-for="img in monthGroup.images" :key="img.date + img.type" class="image-card">
+                            <div class="image-container">
+                                <img :src="img.url" :alt="img.type + ' - ' + img.date" class="index-image" />
+                            </div>
+                            <div class="image-info">
+                                <span class="image-type-badge" :style="{ backgroundColor: getImageTypeColor(img.type) + '20', color: getImageTypeColor(img.type), borderColor: getImageTypeColor(img.type) }">{{ img.type }}</span>
+                                <span class="image-date">{{ formatDate(img.date) }}</span>
+                                <span class="image-cloud" :class="{ 'has-clouds': img.cloud_coverage > 0 }">Nubes: {{ (img.cloud_coverage / 100).toFixed(1) }}%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Tabla de resumen mensual -->
             <div class="section">
                 <h2 class="section-title">📋 Resumen Mensual</h2>
@@ -652,28 +735,6 @@ watch(
                             <div class="capture-stat">
                                 <span class="stat-label">Nubes</span>
                                 <span class="stat-value">{{ capture.cloud_coverage.toFixed(1) }}%</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Imágenes Satelitales -->
-            <div class="images-section" v-if="diagnosticoData.satellite_images && diagnosticoData.satellite_images.length > 0">
-                <div class="images-header">
-                    <h2 class="images-title">🛰️ Imágenes Satelitales Utilizadas</h2>
-                </div>
-                <div v-for="monthGroup in diagnosticoData.satellite_images" :key="monthGroup.month" class="image-type-group">
-                    <h3 class="image-type-title">{{ monthGroup.month }}</h3>
-                    <div class="image-gallery">
-                        <div v-for="img in monthGroup.images" :key="img.date + img.type" class="image-card">
-                            <div class="image-container">
-                                <img :src="img.url" :alt="img.type + ' - ' + img.date" class="index-image" />
-                            </div>
-                            <div class="image-info">
-                                <span class="image-type-badge">{{ img.type }}</span>
-                                <span class="image-date">{{ formatDate(img.date) }}</span>
-                                <span class="image-cloud" :class="{ 'has-clouds': img.cloud_coverage > 0 }">Nubes: {{ (img.cloud_coverage / 100).toFixed(1) }}%</span>
                             </div>
                         </div>
                     </div>
@@ -1316,6 +1377,7 @@ watch(
     color: #58a6ff;
     font-size: 0.75rem;
     font-weight: 600;
+    border: 1px solid transparent;
 }
 
 .image-date {
@@ -1331,5 +1393,33 @@ watch(
 
 .image-cloud.has-clouds {
     color: #f0883e;
+}
+
+.image-filter {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.image-filter label {
+    color: #8b949e;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.image-filter select {
+    padding: 0.4rem 0.8rem;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    color: #e6edf3;
+    font-size: 0.85rem;
+    cursor: pointer;
+    min-width: 150px;
+}
+
+.image-filter select:focus {
+    outline: none;
+    border-color: #58a6ff;
 }
 </style>
