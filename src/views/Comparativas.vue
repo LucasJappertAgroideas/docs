@@ -235,6 +235,7 @@ function formatTotal(diff: number): string {
                             <th>{{ regionConfig.referenceLabel }}</th>
                             <th>Meteoblue (Diferencia)</th>
                             <th>APIX (Diferencia)</th>
+                            <th>Santa Fe (Diferencia)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -269,6 +270,12 @@ function formatTotal(diff: number): string {
                                     {{ formatDiff(item.diffApix) }}
                                 </span>)
                             </td>
+                            <td :class="{ 'best-match': item.isSantaFeBest }">
+                                {{ item.provinciaSantaFe }} mm 
+                                (<span :class="getDiffClass(item.diffSantaFe)">
+                                    {{ formatDiff(item.diffSantaFe) }}
+                                </span>)
+                            </td>
                         </tr>
                         <!-- Fila de totales -->
                         <tr class="totals-row">
@@ -281,6 +288,10 @@ function formatTotal(diff: number): string {
                             <td>
                                 {{ yearSummary[1].total }} mm 
                                 <span class="hits">({{ yearSummary[1].hits }} ✓)</span>
+                            </td>
+                            <td>
+                                {{ yearSummary[3].total }} mm 
+                                <span class="hits">({{ yearSummary[3].hits }} ✓)</span>
                             </td>
                         </tr>
                     </tbody>

@@ -21,25 +21,31 @@ export function useComparativasData(regionId: string | null) {
                 ? Math.round(item.fuente_meteoblue - item.fuente_referencia)
                 : null;
             const diffApix = Math.round(item.fuente_apix - item.fuente_referencia);
+            const diffSantaFe = Math.round(item.fuente_provincia_santa_fe - item.fuente_referencia);
 
             // Calcular diferencias absolutas para determinar el mejor match
             const absDiffMeteo = item.fuente_meteoblue !== null
                 ? Math.abs(item.fuente_meteoblue - item.fuente_referencia)
                 : Infinity;
             const absDiffApix = Math.abs(item.fuente_apix - item.fuente_referencia);
+            const absDiffSantaFe = Math.abs(item.fuente_provincia_santa_fe - item.fuente_referencia);
 
-            const isMeteoBest = absDiffMeteo < absDiffApix && item.fuente_meteoblue !== null;
-            const isApixBest = absDiffApix < absDiffMeteo;
+            const isMeteoBest = absDiffMeteo < absDiffApix && absDiffMeteo < absDiffSantaFe && item.fuente_meteoblue !== null;
+            const isApixBest = absDiffApix < absDiffMeteo && absDiffApix < absDiffSantaFe;
+            const isSantaFeBest = absDiffSantaFe < absDiffMeteo && absDiffSantaFe < absDiffApix;
 
             return {
                 mes: item.mes,
                 referencia: item.fuente_referencia,
                 meteoblue: item.fuente_meteoblue,
                 apix: item.fuente_apix,
+                provinciaSantaFe: item.fuente_provincia_santa_fe,
                 diffMeteo,
                 diffApix,
+                diffSantaFe,
                 isMeteoBest,
                 isApixBest,
+                isSantaFeBest,
                 isIncomplete
             };
         });
@@ -56,26 +62,34 @@ export function useComparativasData(regionId: string | null) {
         let totalReferencia = 0;
         let totalMeteoblue = 0;
         let totalApix = 0;
+        let totalSantaFe = 0;
         let aciertosMeteo = 0;
         let aciertosApix = 0;
+        let aciertosSantaFe = 0;
 
         lluvias2025.forEach(item => {
             totalReferencia += item.fuente_referencia;
             totalMeteoblue += item.fuente_meteoblue || 0;
             totalApix += item.fuente_apix;
+            totalSantaFe += item.fuente_provincia_santa_fe;
 
             // Contar aciertos (solo si referencia > 0)
-            if (item.fuente_referencia > 0 && item.fuente_meteoblue !== null) {
-                const absDiffMeteo = Math.abs(item.fuente_meteoblue - item.fuente_referencia);
+            if (item.fuente_referencia > 0) {
+                const absDiffMeteo = item.fuente_meteoblue !== null
+                    ? Math.abs(item.fuente_meteoblue - item.fuente_referencia)
+                    : Infinity;
                 const absDiffApix = Math.abs(item.fuente_apix - item.fuente_referencia);
+                const absDiffSantaFe = Math.abs(item.fuente_provincia_santa_fe - item.fuente_referencia);
 
-                if (absDiffMeteo < absDiffApix) aciertosMeteo++;
-                if (absDiffApix < absDiffMeteo) aciertosApix++;
+                if (absDiffMeteo < absDiffApix && absDiffMeteo < absDiffSantaFe) aciertosMeteo++;
+                if (absDiffApix < absDiffMeteo && absDiffApix < absDiffSantaFe) aciertosApix++;
+                if (absDiffSantaFe < absDiffMeteo && absDiffSantaFe < absDiffApix) aciertosSantaFe++;
             }
         });
 
         const diffMeteoTotal = Math.round(totalMeteoblue - totalReferencia);
         const diffApixTotal = Math.round(totalApix - totalReferencia);
+        const diffSantaFeTotal = Math.round(totalSantaFe - totalReferencia);
 
         const refLabel = regionConfig.value?.referenceLabel || 'Referencia';
 
@@ -99,6 +113,13 @@ export function useComparativasData(regionId: string | null) {
                 difference: diffMeteoTotal,
                 isReference: false,
                 hits: aciertosMeteo
+            },
+            {
+                source: 'Provincia Santa Fe',
+                total: totalSantaFe,
+                difference: diffSantaFeTotal,
+                isReference: false,
+                hits: aciertosSantaFe
             }
         ];
     });
@@ -157,6 +178,15 @@ export function useComparativasData(regionId: string | null) {
                 borderWidth: 2,
                 tension: 0.3,
                 fill: false
+            },
+            {
+                label: 'Provincia Santa Fe',
+                data: data.value.comparativa_lluvias.map(item => item.fuente_provincia_santa_fe),
+                borderColor: 'rgb(155, 89, 182)',
+                backgroundColor: 'rgba(155, 89, 182, 0.1)',
+                borderWidth: 2,
+                tension: 0.3,
+                fill: false
             }
         ];
     });
@@ -174,7 +204,8 @@ export function useComparativasData(regionId: string | null) {
         const allValues = data.value.comparativa_lluvias.flatMap(item => [
             item.fuente_referencia,
             item.fuente_meteoblue ?? 0,
-            item.fuente_apix
+            item.fuente_apix,
+            item.fuente_provincia_santa_fe
         ]);
 
         return Math.max(...allValues) * 1.1;

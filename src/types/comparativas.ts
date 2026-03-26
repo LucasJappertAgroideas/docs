@@ -7,6 +7,7 @@ export interface LluviaItem {
     fuente_referencia: number;
     fuente_meteoblue: number | null;
     fuente_apix: number;
+    fuente_provincia_santa_fe: number;
 }
 
 export interface ComparativaData {
@@ -28,10 +29,13 @@ export interface MonthlySummary {
     referencia: number;
     meteoblue: number | null;
     apix: number;
+    provinciaSantaFe: number;
     diffMeteo: number | null;
     diffApix: number;
+    diffSantaFe: number;
     isMeteoBest: boolean;
     isApixBest: boolean;
+    isSantaFeBest: boolean;
     isIncomplete: boolean;
 }
 

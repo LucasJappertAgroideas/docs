@@ -6,91 +6,106 @@
 			"mes": "Enero 2025",
 			"fuente_referencia": 65,
 			"fuente_meteoblue": 46,
-			"fuente_apix": 71
+			"fuente_apix": 71,
+			"fuente_provincia_santa_fe": 48
 		},
 		{
 			"mes": "Febrero 2025",
 			"fuente_referencia": 75,
 			"fuente_meteoblue": 45,
-			"fuente_apix": 112
+			"fuente_apix": 112,
+			"fuente_provincia_santa_fe": 72
 		},
 		{
 			"mes": "Marzo 2025",
 			"fuente_referencia": 184,
 			"fuente_meteoblue": 54,
-			"fuente_apix": 163
+			"fuente_apix": 163,
+			"fuente_provincia_santa_fe": 95
 		},
 		{
 			"mes": "Abril 2025",
 			"fuente_referencia": 31,
 			"fuente_meteoblue": 4,
-			"fuente_apix": 24
+			"fuente_apix": 24,
+			"fuente_provincia_santa_fe": 18
 		},
 		{
 			"mes": "Mayo 2025",
 			"fuente_referencia": 96,
 			"fuente_meteoblue": 22,
-			"fuente_apix": 45
+			"fuente_apix": 45,
+			"fuente_provincia_santa_fe": 41
 		},
 		{
 			"mes": "Junio 2025",
 			"fuente_referencia": 6,
 			"fuente_meteoblue": 7,
-			"fuente_apix": 17
+			"fuente_apix": 17,
+			"fuente_provincia_santa_fe": 9
 		},
 		{
 			"mes": "Julio 2025",
 			"fuente_referencia": 74,
 			"fuente_meteoblue": 43,
-			"fuente_apix": 35
+			"fuente_apix": 35,
+			"fuente_provincia_santa_fe": 12
 		},
 		{
 			"mes": "Agosto 2025",
 			"fuente_referencia": 130,
 			"fuente_meteoblue": 52,
-			"fuente_apix": 96
+			"fuente_apix": 96,
+			"fuente_provincia_santa_fe": 88
 		},
 		{
 			"mes": "Septiembre 2025",
 			"fuente_referencia": 12,
 			"fuente_meteoblue": 20,
-			"fuente_apix": 26
+			"fuente_apix": 26,
+			"fuente_provincia_santa_fe": 6
 		},
 		{
 			"mes": "Octubre 2025",
 			"fuente_referencia": 14,
 			"fuente_meteoblue": 25,
-			"fuente_apix": 39
+			"fuente_apix": 39,
+			"fuente_provincia_santa_fe": 19
 		},
 		{
 			"mes": "Noviembre 2025",
 			"fuente_referencia": 214,
 			"fuente_meteoblue": 103,
-			"fuente_apix": 143
+			"fuente_apix": 143,
+			"fuente_provincia_santa_fe": 120
 		},
 		{
 			"mes": "Diciembre 2025",
 			"fuente_referencia": 71,
 			"fuente_meteoblue": 94,
-			"fuente_apix": 117
+			"fuente_apix": 117,
+			"fuente_provincia_santa_fe": 66
 		},
 		{
 			"mes": "Enero 2026",
 			"fuente_referencia": 111,
 			"fuente_meteoblue": 199,
-			"fuente_apix": 118
+			"fuente_apix": 118,
+			"fuente_provincia_santa_fe": 102
 		},
 		{
 			"mes": "Febrero 2026",
 			"fuente_referencia": 123,
 			"fuente_meteoblue": 68,
-			"fuente_apix": 116
+			"fuente_apix": 116,
+			"fuente_provincia_santa_fe": 77
 		},
 		{
 			"mes": "Marzo 2026",
 			"fuente_referencia": 0,
 			"fuente_meteoblue": 49,
-			"fuente_apix": 55
+			"fuente_apix": 55,
+			"fuente_provincia_santa_fe": 110
 		}
 	]
 }
