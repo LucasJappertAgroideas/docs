@@ -236,6 +236,7 @@ function formatTotal(diff: number): string {
                             <th>Meteoblue (Diferencia)</th>
                             <th>APIX (Diferencia)</th>
                             <th>Santa Fe (Diferencia)</th>
+                            <th>NASA Power (Diferencia)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -276,6 +277,12 @@ function formatTotal(diff: number): string {
                                     {{ formatDiff(item.diffSantaFe) }}
                                 </span>)
                             </td>
+                            <td :class="{ 'best-match': item.isNasaPowerBest }">
+                                {{ item.nasaPower }} mm 
+                                (<span :class="getDiffClass(item.diffNasaPower)">
+                                    {{ formatDiff(item.diffNasaPower) }}
+                                </span>)
+                            </td>
                         </tr>
                         <!-- Fila de totales -->
                         <tr class="totals-row">
@@ -292,6 +299,10 @@ function formatTotal(diff: number): string {
                             <td>
                                 {{ yearSummary[3].total }} mm 
                                 <span class="hits">({{ yearSummary[3].hits }} ✓)</span>
+                            </td>
+                            <td>
+                                {{ yearSummary[4].total }} mm 
+                                <span class="hits">({{ yearSummary[4].hits }} ✓)</span>
                             </td>
                         </tr>
                     </tbody>

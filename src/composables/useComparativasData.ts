@@ -22,6 +22,7 @@ export function useComparativasData(regionId: string | null) {
                 : null;
             const diffApix = Math.round(item.fuente_apix - item.fuente_referencia);
             const diffSantaFe = Math.round(item.fuente_provincia_santa_fe - item.fuente_referencia);
+            const diffNasaPower = Math.round(item.fuente_nasa_power - item.fuente_referencia);
 
             // Calcular diferencias absolutas para determinar el mejor match
             const absDiffMeteo = item.fuente_meteoblue !== null
@@ -29,10 +30,12 @@ export function useComparativasData(regionId: string | null) {
                 : Infinity;
             const absDiffApix = Math.abs(item.fuente_apix - item.fuente_referencia);
             const absDiffSantaFe = Math.abs(item.fuente_provincia_santa_fe - item.fuente_referencia);
+            const absDiffNasaPower = Math.abs(item.fuente_nasa_power - item.fuente_referencia);
 
-            const isMeteoBest = absDiffMeteo < absDiffApix && absDiffMeteo < absDiffSantaFe && item.fuente_meteoblue !== null;
-            const isApixBest = absDiffApix < absDiffMeteo && absDiffApix < absDiffSantaFe;
-            const isSantaFeBest = absDiffSantaFe < absDiffMeteo && absDiffSantaFe < absDiffApix;
+            const isMeteoBest = absDiffMeteo < absDiffApix && absDiffMeteo < absDiffSantaFe && absDiffMeteo < absDiffNasaPower && item.fuente_meteoblue !== null;
+            const isApixBest = absDiffApix < absDiffMeteo && absDiffApix < absDiffSantaFe && absDiffApix < absDiffNasaPower;
+            const isSantaFeBest = absDiffSantaFe < absDiffMeteo && absDiffSantaFe < absDiffApix && absDiffSantaFe < absDiffNasaPower;
+            const isNasaPowerBest = absDiffNasaPower < absDiffMeteo && absDiffNasaPower < absDiffApix && absDiffNasaPower < absDiffSantaFe;
 
             return {
                 mes: item.mes,
@@ -40,12 +43,15 @@ export function useComparativasData(regionId: string | null) {
                 meteoblue: item.fuente_meteoblue,
                 apix: item.fuente_apix,
                 provinciaSantaFe: item.fuente_provincia_santa_fe,
+                nasaPower: item.fuente_nasa_power,
                 diffMeteo,
                 diffApix,
                 diffSantaFe,
+                diffNasaPower,
                 isMeteoBest,
                 isApixBest,
                 isSantaFeBest,
+                isNasaPowerBest,
                 isIncomplete
             };
         });
@@ -63,15 +69,18 @@ export function useComparativasData(regionId: string | null) {
         let totalMeteoblue = 0;
         let totalApix = 0;
         let totalSantaFe = 0;
+        let totalNasaPower = 0;
         let aciertosMeteo = 0;
         let aciertosApix = 0;
         let aciertosSantaFe = 0;
+        let aciertosNasaPower = 0;
 
         lluvias2025.forEach(item => {
             totalReferencia += item.fuente_referencia;
             totalMeteoblue += item.fuente_meteoblue || 0;
             totalApix += item.fuente_apix;
             totalSantaFe += item.fuente_provincia_santa_fe;
+            totalNasaPower += item.fuente_nasa_power;
 
             // Contar aciertos (solo si referencia > 0)
             if (item.fuente_referencia > 0) {
@@ -80,16 +89,19 @@ export function useComparativasData(regionId: string | null) {
                     : Infinity;
                 const absDiffApix = Math.abs(item.fuente_apix - item.fuente_referencia);
                 const absDiffSantaFe = Math.abs(item.fuente_provincia_santa_fe - item.fuente_referencia);
+                const absDiffNasaPower = Math.abs(item.fuente_nasa_power - item.fuente_referencia);
 
-                if (absDiffMeteo < absDiffApix && absDiffMeteo < absDiffSantaFe) aciertosMeteo++;
-                if (absDiffApix < absDiffMeteo && absDiffApix < absDiffSantaFe) aciertosApix++;
-                if (absDiffSantaFe < absDiffMeteo && absDiffSantaFe < absDiffApix) aciertosSantaFe++;
+                if (absDiffMeteo < absDiffApix && absDiffMeteo < absDiffSantaFe && absDiffMeteo < absDiffNasaPower) aciertosMeteo++;
+                if (absDiffApix < absDiffMeteo && absDiffApix < absDiffSantaFe && absDiffApix < absDiffNasaPower) aciertosApix++;
+                if (absDiffSantaFe < absDiffMeteo && absDiffSantaFe < absDiffApix && absDiffSantaFe < absDiffNasaPower) aciertosSantaFe++;
+                if (absDiffNasaPower < absDiffMeteo && absDiffNasaPower < absDiffApix && absDiffNasaPower < absDiffSantaFe) aciertosNasaPower++;
             }
         });
 
         const diffMeteoTotal = Math.round(totalMeteoblue - totalReferencia);
         const diffApixTotal = Math.round(totalApix - totalReferencia);
         const diffSantaFeTotal = Math.round(totalSantaFe - totalReferencia);
+        const diffNasaPowerTotal = Math.round(totalNasaPower - totalReferencia);
 
         const refLabel = regionConfig.value?.referenceLabel || 'Referencia';
 
@@ -120,6 +132,13 @@ export function useComparativasData(regionId: string | null) {
                 difference: diffSantaFeTotal,
                 isReference: false,
                 hits: aciertosSantaFe
+            },
+            {
+                source: 'NASA Power',
+                total: totalNasaPower,
+                difference: diffNasaPowerTotal,
+                isReference: false,
+                hits: aciertosNasaPower
             }
         ];
     });
@@ -187,6 +206,15 @@ export function useComparativasData(regionId: string | null) {
                 borderWidth: 2,
                 tension: 0.3,
                 fill: false
+            },
+            {
+                label: 'NASA Power',
+                data: data.value.comparativa_lluvias.map(item => item.fuente_nasa_power),
+                borderColor: 'rgb(255, 165, 0)',
+                backgroundColor: 'rgba(255, 165, 0, 0.1)',
+                borderWidth: 2,
+                tension: 0.3,
+                fill: false
             }
         ];
     });
@@ -205,7 +233,8 @@ export function useComparativasData(regionId: string | null) {
             item.fuente_referencia,
             item.fuente_meteoblue ?? 0,
             item.fuente_apix,
-            item.fuente_provincia_santa_fe
+            item.fuente_provincia_santa_fe,
+            item.fuente_nasa_power
         ]);
 
         return Math.max(...allValues) * 1.1;
