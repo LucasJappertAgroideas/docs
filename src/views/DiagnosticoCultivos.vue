@@ -62,6 +62,7 @@ const IMAGE_TYPE_COLORS: Record<string, string> = {
     NDWI: "#00d4ff",
     NDRE: "#f0883e",
     EVI: "#d2a8ff",
+    GNDVI: "#8b5cf6",
     PRECIPITATION: "#58a6ff",
     TEMP_MAX: "#f85149",
     TEMP_MIN: "#79c0ff",
@@ -77,6 +78,7 @@ const DATASET_CONFIGS = [
     { key: "ndwi", label: "NDWI", color: "#00d4ff", yAxisID: "y1", type: "line" as const },
     { key: "ndre", label: "NDRE", color: "#f0883e", yAxisID: "y1", type: "line" as const },
     { key: "evi", label: "EVI", color: "#d2a8ff", yAxisID: "y1", type: "line" as const },
+    { key: "gndvi", label: "GNDVI", color: "#8b5cf6", yAxisID: "y1", type: "line" as const },
     { key: "temp_max", label: "Temp. Máx (°C)", color: "#f85149", yAxisID: "y2", type: "line" as const },
     { key: "temp_min", label: "Temp. Mín (°C)", color: "#79c0ff", yAxisID: "y2", type: "line" as const },
     { key: "temp_avg", label: "Temp. Prom (°C)", color: "#ffa657", yAxisID: "y2", type: "line" as const },
@@ -118,6 +120,11 @@ const eviData = computed(() => {
     return diagnosticoData.value.monthly_summary.map((m: any) => m.evi_avg);
 });
 
+const gndviData = computed(() => {
+    if (!diagnosticoData.value?.monthly_summary) return [];
+    return diagnosticoData.value.monthly_summary.map((m: any) => m.gndvi_avg ?? 0);
+});
+
 const precipitationData = computed(() => {
     if (!diagnosticoData.value?.monthly_summary) return [];
     return diagnosticoData.value.monthly_summary.map((m: any) => m.precipitation_mm);
@@ -155,14 +162,14 @@ const minTemperature = computed(() => {
 });
 
 const maxIndex = computed(() => {
-    const allIndexData = [...ndviData.value, ...ndviMaxData.value, ...reciData.value, ...ndwiData.value, ...ndreData.value, ...eviData.value];
+    const allIndexData = [...ndviData.value, ...ndviMaxData.value, ...reciData.value, ...ndwiData.value, ...ndreData.value, ...eviData.value, ...gndviData.value];
     if (!allIndexData.length) return 1;
     return Math.ceil(Math.max(...allIndexData.filter(v => v !== null && v !== undefined)) * 1.1 * 100) / 100;
 });
 
 // Datos del gráfico unificado
 const unifiedChartData = computed<ChartData<"line" | "bar">>(() => {
-    const dataArrays = [precipitationData.value, ndviData.value, ndviMaxData.value, reciData.value, ndwiData.value, ndreData.value, eviData.value, tempMaxData.value, tempMinData.value, tempAvgData.value];
+    const dataArrays = [precipitationData.value, ndviData.value, ndviMaxData.value, reciData.value, ndwiData.value, ndreData.value, eviData.value, gndviData.value, tempMaxData.value, tempMinData.value, tempAvgData.value];
 
     return {
         labels: monthlyLabels.value,
@@ -556,6 +563,10 @@ watch(
                                 <label>Pico NDVI</label>
                                 <span class="stat-value ndvi-value">{{ cycle.pico_ndvi.toFixed(3) }}</span>
                             </div>
+                            <div v-if="cycle.pico_gndvi !== undefined" class="stat-item">
+                                <label>Pico GNDVI</label>
+                                <span class="stat-value ndvi-value">{{ cycle.pico_gndvi.toFixed(3) }}</span>
+                            </div>
                             <div class="stat-item">
                                 <label>Estado</label>
                                 <span class="stat-badge" :class="cycle.estado_salud.toLowerCase()">
@@ -685,6 +696,7 @@ watch(
                                 <th>NDWI</th>
                                 <th>NDRE</th>
                                 <th>EVI</th>
+                                <th>GNDVI</th>
                                 <th>Precip. (mm)</th>
                                 <th>Temp. Máx</th>
                                 <th>Temp. Mín</th>
@@ -701,6 +713,7 @@ watch(
                                 <td>{{ month.ndwi_avg.toFixed(3) }}</td>
                                 <td>{{ month.ndre_avg.toFixed(3) }}</td>
                                 <td>{{ month.evi_avg.toFixed(3) }}</td>
+                                <td>{{ (month.gndvi_avg ?? 0).toFixed(3) }}</td>
                                 <td>{{ month.precipitation_mm.toFixed(1) }}</td>
                                 <td class="temp-max">{{ month.temp_max_c.toFixed(1) }}°C</td>
                                 <td class="temp-min">{{ month.temp_min_c.toFixed(1) }}°C</td>
@@ -738,6 +751,10 @@ watch(
                             <div class="capture-stat">
                                 <span class="stat-label">EVI</span>
                                 <span class="stat-value">{{ capture.evi.toFixed(2) }}</span>
+                            </div>
+                            <div class="capture-stat">
+                                <span class="stat-label">GNDVI</span>
+                                <span class="stat-value">{{ (capture.gndvi ?? 0).toFixed(2) }}</span>
                             </div>
                             <div class="capture-stat">
                                 <span class="stat-label">Nubes</span>

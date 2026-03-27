@@ -60,6 +60,14 @@ const indicesInfo = [
         healthyRange: "0.3 - 0.8",
         color: "#d2a8ff",
     },
+    {
+        name: "GNDVI",
+        fullName: "Índice de Vegetación de Diferencia Normalizada Verde",
+        description: "Usa la banda verde en lugar de la roja, siendo más sensible al contenido de clorofila en las hojas. Ideal para detectar deficiencias de nitrógeno en cultivos.",
+        range: "-1 a 1",
+        healthyRange: "0.2 - 0.8",
+        color: "#8b5cf6",
+    },
 ];
 </script>
 
