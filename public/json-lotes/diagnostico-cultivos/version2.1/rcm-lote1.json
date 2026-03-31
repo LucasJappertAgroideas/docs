@@ -1,0 +1,1738 @@
+{
+  "field_id": 40,
+  "date_from": "2024-07-01",
+  "date_to": "2026-03-30",
+  "cycles": [
+    {
+      "cultivo": "SOJA",
+      "fecha_siembra": "2025-01-09T00:00:00",
+      "fecha_cosecha": "2025-05-08T00:00:00",
+      "pico_ndvi": 0.871,
+      "pico_gndvi": 0.82,
+      "estado_salud": "EXCELENTE",
+      "eventos": [
+        {
+          "fecha": "2025-03-26T00:00:00",
+          "fecha_fin": null,
+          "duracion_dias": null,
+          "tipo": "INCIDENCIA_SIN_DEFINIR",
+          "severidad": "BAJA",
+          "descripcion": "Caída de GNDVI=0.11 sin causa climática evidente: Caída GNDVI=0.11, NDVI=0.20",
+          "indices_afectados": {
+            "gndvi": 0.111,
+            "ndvi": 0.201,
+            "evi": 0.183,
+            "reci": 1.153
+          },
+          "indices_promedio": {},
+          "clima_asociado": {
+            "precipitacion_mm": 0,
+            "temp_max_c": 20,
+            "temp_min_c": 10,
+            "temp_avg_c": 15,
+            "temp_anomalia": 0,
+            "precipitacion_anomalia": 0
+          },
+          "causa_probable": "Caída de GNDVI=0.11 sin causa climática evidente",
+          "recovery_observed": false,
+          "impacto_estimado": "MODERADO",
+          "confidence": {
+            "overall": 0.67,
+            "abruptness_score": 0.6,
+            "multi_index_agreement": 0.9,
+            "climate_correlation": 0.5,
+            "differentiation_from_senescence": 0.7
+          }
+        },
+        {
+          "fecha": "2025-03-27T00:00:00",
+          "fecha_fin": null,
+          "duracion_dias": null,
+          "tipo": "INCIDENCIA_SIN_DEFINIR",
+          "severidad": "MEDIA",
+          "descripcion": "Caída de GNDVI=0.12 sin causa climática evidente: Caída GNDVI=0.12, NDVI=0.22",
+          "indices_afectados": {
+            "gndvi": 0.122,
+            "ndvi": 0.22,
+            "evi": 0.2,
+            "reci": 1.26
+          },
+          "indices_promedio": {},
+          "clima_asociado": {
+            "precipitacion_mm": 0,
+            "temp_max_c": 20,
+            "temp_min_c": 10,
+            "temp_avg_c": 15,
+            "temp_anomalia": 0,
+            "precipitacion_anomalia": 0
+          },
+          "causa_probable": "Caída de GNDVI=0.12 sin causa climática evidente",
+          "recovery_observed": false,
+          "impacto_estimado": "MODERADO",
+          "confidence": {
+            "overall": 0.67,
+            "abruptness_score": 0.6,
+            "multi_index_agreement": 0.9,
+            "climate_correlation": 0.5,
+            "differentiation_from_senescence": 0.7
+          }
+        },
+        {
+          "fecha": "2025-03-28T00:00:00",
+          "fecha_fin": null,
+          "duracion_dias": null,
+          "tipo": "INCIDENCIA_SIN_DEFINIR",
+          "severidad": "MEDIA",
+          "descripcion": "Caída de GNDVI=0.13 sin causa climática evidente: Caída GNDVI=0.13, NDVI=0.24",
+          "indices_afectados": {
+            "gndvi": 0.134,
+            "ndvi": 0.24,
+            "evi": 0.219,
+            "reci": 1.378
+          },
+          "indices_promedio": {},
+          "clima_asociado": {
+            "precipitacion_mm": 0,
+            "temp_max_c": 20,
+            "temp_min_c": 10,
+            "temp_avg_c": 15,
+            "temp_anomalia": 0,
+            "precipitacion_anomalia": 0
+          },
+          "causa_probable": "Caída de GNDVI=0.13 sin causa climática evidente",
+          "recovery_observed": false,
+          "impacto_estimado": "MODERADO",
+          "confidence": {
+            "overall": 0.67,
+            "abruptness_score": 0.6,
+            "multi_index_agreement": 0.9,
+            "climate_correlation": 0.5,
+            "differentiation_from_senescence": 0.7
+          }
+        },
+        {
+          "fecha": "2025-03-29T00:00:00",
+          "fecha_fin": null,
+          "duracion_dias": null,
+          "tipo": "INCIDENCIA_SIN_DEFINIR",
+          "severidad": "MEDIA",
+          "descripcion": "Caída de GNDVI=0.14 sin causa climática evidente: Caída GNDVI=0.14, NDVI=0.26",
+          "indices_afectados": {
+            "gndvi": 0.144,
+            "ndvi": 0.258,
+            "evi": 0.235,
+            "reci": 1.48
+          },
+          "indices_promedio": {},
+          "clima_asociado": {
+            "precipitacion_mm": 0,
+            "temp_max_c": 20,
+            "temp_min_c": 10,
+            "temp_avg_c": 15,
+            "temp_anomalia": 0,
+            "precipitacion_anomalia": 0
+          },
+          "causa_probable": "Caída de GNDVI=0.14 sin causa climática evidente",
+          "recovery_observed": false,
+          "impacto_estimado": "MODERADO",
+          "confidence": {
+            "overall": 0.67,
+            "abruptness_score": 0.6,
+            "multi_index_agreement": 0.9,
+            "climate_correlation": 0.5,
+            "differentiation_from_senescence": 0.7
+          }
+        },
+        {
+          "fecha": "2025-03-30T00:00:00",
+          "fecha_fin": null,
+          "duracion_dias": null,
+          "tipo": "INCIDENCIA_SIN_DEFINIR",
+          "severidad": "MEDIA",
+          "descripcion": "Caída de GNDVI=0.15 sin causa climática evidente: Caída GNDVI=0.15, NDVI=0.27",
+          "indices_afectados": {
+            "gndvi": 0.152,
+            "ndvi": 0.27,
+            "evi": 0.247,
+            "reci": 1.552
+          },
+          "indices_promedio": {},
+          "clima_asociado": {
+            "precipitacion_mm": 0,
+            "temp_max_c": 20,
+            "temp_min_c": 10,
+            "temp_avg_c": 15,
+            "temp_anomalia": 0,
+            "precipitacion_anomalia": 0
+          },
+          "causa_probable": "Caída de GNDVI=0.15 sin causa climática evidente",
+          "recovery_observed": false,
+          "impacto_estimado": "SEVERO",
+          "confidence": {
+            "overall": 0.73,
+            "abruptness_score": 0.8,
+            "multi_index_agreement": 0.9,
+            "climate_correlation": 0.5,
+            "differentiation_from_senescence": 0.7
+          }
+        },
+        {
+          "fecha": "2025-03-31T00:00:00",
+          "fecha_fin": null,
+          "duracion_dias": null,
+          "tipo": "INCIDENCIA_SIN_DEFINIR",
+          "severidad": "MEDIA",
+          "descripcion": "Caída de GNDVI=0.16 sin causa climática evidente: Caída GNDVI=0.16, NDVI=0.28",
+          "indices_afectados": {
+            "gndvi": 0.155,
+            "ndvi": 0.277,
+            "evi": 0.252,
+            "reci": 1.587
+          },
+          "indices_promedio": {},
+          "clima_asociado": {
+            "precipitacion_mm": 0,
+            "temp_max_c": 20,
+            "temp_min_c": 10,
+            "temp_avg_c": 15,
+            "temp_anomalia": 0,
+            "precipitacion_anomalia": 0
+          },
+          "causa_probable": "Caída de GNDVI=0.16 sin causa climática evidente",
+          "recovery_observed": false,
+          "impacto_estimado": "SEVERO",
+          "confidence": {
+            "overall": 0.73,
+            "abruptness_score": 0.8,
+            "multi_index_agreement": 0.9,
+            "climate_correlation": 0.5,
+            "differentiation_from_senescence": 0.7
+          }
+        }
+      ],
+      "status": "COMPLETO",
+      "confidence": 0.94,
+      "notes": "Ciclo: Siembra 2025-01-09, Pico 2025-03-14, Cosecha 2025-05-08 | Duración: 99 días | Seguimiento biomasa: 29/30 días",
+      "fecha_inicio_crecimiento": "2025-01-29T00:00:00",
+      "fecha_pico_biomasa": "2025-03-14T00:00:00",
+      "fecha_inicio_senescencia": "2025-03-31T00:00:00",
+      "fecha_fin_ciclo": "2025-05-08T00:00:00",
+      "fecha_siembra_estimada": "2025-01-09T00:00:00",
+      "cultivo_probable": "Soja",
+      "cultivo_scores": {
+        "NDVI": 0.15463917525773194,
+        "GNDVI": 0.15463917525773194,
+        "RECI": 0.02577319587628866,
+        "MAIZ": 0.27319587628865977,
+        "SOJA": 0.2989690721649484,
+        "TRIGO": 0.09278350515463916
+      },
+      "clasificacion_detallada": {},
+      "etapa_actual": "FINALIZADO",
+      "max_biomass_window": {
+        "start_date": "2025-02-14T00:00:00",
+        "end_date": "2025-03-14T00:00:00",
+        "stabilized_days": 29,
+        "is_ready_for_yield_estimation": false,
+        "estimation_status": "EN_SEGUIMIENTO",
+        "score": 0.9666666666666667,
+        "plateau_gndvi_avg": 0.809,
+        "plateau_ndvi_avg": 0.864,
+        "plateau_evi_avg": 0.754,
+        "plateau_reci_avg": 3.71,
+        "variability": 0.0084
+      },
+      "indices_summary": {
+        "pico_ndvi": 0.871,
+        "pico_gndvi": 0.82,
+        "pico_evi": 0.761,
+        "pico_reci": 3.747,
+        "pico_ndre": 0,
+        "pico_ndwi": 0.4,
+        "fecha_pico_ndvi": "2025-03-13",
+        "fecha_pico_gndvi": "2025-03-14",
+        "fecha_pico_evi": "2025-03-13",
+        "fecha_pico_reci": "2025-03-13",
+        "fecha_pico_ndre": null,
+        "fecha_pico_ndwi": "2025-03-13",
+        "ndvi_gndvi_ratio": 1.063,
+        "evi_ndvi_ratio": 0.874,
+        "reci_ndvi_ratio": 4.301
+      },
+      "cycle_confidence": {
+        "overall": 0.94,
+        "temporal_alignment": 0.9,
+        "index_correlation": 1,
+        "data_quality": 1,
+        "thermal_consistency": 0.85
+      },
+      "biomass_confidence": {
+        "overall": 0.99,
+        "plateau_stability": 1,
+        "multi_index_confirmation": 1,
+        "duration_adequacy": 0.97
+      },
+      "enriched_notes": [
+        "Ciclo: Siembra 2025-01-09, Pico 2025-03-14, Cosecha 2025-05-08",
+        "Duración: 99 días",
+        "Seguimiento biomasa: 29/30 días",
+        "NDVI/GNDVI=1.06 (excelente)"
+      ],
+      "ciclo_duracion_dias": 99,
+      "ventana_termica": "TEMPLADA"
+    },
+    {
+      "cultivo": "TRIGO",
+      "fecha_siembra": "2025-06-29T00:00:00",
+      "fecha_cosecha": "2025-11-14T00:00:00",
+      "pico_ndvi": 0.851,
+      "pico_gndvi": 0.8,
+      "estado_salud": "EXCELENTE",
+      "eventos": [
+        {
+          "fecha": "2025-10-01T00:00:00",
+          "fecha_fin": null,
+          "duracion_dias": null,
+          "tipo": "INCIDENCIA_SIN_DEFINIR",
+          "severidad": "BAJA",
+          "descripcion": "Caída de GNDVI=0.10 sin causa climática evidente: Caída GNDVI=0.10, NDVI=0.18",
+          "indices_afectados": {
+            "gndvi": 0.1,
+            "ndvi": 0.181,
+            "evi": 0.1,
+            "reci": 1.315
+          },
+          "indices_promedio": {},
+          "clima_asociado": {
+            "precipitacion_mm": 0,
+            "temp_max_c": 20,
+            "temp_min_c": 10,
+            "temp_avg_c": 15,
+            "temp_anomalia": 0,
+            "precipitacion_anomalia": 0
+          },
+          "causa_probable": "Caída de GNDVI=0.10 sin causa climática evidente",
+          "recovery_observed": false,
+          "impacto_estimado": "MODERADO",
+          "confidence": {
+            "overall": 0.67,
+            "abruptness_score": 0.6,
+            "multi_index_agreement": 0.9,
+            "climate_correlation": 0.5,
+            "differentiation_from_senescence": 0.7
+          }
+        },
+        {
+          "fecha": "2025-10-02T00:00:00",
+          "fecha_fin": null,
+          "duracion_dias": null,
+          "tipo": "INCIDENCIA_SIN_DEFINIR",
+          "severidad": "BAJA",
+          "descripcion": "Caída de GNDVI=0.10 sin causa climática evidente: Caída GNDVI=0.10, NDVI=0.18",
+          "indices_afectados": {
+            "gndvi": 0.101,
+            "ndvi": 0.181,
+            "evi": 0.1,
+            "reci": 1.319
+          },
+          "indices_promedio": {},
+          "clima_asociado": {
+            "precipitacion_mm": 0,
+            "temp_max_c": 20,
+            "temp_min_c": 10,
+            "temp_avg_c": 15,
+            "temp_anomalia": 0,
+            "precipitacion_anomalia": 0
+          },
+          "causa_probable": "Caída de GNDVI=0.10 sin causa climática evidente",
+          "recovery_observed": false,
+          "impacto_estimado": "MODERADO",
+          "confidence": {
+            "overall": 0.67,
+            "abruptness_score": 0.6,
+            "multi_index_agreement": 0.9,
+            "climate_correlation": 0.5,
+            "differentiation_from_senescence": 0.7
+          }
+        },
+        {
+          "fecha": "2025-10-03T00:00:00",
+          "fecha_fin": null,
+          "duracion_dias": null,
+          "tipo": "INCIDENCIA_SIN_DEFINIR",
+          "severidad": "BAJA",
+          "descripcion": "Caída de GNDVI=0.10 sin causa climática evidente: Caída GNDVI=0.10, NDVI=0.18",
+          "indices_afectados": {
+            "gndvi": 0.1,
+            "ndvi": 0.18,
+            "evi": 0.1,
+            "reci": 1.31
+          },
+          "indices_promedio": {},
+          "clima_asociado": {
+            "precipitacion_mm": 0,
+            "temp_max_c": 20,
+            "temp_min_c": 10,
+            "temp_avg_c": 15,
+            "temp_anomalia": 0,
+            "precipitacion_anomalia": 0
+          },
+          "causa_probable": "Caída de GNDVI=0.10 sin causa climática evidente",
+          "recovery_observed": false,
+          "impacto_estimado": "MODERADO",
+          "confidence": {
+            "overall": 0.67,
+            "abruptness_score": 0.6,
+            "multi_index_agreement": 0.9,
+            "climate_correlation": 0.5,
+            "differentiation_from_senescence": 0.7
+          }
+        },
+        {
+          "fecha": "2025-10-04T00:00:00",
+          "fecha_fin": null,
+          "duracion_dias": null,
+          "tipo": "INCIDENCIA_SIN_DEFINIR",
+          "severidad": "BAJA",
+          "descripcion": "Caída de GNDVI=0.10 sin causa climática evidente: Caída GNDVI=0.10, NDVI=0.18",
+          "indices_afectados": {
+            "gndvi": 0.1,
+            "ndvi": 0.18,
+            "evi": 0.1,
+            "reci": 1.31
+          },
+          "indices_promedio": {},
+          "clima_asociado": {
+            "precipitacion_mm": 0,
+            "temp_max_c": 20,
+            "temp_min_c": 10,
+            "temp_avg_c": 15,
+            "temp_anomalia": 0,
+            "precipitacion_anomalia": 0
+          },
+          "causa_probable": "Caída de GNDVI=0.10 sin causa climática evidente",
+          "recovery_observed": false,
+          "impacto_estimado": "MODERADO",
+          "confidence": {
+            "overall": 0.67,
+            "abruptness_score": 0.6,
+            "multi_index_agreement": 0.9,
+            "climate_correlation": 0.5,
+            "differentiation_from_senescence": 0.7
+          }
+        },
+        {
+          "fecha": "2025-10-05T00:00:00",
+          "fecha_fin": null,
+          "duracion_dias": null,
+          "tipo": "INCIDENCIA_SIN_DEFINIR",
+          "severidad": "BAJA",
+          "descripcion": "Caída de GNDVI=0.10 sin causa climática evidente: Caída GNDVI=0.10, NDVI=0.18",
+          "indices_afectados": {
+            "gndvi": 0.1,
+            "ndvi": 0.18,
+            "evi": 0.1,
+            "reci": 1.31
+          },
+          "indices_promedio": {},
+          "clima_asociado": {
+            "precipitacion_mm": 0,
+            "temp_max_c": 20,
+            "temp_min_c": 10,
+            "temp_avg_c": 15,
+            "temp_anomalia": 0,
+            "precipitacion_anomalia": 0
+          },
+          "causa_probable": "Caída de GNDVI=0.10 sin causa climática evidente",
+          "recovery_observed": false,
+          "impacto_estimado": "MODERADO",
+          "confidence": {
+            "overall": 0.67,
+            "abruptness_score": 0.6,
+            "multi_index_agreement": 0.9,
+            "climate_correlation": 0.5,
+            "differentiation_from_senescence": 0.7
+          }
+        },
+        {
+          "fecha": "2025-10-06T00:00:00",
+          "fecha_fin": null,
+          "duracion_dias": null,
+          "tipo": "INCIDENCIA_SIN_DEFINIR",
+          "severidad": "BAJA",
+          "descripcion": "Caída de GNDVI=0.10 sin causa climática evidente: Caída GNDVI=0.10, NDVI=0.18",
+          "indices_afectados": {
+            "gndvi": 0.1,
+            "ndvi": 0.18,
+            "evi": 0.1,
+            "reci": 1.31
+          },
+          "indices_promedio": {},
+          "clima_asociado": {
+            "precipitacion_mm": 0,
+            "temp_max_c": 20,
+            "temp_min_c": 10,
+            "temp_avg_c": 15,
+            "temp_anomalia": 0,
+            "precipitacion_anomalia": 0
+          },
+          "causa_probable": "Caída de GNDVI=0.10 sin causa climática evidente",
+          "recovery_observed": false,
+          "impacto_estimado": "MODERADO",
+          "confidence": {
+            "overall": 0.67,
+            "abruptness_score": 0.6,
+            "multi_index_agreement": 0.9,
+            "climate_correlation": 0.5,
+            "differentiation_from_senescence": 0.7
+          }
+        },
+        {
+          "fecha": "2025-10-07T00:00:00",
+          "fecha_fin": null,
+          "duracion_dias": null,
+          "tipo": "INCIDENCIA_SIN_DEFINIR",
+          "severidad": "BAJA",
+          "descripcion": "Caída de GNDVI=0.10 sin causa climática evidente: Caída GNDVI=0.10, NDVI=0.18",
+          "indices_afectados": {
+            "gndvi": 0.1,
+            "ndvi": 0.18,
+            "evi": 0.1,
+            "reci": 1.31
+          },
+          "indices_promedio": {},
+          "clima_asociado": {
+            "precipitacion_mm": 0,
+            "temp_max_c": 20,
+            "temp_min_c": 10,
+            "temp_avg_c": 15,
+            "temp_anomalia": 0,
+            "precipitacion_anomalia": 0
+          },
+          "causa_probable": "Caída de GNDVI=0.10 sin causa climática evidente",
+          "recovery_observed": false,
+          "impacto_estimado": "MODERADO",
+          "confidence": {
+            "overall": 0.67,
+            "abruptness_score": 0.6,
+            "multi_index_agreement": 0.9,
+            "climate_correlation": 0.5,
+            "differentiation_from_senescence": 0.7
+          }
+        },
+        {
+          "fecha": "2025-10-08T00:00:00",
+          "fecha_fin": null,
+          "duracion_dias": null,
+          "tipo": "INCIDENCIA_SIN_DEFINIR",
+          "severidad": "BAJA",
+          "descripcion": "Caída de GNDVI=0.10 sin causa climática evidente: Caída GNDVI=0.10, NDVI=0.18",
+          "indices_afectados": {
+            "gndvi": 0.1,
+            "ndvi": 0.18,
+            "evi": 0.1,
+            "reci": 1.31
+          },
+          "indices_promedio": {},
+          "clima_asociado": {
+            "precipitacion_mm": 0,
+            "temp_max_c": 20,
+            "temp_min_c": 10,
+            "temp_avg_c": 15,
+            "temp_anomalia": 0,
+            "precipitacion_anomalia": 0
+          },
+          "causa_probable": "Caída de GNDVI=0.10 sin causa climática evidente",
+          "recovery_observed": false,
+          "impacto_estimado": "MODERADO",
+          "confidence": {
+            "overall": 0.67,
+            "abruptness_score": 0.6,
+            "multi_index_agreement": 0.9,
+            "climate_correlation": 0.5,
+            "differentiation_from_senescence": 0.7
+          }
+        }
+      ],
+      "status": "COMPLETO",
+      "confidence": 0.87,
+      "notes": "Ciclo: Siembra 2025-06-29, Pico 2025-09-13, Cosecha 2025-11-14 | Duración: 118 días | Biomasa máxima: 40 días estabilizados",
+      "fecha_inicio_crecimiento": "2025-07-19T00:00:00",
+      "fecha_pico_biomasa": "2025-09-13T00:00:00",
+      "fecha_inicio_senescencia": "2025-10-09T00:00:00",
+      "fecha_fin_ciclo": "2025-11-14T00:00:00",
+      "fecha_siembra_estimada": "2025-06-29T00:00:00",
+      "cultivo_probable": "Trigo",
+      "cultivo_scores": {
+        "NDVI": 0.13888888888888887,
+        "GNDVI": 0.13888888888888887,
+        "RECI": 0.023148148148148147,
+        "MAIZ": 0.27777777777777773,
+        "SOJA": 0.2685185185185185,
+        "TRIGO": 0.15277777777777776
+      },
+      "clasificacion_detallada": {},
+      "etapa_actual": "FINALIZADO",
+      "max_biomass_window": {
+        "start_date": "2025-08-12T00:00:00",
+        "end_date": "2025-09-20T00:00:00",
+        "stabilized_days": 40,
+        "is_ready_for_yield_estimation": true,
+        "estimation_status": "LISTO",
+        "score": 1,
+        "plateau_gndvi_avg": 0.792,
+        "plateau_ndvi_avg": 0.839,
+        "plateau_evi_avg": 0.624,
+        "plateau_reci_avg": 3.35,
+        "variability": 0.0094
+      },
+      "indices_summary": {
+        "pico_ndvi": 0.851,
+        "pico_gndvi": 0.8,
+        "pico_evi": 0.668,
+        "pico_reci": 3.563,
+        "pico_ndre": 0,
+        "pico_ndwi": 0.469,
+        "fecha_pico_ndvi": "2025-09-13",
+        "fecha_pico_gndvi": "2025-09-13",
+        "fecha_pico_evi": "2025-08-16",
+        "fecha_pico_reci": "2025-09-14",
+        "fecha_pico_ndre": null,
+        "fecha_pico_ndwi": "2025-09-14",
+        "ndvi_gndvi_ratio": 1.063,
+        "evi_ndvi_ratio": 0.785,
+        "reci_ndvi_ratio": 4.189
+      },
+      "cycle_confidence": {
+        "overall": 0.87,
+        "temporal_alignment": 0.9,
+        "index_correlation": 0.75,
+        "data_quality": 1,
+        "thermal_consistency": 0.85
+      },
+      "biomass_confidence": {
+        "overall": 1,
+        "plateau_stability": 1,
+        "multi_index_confirmation": 1,
+        "duration_adequacy": 1
+      },
+      "enriched_notes": [
+        "Ciclo: Siembra 2025-06-29, Pico 2025-09-13, Cosecha 2025-11-14",
+        "Duración: 118 días",
+        "Biomasa máxima: 40 días estabilizados",
+        "NDVI/GNDVI=1.06 (excelente)"
+      ],
+      "ciclo_duracion_dias": 118,
+      "ventana_termica": "TEMPLADA"
+    },
+    {
+      "cultivo": "MAIZ",
+      "fecha_siembra": "2026-01-04T00:00:00",
+      "fecha_cosecha": "2026-03-15T00:00:00",
+      "pico_ndvi": 0.86,
+      "pico_gndvi": 0.81,
+      "estado_salud": "EXCELENTE",
+      "eventos": [],
+      "status": "COMPLETO",
+      "confidence": 0.77,
+      "notes": "Ciclo: Siembra 2026-01-04, Pico 2026-03-15, Cosecha 2026-03-15 | Duración: 50 días | Seguimiento biomasa: 0/30 días",
+      "fecha_inicio_crecimiento": "2026-01-24T00:00:00",
+      "fecha_pico_biomasa": "2026-03-15T00:00:00",
+      "fecha_inicio_senescencia": null,
+      "fecha_fin_ciclo": "2026-03-15T00:00:00",
+      "fecha_siembra_estimada": "2026-01-04T00:00:00",
+      "cultivo_probable": "Maíz",
+      "cultivo_scores": {
+        "NDVI": 0.17543859649122806,
+        "GNDVI": 0.17543859649122806,
+        "RECI": 0.029239766081871347,
+        "MAIZ": 0.2631578947368421,
+        "SOJA": 0.25146198830409355,
+        "TRIGO": 0.10526315789473684
+      },
+      "clasificacion_detallada": {},
+      "etapa_actual": "VEGETATIVO",
+      "max_biomass_window": null,
+      "indices_summary": {
+        "pico_ndvi": 0.86,
+        "pico_gndvi": 0.81,
+        "pico_evi": 0.62,
+        "pico_reci": 3.85,
+        "pico_ndre": 0,
+        "pico_ndwi": 0.42,
+        "fecha_pico_ndvi": "2026-03-15",
+        "fecha_pico_gndvi": "2026-03-15",
+        "fecha_pico_evi": "2026-03-15",
+        "fecha_pico_reci": "2026-03-15",
+        "fecha_pico_ndre": null,
+        "fecha_pico_ndwi": "2026-03-15",
+        "ndvi_gndvi_ratio": 1.062,
+        "evi_ndvi_ratio": 0.721,
+        "reci_ndvi_ratio": 4.477
+      },
+      "cycle_confidence": {
+        "overall": 0.77,
+        "temporal_alignment": 0.8,
+        "index_correlation": 0.5,
+        "data_quality": 1,
+        "thermal_consistency": 0.85
+      },
+      "biomass_confidence": {
+        "overall": 0.3,
+        "plateau_stability": 0,
+        "multi_index_confirmation": 0,
+        "duration_adequacy": 0
+      },
+      "enriched_notes": [
+        "Ciclo: Siembra 2026-01-04, Pico 2026-03-15, Cosecha 2026-03-15",
+        "Duración: 50 días",
+        "Seguimiento biomasa: 0/30 días",
+        "NDVI/GNDVI=1.06 (excelente)"
+      ],
+      "ciclo_duracion_dias": 50,
+      "ventana_termica": "TEMPLADA"
+    }
+  ],
+  "monthly_summary": [
+    {
+      "month": "07-2024",
+      "ndvi_avg": 0.212,
+      "ndvi_max": 0.22,
+      "reci_avg": 0.305,
+      "reci_max": 0.31,
+      "ndwi_avg": -0.077,
+      "ndre_avg": 0.237,
+      "evi_avg": 0.22,
+      "gndvi_avg": 0.455,
+      "precipitation_mm": 0,
+      "temp_max_c": 29.5,
+      "temp_min_c": 0.8,
+      "temp_avg_c": 14.5,
+      "num_captures": 0
+    },
+    {
+      "month": "08-2024",
+      "ndvi_avg": 0.193,
+      "ndvi_max": 0.204,
+      "reci_avg": 0.292,
+      "reci_max": 0.299,
+      "ndwi_avg": -0.071,
+      "ndre_avg": 0.23,
+      "evi_avg": 0.22,
+      "gndvi_avg": 0.439,
+      "precipitation_mm": 2.9,
+      "temp_max_c": 34.9,
+      "temp_min_c": 3.8,
+      "temp_avg_c": 17,
+      "num_captures": 0
+    },
+    {
+      "month": "09-2024",
+      "ndvi_avg": 0.185,
+      "ndvi_max": 0.19,
+      "reci_avg": 0.277,
+      "reci_max": 0.29,
+      "ndwi_avg": -0.078,
+      "ndre_avg": 0.218,
+      "evi_avg": 0.217,
+      "gndvi_avg": 0.416,
+      "precipitation_mm": 4,
+      "temp_max_c": 42,
+      "temp_min_c": 7.9,
+      "temp_avg_c": 23.3,
+      "num_captures": 0
+    },
+    {
+      "month": "10-2024",
+      "ndvi_avg": 0.155,
+      "ndvi_max": 0.169,
+      "reci_avg": 0.2,
+      "reci_max": 0.237,
+      "ndwi_avg": -0.123,
+      "ndre_avg": 0.202,
+      "evi_avg": 0.202,
+      "gndvi_avg": 0.374,
+      "precipitation_mm": 226.3,
+      "temp_max_c": 35.4,
+      "temp_min_c": 12.8,
+      "temp_avg_c": 24.4,
+      "num_captures": 0
+    },
+    {
+      "month": "11-2024",
+      "ndvi_avg": 0.155,
+      "ndvi_max": 0.17,
+      "reci_avg": 0.192,
+      "reci_max": 0.22,
+      "ndwi_avg": -0.123,
+      "ndre_avg": 0.203,
+      "evi_avg": 0.192,
+      "gndvi_avg": 0.365,
+      "precipitation_mm": 116.3,
+      "temp_max_c": 39.2,
+      "temp_min_c": 13.7,
+      "temp_avg_c": 25.6,
+      "num_captures": 0
+    },
+    {
+      "month": "12-2024",
+      "ndvi_avg": 0.2,
+      "ndvi_max": 0.242,
+      "reci_avg": 0.278,
+      "reci_max": 0.358,
+      "ndwi_avg": -0.08,
+      "ndre_avg": 0.229,
+      "evi_avg": 0.157,
+      "gndvi_avg": 0.395,
+      "precipitation_mm": 48.6,
+      "temp_max_c": 37.2,
+      "temp_min_c": 14.4,
+      "temp_avg_c": 25.6,
+      "num_captures": 0
+    },
+    {
+      "month": "01-2025",
+      "ndvi_avg": 0.36,
+      "ndvi_max": 0.584,
+      "reci_avg": 0.888,
+      "reci_max": 2.122,
+      "ndwi_avg": 0.015,
+      "ndre_avg": 0.349,
+      "evi_avg": 0.279,
+      "gndvi_avg": 0.493,
+      "precipitation_mm": 93.4,
+      "temp_max_c": 39,
+      "temp_min_c": 19.4,
+      "temp_avg_c": 29.3,
+      "num_captures": 0
+    },
+    {
+      "month": "02-2025",
+      "ndvi_avg": 0.792,
+      "ndvi_max": 0.865,
+      "reci_avg": 3.304,
+      "reci_max": 3.713,
+      "ndwi_avg": 0.332,
+      "ndre_avg": 0.666,
+      "evi_avg": 0.686,
+      "gndvi_avg": 0.76,
+      "precipitation_mm": 70.4,
+      "temp_max_c": 42.1,
+      "temp_min_c": 20.6,
+      "temp_avg_c": 32.4,
+      "num_captures": 0
+    },
+    {
+      "month": "03-2025",
+      "ndvi_avg": 0.788,
+      "ndvi_max": 0.871,
+      "reci_avg": 3.271,
+      "reci_max": 3.747,
+      "ndwi_avg": 0.324,
+      "ndre_avg": 0.692,
+      "evi_avg": 0.685,
+      "gndvi_avg": 0.772,
+      "precipitation_mm": 68,
+      "temp_max_c": 41.2,
+      "temp_min_c": 15.2,
+      "temp_avg_c": 27.6,
+      "num_captures": 0
+    },
+    {
+      "month": "04-2025",
+      "ndvi_avg": 0.351,
+      "ndvi_max": 0.557,
+      "reci_avg": 0.819,
+      "reci_max": 1.947,
+      "ndwi_avg": -0.069,
+      "ndre_avg": 0.36,
+      "evi_avg": 0.295,
+      "gndvi_avg": 0.525,
+      "precipitation_mm": 2.2,
+      "temp_max_c": 31.6,
+      "temp_min_c": 9.9,
+      "temp_avg_c": 21.6,
+      "num_captures": 0
+    },
+    {
+      "month": "05-2025",
+      "ndvi_avg": 0.213,
+      "ndvi_max": 0.247,
+      "reci_avg": 0.34,
+      "reci_max": 0.39,
+      "ndwi_avg": -0.176,
+      "ndre_avg": 0.258,
+      "evi_avg": 0.211,
+      "gndvi_avg": 0.432,
+      "precipitation_mm": 4,
+      "temp_max_c": 31.2,
+      "temp_min_c": 4.7,
+      "temp_avg_c": 20.4,
+      "num_captures": 0
+    },
+    {
+      "month": "06-2025",
+      "ndvi_avg": 0.238,
+      "ndvi_max": 0.32,
+      "reci_avg": 0.396,
+      "reci_max": 0.56,
+      "ndwi_avg": -0.174,
+      "ndre_avg": 0.263,
+      "evi_avg": 0.211,
+      "gndvi_avg": 0.451,
+      "precipitation_mm": 7.4,
+      "temp_max_c": 24.6,
+      "temp_min_c": 3.1,
+      "temp_avg_c": 13.8,
+      "num_captures": 0
+    },
+    {
+      "month": "07-2025",
+      "ndvi_avg": 0.463,
+      "ndvi_max": 0.642,
+      "reci_avg": 1.073,
+      "reci_max": 2.029,
+      "ndwi_avg": 0.025,
+      "ndre_avg": 0.381,
+      "evi_avg": 0.362,
+      "gndvi_avg": 0.564,
+      "precipitation_mm": 32.6,
+      "temp_max_c": 30.1,
+      "temp_min_c": 1.8,
+      "temp_avg_c": 16.5,
+      "num_captures": 0
+    },
+    {
+      "month": "08-2025",
+      "ndvi_avg": 0.797,
+      "ndvi_max": 0.845,
+      "reci_avg": 2.988,
+      "reci_max": 3.391,
+      "ndwi_avg": 0.394,
+      "ndre_avg": 0.62,
+      "evi_avg": 0.622,
+      "gndvi_avg": 0.764,
+      "precipitation_mm": 118.9,
+      "temp_max_c": 30.5,
+      "temp_min_c": 4,
+      "temp_avg_c": 17.4,
+      "num_captures": 0
+    },
+    {
+      "month": "09-2025",
+      "ndvi_avg": 0.801,
+      "ndvi_max": 0.851,
+      "reci_avg": 3.179,
+      "reci_max": 3.563,
+      "ndwi_avg": 0.435,
+      "ndre_avg": 0.632,
+      "evi_avg": 0.572,
+      "gndvi_avg": 0.772,
+      "precipitation_mm": 15.2,
+      "temp_max_c": 35.1,
+      "temp_min_c": 6.4,
+      "temp_avg_c": 20,
+      "num_captures": 0
+    },
+    {
+      "month": "10-2025",
+      "ndvi_avg": 0.481,
+      "ndvi_max": 0.658,
+      "reci_avg": 1.137,
+      "reci_max": 2.173,
+      "ndwi_avg": 0.212,
+      "ndre_avg": 0.401,
+      "evi_avg": 0.386,
+      "gndvi_avg": 0.587,
+      "precipitation_mm": 103.4,
+      "temp_max_c": 37.6,
+      "temp_min_c": 10.8,
+      "temp_avg_c": 23.1,
+      "num_captures": 0
+    },
+    {
+      "month": "11-2025",
+      "ndvi_avg": 0.18,
+      "ndvi_max": 0.298,
+      "reci_avg": 0.266,
+      "reci_max": 0.528,
+      "ndwi_avg": -0.059,
+      "ndre_avg": 0.214,
+      "evi_avg": 0.22,
+      "gndvi_avg": 0.377,
+      "precipitation_mm": 103.1,
+      "temp_max_c": 39.2,
+      "temp_min_c": 12.5,
+      "temp_avg_c": 24.9,
+      "num_captures": 0
+    },
+    {
+      "month": "12-2025",
+      "ndvi_avg": 0.141,
+      "ndvi_max": 0.145,
+      "reci_avg": 0.173,
+      "reci_max": 0.175,
+      "ndwi_avg": -0.127,
+      "ndre_avg": 0.191,
+      "evi_avg": 0.193,
+      "gndvi_avg": 0.344,
+      "precipitation_mm": 193.6,
+      "temp_max_c": 36.6,
+      "temp_min_c": 14.8,
+      "temp_avg_c": 26.4,
+      "num_captures": 0
+    },
+    {
+      "month": "01-2026",
+      "ndvi_avg": 0.227,
+      "ndvi_max": 0.434,
+      "reci_avg": 0.5,
+      "reci_max": 1.352,
+      "ndwi_avg": -0.092,
+      "ndre_avg": 0.257,
+      "evi_avg": 0.247,
+      "gndvi_avg": 0.403,
+      "precipitation_mm": 314.5,
+      "temp_max_c": 36.4,
+      "temp_min_c": 16.2,
+      "temp_avg_c": 26.9,
+      "num_captures": 0
+    },
+    {
+      "month": "02-2026",
+      "ndvi_avg": 0.652,
+      "ndvi_max": 0.774,
+      "reci_avg": 2.338,
+      "reci_max": 3.1,
+      "ndwi_avg": 0.177,
+      "ndre_avg": 0.573,
+      "evi_avg": 0.508,
+      "gndvi_avg": 0.656,
+      "precipitation_mm": 63.9,
+      "temp_max_c": 38.4,
+      "temp_min_c": 20.4,
+      "temp_avg_c": 28.7,
+      "num_captures": 0
+    },
+    {
+      "month": "03-2026",
+      "ndvi_avg": 0.82,
+      "ndvi_max": 0.86,
+      "reci_avg": 3.5,
+      "reci_max": 3.85,
+      "ndwi_avg": 0.363,
+      "ndre_avg": 0.693,
+      "evi_avg": 0.6,
+      "gndvi_avg": 0.778,
+      "precipitation_mm": 124.5,
+      "temp_max_c": 39,
+      "temp_min_c": 13.6,
+      "temp_avg_c": 25.6,
+      "num_captures": 0
+    }
+  ],
+  "captures_detail": [
+    {
+      "date": "2024-07-15",
+      "cloud_coverage": 0,
+      "ndvi": 0.22,
+      "ndwi": -0.08,
+      "reci": 0.31,
+      "ndre": 0.24,
+      "evi": 0.22,
+      "gndvi": 0.46
+    },
+    {
+      "date": "2024-08-15",
+      "cloud_coverage": 0,
+      "ndvi": 0.19,
+      "ndwi": -0.07,
+      "reci": 0.29,
+      "ndre": 0.23,
+      "evi": 0.22,
+      "gndvi": 0.44
+    },
+    {
+      "date": "2024-09-15",
+      "cloud_coverage": 0,
+      "ndvi": 0.19,
+      "ndwi": -0.07,
+      "reci": 0.29,
+      "ndre": 0.22,
+      "evi": 0.22,
+      "gndvi": 0.42
+    },
+    {
+      "date": "2024-10-15",
+      "cloud_coverage": 0,
+      "ndvi": 0.15,
+      "ndwi": -0.13,
+      "reci": 0.19,
+      "ndre": 0.2,
+      "evi": 0.2,
+      "gndvi": 0.37
+    },
+    {
+      "date": "2024-11-15",
+      "cloud_coverage": 0,
+      "ndvi": 0.15,
+      "ndwi": -0.13,
+      "reci": 0.18,
+      "ndre": 0.2,
+      "evi": 0.2,
+      "gndvi": 0.36
+    },
+    {
+      "date": "2024-12-15",
+      "cloud_coverage": 0,
+      "ndvi": 0.19,
+      "ndwi": -0.08,
+      "reci": 0.26,
+      "ndre": 0.22,
+      "evi": 0.14,
+      "gndvi": 0.39
+    },
+    {
+      "date": "2025-01-15",
+      "cloud_coverage": 0,
+      "ndvi": 0.29,
+      "ndwi": -0.04,
+      "reci": 0.45,
+      "ndre": 0.3,
+      "evi": 0.21,
+      "gndvi": 0.45
+    },
+    {
+      "date": "2025-02-15",
+      "cloud_coverage": 0,
+      "ndvi": 0.86,
+      "ndwi": 0.38,
+      "reci": 3.69,
+      "ndre": 0.71,
+      "evi": 0.75,
+      "gndvi": 0.8
+    },
+    {
+      "date": "2025-03-15",
+      "cloud_coverage": 0,
+      "ndvi": 0.87,
+      "ndwi": 0.4,
+      "reci": 3.74,
+      "ndre": 0.76,
+      "evi": 0.76,
+      "gndvi": 0.82
+    },
+    {
+      "date": "2025-04-15",
+      "cloud_coverage": 0,
+      "ndvi": 0.3,
+      "ndwi": -0.12,
+      "reci": 0.47,
+      "ndre": 0.32,
+      "evi": 0.24,
+      "gndvi": 0.5
+    },
+    {
+      "date": "2025-05-15",
+      "cloud_coverage": 0,
+      "ndvi": 0.2,
+      "ndwi": -0.18,
+      "reci": 0.32,
+      "ndre": 0.25,
+      "evi": 0.21,
+      "gndvi": 0.42
+    },
+    {
+      "date": "2025-06-15",
+      "cloud_coverage": 0,
+      "ndvi": 0.21,
+      "ndwi": -0.2,
+      "reci": 0.34,
+      "ndre": 0.25,
+      "evi": 0.19,
+      "gndvi": 0.44
+    },
+    {
+      "date": "2025-07-15",
+      "cloud_coverage": 0,
+      "ndvi": 0.43,
+      "ndwi": -0.02,
+      "reci": 0.78,
+      "ndre": 0.35,
+      "evi": 0.33,
+      "gndvi": 0.54
+    },
+    {
+      "date": "2025-08-15",
+      "cloud_coverage": 0,
+      "ndvi": 0.84,
+      "ndwi": 0.44,
+      "reci": 3.2,
+      "ndre": 0.65,
+      "evi": 0.67,
+      "gndvi": 0.79
+    },
+    {
+      "date": "2025-09-15",
+      "cloud_coverage": 0,
+      "ndvi": 0.85,
+      "ndwi": 0.47,
+      "reci": 3.57,
+      "ndre": 0.67,
+      "evi": 0.59,
+      "gndvi": 0.8
+    },
+    {
+      "date": "2025-10-15",
+      "cloud_coverage": 0,
+      "ndvi": 0.49,
+      "ndwi": 0.23,
+      "reci": 0.95,
+      "ndre": 0.4,
+      "evi": 0.39,
+      "gndvi": 0.6
+    },
+    {
+      "date": "2025-11-15",
+      "cloud_coverage": 0,
+      "ndvi": 0.14,
+      "ndwi": -0.09,
+      "reci": 0.18,
+      "ndre": 0.19,
+      "evi": 0.2,
+      "gndvi": 0.35
+    },
+    {
+      "date": "2025-12-15",
+      "cloud_coverage": 0,
+      "ndvi": 0.14,
+      "ndwi": -0.13,
+      "reci": 0.17,
+      "ndre": 0.19,
+      "evi": 0.19,
+      "gndvi": 0.34
+    },
+    {
+      "date": "2026-01-15",
+      "cloud_coverage": 0,
+      "ndvi": 0.15,
+      "ndwi": -0.14,
+      "reci": 0.18,
+      "ndre": 0.2,
+      "evi": 0.2,
+      "gndvi": 0.36
+    },
+    {
+      "date": "2026-02-15",
+      "cloud_coverage": 1,
+      "ndvi": 0.7,
+      "ndwi": 0.19,
+      "reci": 2.45,
+      "ndre": 0.61,
+      "evi": 0.54,
+      "gndvi": 0.68
+    },
+    {
+      "date": "2026-03-15",
+      "cloud_coverage": 0,
+      "ndvi": 0.86,
+      "ndwi": 0.42,
+      "reci": 3.85,
+      "ndre": 0.72,
+      "evi": 0.62,
+      "gndvi": 0.81
+    }
+  ],
+  "satellite_images": [
+    {
+      "month": "07-2024",
+      "images": [
+        {
+          "type": "NDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/40_Imagen_20240702.png",
+          "date": "2024-07-02",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "RECI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/40_Imagen_20240702.png",
+          "date": "2024-07-02",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "GNDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/GNDVI/40_Imagen_20240702.png",
+          "date": "2024-07-02",
+          "cloud_coverage": 0
+        }
+      ]
+    },
+    {
+      "month": "08-2024",
+      "images": [
+        {
+          "type": "NDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/40_Imagen_20240811.png",
+          "date": "2024-08-11",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "RECI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/40_Imagen_20240811.png",
+          "date": "2024-08-11",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "GNDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/GNDVI/40_Imagen_20240811.png",
+          "date": "2024-08-11",
+          "cloud_coverage": 0
+        }
+      ]
+    },
+    {
+      "month": "09-2024",
+      "images": [
+        {
+          "type": "NDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/40_Imagen_20240905.png",
+          "date": "2024-09-05",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "RECI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/40_Imagen_20240905.png",
+          "date": "2024-09-05",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "GNDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/GNDVI/40_Imagen_20240905.png",
+          "date": "2024-09-05",
+          "cloud_coverage": 0
+        }
+      ]
+    },
+    {
+      "month": "10-2024",
+      "images": [
+        {
+          "type": "NDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/40_Imagen_20241020.png",
+          "date": "2024-10-20",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "RECI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/40_Imagen_20241020.png",
+          "date": "2024-10-20",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "GNDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/GNDVI/40_Imagen_20241020.png",
+          "date": "2024-10-20",
+          "cloud_coverage": 0
+        }
+      ]
+    },
+    {
+      "month": "11-2024",
+      "images": [
+        {
+          "type": "NDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/40_Imagen_20241109.png",
+          "date": "2024-11-09",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "RECI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/40_Imagen_20241109.png",
+          "date": "2024-11-09",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "GNDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/GNDVI/40_Imagen_20241109.png",
+          "date": "2024-11-09",
+          "cloud_coverage": 0
+        }
+      ]
+    },
+    {
+      "month": "12-2024",
+      "images": [
+        {
+          "type": "NDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/40_Imagen_20241229.png",
+          "date": "2024-12-29",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "RECI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/40_Imagen_20241229.png",
+          "date": "2024-12-29",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "GNDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/GNDVI/40_Imagen_20241229.png",
+          "date": "2024-12-29",
+          "cloud_coverage": 0
+        }
+      ]
+    },
+    {
+      "month": "01-2025",
+      "images": [
+        {
+          "type": "NDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/40_Imagen_20250108.png",
+          "date": "2025-01-08",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "RECI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/40_Imagen_20250108.png",
+          "date": "2025-01-08",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "GNDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/GNDVI/40_Imagen_20250108.png",
+          "date": "2025-01-08",
+          "cloud_coverage": 0
+        }
+      ]
+    },
+    {
+      "month": "02-2025",
+      "images": [
+        {
+          "type": "NDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/40_Imagen_20250202.png",
+          "date": "2025-02-02",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "RECI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/40_Imagen_20250202.png",
+          "date": "2025-02-02",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "GNDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/GNDVI/40_Imagen_20250202.png",
+          "date": "2025-02-02",
+          "cloud_coverage": 0
+        }
+      ]
+    },
+    {
+      "month": "03-2025",
+      "images": [
+        {
+          "type": "NDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/40_Imagen_20250304.png",
+          "date": "2025-03-04",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "RECI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/40_Imagen_20250304.png",
+          "date": "2025-03-04",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "GNDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/GNDVI/40_Imagen_20250304.png",
+          "date": "2025-03-04",
+          "cloud_coverage": 0
+        }
+      ]
+    },
+    {
+      "month": "04-2025",
+      "images": [
+        {
+          "type": "NDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/40_Imagen_20250413.png",
+          "date": "2025-04-13",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "RECI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/40_Imagen_20250413.png",
+          "date": "2025-04-13",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "GNDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/GNDVI/40_Imagen_20250413.png",
+          "date": "2025-04-13",
+          "cloud_coverage": 0
+        }
+      ]
+    },
+    {
+      "month": "05-2025",
+      "images": [
+        {
+          "type": "NDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/40_Imagen_20250513.png",
+          "date": "2025-05-13",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "RECI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/40_Imagen_20250513.png",
+          "date": "2025-05-13",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "GNDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/GNDVI/40_Imagen_20250513.png",
+          "date": "2025-05-13",
+          "cloud_coverage": 0
+        }
+      ]
+    },
+    {
+      "month": "06-2025",
+      "images": [
+        {
+          "type": "NDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/40_Imagen_20250602.png",
+          "date": "2025-06-02",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "RECI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/40_Imagen_20250602.png",
+          "date": "2025-06-02",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "GNDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/GNDVI/40_Imagen_20250602.png",
+          "date": "2025-06-02",
+          "cloud_coverage": 0
+        }
+      ]
+    },
+    {
+      "month": "07-2025",
+      "images": [
+        {
+          "type": "NDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/40_Imagen_20250717.png",
+          "date": "2025-07-17",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "RECI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/40_Imagen_20250717.png",
+          "date": "2025-07-17",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "GNDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/GNDVI/40_Imagen_20250717.png",
+          "date": "2025-07-17",
+          "cloud_coverage": 0
+        }
+      ]
+    },
+    {
+      "month": "08-2025",
+      "images": [
+        {
+          "type": "NDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/40_Imagen_20250826.png",
+          "date": "2025-08-26",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "RECI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/40_Imagen_20250826.png",
+          "date": "2025-08-26",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "GNDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/GNDVI/40_Imagen_20250826.png",
+          "date": "2025-08-26",
+          "cloud_coverage": 0
+        }
+      ]
+    },
+    {
+      "month": "09-2025",
+      "images": [
+        {
+          "type": "NDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2025/11/NDVI/40_Imagen_20250905.png",
+          "date": "2025-09-05",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "RECI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2025/11/RECI/40_Imagen_20250905.png",
+          "date": "2025-09-05",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "GNDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/GNDVI/40_Imagen_20250905.png",
+          "date": "2025-09-05",
+          "cloud_coverage": 0
+        }
+      ]
+    },
+    {
+      "month": "10-2025",
+      "images": [
+        {
+          "type": "NDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2025/11/NDVI/40_Imagen_20251007.png",
+          "date": "2025-10-07",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "RECI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2025/11/RECI/40_Imagen_20251007.png",
+          "date": "2025-10-07",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "GNDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/GNDVI/40_Imagen_20251007.png",
+          "date": "2025-10-07",
+          "cloud_coverage": 0
+        }
+      ]
+    },
+    {
+      "month": "11-2025",
+      "images": [
+        {
+          "type": "NDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2025/11/NDVI/40_Imagen_20251119.png",
+          "date": "2025-11-19",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "RECI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2025/11/RECI/40_Imagen_20251119.png",
+          "date": "2025-11-19",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "GNDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/GNDVI/40_Imagen_20251119.png",
+          "date": "2025-11-19",
+          "cloud_coverage": 0
+        }
+      ]
+    },
+    {
+      "month": "12-2025",
+      "images": [
+        {
+          "type": "NDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/40_Imagen_20251204.png",
+          "date": "2025-12-04",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "RECI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/40_Imagen_20251204.png",
+          "date": "2025-12-04",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "GNDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/GNDVI/40_Imagen_20251204.png",
+          "date": "2025-12-04",
+          "cloud_coverage": 0
+        }
+      ]
+    },
+    {
+      "month": "01-2026",
+      "images": [
+        {
+          "type": "NDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/40_Imagen_20260113.png",
+          "date": "2026-01-13",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "RECI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/40_Imagen_20260113.png",
+          "date": "2026-01-13",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "GNDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/GNDVI/40_Imagen_20260113.png",
+          "date": "2026-01-13",
+          "cloud_coverage": 0
+        }
+      ]
+    },
+    {
+      "month": "02-2026",
+      "images": [
+        {
+          "type": "NDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/40_Imagen_20260217.png",
+          "date": "2026-02-17",
+          "cloud_coverage": 1
+        },
+        {
+          "type": "RECI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/40_Imagen_20260217.png",
+          "date": "2026-02-17",
+          "cloud_coverage": 1
+        },
+        {
+          "type": "GNDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/GNDVI/40_Imagen_20260217.png",
+          "date": "2026-02-17",
+          "cloud_coverage": 1
+        }
+      ]
+    },
+    {
+      "month": "03-2026",
+      "images": [
+        {
+          "type": "NDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/NDVI/40_Imagen_20260324.png",
+          "date": "2026-03-24",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "RECI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/RECI/40_Imagen_20260324.png",
+          "date": "2026-03-24",
+          "cloud_coverage": 0
+        },
+        {
+          "type": "GNDVI",
+          "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/3/GNDVI/40_Imagen_20260324.png",
+          "date": "2026-03-24",
+          "cloud_coverage": 0
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "engine_version": "2.1",
+    "total_captures": 21,
+    "filtered_captures": 21,
+    "daily_points": 609,
+    "cycles_detected": 3
+  }
+}
