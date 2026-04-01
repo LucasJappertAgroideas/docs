@@ -22,6 +22,13 @@ export const REGION_CONFIG: Record<string, RegionConfig> = {
         label: 'La Merced',
         referenceLabel: 'Productor (Referencia)',
         dataUrl: '/data/datos-lluvias-la-merced.json'
+    },
+    'los-aromos': {
+        id: 'los-aromos',
+        name: 'los-aromos',
+        label: 'Los Aromos',
+        referenceLabel: 'Productor (Referencia)',
+        dataUrl: '/data/datos-lluvias-los-aromos.json'
     }
 };
 

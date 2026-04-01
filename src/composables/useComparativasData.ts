@@ -9,18 +9,28 @@ export function useComparativasData(regionId: string | null) {
 
     const regionConfig = computed(() => regionId ? getRegionConfig(regionId) : undefined);
 
+    // Verificar si los datos tienen wunder_map
+    const hasWunderMap = computed((): boolean => {
+        if (!data.value) return false;
+        return data.value.comparativa_lluvias.some(item => 'wunder_map' in item && item.wunder_map !== undefined);
+    });
+
     // Procesar datos mensuales con diferencias y mejores matches
     const monthlyData = computed((): MonthlySummary[] => {
         if (!data.value) return [];
 
         return data.value.comparativa_lluvias.map(item => {
             const isIncomplete = item.fuente_meteoblue === null;
+            const wunderMapValue = item.wunder_map ?? null;
 
             // Calcular diferencias
             const diffMeteo = item.fuente_meteoblue !== null
                 ? Math.round(item.fuente_meteoblue - item.fuente_referencia)
                 : null;
             const diffApix = Math.round(item.fuente_apix - item.fuente_referencia);
+            const diffWunderMap = wunderMapValue !== null && wunderMapValue !== undefined
+                ? Math.round(wunderMapValue - item.fuente_referencia)
+                : null;
             const diffSantaFe = Math.round(item.fuente_provincia_santa_fe - item.fuente_referencia);
             const diffNasaPower = Math.round(item.fuente_nasa_power - item.fuente_referencia);
 
@@ -29,26 +39,33 @@ export function useComparativasData(regionId: string | null) {
                 ? Math.abs(item.fuente_meteoblue - item.fuente_referencia)
                 : Infinity;
             const absDiffApix = Math.abs(item.fuente_apix - item.fuente_referencia);
+            const absDiffWunderMap = wunderMapValue !== null && wunderMapValue !== undefined
+                ? Math.abs(wunderMapValue - item.fuente_referencia)
+                : Infinity;
             const absDiffSantaFe = Math.abs(item.fuente_provincia_santa_fe - item.fuente_referencia);
             const absDiffNasaPower = Math.abs(item.fuente_nasa_power - item.fuente_referencia);
 
-            const isMeteoBest = absDiffMeteo < absDiffApix && absDiffMeteo < absDiffSantaFe && absDiffMeteo < absDiffNasaPower && item.fuente_meteoblue !== null;
-            const isApixBest = absDiffApix < absDiffMeteo && absDiffApix < absDiffSantaFe && absDiffApix < absDiffNasaPower;
-            const isSantaFeBest = absDiffSantaFe < absDiffMeteo && absDiffSantaFe < absDiffApix && absDiffSantaFe < absDiffNasaPower;
-            const isNasaPowerBest = absDiffNasaPower < absDiffMeteo && absDiffNasaPower < absDiffApix && absDiffNasaPower < absDiffSantaFe;
+            const isMeteoBest = absDiffMeteo < absDiffApix && absDiffMeteo < absDiffWunderMap && absDiffMeteo < absDiffSantaFe && absDiffMeteo < absDiffNasaPower && item.fuente_meteoblue !== null;
+            const isWunderMapBest = wunderMapValue !== null && wunderMapValue !== undefined && absDiffWunderMap < absDiffMeteo && absDiffWunderMap < absDiffApix && absDiffWunderMap < absDiffSantaFe && absDiffWunderMap < absDiffNasaPower;
+            const isApixBest = absDiffApix < absDiffMeteo && absDiffApix < absDiffWunderMap && absDiffApix < absDiffSantaFe && absDiffApix < absDiffNasaPower;
+            const isSantaFeBest = absDiffSantaFe < absDiffMeteo && absDiffSantaFe < absDiffApix && absDiffSantaFe < absDiffWunderMap && absDiffSantaFe < absDiffNasaPower;
+            const isNasaPowerBest = absDiffNasaPower < absDiffMeteo && absDiffNasaPower < absDiffApix && absDiffNasaPower < absDiffWunderMap && absDiffNasaPower < absDiffSantaFe;
 
             return {
                 mes: item.mes,
                 referencia: item.fuente_referencia,
                 meteoblue: item.fuente_meteoblue,
                 apix: item.fuente_apix,
+                wunderMap: wunderMapValue,
                 provinciaSantaFe: item.fuente_provincia_santa_fe,
                 nasaPower: item.fuente_nasa_power,
                 diffMeteo,
                 diffApix,
+                diffWunderMap,
                 diffSantaFe,
                 diffNasaPower,
                 isMeteoBest,
+                isWunderMapBest,
                 isApixBest,
                 isSantaFeBest,
                 isNasaPowerBest,
@@ -68,10 +85,12 @@ export function useComparativasData(regionId: string | null) {
         let totalReferencia = 0;
         let totalMeteoblue = 0;
         let totalApix = 0;
+        let totalWunderMap = 0;
         let totalSantaFe = 0;
         let totalNasaPower = 0;
         let aciertosMeteo = 0;
         let aciertosApix = 0;
+        let aciertosWunderMap = 0;
         let aciertosSantaFe = 0;
         let aciertosNasaPower = 0;
 
@@ -79,6 +98,7 @@ export function useComparativasData(regionId: string | null) {
             totalReferencia += item.fuente_referencia;
             totalMeteoblue += item.fuente_meteoblue || 0;
             totalApix += item.fuente_apix;
+            totalWunderMap += item.wunder_map || 0;
             totalSantaFe += item.fuente_provincia_santa_fe;
             totalNasaPower += item.fuente_nasa_power;
 
@@ -88,24 +108,31 @@ export function useComparativasData(regionId: string | null) {
                     ? Math.abs(item.fuente_meteoblue - item.fuente_referencia)
                     : Infinity;
                 const absDiffApix = Math.abs(item.fuente_apix - item.fuente_referencia);
+                const absDiffWunderMap = item.wunder_map !== undefined
+                    ? Math.abs(item.wunder_map - item.fuente_referencia)
+                    : Infinity;
                 const absDiffSantaFe = Math.abs(item.fuente_provincia_santa_fe - item.fuente_referencia);
                 const absDiffNasaPower = Math.abs(item.fuente_nasa_power - item.fuente_referencia);
 
-                if (absDiffMeteo < absDiffApix && absDiffMeteo < absDiffSantaFe && absDiffMeteo < absDiffNasaPower) aciertosMeteo++;
-                if (absDiffApix < absDiffMeteo && absDiffApix < absDiffSantaFe && absDiffApix < absDiffNasaPower) aciertosApix++;
-                if (absDiffSantaFe < absDiffMeteo && absDiffSantaFe < absDiffApix && absDiffSantaFe < absDiffNasaPower) aciertosSantaFe++;
-                if (absDiffNasaPower < absDiffMeteo && absDiffNasaPower < absDiffApix && absDiffNasaPower < absDiffSantaFe) aciertosNasaPower++;
+                if (absDiffMeteo < absDiffApix && absDiffMeteo < absDiffWunderMap && absDiffMeteo < absDiffSantaFe && absDiffMeteo < absDiffNasaPower) aciertosMeteo++;
+                if (absDiffApix < absDiffMeteo && absDiffApix < absDiffWunderMap && absDiffApix < absDiffSantaFe && absDiffApix < absDiffNasaPower) aciertosApix++;
+                if (absDiffWunderMap < absDiffMeteo && absDiffWunderMap < absDiffApix && absDiffWunderMap < absDiffSantaFe && absDiffWunderMap < absDiffNasaPower && item.wunder_map !== undefined) aciertosWunderMap++;
+                if (absDiffSantaFe < absDiffMeteo && absDiffSantaFe < absDiffApix && absDiffSantaFe < absDiffWunderMap && absDiffSantaFe < absDiffNasaPower) aciertosSantaFe++;
+                if (absDiffNasaPower < absDiffMeteo && absDiffNasaPower < absDiffApix && absDiffNasaPower < absDiffWunderMap && absDiffNasaPower < absDiffSantaFe) aciertosNasaPower++;
             }
         });
 
         const diffMeteoTotal = Math.round(totalMeteoblue - totalReferencia);
         const diffApixTotal = Math.round(totalApix - totalReferencia);
+        const diffWunderMapTotal = Math.round(totalWunderMap - totalReferencia);
         const diffSantaFeTotal = Math.round(totalSantaFe - totalReferencia);
         const diffNasaPowerTotal = Math.round(totalNasaPower - totalReferencia);
 
         const refLabel = regionConfig.value?.referenceLabel || 'Referencia';
+        const hasWunderMapData = hasWunderMap.value;
 
-        return [
+        // Construir resultado dinámicamente basado en qué fuentes existen
+        const result: YearSummary[] = [
             {
                 source: refLabel,
                 total: totalReferencia,
@@ -125,7 +152,21 @@ export function useComparativasData(regionId: string | null) {
                 difference: diffMeteoTotal,
                 isReference: false,
                 hits: aciertosMeteo
-            },
+            }
+        ];
+
+        // Agregar Wunder Map si existe
+        if (hasWunderMapData) {
+            result.push({
+                source: 'Wunder Map',
+                total: totalWunderMap,
+                difference: diffWunderMapTotal,
+                isReference: false,
+                hits: aciertosWunderMap
+            });
+        }
+
+        result.push(
             {
                 source: 'Provincia Santa Fe',
                 total: totalSantaFe,
@@ -140,7 +181,9 @@ export function useComparativasData(regionId: string | null) {
                 isReference: false,
                 hits: aciertosNasaPower
             }
-        ];
+        );
+
+        return result;
     });
 
     // Datos para el gráfico
@@ -169,8 +212,9 @@ export function useComparativasData(regionId: string | null) {
         if (!data.value) return [];
 
         const refLabel = regionConfig.value?.referenceLabel || 'Referencia';
+        const hasWunderMapData = hasWunderMap.value;
 
-        return [
+        const datasets: ChartDataset[] = [
             {
                 label: refLabel,
                 data: data.value.comparativa_lluvias.map(item => item.fuente_referencia),
@@ -197,7 +241,23 @@ export function useComparativasData(regionId: string | null) {
                 borderWidth: 2,
                 tension: 0.3,
                 fill: false
-            },
+            }
+        ];
+
+        // Agregar Wunder Map si existe
+        if (hasWunderMapData) {
+            datasets.push({
+                label: 'Wunder Map',
+                data: data.value.comparativa_lluvias.map(item => item.wunder_map ?? 0),
+                borderColor: 'rgb(255, 99, 132)',
+                backgroundColor: 'rgba(255, 99, 132, 0.1)',
+                borderWidth: 2,
+                tension: 0.3,
+                fill: false
+            });
+        }
+
+        datasets.push(
             {
                 label: 'Provincia Santa Fe',
                 data: data.value.comparativa_lluvias.map(item => item.fuente_provincia_santa_fe),
@@ -216,7 +276,9 @@ export function useComparativasData(regionId: string | null) {
                 tension: 0.3,
                 fill: false
             }
-        ];
+        );
+
+        return datasets;
     });
 
     // Verificar si hay datos incompletos
@@ -274,6 +336,7 @@ export function useComparativasData(regionId: string | null) {
         chartLabels,
         chartDatasets,
         hasIncompleteData,
+        hasWunderMap,
         maxChartValue,
         fetchData
     };

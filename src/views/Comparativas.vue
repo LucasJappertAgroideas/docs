@@ -58,6 +58,7 @@ const yearSummary = computed(() => composableState.value?.yearSummary ?? [])
 const chartLabels = computed(() => composableState.value?.chartLabels ?? [])
 const chartDatasets = computed(() => composableState.value?.chartDatasets ?? [])
 const hasIncompleteData = computed(() => composableState.value?.hasIncompleteData ?? false)
+const hasWunderMap = computed(() => composableState.value?.hasWunderMap ?? false)
 const fetchData = async () => {
     await composableState.value?.fetchData()
     updateChartData()
@@ -179,6 +180,10 @@ function formatTotal(diff: number): string {
     const sign = diff >= 0 ? '+' : '';
     return `${sign}${diff} mm`;
 }
+
+function getYearSummaryBySource(source: string) {
+    return yearSummary.value.find(s => s.source === source);
+}
 </script>
 
 <template>
@@ -235,6 +240,7 @@ function formatTotal(diff: number): string {
                             <th>{{ regionConfig.referenceLabel }}</th>
                             <th>Meteoblue (Diferencia)</th>
                             <th>APIX (Diferencia)</th>
+                            <th v-if="hasWunderMap">Wunder Map (Diferencia)</th>
                             <th>Santa Fe (Diferencia)</th>
                             <th>NASA Power (Diferencia)</th>
                         </tr>
@@ -271,6 +277,17 @@ function formatTotal(diff: number): string {
                                     {{ formatDiff(item.diffApix) }}
                                 </span>)
                             </td>
+                            <td v-if="hasWunderMap" :class="{ 'best-match': item.isWunderMapBest }">
+                                <template v-if="item.wunderMap === null">
+                                    Sin datos
+                                </template>
+                                <template v-else>
+                                    {{ item.wunderMap }} mm 
+                                    (<span :class="getDiffClass(item.diffWunderMap)">
+                                        {{ formatDiff(item.diffWunderMap) }}
+                                    </span>)
+                                </template>
+                            </td>
                             <td :class="{ 'best-match': item.isSantaFeBest }">
                                 {{ item.provinciaSantaFe }} mm 
                                 (<span :class="getDiffClass(item.diffSantaFe)">
@@ -289,20 +306,24 @@ function formatTotal(diff: number): string {
                             <td>TOTALES</td>
                             <td>{{ yearSummary[0].total }} mm</td>
                             <td>
-                                {{ yearSummary[2].total }} mm 
-                                <span class="hits">({{ yearSummary[2].hits }} ✓)</span>
+                                {{ getYearSummaryBySource('Meteoblue')?.total || 0 }} mm 
+                                <span class="hits">({{ getYearSummaryBySource('Meteoblue')?.hits || 0 }} ✓)</span>
                             </td>
                             <td>
-                                {{ yearSummary[1].total }} mm 
-                                <span class="hits">({{ yearSummary[1].hits }} ✓)</span>
+                                {{ getYearSummaryBySource('APIX')?.total || 0 }} mm 
+                                <span class="hits">({{ getYearSummaryBySource('APIX')?.hits || 0 }} ✓)</span>
+                            </td>
+                            <td v-if="hasWunderMap">
+                                {{ getYearSummaryBySource('Wunder Map')?.total || 0 }} mm 
+                                <span class="hits">({{ getYearSummaryBySource('Wunder Map')?.hits || 0 }} ✓)</span>
                             </td>
                             <td>
-                                {{ yearSummary[3].total }} mm 
-                                <span class="hits">({{ yearSummary[3].hits }} ✓)</span>
+                                {{ getYearSummaryBySource('Provincia Santa Fe')?.total || 0 }} mm 
+                                <span class="hits">({{ getYearSummaryBySource('Provincia Santa Fe')?.hits || 0 }} ✓)</span>
                             </td>
                             <td>
-                                {{ yearSummary[4].total }} mm 
-                                <span class="hits">({{ yearSummary[4].hits }} ✓)</span>
+                                {{ getYearSummaryBySource('NASA Power')?.total || 0 }} mm 
+                                <span class="hits">({{ getYearSummaryBySource('NASA Power')?.hits || 0 }} ✓)</span>
                             </td>
                         </tr>
                     </tbody>

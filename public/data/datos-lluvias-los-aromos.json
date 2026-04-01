@@ -1,0 +1,126 @@
+{
+  "titulo": "Comparativa Mensual de Precipitaciones (2025 - 2026)",
+  "subtitulo": "Los Aromos",
+  "comparativa_lluvias": [
+    {
+      "mes": "Enero 2025",
+      "fuente_referencia": 82,
+      "fuente_meteoblue": 0,
+      "fuente_apix": 67,
+      "fuente_provincia_santa_fe": 0,
+      "fuente_nasa_power": 73
+    },
+    {
+      "mes": "Febrero 2025",
+      "fuente_referencia": 118,
+      "fuente_meteoblue": 0,
+      "fuente_apix": 114,
+      "fuente_provincia_santa_fe": 0,
+      "fuente_nasa_power": 101
+    },
+    {
+      "mes": "Marzo 2025",
+      "fuente_referencia": 125,
+      "fuente_meteoblue": 0,
+      "fuente_apix": 167,
+      "fuente_provincia_santa_fe": 0,
+      "fuente_nasa_power": 124
+    },
+    {
+      "mes": "Abril 2025",
+      "fuente_referencia": 45,
+      "fuente_meteoblue": 0,
+      "fuente_apix": 30,
+      "fuente_provincia_santa_fe": 0,
+      "fuente_nasa_power": 38
+    },
+    {
+      "mes": "Mayo 2025",
+      "fuente_referencia": 117,
+      "fuente_meteoblue": 0,
+      "fuente_apix": 46,
+      "fuente_provincia_santa_fe": 0,
+      "fuente_nasa_power": 19
+    },
+    {
+      "mes": "Junio 2025",
+      "fuente_referencia": 7,
+      "fuente_meteoblue": 0,
+      "fuente_apix": 17,
+      "fuente_provincia_santa_fe": 0,
+      "fuente_nasa_power": 37
+    },
+    {
+      "mes": "Julio 2025",
+      "fuente_referencia": 58,
+      "fuente_meteoblue": 0,
+      "fuente_apix": 42,
+      "fuente_provincia_santa_fe": 0,
+      "fuente_nasa_power": 42
+    },
+    {
+      "mes": "Agosto 2025",
+      "fuente_referencia": 130,
+      "fuente_meteoblue": 0,
+      "fuente_apix": 95,
+      "fuente_provincia_santa_fe": 0,
+      "fuente_nasa_power": 92
+    },
+    {
+      "mes": "Septiembre 2025",
+      "fuente_referencia": 62,
+      "fuente_meteoblue": 0,
+      "fuente_apix": 27,
+      "fuente_provincia_santa_fe": 0,
+      "fuente_nasa_power": 44
+    },
+    {
+      "mes": "Octubre 2025",
+      "fuente_referencia": 21,
+      "fuente_meteoblue": 0,
+      "fuente_apix": 39,
+      "fuente_provincia_santa_fe": 0,
+      "fuente_nasa_power": 16
+    },
+    {
+      "mes": "Noviembre 2025",
+      "fuente_referencia": 166,
+      "fuente_meteoblue": 0,
+      "fuente_apix": 140,
+      "fuente_provincia_santa_fe": 0,
+      "fuente_nasa_power": 119
+    },
+    {
+      "mes": "Diciembre 2025",
+      "fuente_referencia": 96,
+      "fuente_meteoblue": 0,
+      "fuente_apix": 112,
+      "fuente_provincia_santa_fe": 0,
+      "fuente_nasa_power": 114
+    },
+    {
+      "mes": "Enero 2026",
+      "fuente_referencia": 0,
+      "fuente_meteoblue": 0,
+      "fuente_apix": 0,
+      "fuente_provincia_santa_fe": 0,
+      "fuente_nasa_power": 0
+    },
+    {
+      "mes": "Febrero 2026",
+      "fuente_referencia": 0,
+      "fuente_meteoblue": 0,
+      "fuente_apix": 0,
+      "fuente_provincia_santa_fe": 0,
+      "fuente_nasa_power": 0
+    },
+    {
+      "mes": "Marzo 2026",
+      "fuente_referencia": 0,
+      "fuente_meteoblue": 0,
+      "fuente_apix": 0,
+      "fuente_provincia_santa_fe": 0,
+      "fuente_nasa_power": 0
+    }
+  ]
+}
