@@ -24,6 +24,11 @@ import { RouterLink } from "vue-router";
                 <h2>🌱 Diagnóstico de Cultivos</h2>
                 <p>Análisis detallado de ciclos de cultivo, eventos y evolución de índices</p>
             </RouterLink>
+
+            <RouterLink to="/diagnostico-cultivos-v2" class="nav-card">
+                <h2>🌱 Diagnóstico de Cultivos V2</h2>
+                <p>Versión 2 del análisis detallado de ciclos de cultivo, eventos y evolución de índices</p>
+            </RouterLink>
         </div>
     </div>
 </template>
