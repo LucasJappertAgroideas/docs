@@ -87,11 +87,11 @@
             "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2024-11-14 | Cosecha detectada: 2025-07-17 | Periodo de máximo crecimiento térmico (Temp > 20°C)"
         },
         {
-            "cultivo": "MAIZ_1RA",
+            "cultivo": "GIRASOL",
             "fecha_siembra": "2025-07-18T00:00:00",
             "fecha_cosecha": "2026-02-16T00:00:00",
             "pico_ndvi": 0.777,
-            "estado_salud": "BUENO",
+            "estado_salud": "EXCELENTE",
             "eventos": [
                 { "tipo": "ESTRES_HIDRICO", "fecha": "2025-09-01T00:00:00", "severidad": "ALTA", "descripcion": "Sequía detectada: NDWI=0.210, Precip=10.9mm" },
                 { "tipo": "ESTRES_HIDRICO", "fecha": "2025-09-16T00:00:00", "severidad": "ALTA", "descripcion": "Sequía detectada: NDWI=0.211, Precip=10.9mm" },

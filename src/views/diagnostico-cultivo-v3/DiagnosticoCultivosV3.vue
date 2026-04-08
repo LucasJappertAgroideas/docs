@@ -4,7 +4,9 @@ import { useRoute, useRouter } from "vue-router";
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, BarElement, BarController, LineController, Title, Tooltip, Legend, Filler, type ChartOptions, type ChartData } from "chart.js";
 import { Line } from "vue-chartjs";
 import { DIAGNOSTICO_LOTE_CONFIG_V3_LOCAL, getDiagnosticoLoteConfigV3 } from "@/config/diagnosticoLotes";
-import laQuerenciaData from "./data/la-querencia-lote-4-reci-ndvi-desde-2021.json";
+import laQuerenciaData from "./data/lote-4-286.json";
+import laQuerenciaLote2Data from "./data/lote-2-288.json";
+import laQuerenciaLote20Data from "./data/lote-20-289.json";
 import IndicesInfoButton from "@/components/IndicesInfoButton.vue";
 import { useMonthlyData, useSatelliteImages, DATASET_CONFIGS, formatDate } from "./composables-v3";
 import CyclesSection from "./components/CyclesSection.vue";
@@ -24,8 +26,8 @@ const loading = ref(true);
 const error = ref<string | null>(null);
 const diagnosticoData = ref<any>(null);
 
-// Control de datasets visibles
-const hiddenDatasets = ref<Set<number>>(new Set());
+// Control de datasets visibles (precipitación y temperaturas ocultos por defecto)
+const hiddenDatasets = ref<Set<number>>(new Set([0, 5, 6, 7])); // 0=precipitación, 5=temp_max, 6=temp_min, 7=temp_avg
 
 // Filtro de tipo de imagen satelital
 const selectedImageType = ref<string>("all");
@@ -249,9 +251,13 @@ async function loadDiagnosticoData() {
         loading.value = true;
         error.value = null;
 
-        // Usar JSON importado directamente para el lote 286
+        // Usar JSON importado directamente para cada lote
         if (loteConfig.value.fieldId === "286") {
             diagnosticoData.value = laQuerenciaData;
+        } else if (loteConfig.value.fieldId === "288") {
+            diagnosticoData.value = laQuerenciaLote2Data;
+        } else if (loteConfig.value.fieldId === "289") {
+            diagnosticoData.value = laQuerenciaLote20Data;
         } else {
             // Para otros lotes, usar fetch (fallback)
             const response = await fetch(loteConfig.value.dataUrl);
@@ -349,13 +355,6 @@ watch(
 
                 <div class="chart-wrapper">
                     <Line :key="loteConfig?.fieldId" :data="unifiedChartData as ChartData<'line'>" :options="unifiedChartOptions as ChartOptions<'line'>" />
-                </div>
-
-                <div class="legend-info">
-                    <div v-for="(config, index) in DATASET_CONFIGS" :key="config.key" class="legend-item" :style="{ opacity: hiddenDatasets.has(index) ? 0.4 : 1 }">
-                        <div class="legend-color" :style="{ backgroundColor: config.color }"></div>
-                        <span>{{ config.label }}</span>
-                    </div>
                 </div>
             </div>
 

@@ -86,7 +86,17 @@ export const DIAGNOSTICO_LOTE_CONFIG_V3_LOCAL: Record<string, DiagnosticoLoteCon
     '286': {
         fieldId: '286',
         title: 'La Querencia Lote 4',
-        dataUrl: '../views/diagnostico-cultivo-v3/data/la-querencia-lote-4-reci-ndvi-desde-2021.json'
+        dataUrl: '../views/diagnostico-cultivo-v3/data/lote-4-286.json'
+    },
+    '288': {
+        fieldId: '288',
+        title: 'La Querencia Lote 2',
+        dataUrl: '../views/diagnostico-cultivo-v3/data/lote-2-288.json'
+    },
+    '289': {
+        fieldId: '289',
+        title: 'La Querencia Lote 20',
+        dataUrl: '../views/diagnostico-cultivo-v3/data/lote-20-289.json'
     }
 };
 
@@ -108,5 +118,5 @@ export function getDiagnosticoLoteConfigV2(fieldId: string): DiagnosticoLoteConf
  * Obtiene la configuración de un lote de diagnóstico V3 por su field_id
  */
 export function getDiagnosticoLoteConfigV3(fieldId: string): DiagnosticoLoteConfig | undefined {
-    return DIAGNOSTICO_LOTE_CONFIG_V3[fieldId];
+    return DIAGNOSTICO_LOTE_CONFIG_V3_LOCAL[fieldId];
 }
