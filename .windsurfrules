@@ -1,0 +1,76 @@
+# Agent Development Rules & Protocol - Frontend Vue/Vite
+
+## 🧠 1. SWE-Agent Protocol (Flujo de Pensamiento Lento y Seguro)
+
+### Principios Fundamentales (PROHIBIDO SALTAR)
+
+- **Simplicidad y Elegancia:** Haz que cada cambio sea lo más simple posible. Para cambios no triviales, haz una pausa y pregúntate: "¿Hay una forma más elegante de hacer esto?".
+- **Razonamiento Forzado (Thinking):** TIENES PROHIBIDO escribir código o ejecutar comandos sin antes explicar tu lógica. Para cada paso o respuesta, DEBES abrir un bloque `<thinking> ... </thinking>` donde:
+    1. Analices el problema profundamente.
+    2. Evalúes los posibles efectos secundarios en otros componentes.
+    3. Describas exactamente qué vas a hacer.
+- **Modularidad:** Si un componente de Vue crece demasiado, sugiere proactivamente una división.
+
+### Orquestación y Bucle de Automejora
+
+- **Banco de Memoria:** Este proyecto usa `docs/lessons.md`. CADA VEZ que el usuario te corrija, anótala allí. DEBES leer `docs/lessons.md` silenciosamente antes de empezar cualquier tarea.
+- **Planificación Rigurosa:** Entra en modo planificación para CUALQUIER tarea. Tómate todo el tiempo necesario para leer los archivos involucrados antes de actuar. Si te estancas, PARA y vuelve a planificar.
+- **Mini-Review y Verificación Obligatoria:** Actúa como QA. NUNCA des una tarea por terminada sin imprimir explícitamente un checklist de verificación:
+    - [ ] ¿El código introducido rompe algo existente?
+    - [ ] ¿Hay errores en la consola o variables sin usar?
+    - [ ] ¿Se eliminaron los logs de depuración?
+
+---
+
+## 🚫 2. Reglas Estrictas de Comportamiento
+
+- **NO LEVANTAR SERVIDOR:** Nunca iniciar el servidor de desarrollo (`npm run dev`) sin autorización.
+- **COMMITS Y PUSH:** Solo hacer commit y push si el usuario lo solicita explícitamente. Esperar autorización antes de ejecutar `git add`, `git commit` o `git push`. (Se permiten cambios locales sin commit hasta autorización).
+- **CHANGELOG:** Solo modificar `changelog.md` si el usuario lo solicita explícitamente.
+
+---
+
+## 🌐 3. Idioma de Comunicación
+
+- **Siempre responder en español**, excepto términos técnicos sin traducción directa.
+- Toda comunicación, comentarios y documentación debe estar en español.
+
+---
+
+## 🔧 4. Development Patterns & File Structure
+
+- **TypeScript First:** Usar siempre TypeScript con interfaces y tipado estricto.
+- **Arrow Functions:** Preferir funciones flecha, excepto métodos de clase que necesitan `this`.
+- **Funciones Async:** Terminar con "Async" (ej: `getUsersAsync`, `saveOrderAsync`).
+- **Orden Variables:** Declarar dependencias antes de usarlas.
+- **Estructura Vue:** Orden estricto: Variables → Métodos → Watchers → Template → Styles. Usar multi_edit y mantener imports al principio.
+- **Componentes Globales:** Los componentes en `src/plugins/components/global/` NO requieren importación (ej: MySelect, MyCheckbox).
+- **Archivos de Configuración:** Respetar la función de `package.json` (versión), `service-worker.js` (cache), y `changelog.md` (historial).
+
+---
+
+## 🐛 5. Bug Fixes & UX Guidelines
+
+- **MySelect:** Usar `options.find(opt => opt.checked === true)` para selección simple. Nunca usar `options[0]`.
+- **Enfoque UX:** Enfocarse en lo que el usuario ve y siente. Priorizar opciones útiles primero en filtros. Documentar beneficios en lugar de implementaciones técnicas.
+- **Logging:** Eliminar todos los `console.log` antes de finalizar la tarea.
+
+---
+
+## 📈 6. Version Management
+
+- **Actualización de versión:** Cuando el usuario solicite "actualiza versión":
+    1. Incrementar versión en `package.json` (sumar 1 al último número).
+    2. Actualizar versión en `public/service-worker.js` para mantener consistencia.
+    3. No modificar `changelog.md` a menos que se solicite.
+
+---
+
+## 🌿 7. Git Branch Management
+
+- **Formato:** `sprint-xx/xxxx` (sprint-número/descripción). Ejemplos: `sprint-23/login-optimization`.
+- **Proceso:** Crear rama, verificar, hacer push si es necesario.
+
+---
+
+**Última actualización**: 2026-04-05 **Versión**: 3.0 (Cognitive Protocol + Vue Rules)

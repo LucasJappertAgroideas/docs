@@ -3,6 +3,7 @@ import LoteView from '@/views/LoteView.vue';
 import Comparativas from '@/views/Comparativas.vue';
 import DiagnosticoCultivos from '@/views/DiagnosticoCultivos.vue';
 import DiagnosticoCultivosV2 from '@/views/DiagnosticoCultivosV2.vue';
+import DiagnosticoCultivosV3 from '@/views/DiagnosticoCultivosV3.vue';
 import Index from '@/views/Index.vue';
 
 const router = createRouter({
@@ -50,6 +51,11 @@ const router = createRouter({
             path: '/diagnostico-cultivos-v2',
             name: 'diagnostico-cultivos-v2',
             component: DiagnosticoCultivosV2
+        },
+        {
+            path: '/diagnostico-cultivos-v3',
+            name: 'diagnostico-cultivos-v3',
+            component: DiagnosticoCultivosV3
         },
         // Redirecciones de rutas antiguas a nueva estructura
         {
