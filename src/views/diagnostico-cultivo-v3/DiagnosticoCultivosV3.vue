@@ -3,7 +3,8 @@ import { onMounted, ref, computed, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, BarElement, BarController, LineController, Title, Tooltip, Legend, Filler, type ChartOptions, type ChartData } from "chart.js";
 import { Line } from "vue-chartjs";
-import { DIAGNOSTICO_LOTE_CONFIG_V3, getDiagnosticoLoteConfigV3 } from "@/config/diagnosticoLotes";
+import { DIAGNOSTICO_LOTE_CONFIG_V3_LOCAL, getDiagnosticoLoteConfigV3 } from "@/config/diagnosticoLotes";
+import laQuerenciaData from "./data/la-querencia-lote-4-reci-ndvi-desde-2021.json";
 import IndicesInfoButton from "@/components/IndicesInfoButton.vue";
 import { useMonthlyData, useSatelliteImages, DATASET_CONFIGS, formatDate } from "./composables-v3";
 import CyclesSection from "./components/CyclesSection.vue";
@@ -16,7 +17,7 @@ const route = useRoute();
 const router = useRouter();
 
 // Lista de lotes disponibles
-const lotes = Object.values(DIAGNOSTICO_LOTE_CONFIG_V3);
+const lotes = Object.values(DIAGNOSTICO_LOTE_CONFIG_V3_LOCAL);
 
 // Estado de carga y datos
 const loading = ref(true);
@@ -248,13 +249,18 @@ async function loadDiagnosticoData() {
         loading.value = true;
         error.value = null;
 
-        const response = await fetch(loteConfig.value.dataUrl);
-        if (!response.ok) {
-            throw new Error(`Error HTTP: ${response.status}`);
+        // Usar JSON importado directamente para el lote 286
+        if (loteConfig.value.fieldId === "286") {
+            diagnosticoData.value = laQuerenciaData;
+        } else {
+            // Para otros lotes, usar fetch (fallback)
+            const response = await fetch(loteConfig.value.dataUrl);
+            if (!response.ok) {
+                throw new Error(`Error HTTP: ${response.status}`);
+            }
+            const data = await response.json();
+            diagnosticoData.value = data;
         }
-
-        const data = await response.json();
-        diagnosticoData.value = data;
     } catch (err) {
         console.error("Error cargando datos de diagnóstico:", err);
         error.value = err instanceof Error ? err.message : "Error desconocido al cargar los datos";

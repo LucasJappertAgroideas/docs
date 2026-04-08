@@ -81,6 +81,15 @@ export const DIAGNOSTICO_LOTE_CONFIG_V3: Record<string, DiagnosticoLoteConfig> =
     }
 };
 
+// Configuración alternativa para importar JSON directamente
+export const DIAGNOSTICO_LOTE_CONFIG_V3_LOCAL: Record<string, DiagnosticoLoteConfig> = {
+    '286': {
+        fieldId: '286',
+        title: 'La Querencia Lote 4',
+        dataUrl: '../views/diagnostico-cultivo-v3/data/la-querencia-lote-4-reci-ndvi-desde-2021.json'
+    }
+};
+
 /**
  * Obtiene la configuración de un lote de diagnóstico por su field_id
  */
