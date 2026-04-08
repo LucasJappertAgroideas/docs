@@ -8,6 +8,8 @@
                         <th>Mes</th>
                         <th>NDVI</th>
                         <th>RECI</th>
+                        <th>NDWI</th>
+                        <th>EVI</th>
                         <th>Precip. (mm)</th>
                         <th>Temp. Máx</th>
                         <th>Temp. Mín</th>
@@ -17,12 +19,14 @@
                 <tbody>
                     <tr v-for="item in monthlyData" :key="item.key">
                         <td class="month-cell">{{ item.key }}</td>
-                        <td>{{ item.month.indices?.ndvi?.average !== null && item.month.indices?.ndvi?.average !== undefined ? item.month.indices.ndvi.average.toFixed(3) : "N/A" }}</td>
-                        <td>{{ item.month.indices?.reci?.average !== null && item.month.indices?.reci?.average !== undefined ? item.month.indices.reci.average.toFixed(3) : "N/A" }}</td>
-                        <td>{{ (item.month.precipitation || 0).toFixed(1) }}</td>
-                        <td class="temp-max">{{ (item.month.temperature?.max || 0).toFixed(1) }}°C</td>
-                        <td class="temp-min">{{ (item.month.temperature?.min || 0).toFixed(1) }}°C</td>
-                        <td>{{ (item.month.temperature?.avg || 0).toFixed(1) }}°C</td>
+                        <td>{{ item.month.ndvi_avg !== null && item.month.ndvi_avg !== undefined ? item.month.ndvi_avg.toFixed(3) : "N/A" }}</td>
+                        <td>{{ item.month.reci_avg !== null && item.month.reci_avg !== undefined ? item.month.reci_avg.toFixed(3) : "N/A" }}</td>
+                        <td>{{ item.month.ndwi_avg !== null && item.month.ndwi_avg !== undefined ? item.month.ndwi_avg.toFixed(3) : "N/A" }}</td>
+                        <td>{{ item.month.evi_avg !== null && item.month.evi_avg !== undefined ? item.month.evi_avg.toFixed(3) : "N/A" }}</td>
+                        <td>{{ (item.month.precipitation_mm || 0).toFixed(1) }}</td>
+                        <td class="temp-max">{{ (item.month.temp_max_c || 0).toFixed(1) }}°C</td>
+                        <td class="temp-min">{{ (item.month.temp_min_c || 0).toFixed(1) }}°C</td>
+                        <td>{{ (item.month.temp_avg_c || 0).toFixed(1) }}°C</td>
                     </tr>
                 </tbody>
             </table>

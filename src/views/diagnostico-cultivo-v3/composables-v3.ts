@@ -6,6 +6,8 @@ import type { SatelliteImageV3, MonthlySummary } from './types-v3';
 export const IMAGE_TYPE_COLORS: Record<string, string> = {
     NDVI: "#3fb950",
     RECI: "#a371f7",
+    NDWI: "#58a6ff",
+    EVI: "#ffa657",
 };
 
 // Configuración de datasets para el gráfico unificado
@@ -13,8 +15,10 @@ export const DATASET_CONFIGS = [
     { key: "precipitation", label: "Precipitación (mm)", color: "#58a6ff", yAxisID: "y", type: "bar" as const },
     { key: "ndvi", label: "NDVI", color: "#3fb950", yAxisID: "y1", type: "line" as const },
     { key: "reci", label: "RECI", color: "#a371f7", yAxisID: "y1", type: "line" as const },
+    { key: "ndwi", label: "NDWI", color: "#79c0ff", yAxisID: "y1", type: "line" as const },
+    { key: "evi", label: "EVI", color: "#ffa657", yAxisID: "y1", type: "line" as const },
     { key: "temp_max", label: "Temp. Máx (°C)", color: "#f85149", yAxisID: "y2", type: "line" as const },
-    { key: "temp_min", label: "Temp. Mín (°C)", color: "#79c0ff", yAxisID: "y2", type: "line" as const },
+    { key: "temp_min", label: "Temp. Mín (°C)", color: "#ff7b72", yAxisID: "y2", type: "line" as const },
     { key: "temp_avg", label: "Temp. Prom (°C)", color: "#ffa657", yAxisID: "y2", type: "line" as const },
 ];
 
@@ -94,12 +98,22 @@ export function useMonthlyData(diagnosticoData: any) {
         return monthlyData.value.map((item: { month: MonthlySummary }) => item.month.temp_avg_c || 0);
     });
 
+    const ndwiData = computed(() => {
+        return monthlyData.value.map((item: { month: MonthlySummary }) => item.month.ndwi_avg || null);
+    });
+
+    const eviData = computed(() => {
+        return monthlyData.value.map((item: { month: MonthlySummary }) => item.month.evi_avg || null);
+    });
+
     return {
         monthlyData,
         monthlyLabels,
         precipitationData,
         ndviData,
         reciData,
+        ndwiData,
+        eviData,
         tempMaxData,
         tempMinData,
         tempAvgData

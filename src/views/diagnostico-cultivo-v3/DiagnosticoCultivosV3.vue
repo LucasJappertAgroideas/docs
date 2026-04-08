@@ -44,7 +44,7 @@ const pageTitle = computed(() => {
 });
 
 // Usar composables importados
-const { monthlyData, monthlyLabels, precipitationData, ndviData, reciData, tempMaxData, tempMinData, tempAvgData } = useMonthlyData(diagnosticoData);
+const { monthlyData, monthlyLabels, precipitationData, ndviData, reciData, ndwiData, eviData, tempMaxData, tempMinData, tempAvgData } = useMonthlyData(diagnosticoData);
 const { satelliteImages, imageTypes } = useSatelliteImages(diagnosticoData);
 
 // Valores máximos para escalas
@@ -59,14 +59,14 @@ const maxTemperature = computed(() => {
 });
 
 const maxIndex = computed(() => {
-    const allIndexData = [...ndviData.value, ...reciData.value].filter(val => val !== null);
+    const allIndexData = [...ndviData.value, ...reciData.value, ...ndwiData.value, ...eviData.value].filter(val => val !== null);
     if (!allIndexData.length) return 1;
     return Math.ceil(Math.max(...allIndexData) * 1.1 * 100) / 100;
 });
 
 // Datos del gráfico unificado
 const unifiedChartData = computed<ChartData<"line" | "bar">>(() => {
-    const dataArrays = [precipitationData.value, ndviData.value, reciData.value, tempMaxData.value, tempMinData.value, tempAvgData.value];
+    const dataArrays = [precipitationData.value, ndviData.value, reciData.value, ndwiData.value, eviData.value, tempMaxData.value, tempMinData.value, tempAvgData.value];
 
     return {
         labels: monthlyLabels.value,
@@ -172,7 +172,7 @@ function createChartOptions(maxPrecip: number, maxTemp: number, minTemp: number,
                 max: maxIdx,
                 title: {
                     display: true,
-                    text: "Índices (NDVI/RECI)",
+                    text: "Índices (NDVI/RECI/NDWI/EVI)",
                     color: "#3fb950",
                     font: {
                         size: 12,
