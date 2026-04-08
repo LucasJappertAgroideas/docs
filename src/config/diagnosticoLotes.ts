@@ -77,7 +77,7 @@ export const DIAGNOSTICO_LOTE_CONFIG_V3: Record<string, DiagnosticoLoteConfig> =
     '286': {
         fieldId: '286',
         title: 'La Querencia Lote 4',
-        dataUrl: '/json-lotes/diagnostico-cultivos/version3/la-querencia-lote-4-reci-ndvi-desde-2019.json'
+        dataUrl: '/json-lotes/diagnostico-cultivos/version3/field-crop-diagnostic-field_id-286&date_from=2023-01-01&date_to=2026-04-01.json'
     }
 };
 

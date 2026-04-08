@@ -3,7 +3,7 @@ import LoteView from '@/views/LoteView.vue';
 import Comparativas from '@/views/Comparativas.vue';
 import DiagnosticoCultivos from '@/views/DiagnosticoCultivos.vue';
 import DiagnosticoCultivosV2 from '@/views/DiagnosticoCultivosV2.vue';
-import DiagnosticoCultivosV3 from '@/views/DiagnosticoCultivosV3.vue';
+import DiagnosticoCultivosV3 from '@/views/diagnostico-cultivo-v3/DiagnosticoCultivosV3.vue';
 import Index from '@/views/Index.vue';
 
 const router = createRouter({
