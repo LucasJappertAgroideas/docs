@@ -9,6 +9,7 @@ import laQuerenciaLote2Data from "./data/lote-2-288.json";
 import laQuerenciaLote20Data from "./data/lote-20-289.json";
 import IndicesInfoButton from "@/components/IndicesInfoButton.vue";
 import { useMonthlyData, useCapturesDetail, useSatelliteImages, DATASET_CONFIGS, formatDate } from "./composables-v3";
+import { type TimelineSegment } from "./types-v3";
 import CyclesSection from "./components/CyclesSection.vue";
 import SatelliteImagesSection from "./components/SatelliteImagesSection.vue";
 import MonthlySummaryTable from "./components/MonthlySummaryTable.vue";
@@ -267,7 +268,7 @@ function getCultivoColor(cultivo: string): string {
     return CULTIVO_COLORS[cultivo as keyof typeof CULTIVO_COLORS] || CULTIVO_COLORS.default;
 }
 
-// Calcular porcentajes de cobertura de cultivos
+// Calcular porcentajes de cobertura de cultivos (agregado)
 const cultivosCoverage = computed(() => {
     if (!diagnosticoData.value?.cycles || !diagnosticoData.value.date_from || !diagnosticoData.value.date_to) {
         return [];
@@ -307,6 +308,119 @@ const cultivosCoverage = computed(() => {
 
     // Ordenar por porcentaje (mayor a menor)
     return result.sort((a, b) => b.percentage - a.percentage);
+});
+
+// Calcular timeline temporal de cultivos para la barra
+const cultivosTimeline = computed<TimelineSegment[]>(() => {
+    if (!diagnosticoData.value?.cycles || !diagnosticoData.value.date_from || !diagnosticoData.value.date_to) {
+        return [];
+    }
+
+    const startDate = new Date(diagnosticoData.value.date_from);
+    const endDate = new Date(diagnosticoData.value.date_to);
+    const totalDays = Math.ceil((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24));
+
+    // Ordenar ciclos por fecha de siembra
+    const sortedCycles = diagnosticoData.value.cycles
+        .filter((cycle: any) => cycle.fecha_siembra || cycle.fecha_cosecha)
+        .sort((a: any, b: any) => {
+            const aDate = a.fecha_siembra ? new Date(a.fecha_siembra) : startDate;
+            const bDate = b.fecha_siembra ? new Date(b.fecha_siembra) : startDate;
+            return aDate.getTime() - bDate.getTime();
+        });
+
+    const rawSegments: (TimelineSegment | null)[] = sortedCycles.map((cycle: any) => {
+        const siembraDate = cycle.fecha_siembra ? new Date(cycle.fecha_siembra) : startDate;
+        const cosechaDate = cycle.fecha_cosecha ? new Date(cycle.fecha_cosecha) : endDate;
+
+        // Asegurar que las fechas estén dentro del rango del análisis
+        const effectiveStart = new Date(Math.max(siembraDate.getTime(), startDate.getTime()));
+        const effectiveEnd = new Date(Math.min(cosechaDate.getTime(), endDate.getTime()));
+
+        if (effectiveEnd <= effectiveStart) return null;
+
+        const cycleDays = Math.ceil((effectiveEnd.getTime() - effectiveStart.getTime()) / (1000 * 60 * 60 * 24));
+        const startOffsetDays = Math.ceil((effectiveStart.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24));
+
+        const cultivoKey = cycle.cultivo || "Sin cultivo";
+        const color = getCultivoColor(cultivoKey);
+
+        return {
+            name: cultivoKey,
+            color,
+            startPercentage: (startOffsetDays / totalDays) * 100,
+            widthPercentage: (cycleDays / totalDays) * 100,
+            fecha_siembra: cycle.fecha_siembra,
+            fecha_cosecha: cycle.fecha_cosecha,
+            cycleDays,
+        } as TimelineSegment;
+    });
+
+    const segments: TimelineSegment[] = rawSegments.filter((segment): segment is TimelineSegment => segment !== null);
+
+    return segments;
+});
+
+// Calcular etiquetas de fecha para el eje x de la barra (fechas de siembra y cosecha)
+const timelineLabels = computed(() => {
+    if (!diagnosticoData.value?.cycles || !diagnosticoData.value.date_from || !diagnosticoData.value.date_to) {
+        return [];
+    }
+
+    const startDate = new Date(diagnosticoData.value.date_from);
+    const endDate = new Date(diagnosticoData.value.date_to);
+    const totalDays = Math.ceil((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24));
+
+    const dateSet = new Set<string>();
+
+    // Agregar fechas de siembra y cosecha de todos los ciclos
+    diagnosticoData.value.cycles.forEach((cycle: any) => {
+        if (cycle.fecha_siembra) {
+            const date = new Date(cycle.fecha_siembra);
+            if (date >= startDate && date <= endDate) {
+                const mm = String(date.getMonth() + 1).padStart(2, "0");
+                const yy = String(date.getFullYear()).slice(-2);
+                dateSet.add(`${mm}-${yy}`);
+            }
+        }
+        if (cycle.fecha_cosecha) {
+            const date = new Date(cycle.fecha_cosecha);
+            if (date >= startDate && date <= endDate) {
+                const mm = String(date.getMonth() + 1).padStart(2, "0");
+                const yy = String(date.getFullYear()).slice(-2);
+                dateSet.add(`${mm}-${yy}`);
+            }
+        }
+    });
+
+    // Convertir a array y ordenar por fecha
+    const sortedLabels = Array.from(dateSet).sort((a, b) => {
+        const [aMm, aYy] = a.split("-").map(Number);
+        const [bMm, bYy] = b.split("-").map(Number);
+        const aYear = aYy < 50 ? 2000 + aYy : 1900 + aYy; // Asumir 20xx
+        const bYear = bYy < 50 ? 2000 + bYy : 1900 + bYy;
+        if (aYear !== bYear) return aYear - bYear;
+        return aMm - bMm;
+    });
+
+    // Nombres de meses abreviados en español
+    const monthNames = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
+
+    // Calcular porcentajes para cada etiqueta
+    const labels = sortedLabels.map(originalLabel => {
+        const [mm, yyStr] = originalLabel.split("-");
+        const yy = parseInt(yyStr);
+        const year = yy < 50 ? 2000 + yy : 1900 + yy;
+        const monthIndex = parseInt(mm) - 1; // 0-based
+        const monthName = monthNames[monthIndex];
+        const label = `${monthName}-${year}`;
+        const date = new Date(year, monthIndex, 15); // Mitad del mes para mejor alineación
+        const offsetDays = Math.ceil((date.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24));
+        const percentage = Math.max(0, Math.min(100, (offsetDays / totalDays) * 100)); // Clamp entre 0-100
+        return { label, percentage };
+    });
+
+    return labels;
 });
 
 // Funciones de interacción
@@ -503,22 +617,26 @@ watch(
                 </div>
 
                 <!-- Barra de cobertura de cultivos -->
-                <div v-if="cultivosCoverage.length > 0" class="cultivos-coverage-section">
+                <div v-if="cultivosTimeline.length > 0" class="cultivos-coverage-section">
                     <h3 class="coverage-title">🌾 Cobertura de Cultivos en el Período</h3>
                     <div class="coverage-bar-container">
-                        <div class="coverage-bar">
+                        <div class="coverage-bar-timeline">
                             <div
-                                v-for="(cultivo, index) in cultivosCoverage"
-                                :key="cultivo.name"
-                                class="coverage-segment"
+                                v-for="(segment, index) in cultivosTimeline"
+                                :key="`${segment.name}-${index}`"
+                                class="coverage-segment-timeline"
                                 :style="{
-                                    width: cultivo.percentage + '%',
-                                    backgroundColor: cultivo.color,
-                                    marginLeft: index === 0 ? '0' : '2px',
+                                    left: segment.startPercentage + '%',
+                                    width: segment.widthPercentage + '%',
+                                    backgroundColor: segment.color,
                                 }"
-                                :title="`${cultivo.name}: ${cultivo.percentage.toFixed(1)}%`"
-                            >
-                                <span v-if="cultivo.percentage > 5" class="coverage-percentage">{{ cultivo.percentage.toFixed(1) }}%</span>
+                                :title="`${segment.name}: ${segment.fecha_siembra ? formatDate(segment.fecha_siembra) : 'N/A'} - ${segment.fecha_cosecha ? formatDate(segment.fecha_cosecha) : 'N/A'} (${segment.cycleDays} días)`"
+                            ></div>
+                        </div>
+                        <!-- Eje x con fechas -->
+                        <div class="timeline-axis">
+                            <div v-for="(label, index) in timelineLabels" :key="index" class="axis-label" :style="{ left: label.percentage + '%' }">
+                                {{ label.label }}
                             </div>
                         </div>
                     </div>
@@ -797,6 +915,23 @@ watch(
     margin-bottom: 1.5rem;
 }
 
+.timeline-axis {
+    position: relative;
+    height: 40px;
+    margin-top: 5px;
+}
+
+.axis-label {
+    position: absolute;
+    top: 10px;
+    transform: translateX(-90%) rotate(-45deg);
+    transform-origin: center top;
+    color: #8b949e;
+    font-size: 11px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
 .coverage-bar {
     width: 100%;
     height: 40px;
@@ -808,6 +943,16 @@ watch(
     position: relative;
 }
 
+.coverage-bar-timeline {
+    width: 100%;
+    height: 40px;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
 .coverage-segment {
     height: 100%;
     display: flex;
@@ -816,6 +961,20 @@ watch(
     transition: all 0.3s ease;
     position: relative;
     min-width: 2px;
+}
+
+.coverage-segment-timeline {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 0;
+    min-width: 2px;
+    border-radius: 4px;
+    z-index: 1;
+    cursor: pointer;
 }
 
 .coverage-segment:hover {

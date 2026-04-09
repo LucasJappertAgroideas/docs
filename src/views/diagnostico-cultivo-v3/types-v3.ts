@@ -85,3 +85,13 @@ export interface CycleAnalysisV3 {
     peakNDVI: number;
     peakMonth: string;
 }
+
+export interface TimelineSegment {
+    name: string;
+    color: string;
+    startPercentage: number;
+    widthPercentage: number;
+    fecha_siembra: string | null;
+    fecha_cosecha: string | null;
+    cycleDays: number;
+}

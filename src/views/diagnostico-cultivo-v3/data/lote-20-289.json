@@ -15,7 +15,7 @@
             ],
             "status": "PARCIAL_SIN_SIEMBRA",
             "confidence": 0.7,
-            "notes": "Fecha de siembra no detectada (posiblemente anterior al rango de análisis) | Cosecha detectada: 2019-02-16 | Periodo de máximo crecimiento térmico (Temp > 20°C) | [INTERNO]  | Cultivo afectado severamente por sequía"
+            "notes": "Fecha de siembra no detectada (posiblemente anterior al rango de análisis) | Cosecha detectada: 2019-02-16 | Periodo de máximo crecimiento térmico (Temp > 20°C) | [INTERNO] Cultivo afectado severamente por sequía"
         },
         {
             "cultivo": "TRIGO",
@@ -42,14 +42,14 @@
             "eventos": [{ "tipo": "ESTRES_HIDRICO", "fecha": "2020-03-27T00:00:00", "severidad": "MEDIA", "descripcion": "Sequía detectada: NDWI=0.315, Precip=67.5mm" }],
             "status": "COMPLETO",
             "confidence": 1.0,
-            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2019-11-17 | Cosecha detectada: 2020-05-17 | Periodo de máximo crecimiento térmico (Temp > 20°C)"
+            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2019-11-17 | Cosecha detectada: 2020-05-17 | Periodo de máximo crecimiento térmico (Temp > 20°C) | [INTERNO] EVI al pico: 0.728, NDVI al pico: 0.787, Caída 30d: 0.65 (Estructura planófila)"
         },
         {
-            "cultivo": "MAIZ_TARDIO",
+            "cultivo": "SOJA_2DA",
             "fecha_siembra": "2020-09-14T00:00:00",
             "fecha_cosecha": "2021-07-16T00:00:00",
             "pico_ndvi": 0.87,
-            "estado_salud": "BUENO",
+            "estado_salud": "EXCELENTE",
             "eventos": [
                 { "tipo": "ESTRES_HIDRICO", "fecha": "2020-09-14T00:00:00", "severidad": "ALTA", "descripcion": "Sequía detectada: NDWI=0.150, Precip=21.5mm" },
                 { "tipo": "ESTRES_HIDRICO", "fecha": "2020-09-29T00:00:00", "severidad": "ALTA", "descripcion": "Sequía detectada: NDWI=0.150, Precip=21.5mm" },
@@ -61,7 +61,7 @@
             ],
             "status": "COMPLETO",
             "confidence": 1.0,
-            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2020-09-14 | Cosecha detectada: 2021-07-16 | Periodo de máximo crecimiento térmico (Temp > 20°C)"
+            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2020-09-14 | Cosecha detectada: 2021-07-16 | Periodo de máximo crecimiento térmico (Temp > 20°C) | [INTERNO] EVI al pico: 0.758, NDVI al pico: 0.870, Caída 30d: 0.97 (Estructura planófila)"
         },
         {
             "cultivo": "MAIZ_TARDIO",
@@ -72,10 +72,10 @@
             "eventos": [{ "tipo": "GOLPE_DE_CALOR", "fecha": "2022-01-15T00:00:00", "severidad": "ALTA", "descripcion": "Estrés térmico: Temp máx=40.6°C" }],
             "status": "COMPLETO",
             "confidence": 1.0,
-            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2022-01-14 | Cosecha detectada: 2022-08-17 | Periodo de máximo crecimiento térmico (Temp > 20°C)"
+            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2022-01-14 | Cosecha detectada: 2022-08-17 | Periodo de máximo crecimiento térmico (Temp > 20°C) | [INTERNO] EVI al pico: 0.639, NDVI al pico: 0.739, Caída 30d: 0.80 (Estructura erectófila)"
         },
         {
-            "cultivo": "SOJA_2DA",
+            "cultivo": "MAIZ_TARDIO",
             "fecha_siembra": "2022-12-14T00:00:00",
             "fecha_cosecha": "2023-05-16T00:00:00",
             "pico_ndvi": 0.63,
@@ -89,7 +89,7 @@
             ],
             "status": "COMPLETO",
             "confidence": 0.96,
-            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2022-12-14 | Cosecha detectada: 2023-05-16 | Periodo de máximo crecimiento térmico (Temp > 20°C)"
+            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2022-12-14 | Cosecha detectada: 2023-05-16 | Periodo de máximo crecimiento térmico (Temp > 20°C) | [INTERNO] EVI al pico: 0.619, NDVI al pico: 0.630, Caída 30d: 0.79 (Estructura erectófila)"
         },
         {
             "cultivo": "MAIZ_1RA",
@@ -105,7 +105,7 @@
             ],
             "status": "COMPLETO",
             "confidence": 1.0,
-            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2023-10-14 | Cosecha detectada: 2024-03-17 | Periodo de máximo crecimiento térmico (Temp > 20°C) | [INTERNO] EVI al pico: 0.730, NDVI al pico: 0.771"
+            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2023-10-14 | Cosecha detectada: 2024-03-17 | Periodo de máximo crecimiento térmico (Temp > 20°C) | [INTERNO] EVI al pico: 0.730, NDVI al pico: 0.771, Caída 30d: 0.99"
         },
         {
             "cultivo": "GIRASOL",
@@ -120,7 +120,7 @@
             ],
             "status": "COMPLETO",
             "confidence": 1.0,
-            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2024-09-15 | Cosecha detectada: 2025-04-15 | Periodo de máximo crecimiento térmico (Temp > 20°C) | [INTERNO] EVI al pico: 0.868, NDVI al pico: 0.840"
+            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2024-09-15 | Cosecha detectada: 2025-04-15 | Periodo de máximo crecimiento térmico (Temp > 20°C) | [INTERNO] EVI al pico: 0.868, NDVI al pico: 0.840, Caída 30d: 0.82"
         },
         {
             "cultivo": "MAIZ_1RA",
@@ -131,7 +131,7 @@
             "eventos": [{ "tipo": "ESTRES_HIDRICO", "fecha": "2025-10-14T00:00:00", "severidad": "ALTA", "descripcion": "Sequía detectada: NDWI=0.198, Precip=34.5mm" }],
             "status": "COMPLETO",
             "confidence": 1.0,
-            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2025-10-14 | Cosecha detectada: 2026-03-17 | Periodo de máximo crecimiento térmico (Temp > 20°C) | [INTERNO] EVI al pico: 0.728, NDVI al pico: 0.778"
+            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2025-10-14 | Cosecha detectada: 2026-03-17 | Periodo de máximo crecimiento térmico (Temp > 20°C) | [INTERNO] EVI al pico: 0.728, NDVI al pico: 0.778, Caída 30d: 0.50"
         }
     ],
     "monthly_summary": [

@@ -3,115 +3,20 @@
     "date_from": "2019-01-01",
     "date_to": "2026-04-01",
     "cycles": [
+        { "cultivo": "ALFALFA", "fecha_siembra": "2019-01-14T00:00:00", "fecha_cosecha": "2021-08-15T00:00:00", "pico_ndvi": 0.884, "estado_salud": "EXCELENTE", "eventos": [], "status": "COMPLETO", "confidence": 1.0, "notes": "Ciclo perenne de alfalfa (múltiples cortes fusionados)" },
         {
-            "cultivo": "ALFALFA",
-            "fecha_siembra": "2019-01-14T00:00:00",
-            "fecha_cosecha": "2019-07-15T00:00:00",
-            "pico_ndvi": 0.848,
-            "estado_salud": "EXCELENTE",
-            "eventos": [],
-            "status": "COMPLETO",
-            "confidence": 1.0,
-            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2019-01-14 | Cosecha detectada: 2019-07-15 | Periodo de crecimiento limitado por temperatura (Temp ≤ 20°C)"
-        },
-        {
-            "cultivo": "ALFALFA",
-            "fecha_siembra": "2019-05-16T00:00:00",
-            "fecha_cosecha": "2020-01-15T00:00:00",
-            "pico_ndvi": 0.83,
-            "estado_salud": "EXCELENTE",
-            "eventos": [],
-            "status": "COMPLETO",
-            "confidence": 1.0,
-            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2019-05-16 | Cosecha detectada: 2020-01-15 | Periodo de crecimiento limitado por temperatura (Temp ≤ 20°C)"
-        },
-        {
-            "cultivo": "ALFALFA",
-            "fecha_siembra": "2019-07-16T00:00:00",
-            "fecha_cosecha": "2020-01-15T00:00:00",
-            "pico_ndvi": 0.82,
-            "estado_salud": "EXCELENTE",
-            "eventos": [],
-            "status": "COMPLETO",
-            "confidence": 1.0,
-            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2019-07-16 | Cosecha detectada: 2020-01-15 | Periodo de máximo crecimiento térmico (Temp > 20°C)"
-        },
-        {
-            "cultivo": "ALFALFA",
-            "fecha_siembra": "2020-01-16T00:00:00",
-            "fecha_cosecha": "2020-06-16T00:00:00",
-            "pico_ndvi": 0.848,
-            "estado_salud": "EXCELENTE",
-            "eventos": [],
-            "status": "COMPLETO",
-            "confidence": 1.0,
-            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2020-01-16 | Cosecha detectada: 2020-06-16 | Periodo de máximo crecimiento térmico (Temp > 20°C)"
-        },
-        {
-            "cultivo": "ALFALFA",
-            "fecha_siembra": "2020-01-16T00:00:00",
-            "fecha_cosecha": "2020-06-16T00:00:00",
-            "pico_ndvi": 0.86,
-            "estado_salud": "EXCELENTE",
-            "eventos": [{ "tipo": "ESTRES_HIDRICO", "fecha": "2020-06-12T00:00:00", "severidad": "MEDIA", "descripcion": "Sequía detectada: NDWI=0.318, Precip=14.0mm" }],
-            "status": "COMPLETO",
-            "confidence": 1.0,
-            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2020-01-16 | Cosecha detectada: 2020-06-16 | Periodo de crecimiento limitado por temperatura (Temp ≤ 20°C)"
-        },
-        {
-            "cultivo": "ALFALFA",
-            "fecha_siembra": "2020-06-17T00:00:00",
-            "fecha_cosecha": "2020-08-14T00:00:00",
-            "pico_ndvi": 0.598,
-            "estado_salud": "REGULAR",
-            "eventos": [
-                { "tipo": "ESTRES_HIDRICO", "fecha": "2020-06-17T00:00:00", "severidad": "MEDIA", "descripcion": "Sequía detectada: NDWI=0.298, Precip=14.0mm" },
-                { "tipo": "ESTRES_HIDRICO", "fecha": "2020-07-02T00:00:00", "severidad": "MEDIA", "descripcion": "Sequía detectada: NDWI=0.289, Precip=5.3mm" },
-                { "tipo": "ESTRES_HIDRICO", "fecha": "2020-07-17T00:00:00", "severidad": "MEDIA", "descripcion": "Sequía detectada: NDWI=0.281, Precip=5.3mm" },
-                { "tipo": "ESTRES_HIDRICO", "fecha": "2020-08-01T00:00:00", "severidad": "MEDIA", "descripcion": "Sequía detectada: NDWI=0.285, Precip=16.0mm" }
-            ],
-            "status": "COMPLETO",
-            "confidence": 0.88,
-            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2020-06-17 | Cosecha detectada: 2020-08-14 | Periodo de crecimiento limitado por temperatura (Temp ≤ 20°C)"
-        },
-        {
-            "cultivo": "ALFALFA",
-            "fecha_siembra": "2020-08-15T00:00:00",
-            "fecha_cosecha": "2021-03-15T00:00:00",
-            "pico_ndvi": 0.817,
-            "estado_salud": "EXCELENTE",
-            "eventos": [
-                { "tipo": "ESTRES_HIDRICO", "fecha": "2020-08-15T00:00:00", "severidad": "MEDIA", "descripcion": "Sequía detectada: NDWI=0.291, Precip=16.0mm" },
-                { "tipo": "GOLPE_DE_CALOR", "fecha": "2020-11-15T00:00:00", "severidad": "MEDIA", "descripcion": "Estrés térmico: Temp máx=38.2°C" }
-            ],
-            "status": "COMPLETO",
-            "confidence": 1.0,
-            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2020-08-15 | Cosecha detectada: 2021-03-15 | Periodo de máximo crecimiento térmico (Temp > 20°C)"
-        },
-        {
-            "cultivo": "ALFALFA",
-            "fecha_siembra": "2021-03-16T00:00:00",
-            "fecha_cosecha": "2021-08-15T00:00:00",
-            "pico_ndvi": 0.884,
-            "estado_salud": "EXCELENTE",
-            "eventos": [{ "tipo": "ESTRES_HIDRICO", "fecha": "2021-05-16T00:00:00", "severidad": "MEDIA", "descripcion": "Sequía detectada: NDWI=0.314, Precip=17.8mm" }],
-            "status": "COMPLETO",
-            "confidence": 1.0,
-            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2021-03-16 | Cosecha detectada: 2021-08-15 | Periodo de crecimiento limitado por temperatura (Temp ≤ 20°C)"
-        },
-        {
-            "cultivo": "SOJA_2DA",
+            "cultivo": "MAIZ_TARDIO",
             "fecha_siembra": "2021-12-17T00:00:00",
             "fecha_cosecha": "2022-02-18T00:00:00",
             "pico_ndvi": 0.702,
-            "estado_salud": "BUENO",
+            "estado_salud": "REGULAR",
             "eventos": [
                 { "tipo": "ESTRES_HIDRICO", "fecha": "2021-12-17T00:00:00", "severidad": "ALTA", "descripcion": "Sequía detectada: NDWI=0.122, Precip=42.1mm" },
                 { "tipo": "GOLPE_DE_CALOR", "fecha": "2022-01-15T00:00:00", "severidad": "ALTA", "descripcion": "Estrés térmico: Temp máx=40.5°C" }
             ],
             "status": "COMPLETO",
             "confidence": 1.0,
-            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2021-12-17 | Cosecha detectada: 2022-02-18 | Periodo de máximo crecimiento térmico (Temp > 20°C)"
+            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2021-12-17 | Cosecha detectada: 2022-02-18 | Periodo de máximo crecimiento térmico (Temp > 20°C) | [INTERNO] EVI al pico: 0.620, NDVI al pico: 0.702, Caída 30d: 1.02 (Estructura erectófila)"
         },
         {
             "cultivo": "CULTIVO_VERANO_FALLIDO",
@@ -131,7 +36,7 @@
             ],
             "status": "COMPLETO",
             "confidence": 0.88,
-            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2022-11-16 | Cosecha detectada: 2023-09-17 | Periodo de crecimiento limitado por temperatura (Temp ≤ 20°C) | [INTERNO] Estrés hídrico severo limitando expresión de vigor (NDWI bajo) | Cultivo afectado severamente por sequía"
+            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2022-11-16 | Cosecha detectada: 2023-09-17 | Periodo de crecimiento limitado por temperatura (Temp ≤ 20°C) | [INTERNO] Cultivo afectado severamente por sequía"
         },
         {
             "cultivo": "MAIZ_1RA",
@@ -147,10 +52,10 @@
             ],
             "status": "COMPLETO",
             "confidence": 1.0,
-            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2023-10-14 | Cosecha detectada: 2024-03-15 | Periodo de máximo crecimiento térmico (Temp > 20°C)"
+            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2023-10-14 | Cosecha detectada: 2024-03-15 | Periodo de máximo crecimiento térmico (Temp > 20°C) | [INTERNO] EVI al pico: 0.728, NDVI al pico: 0.798, Caída 30d: 0.81"
         },
         {
-            "cultivo": "MAIZ_TARDIO",
+            "cultivo": "SOJA_2DA",
             "fecha_siembra": "2024-09-18T00:00:00",
             "fecha_cosecha": "2025-08-15T00:00:00",
             "pico_ndvi": 0.814,
@@ -161,7 +66,7 @@
             ],
             "status": "COMPLETO",
             "confidence": 1.0,
-            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2024-09-18 | Cosecha detectada: 2025-08-15 | Periodo de máximo crecimiento térmico (Temp > 20°C)"
+            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2024-09-18 | Cosecha detectada: 2025-08-15 | Periodo de máximo crecimiento térmico (Temp > 20°C) | [INTERNO] EVI al pico: 0.759, NDVI al pico: 0.814, Caída 30d: 0.96 (Estructura planófila)"
         },
         {
             "cultivo": "MAIZ_1RA",
@@ -176,7 +81,7 @@
             ],
             "status": "COMPLETO",
             "confidence": 1.0,
-            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2025-08-16 | Cosecha detectada: 2026-03-17 | Periodo de máximo crecimiento térmico (Temp > 20°C)"
+            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2025-08-16 | Cosecha detectada: 2026-03-17 | Periodo de máximo crecimiento térmico (Temp > 20°C) | [INTERNO] EVI al pico: 0.691, NDVI al pico: 0.751, Caída 30d: 0.91"
         }
     ],
     "monthly_summary": [
@@ -1443,5 +1348,5 @@
             ]
         }
     ],
-    "metadata": { "total_captures": 85, "filtered_captures": 85, "daily_points": 2648, "cycles_detected": 13, "complete_cycles": 13, "partial_cycles": 0, "satellite_images_count": 660 }
+    "metadata": { "total_captures": 85, "filtered_captures": 85, "daily_points": 2648, "cycles_detected": 6, "complete_cycles": 6, "partial_cycles": 0, "satellite_images_count": 660 }
 }
