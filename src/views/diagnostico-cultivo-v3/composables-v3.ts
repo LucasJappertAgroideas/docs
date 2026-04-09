@@ -249,11 +249,21 @@ export function useCapturesDetail(diagnosticoData: any) {
 
     const capturesLabels = computed(() => {
         return capturesData.value.map((item: { key: string; capture: CaptureDetail }) => {
+            // Parsear la fecha manualmente para evitar problemas de zona horaria
+            const dateStr = item.capture.date;
+            const dateMatch = dateStr.match(/(\d{4})-(\d{2})-(\d{2})/);
+            
+            if (dateMatch) {
+                const [, year, month, day] = dateMatch;
+                return `${day}-${month}-${year}`;
+            }
+            
+            // Fallback al método original si el formato no coincide
             const date = new Date(item.capture.date);
             const day = date.getDate().toString().padStart(2, "0");
-            const month = (date.getMonth() + 1).toString().padStart(2, "0");
-            const year = date.getFullYear();
-            return `${day}-${month}-${year}`;
+            const monthNum = (date.getMonth() + 1).toString().padStart(2, "0");
+            const yearNum = date.getFullYear();
+            return `${day}-${monthNum}-${yearNum}`;
         });
     });
 
@@ -292,29 +302,6 @@ export function useCapturesDetail(diagnosticoData: any) {
         return capturesData.value.map((item: { capture: CaptureDetail }) => item.capture.evi || null);
     });
 
-    // Filtrar datos por cobertura de nubes baja (opcional)
-    const filteredCapturesData = computed(() => {
-        return capturesData.value.filter((item: { capture: CaptureDetail }) => 
-            item.capture.cloud_coverage <= 10 // Umbral de 10% de cobertura de nubes
-        );
-    });
-
-    const filteredNdviData = computed(() => {
-        return filteredCapturesData.value.map((item: { capture: CaptureDetail }) => item.capture.ndvi || null);
-    });
-
-    const filteredReciData = computed(() => {
-        return filteredCapturesData.value.map((item: { capture: CaptureDetail }) => item.capture.reci || null);
-    });
-
-    const filteredNdwiData = computed(() => {
-        return filteredCapturesData.value.map((item: { capture: CaptureDetail }) => item.capture.ndwi || null);
-    });
-
-    const filteredEviData = computed(() => {
-        return filteredCapturesData.value.map((item: { capture: CaptureDetail }) => item.capture.evi || null);
-    });
-
     return {
         capturesData,
         capturesLabels,
@@ -322,12 +309,7 @@ export function useCapturesDetail(diagnosticoData: any) {
         ndviData,
         reciData,
         ndwiData,
-        eviData,
-        filteredCapturesData,
-        filteredNdviData,
-        filteredReciData,
-        filteredNdwiData,
-        filteredEviData
+        eviData
     };
 }
 
@@ -365,7 +347,18 @@ export function useSatelliteImages(diagnosticoData: any) {
             }
         });
         
-        return images.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+        // Función helper para convertir YYYYMMDD a objeto Date válido
+        const parseDate = (dateStr: string) => {
+            if (dateStr.length === 8 && /^\d{8}$/.test(dateStr)) {
+                const year = dateStr.substring(0, 4);
+                const month = dateStr.substring(4, 6);
+                const day = dateStr.substring(6, 8);
+                return new Date(`${year}-${month}-${day}`);
+            }
+            return new Date(dateStr);
+        };
+        
+        return images.sort((a, b) => parseDate(a.date).getTime() - parseDate(b.date).getTime());
     });
 
     const imageTypes = computed(() => {

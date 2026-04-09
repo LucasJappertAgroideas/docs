@@ -35,6 +35,9 @@ const useDailyData = ref<boolean>(true);
 // Filtro de tipo de imagen satelital
 const selectedImageType = ref<string>("all");
 
+// Control de sección de ciclos colapsable (inicia plegada por defecto)
+const cyclesSectionCollapsed = ref<boolean>(true);
+
 // Obtener configuración del lote desde el query string
 const loteConfig = computed(() => {
     const fieldId = (route.query.field_id as string) || "286"; // Default: La Querencia Lote 4
@@ -49,8 +52,8 @@ const pageTitle = computed(() => {
 });
 
 // Usar composables importados
-const { monthlyData, monthlyLabels, precipitationData, ndviData, reciData, ndwiData, eviData, tempMaxData, tempMinData, tempAvgData } = useMonthlyData(diagnosticoData);
-const { capturesLabels, precipitationData: dailyPrecipitationData, filteredNdviData, filteredReciData, filteredNdwiData, filteredEviData } = useCapturesDetail(diagnosticoData);
+const { monthlyData, monthlyLabels, precipitationData, ndviData: monthlyNdviData, reciData: monthlyReciData, ndwiData: monthlyNdwiData, eviData: monthlyEviData, tempMaxData, tempMinData, tempAvgData } = useMonthlyData(diagnosticoData);
+const { capturesLabels, precipitationData: dailyPrecipitationData, ndviData: dailyNdviData, reciData: dailyReciData, ndwiData: dailyNdwiData, eviData: dailyEviData } = useCapturesDetail(diagnosticoData);
 const { satelliteImages, imageTypes } = useSatelliteImages(diagnosticoData);
 
 // Computed properties dinámicas según fuente de datos
@@ -63,19 +66,19 @@ const chartPrecipitationData = computed(() => {
 });
 
 const chartNdviData = computed(() => {
-    return useDailyData.value ? filteredNdviData.value : ndviData.value;
+    return useDailyData.value ? dailyNdviData.value : monthlyNdviData.value;
 });
 
 const chartReciData = computed(() => {
-    return useDailyData.value ? filteredReciData.value : reciData.value;
+    return useDailyData.value ? dailyReciData.value : monthlyReciData.value;
 });
 
 const chartNdwiData = computed(() => {
-    return useDailyData.value ? filteredNdwiData.value : ndwiData.value;
+    return useDailyData.value ? dailyNdwiData.value : monthlyNdwiData.value;
 });
 
 const chartEviData = computed(() => {
-    return useDailyData.value ? filteredEviData.value : eviData.value;
+    return useDailyData.value ? dailyEviData.value : monthlyEviData.value;
 });
 
 // Valores máximos para escalas
@@ -91,7 +94,7 @@ const maxTemperature = computed(() => {
 });
 
 const maxIndex = computed(() => {
-    const allIndexData = [...ndviData.value, ...reciData.value, ...ndwiData.value, ...eviData.value].filter(val => val !== null);
+    const allIndexData = [...monthlyNdviData.value, ...monthlyReciData.value, ...monthlyNdwiData.value, ...monthlyEviData.value].filter(val => val !== null);
     if (!allIndexData.length) return 1;
     return Math.ceil(Math.max(...allIndexData) * 1.1 * 100) / 100;
 });
@@ -378,6 +381,15 @@ watch(
     },
     { immediate: true },
 );
+
+// Watcher para actualizar el título de la pestaña del navegador
+watch(
+    pageTitle,
+    newTitle => {
+        document.title = newTitle;
+    },
+    { immediate: true },
+);
 </script>
 
 <template>
@@ -429,7 +441,8 @@ watch(
             <!-- Ciclos de Cultivo -->
             <div class="section">
                 <h2 class="section-title">🌾 Ciclos de Cultivo</h2>
-                <!-- Tabla resumen de ciclos -->
+
+                <!-- Tabla resumen de ciclos (siempre visible) -->
                 <div class="cycles-summary">
                     <table class="summary-table">
                         <thead>
@@ -454,9 +467,20 @@ watch(
                         </tbody>
                     </table>
                 </div>
-            </div>
 
-            <CyclesSection :cycles="diagnosticoData.cycles || []" />
+                <!-- Sección colapsable para detalles -->
+                <div class="collapsible-section">
+                    <div class="section-header" @click="cyclesSectionCollapsed = !cyclesSectionCollapsed">
+                        <h3 class="collapsible-title">📊 Análisis Detallado de Ciclos</h3>
+                        <button class="collapse-toggle" :class="{ collapsed: cyclesSectionCollapsed }">
+                            {{ cyclesSectionCollapsed ? "▶" : "▼" }}
+                        </button>
+                    </div>
+                    <div v-show="!cyclesSectionCollapsed" class="section-content">
+                        <CyclesSection :cycles="diagnosticoData.cycles || []" />
+                    </div>
+                </div>
+            </div>
 
             <!-- Gráfico unificado -->
             <div class="chart-section">
@@ -852,11 +876,84 @@ watch(
     border: 1px solid #30363d;
 }
 
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    padding: 0.5rem;
+    margin: -0.5rem;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.section-header:hover {
+    background: #1c2128;
+}
+
 .section-title {
     color: #e6edf3;
     font-size: 1.5rem;
     margin: 0 0 1.5rem 0;
     font-weight: 600;
+}
+
+.collapsible-section {
+    margin-top: 1.5rem;
+    border-top: 1px solid #30363d;
+    padding-top: 1.5rem;
+}
+
+.collapsible-title {
+    color: #e6edf3;
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.collapse-toggle {
+    background: none;
+    border: none;
+    color: #8b949e;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2rem;
+}
+
+.collapse-toggle:hover {
+    background: #21262d;
+    color: #e6edf3;
+}
+
+.collapse-toggle.collapsed {
+    transform: rotate(0deg);
+}
+
+.collapse-toggle:not(.collapsed) {
+    transform: rotate(90deg);
+}
+
+.section-content {
+    margin-top: 1rem;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Estilos para tabla resumen de ciclos */
