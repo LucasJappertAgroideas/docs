@@ -1,6 +1,6 @@
 // Composables y lógica específica para DiagnosticoCultivosV3
 import { computed } from 'vue';
-import type { SatelliteImageV3, MonthlySummary } from './types-v3';
+import type { SatelliteImageV3, MonthlySummary, CaptureDetail } from './types-v3';
 
 // Configuración de colores para tipos de imágenes
 export const IMAGE_TYPE_COLORS: Record<string, string> = {
@@ -232,6 +232,102 @@ export function useCycleAnalysis(diagnosticoData: any) {
         activePeriods,
         peakNDVI,
         peakMonths
+    };
+}
+
+// Computed properties para datos diarios de capturas
+export function useCapturesDetail(diagnosticoData: any) {
+    const capturesData = computed(() => {
+        if (!diagnosticoData.value?.captures_detail) return [];
+        
+        const captures = diagnosticoData.value.captures_detail;
+        return captures.map((item: CaptureDetail) => ({
+            key: item.date,
+            capture: item
+        }));
+    });
+
+    const capturesLabels = computed(() => {
+        return capturesData.value.map((item: { key: string; capture: CaptureDetail }) => {
+            const date = new Date(item.capture.date);
+            const day = date.getDate().toString().padStart(2, "0");
+            const month = (date.getMonth() + 1).toString().padStart(2, "0");
+            const year = date.getFullYear();
+            return `${day}-${month}-${year}`;
+        });
+    });
+
+    const precipitationData = computed(() => {
+        // Para captures_detail, necesitamos obtener precipitación de monthly_summary
+        // ya que no está en captures_detail
+        if (!diagnosticoData.value?.monthly_summary) return [];
+        
+        const monthlyData = diagnosticoData.value.monthly_summary;
+        const monthlyMap = new Map<string, number>();
+        
+        monthlyData.forEach((month: MonthlySummary) => {
+            monthlyMap.set(month.month, month.precipitation_mm || 0);
+        });
+        
+        return capturesData.value.map((item: { capture: CaptureDetail }) => {
+            const date = new Date(item.capture.date);
+            const monthKey = `${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getFullYear()}`;
+            return monthlyMap.get(monthKey) || 0;
+        });
+    });
+
+    const ndviData = computed(() => {
+        return capturesData.value.map((item: { capture: CaptureDetail }) => item.capture.ndvi || null);
+    });
+
+    const reciData = computed(() => {
+        return capturesData.value.map((item: { capture: CaptureDetail }) => item.capture.reci || null);
+    });
+
+    const ndwiData = computed(() => {
+        return capturesData.value.map((item: { capture: CaptureDetail }) => item.capture.ndwi || null);
+    });
+
+    const eviData = computed(() => {
+        return capturesData.value.map((item: { capture: CaptureDetail }) => item.capture.evi || null);
+    });
+
+    // Filtrar datos por cobertura de nubes baja (opcional)
+    const filteredCapturesData = computed(() => {
+        return capturesData.value.filter((item: { capture: CaptureDetail }) => 
+            item.capture.cloud_coverage <= 10 // Umbral de 10% de cobertura de nubes
+        );
+    });
+
+    const filteredNdviData = computed(() => {
+        return filteredCapturesData.value.map((item: { capture: CaptureDetail }) => item.capture.ndvi || null);
+    });
+
+    const filteredReciData = computed(() => {
+        return filteredCapturesData.value.map((item: { capture: CaptureDetail }) => item.capture.reci || null);
+    });
+
+    const filteredNdwiData = computed(() => {
+        return filteredCapturesData.value.map((item: { capture: CaptureDetail }) => item.capture.ndwi || null);
+    });
+
+    const filteredEviData = computed(() => {
+        return filteredCapturesData.value.map((item: { capture: CaptureDetail }) => item.capture.evi || null);
+    });
+
+    return {
+        capturesData,
+        capturesLabels,
+        precipitationData,
+        ndviData,
+        reciData,
+        ndwiData,
+        eviData,
+        filteredCapturesData,
+        filteredNdviData,
+        filteredReciData,
+        filteredNdwiData,
+        filteredEviData
     };
 }
 

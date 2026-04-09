@@ -8,7 +8,7 @@ import laQuerenciaData from "./data/lote-4-286.json";
 import laQuerenciaLote2Data from "./data/lote-2-288.json";
 import laQuerenciaLote20Data from "./data/lote-20-289.json";
 import IndicesInfoButton from "@/components/IndicesInfoButton.vue";
-import { useMonthlyData, useSatelliteImages, DATASET_CONFIGS, formatDate } from "./composables-v3";
+import { useMonthlyData, useCapturesDetail, useSatelliteImages, DATASET_CONFIGS, formatDate } from "./composables-v3";
 import CyclesSection from "./components/CyclesSection.vue";
 import SatelliteImagesSection from "./components/SatelliteImagesSection.vue";
 import MonthlySummaryTable from "./components/MonthlySummaryTable.vue";
@@ -29,6 +29,9 @@ const diagnosticoData = ref<any>(null);
 // Control de datasets visibles (precipitación y temperaturas ocultos por defecto)
 const hiddenDatasets = ref<Set<number>>(new Set([0, 5, 6, 7])); // 0=precipitación, 5=temp_max, 6=temp_min, 7=temp_avg
 
+// Control de fuente de datos: true=diaria, false=mensual
+const useDailyData = ref<boolean>(true);
+
 // Filtro de tipo de imagen satelital
 const selectedImageType = ref<string>("all");
 
@@ -47,12 +50,39 @@ const pageTitle = computed(() => {
 
 // Usar composables importados
 const { monthlyData, monthlyLabels, precipitationData, ndviData, reciData, ndwiData, eviData, tempMaxData, tempMinData, tempAvgData } = useMonthlyData(diagnosticoData);
+const { capturesLabels, precipitationData: dailyPrecipitationData, filteredNdviData, filteredReciData, filteredNdwiData, filteredEviData } = useCapturesDetail(diagnosticoData);
 const { satelliteImages, imageTypes } = useSatelliteImages(diagnosticoData);
+
+// Computed properties dinámicas según fuente de datos
+const chartLabels = computed(() => {
+    return useDailyData.value ? capturesLabels.value : monthlyLabels.value;
+});
+
+const chartPrecipitationData = computed(() => {
+    return useDailyData.value ? dailyPrecipitationData.value : precipitationData.value;
+});
+
+const chartNdviData = computed(() => {
+    return useDailyData.value ? filteredNdviData.value : ndviData.value;
+});
+
+const chartReciData = computed(() => {
+    return useDailyData.value ? filteredReciData.value : reciData.value;
+});
+
+const chartNdwiData = computed(() => {
+    return useDailyData.value ? filteredNdwiData.value : ndwiData.value;
+});
+
+const chartEviData = computed(() => {
+    return useDailyData.value ? filteredEviData.value : eviData.value;
+});
 
 // Valores máximos para escalas
 const maxPrecipitation = computed(() => {
-    if (!precipitationData.value.length) return 100;
-    return Math.ceil(Math.max(...precipitationData.value) * 1.1);
+    const data = useDailyData.value ? dailyPrecipitationData.value : precipitationData.value;
+    if (!data.length) return 100;
+    return Math.ceil(Math.max(...data) * 1.1);
 });
 
 const maxTemperature = computed(() => {
@@ -68,10 +98,10 @@ const maxIndex = computed(() => {
 
 // Datos del gráfico unificado
 const unifiedChartData = computed<ChartData<"line" | "bar">>(() => {
-    const dataArrays = [precipitationData.value, ndviData.value, reciData.value, ndwiData.value, eviData.value, tempMaxData.value, tempMinData.value, tempAvgData.value];
+    const dataArrays = [chartPrecipitationData.value, chartNdviData.value, chartReciData.value, chartNdwiData.value, chartEviData.value, tempMaxData.value, tempMinData.value, tempAvgData.value];
 
     return {
-        labels: monthlyLabels.value,
+        labels: chartLabels.value,
         datasets: DATASET_CONFIGS.map((config, index) => ({
             label: config.label,
             data: dataArrays[index],
@@ -397,16 +427,48 @@ watch(
             </div>
 
             <!-- Ciclos de Cultivo -->
+            <div class="section">
+                <h2 class="section-title">🌾 Ciclos de Cultivo</h2>
+                <!-- Tabla resumen de ciclos -->
+                <div class="cycles-summary">
+                    <table class="summary-table">
+                        <thead>
+                            <tr>
+                                <th>Cultivo</th>
+                                <th>Fecha Siembra</th>
+                                <th>Fecha Cosecha</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="(cycle, index) in diagnosticoData.cycles" :key="index">
+                                <td class="cultivo-cell">{{ cycle.cultivo }}</td>
+                                <td>{{ formatDate(cycle.fecha_siembra) }}</td>
+                                <td>{{ formatDate(cycle.fecha_cosecha) }}</td>
+                                <td>
+                                    <span class="stat-badge" :class="cycle.estado_salud?.toLowerCase()">
+                                        {{ cycle.estado_salud }}
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
             <CyclesSection :cycles="diagnosticoData.cycles || []" />
 
             <!-- Gráfico unificado -->
             <div class="chart-section">
                 <div class="chart-header">
-                    <h2 class="chart-title">📊 Precipitación, Temperatura e Índices de Vegetación - Evolución Mensual</h2>
+                    <h2 class="chart-title">📊 Precipitación, Temperatura e Índices de Vegetación - {{ useDailyData ? "Evolución Diaria" : "Evolución Mensual" }}</h2>
                     <IndicesInfoButton />
                 </div>
 
                 <div class="chart-controls">
+                    <button @click="useDailyData = !useDailyData" :class="['data-source-toggle', useDailyData ? 'daily-active' : 'monthly-active']" title="Cambiar entre datos mensuales y diarios">
+                        {{ useDailyData ? "📅 Datos Diarios" : "📆 Datos Mensuales" }}
+                    </button>
                     <button v-for="(config, index) in DATASET_CONFIGS" :key="config.key" :class="getButtonClass(index)" @click="toggleDataset(index)" :style="{ borderLeft: '4px solid ' + config.color }">
                         {{ config.label }}
                     </button>
@@ -630,6 +692,35 @@ watch(
     border-color: #238636;
 }
 
+.data-source-toggle {
+    padding: 0.5rem 1rem;
+    background: #0d1117;
+    border: 2px solid #30363d;
+    border-radius: 6px;
+    color: #e6edf3;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-bottom: 0.5rem;
+}
+
+.data-source-toggle:hover {
+    background: #21262d;
+    border-color: #58a6ff;
+}
+
+.daily-active {
+    background: #22c55e;
+    color: white;
+    border-color: #22c55e;
+}
+
+.monthly-active {
+    background: #3b82f6;
+    color: white;
+    border-color: #3b82f6;
+}
+
 .chart-wrapper {
     height: 400px;
     margin-bottom: 1.5rem;
@@ -750,6 +841,92 @@ watch(
     color: #e6edf3;
     font-size: 0.9rem;
     font-weight: 500;
+}
+
+/* Estilos para sección de ciclos */
+.section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #161b22;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+}
+
+.section-title {
+    color: #e6edf3;
+    font-size: 1.5rem;
+    margin: 0 0 1.5rem 0;
+    font-weight: 600;
+}
+
+/* Estilos para tabla resumen de ciclos */
+.cycles-summary {
+    margin-bottom: 2rem;
+    overflow-x: auto;
+}
+
+.summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.summary-table th,
+.summary-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #30363d;
+}
+
+.summary-table th {
+    background: #161b22;
+    color: #e6edf3;
+    font-weight: 600;
+}
+
+.summary-table td {
+    color: #8b949e;
+}
+
+.summary-table tbody tr:hover {
+    background: #161b22;
+}
+
+.cultivo-cell {
+    font-weight: 600;
+    color: #e6edf3;
+}
+
+.stat-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.stat-badge.excelente {
+    background: #238636;
+    color: white;
+}
+
+.stat-badge.bueno {
+    background: #3fb950;
+    color: white;
+}
+
+.stat-badge.regular {
+    background: #f0883e;
+    color: white;
+}
+
+.stat-badge.malo {
+    background: #f85149;
+    color: white;
 }
 
 @media (max-width: 768px) {
