@@ -30,7 +30,7 @@ const diagnosticoData = ref<any>(null);
 const hiddenDatasets = ref<Set<number>>(new Set([0, 5, 6, 7])); // 0=precipitación, 5=temp_max, 6=temp_min, 7=temp_avg
 
 // Control de fuente de datos: true=diaria, false=mensual
-const useDailyData = ref<boolean>(true);
+const useDailyData = ref(false);
 
 // Filtro de tipo de imagen satelital
 const selectedImageType = ref<string>("all");
@@ -491,7 +491,7 @@ watch(
 
                 <div class="chart-controls">
                     <button @click="useDailyData = !useDailyData" :class="['data-source-toggle', useDailyData ? 'daily-active' : 'monthly-active']" title="Cambiar entre datos mensuales y diarios">
-                        {{ useDailyData ? "📅 Datos Diarios" : "📆 Datos Mensuales" }}
+                        {{ useDailyData ? "Datos Diarios (captures_detail)" : "Datos Mensuales (monthly_summary)" }}
                     </button>
                     <button v-for="(config, index) in DATASET_CONFIGS" :key="config.key" :class="getButtonClass(index)" @click="toggleDataset(index)" :style="{ borderLeft: '4px solid ' + config.color }">
                         {{ config.label }}
