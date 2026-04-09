@@ -47,6 +47,8 @@ export interface MonthlySummary {
     ndwi_avg: number;
     ndre_avg: number;
     evi_avg: number;
+    ndyi_avg: number;
+    ndyi_max: number;
     precipitation_mm: number;
     temp_max_c: number;
     temp_min_c: number;
@@ -62,6 +64,7 @@ export interface CaptureDetail {
     reci: number;
     ndre: number;
     evi: number;
+    ndyi: number;
 }
 
 export interface SatelliteImageGroup {

@@ -105,14 +105,14 @@
             ],
             "status": "COMPLETO",
             "confidence": 1.0,
-            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2023-10-14 | Cosecha detectada: 2024-03-17 | Periodo de máximo crecimiento térmico (Temp > 20°C)"
+            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2023-10-14 | Cosecha detectada: 2024-03-17 | Periodo de máximo crecimiento térmico (Temp > 20°C) | [INTERNO] EVI al pico: 0.730, NDVI al pico: 0.771"
         },
         {
-            "cultivo": "MAIZ_1RA",
+            "cultivo": "GIRASOL",
             "fecha_siembra": "2024-09-15T00:00:00",
             "fecha_cosecha": "2025-04-15T00:00:00",
             "pico_ndvi": 0.84,
-            "estado_salud": "BUENO",
+            "estado_salud": "EXCELENTE",
             "eventos": [
                 { "tipo": "ESTRES_HIDRICO", "fecha": "2024-09-15T00:00:00", "severidad": "ALTA", "descripcion": "Sequía detectada: NDWI=0.160, Precip=0.0mm" },
                 { "tipo": "ESTRES_HIDRICO", "fecha": "2024-09-30T00:00:00", "severidad": "ALTA", "descripcion": "Sequía detectada: NDWI=0.165, Precip=0.0mm" },
@@ -120,18 +120,18 @@
             ],
             "status": "COMPLETO",
             "confidence": 1.0,
-            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2024-09-15 | Cosecha detectada: 2025-04-15 | Periodo de máximo crecimiento térmico (Temp > 20°C)"
+            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2024-09-15 | Cosecha detectada: 2025-04-15 | Periodo de máximo crecimiento térmico (Temp > 20°C) | [INTERNO] EVI al pico: 0.868, NDVI al pico: 0.840"
         },
         {
-            "cultivo": "GIRASOL",
+            "cultivo": "MAIZ_1RA",
             "fecha_siembra": "2025-10-14T00:00:00",
             "fecha_cosecha": "2026-03-17T00:00:00",
             "pico_ndvi": 0.778,
-            "estado_salud": "BUENO",
+            "estado_salud": "REGULAR",
             "eventos": [{ "tipo": "ESTRES_HIDRICO", "fecha": "2025-10-14T00:00:00", "severidad": "ALTA", "descripcion": "Sequía detectada: NDWI=0.198, Precip=34.5mm" }],
             "status": "COMPLETO",
             "confidence": 1.0,
-            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2025-10-14 | Cosecha detectada: 2026-03-17 | Periodo de máximo crecimiento térmico (Temp > 20°C)"
+            "notes": "Ciclo completo con fechas de siembra y cosecha detectadas | Siembra detectada: 2025-10-14 | Cosecha detectada: 2026-03-17 | Periodo de máximo crecimiento térmico (Temp > 20°C) | [INTERNO] EVI al pico: 0.728, NDVI al pico: 0.778"
         }
     ],
     "monthly_summary": [

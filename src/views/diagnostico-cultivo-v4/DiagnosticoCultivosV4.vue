@@ -27,7 +27,7 @@ const error = ref<string | null>(null);
 const diagnosticoData = ref<any>(null);
 
 // Control de datasets visibles (precipitación y temperaturas ocultos por defecto)
-const hiddenDatasets = ref<Set<number>>(new Set([0, 5, 6, 7])); // 0=precipitación, 5=temp_max, 6=temp_min, 7=temp_avg
+const hiddenDatasets = ref<Set<number>>(new Set([0, 6, 7, 8])); // 0=precipitación, 6=temp_max, 7=temp_min, 8=temp_avg
 
 // Control de fuente de datos: true=diaria, false=mensual
 const useDailyData = ref(false);
@@ -52,8 +52,8 @@ const pageTitle = computed(() => {
 });
 
 // Usar composables importados
-const { monthlyData, monthlyLabels, precipitationData, ndviData: monthlyNdviData, reciData: monthlyReciData, ndwiData: monthlyNdwiData, eviData: monthlyEviData, tempMaxData, tempMinData, tempAvgData } = useMonthlyData(diagnosticoData);
-const { capturesLabels, precipitationData: dailyPrecipitationData, ndviData: dailyNdviData, reciData: dailyReciData, ndwiData: dailyNdwiData, eviData: dailyEviData } = useCapturesDetail(diagnosticoData);
+const { monthlyData, monthlyLabels, precipitationData, ndviData: monthlyNdviData, reciData: monthlyReciData, ndwiData: monthlyNdwiData, eviData: monthlyEviData, ndyiData: monthlyNdyiData, tempMaxData, tempMinData, tempAvgData } = useMonthlyData(diagnosticoData);
+const { capturesLabels, precipitationData: dailyPrecipitationData, ndviData: dailyNdviData, reciData: dailyReciData, ndwiData: dailyNdwiData, eviData: dailyEviData, ndyiData: dailyNdyiData } = useCapturesDetail(diagnosticoData);
 const { satelliteImages, imageTypes } = useSatelliteImages(diagnosticoData);
 
 // Computed properties dinámicas según fuente de datos
@@ -81,6 +81,10 @@ const chartEviData = computed(() => {
     return useDailyData.value ? dailyEviData.value : monthlyEviData.value;
 });
 
+const chartNdyiData = computed(() => {
+    return useDailyData.value ? dailyNdyiData.value : monthlyNdyiData.value;
+});
+
 // Valores máximos para escalas
 const maxPrecipitation = computed(() => {
     const data = useDailyData.value ? dailyPrecipitationData.value : precipitationData.value;
@@ -94,14 +98,14 @@ const maxTemperature = computed(() => {
 });
 
 const maxIndex = computed(() => {
-    const allIndexData = [...monthlyNdviData.value, ...monthlyReciData.value, ...monthlyNdwiData.value, ...monthlyEviData.value].filter(val => val !== null);
+    const allIndexData = [...monthlyNdviData.value, ...monthlyReciData.value, ...monthlyNdwiData.value, ...monthlyEviData.value, ...monthlyNdyiData.value].filter(val => val !== null);
     if (!allIndexData.length) return 1;
     return Math.ceil(Math.max(...allIndexData) * 1.1 * 100) / 100;
 });
 
 // Datos del gráfico unificado
 const unifiedChartData = computed<ChartData<"line" | "bar">>(() => {
-    const dataArrays = [chartPrecipitationData.value, chartNdviData.value, chartReciData.value, chartNdwiData.value, chartEviData.value, tempMaxData.value, tempMinData.value, tempAvgData.value];
+    const dataArrays = [chartPrecipitationData.value, chartNdviData.value, chartReciData.value, chartNdwiData.value, chartEviData.value, chartNdyiData.value, tempMaxData.value, tempMinData.value, tempAvgData.value];
 
     return {
         labels: chartLabels.value,
@@ -204,10 +208,11 @@ function createChartOptions(maxPrecip: number, maxTemp: number, minTemp: number,
                 type: "linear" as const,
                 display: true,
                 position: "right" as const,
+                min: 0,
                 max: maxIdx,
                 title: {
                     display: true,
-                    text: "Índices (NDVI/RECI/NDWI/EVI)",
+                    text: "Índices (NDVI/RECI/NDWI/EVI/NDYI)",
                     color: "#3fb950",
                     font: {
                         size: 12,

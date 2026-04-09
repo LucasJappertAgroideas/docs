@@ -8,6 +8,7 @@ export const IMAGE_TYPE_COLORS: Record<string, string> = {
     RECI: "#a371f7",
     NDWI: "#58a6ff",
     EVI: "#ffa657",
+    NDYI: "#ff6b9d",
 };
 
 // Configuración de datasets para el gráfico unificado
@@ -17,6 +18,7 @@ export const DATASET_CONFIGS = [
     { key: "reci", label: "RECI", color: "#a371f7", yAxisID: "y1", type: "line" as const },
     { key: "ndwi", label: "NDWI", color: "#79c0ff", yAxisID: "y1", type: "line" as const },
     { key: "evi", label: "EVI", color: "#ffa657", yAxisID: "y1", type: "line" as const },
+    { key: "ndyi", label: "NDYI", color: "#ff6b9d", yAxisID: "y1", type: "line" as const },
     { key: "temp_max", label: "Temp. Máx (°C)", color: "#f85149", yAxisID: "y2", type: "line" as const },
     { key: "temp_min", label: "Temp. Mín (°C)", color: "#ff7b72", yAxisID: "y2", type: "line" as const },
     { key: "temp_avg", label: "Temp. Prom (°C)", color: "#ffa657", yAxisID: "y2", type: "line" as const },
@@ -106,6 +108,10 @@ export function useMonthlyData(diagnosticoData: any) {
         return monthlyData.value.map((item: { month: MonthlySummary }) => item.month.evi_avg || null);
     });
 
+    const ndyiData = computed(() => {
+        return monthlyData.value.map((item: { month: MonthlySummary }) => item.month.ndyi_avg || null);
+    });
+
     return {
         monthlyData,
         monthlyLabels,
@@ -114,6 +120,7 @@ export function useMonthlyData(diagnosticoData: any) {
         reciData,
         ndwiData,
         eviData,
+        ndyiData,
         tempMaxData,
         tempMinData,
         tempAvgData
@@ -302,6 +309,10 @@ export function useCapturesDetail(diagnosticoData: any) {
         return capturesData.value.map((item: { capture: CaptureDetail }) => item.capture.evi || null);
     });
 
+    const ndyiData = computed(() => {
+        return capturesData.value.map((item: { capture: CaptureDetail }) => item.capture.ndyi || null);
+    });
+
     return {
         capturesData,
         capturesLabels,
@@ -309,7 +320,8 @@ export function useCapturesDetail(diagnosticoData: any) {
         ndviData,
         reciData,
         ndwiData,
-        eviData
+        eviData,
+        ndyiData
     };
 }
 
