@@ -217,6 +217,65 @@ function createChartOptions(maxPrecip: number, maxTemp: number, minTemp: number,
 
 const unifiedChartOptions = computed(() => createChartOptions(maxPrecipitation.value, maxTemperature.value, 0, maxIndex.value));
 
+// Colores para diferentes cultivos
+const CULTIVO_COLORS = {
+    TRIGO: "#f59e0b",
+    SOJA_2DA: "#10b981",
+    MAIZ_TARDIO: "#3b82f6",
+    MAIZ_1RA: "#8b5cf6",
+    GIRASOL: "#ef4444",
+    SOJA_1RA: "#06b6d4",
+    SORGO: "#f97316",
+    default: "#6b7280",
+};
+
+// Función para obtener color de cultivo
+function getCultivoColor(cultivo: string): string {
+    return CULTIVO_COLORS[cultivo as keyof typeof CULTIVO_COLORS] || CULTIVO_COLORS.default;
+}
+
+// Calcular porcentajes de cobertura de cultivos
+const cultivosCoverage = computed(() => {
+    if (!diagnosticoData.value?.cycles || !diagnosticoData.value.date_from || !diagnosticoData.value.date_to) {
+        return [];
+    }
+
+    const startDate = new Date(diagnosticoData.value.date_from);
+    const endDate = new Date(diagnosticoData.value.date_to);
+    const totalDays = Math.ceil((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24));
+
+    const cultivosMap = new Map<string, { days: number; color: string; name: string }>();
+
+    diagnosticoData.value.cycles.forEach((cycle: any) => {
+        if (!cycle.fecha_siembra && !cycle.fecha_cosecha) return;
+
+        const siembraDate = cycle.fecha_siembra ? new Date(cycle.fecha_siembra) : startDate;
+        const cosechaDate = cycle.fecha_cosecha ? new Date(cycle.fecha_cosecha) : endDate;
+
+        // Asegurar que las fechas estén dentro del rango del análisis
+        const effectiveStart = new Date(Math.max(siembraDate.getTime(), startDate.getTime()));
+        const effectiveEnd = new Date(Math.min(cosechaDate.getTime(), endDate.getTime()));
+
+        if (effectiveEnd <= effectiveStart) return;
+
+        const cycleDays = Math.ceil((effectiveEnd.getTime() - effectiveStart.getTime()) / (1000 * 60 * 60 * 24));
+
+        const cultivoKey = cycle.cultivo || "Sin cultivo";
+        const existing = cultivosMap.get(cultivoKey) || { days: 0, color: getCultivoColor(cultivoKey), name: cultivoKey };
+        existing.days += cycleDays;
+        cultivosMap.set(cultivoKey, existing);
+    });
+
+    // Convertir a array y calcular porcentajes
+    const result = Array.from(cultivosMap.values()).map(item => ({
+        ...item,
+        percentage: (item.days / totalDays) * 100,
+    }));
+
+    // Ordenar por porcentaje (mayor a menor)
+    return result.sort((a, b) => b.percentage - a.percentage);
+});
+
 // Funciones de interacción
 function toggleDataset(index: number) {
     const newHiddenDatasets = new Set(hiddenDatasets.value);
@@ -355,6 +414,36 @@ watch(
 
                 <div class="chart-wrapper">
                     <Line :key="loteConfig?.fieldId" :data="unifiedChartData as ChartData<'line'>" :options="unifiedChartOptions as ChartOptions<'line'>" />
+                </div>
+
+                <!-- Barra de cobertura de cultivos -->
+                <div v-if="cultivosCoverage.length > 0" class="cultivos-coverage-section">
+                    <h3 class="coverage-title">🌾 Cobertura de Cultivos en el Período</h3>
+                    <div class="coverage-bar-container">
+                        <div class="coverage-bar">
+                            <div
+                                v-for="(cultivo, index) in cultivosCoverage"
+                                :key="cultivo.name"
+                                class="coverage-segment"
+                                :style="{
+                                    width: cultivo.percentage + '%',
+                                    backgroundColor: cultivo.color,
+                                    marginLeft: index === 0 ? '0' : '2px',
+                                }"
+                                :title="`${cultivo.name}: ${cultivo.percentage.toFixed(1)}%`"
+                            >
+                                <span v-if="cultivo.percentage > 5" class="coverage-percentage">{{ cultivo.percentage.toFixed(1) }}%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Leyenda de cultivos -->
+                    <div class="cultivos-legend">
+                        <div v-for="cultivo in cultivosCoverage" :key="cultivo.name" class="legend-item-cultivo">
+                            <div class="legend-color-cultivo" :style="{ backgroundColor: cultivo.color }"></div>
+                            <span class="legend-text-cultivo">{{ cultivo.name }} ({{ cultivo.percentage.toFixed(1) }}%)</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -573,6 +662,94 @@ watch(
 .legend-item span {
     color: #e6edf3;
     font-size: 0.85rem;
+}
+
+/* Estilos para barra de cobertura de cultivos */
+.cultivos-coverage-section {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #30363d;
+}
+
+.coverage-title {
+    color: #e6edf3;
+    font-size: 1.2rem;
+    margin: 0 0 1rem 0;
+    font-weight: 600;
+}
+
+.coverage-bar-container {
+    margin-bottom: 1.5rem;
+}
+
+.coverage-bar {
+    width: 100%;
+    height: 40px;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.coverage-segment {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: relative;
+    min-width: 2px;
+}
+
+.coverage-segment:hover {
+    filter: brightness(1.2);
+    z-index: 10;
+}
+
+.coverage-percentage {
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+}
+
+.cultivos-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.legend-item-cultivo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.legend-item-cultivo:hover {
+    border-color: #58a6ff;
+    transform: translateY(-1px);
+}
+
+.legend-color-cultivo {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.legend-text-cultivo {
+    color: #e6edf3;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
 @media (max-width: 768px) {
