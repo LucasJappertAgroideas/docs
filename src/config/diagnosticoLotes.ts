@@ -120,3 +120,29 @@ export function getDiagnosticoLoteConfigV2(fieldId: string): DiagnosticoLoteConf
 export function getDiagnosticoLoteConfigV3(fieldId: string): DiagnosticoLoteConfig | undefined {
     return DIAGNOSTICO_LOTE_CONFIG_V3_LOCAL[fieldId];
 }
+
+// Configuración alternativa para importar JSON directamente - Versión 4
+export const DIAGNOSTICO_LOTE_CONFIG_V4_LOCAL: Record<string, DiagnosticoLoteConfig> = {
+    '286': {
+        fieldId: '286',
+        title: 'La Querencia Lote 4',
+        dataUrl: '../views/diagnostico-cultivo-v4/data/lote-4-286.json'
+    },
+    '288': {
+        fieldId: '288',
+        title: 'La Querencia Lote 2',
+        dataUrl: '../views/diagnostico-cultivo-v4/data/lote-2-288.json'
+    },
+    '289': {
+        fieldId: '289',
+        title: 'La Querencia Lote 20',
+        dataUrl: '../views/diagnostico-cultivo-v4/data/lote-20-289.json'
+    }
+};
+
+/**
+ * Obtiene la configuración de un lote de diagnóstico V4 por su field_id
+ */
+export function getDiagnosticoLoteConfigV4(fieldId: string): DiagnosticoLoteConfig | undefined {
+    return DIAGNOSTICO_LOTE_CONFIG_V4_LOCAL[fieldId];
+}

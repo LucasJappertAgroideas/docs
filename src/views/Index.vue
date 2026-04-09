@@ -34,6 +34,11 @@ import { RouterLink } from "vue-router";
                 <h2>🌱 Diagnóstico de Cultivos V3</h2>
                 <p>Versión 3 con datos de La Querencia Lote 4, análisis de índices NDVI y RECI</p>
             </RouterLink>
+
+            <RouterLink to="/diagnostico-cultivos-v4" class="nav-card">
+                <h2>🌱 Diagnóstico de Cultivos V4</h2>
+                <p>Versión 4 del análisis detallado de ciclos de cultivo, eventos y evolución de índices</p>
+            </RouterLink>
         </div>
     </div>
 </template>

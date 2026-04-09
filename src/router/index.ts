@@ -4,6 +4,7 @@ import Comparativas from '@/views/Comparativas.vue';
 import DiagnosticoCultivos from '@/views/DiagnosticoCultivos.vue';
 import DiagnosticoCultivosV2 from '@/views/DiagnosticoCultivosV2.vue';
 import DiagnosticoCultivosV3 from '@/views/diagnostico-cultivo-v3/DiagnosticoCultivosV3.vue';
+import DiagnosticoCultivosV4 from '@/views/diagnostico-cultivo-v4/DiagnosticoCultivosV4.vue';
 import Index from '@/views/Index.vue';
 
 const router = createRouter({
@@ -56,6 +57,11 @@ const router = createRouter({
             path: '/diagnostico-cultivos-v3',
             name: 'diagnostico-cultivos-v3',
             component: DiagnosticoCultivosV3
+        },
+        {
+            path: '/diagnostico-cultivos-v4',
+            name: 'diagnostico-cultivos-v4',
+            component: DiagnosticoCultivosV4
         },
         // Redirecciones de rutas antiguas a nueva estructura
         {
