@@ -16,6 +16,8 @@ import { type TimelineSegment } from "./types-v3";
 import CyclesSection from "./components/CyclesSection.vue";
 import SatelliteImagesSection from "./components/SatelliteImagesSection.vue";
 import MonthlySummaryTable from "./components/MonthlySummaryTable.vue";
+import JSZip from "jszip";
+import { saveAs } from "file-saver";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, BarElement, BarController, LineController, Title, Tooltip, Legend, Filler);
 
@@ -490,6 +492,31 @@ async function loadDiagnosticoData() {
     }
 }
 
+// Función para exportar todos los JSONs filtrados a ZIP
+async function exportJsonsToZip() {
+    try {
+        const zip = new JSZip();
+        const allData = [
+            { name: "forlin-lote-4-286.json", data: laQuerenciaData },
+            { name: "la-querencia-lote-2-288.json", data: laQuerenciaLote2Data },
+            { name: "querencia-lote-20-289.json", data: laQuerenciaLote20Data },
+            { name: "hym-lomas-pino-lote-2-291.json", data: hymLomasLote2Data },
+            { name: "lote-munge-1-292.json", data: mungeLote1Data },
+            { name: "lote-elmer-8-293.json", data: elmerLote8Data },
+        ];
+
+        allData.forEach(({ name, data }) => {
+            const { captures_detail, satellite_images, ...filteredData } = data;
+            zip.file(name, JSON.stringify(filteredData, null, 2));
+        });
+
+        const content = await zip.generateAsync({ type: "blob" });
+        saveAs(content, "diagnostico-cultivos-v3.zip");
+    } catch (error) {
+        console.error("Error al exportar JSONs a ZIP:", error);
+    }
+}
+
 // Lifecycle hooks
 onMounted(() => {
     loadDiagnosticoData();
@@ -529,11 +556,14 @@ watch(
             <div class="header">
                 <div class="header-top">
                     <h1>{{ pageTitle }}</h1>
-                    <div class="lote-selector">
-                        <label for="lote-select">Cambiar Lote:</label>
-                        <select id="lote-select" :value="loteConfig?.fieldId" @change="onLoteChange">
-                            <option v-for="lote in lotes" :key="lote.fieldId" :value="lote.fieldId">{{ lote.title }} ({{ lote.fieldId }})</option>
-                        </select>
+                    <div class="header-actions">
+                        <div class="lote-selector">
+                            <label for="lote-select">Cambiar Lote:</label>
+                            <select id="lote-select" :value="loteConfig?.fieldId" @change="onLoteChange">
+                                <option v-for="lote in lotes" :key="lote.fieldId" :value="lote.fieldId">{{ lote.title }} ({{ lote.fieldId }})</option>
+                            </select>
+                        </div>
+                        <button @click="exportJsonsToZip" class="export-btn" title="Exportar todos los JSONs a ZIP">📦 Exportar ZIP</button>
                     </div>
                 </div>
                 <p class="subtitle">Análisis detallado de índices de vegetación y datos climáticos</p>
@@ -563,30 +593,53 @@ watch(
             <div class="section">
                 <h2 class="section-title">🌾 Ciclos de Cultivo</h2>
 
-                <!-- Tabla resumen de ciclos (siempre visible) -->
-                <div class="cycles-summary">
-                    <table class="summary-table">
-                        <thead>
-                            <tr>
-                                <th>Cultivo</th>
-                                <th>Fecha Siembra</th>
-                                <th>Fecha Cosecha</th>
-                                <th>Estado</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr v-for="(cycle, index) in diagnosticoData.cycles" :key="index">
-                                <td class="cultivo-cell">{{ cycle.cultivo }}</td>
-                                <td>{{ formatDate(cycle.fecha_siembra) }}</td>
-                                <td>{{ formatDate(cycle.fecha_cosecha) }}</td>
-                                <td>
-                                    <span class="stat-badge" :class="cycle.estado_salud?.toLowerCase()">
-                                        {{ cycle.estado_salud }}
-                                    </span>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <!-- Tablas lado a lado: Detecciones y Datos del Productor -->
+                <div class="cycles-tables-container">
+                    <!-- Tabla resumen de ciclos (siempre visible) -->
+                    <div class="cycles-summary">
+                        <h3 class="table-title">🔍 Ciclos Detectados</h3>
+                        <table class="summary-table">
+                            <thead>
+                                <tr>
+                                    <th>Cultivo</th>
+                                    <th>Fecha Siembra</th>
+                                    <th>Fecha Cosecha</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="(cycle, index) in diagnosticoData.cycles" :key="index">
+                                    <td class="cultivo-cell">{{ cycle.cultivo }}</td>
+                                    <td>{{ formatDate(cycle.fecha_siembra) }}</td>
+                                    <td>{{ formatDate(cycle.fecha_cosecha) }}</td>
+                                    <td>
+                                        <span class="stat-badge" :class="cycle.estado_salud?.toLowerCase()">
+                                            {{ cycle.estado_salud }}
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Datos del Productor -->
+                    <div v-if="diagnosticoData.producer_data && diagnosticoData.producer_data.length > 0" class="producer-data-section">
+                        <h3 class="table-title">👨‍🌾 Datos del Productor</h3>
+                        <table class="producer-table">
+                            <thead>
+                                <tr>
+                                    <th>Cultivo Reportado</th>
+                                    <th>Campaña</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="(data, index) in diagnosticoData.producer_data" :key="index">
+                                    <td>{{ data[1] }}</td>
+                                    <td>{{ data[0] }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
                 <!-- Sección colapsable para detalles -->
@@ -754,6 +807,37 @@ watch(
 .lote-selector select:focus {
     outline: none;
     border-color: #58a6ff;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.export-btn {
+    padding: 0.5rem 1rem;
+    background: #238636;
+    border: 1px solid #238636;
+    border-radius: 6px;
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.export-btn:hover {
+    background: #2ea043;
+    border-color: #2ea043;
+}
+
+.export-btn:active {
+    background: #238636;
+    border-color: #238636;
 }
 
 .subtitle {
@@ -1123,9 +1207,27 @@ watch(
 }
 
 /* Estilos para tabla resumen de ciclos */
-.cycles-summary {
+.cycles-tables-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
     margin-bottom: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .cycles-tables-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.cycles-summary {
     overflow-x: auto;
+}
+
+.table-title {
+    color: #e6edf3;
+    font-size: 1.1rem;
+    margin: 0 0 1rem 0;
 }
 
 .summary-table {
@@ -1162,6 +1264,51 @@ watch(
 .cultivo-cell {
     font-weight: 600;
     color: #e6edf3;
+}
+
+.producer-data-section {
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    overflow-x: auto;
+}
+
+.producer-data-title {
+    color: #e6edf3;
+    font-size: 1.3rem;
+    margin: 0 0 1rem 0;
+}
+
+.producer-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.producer-table th,
+.producer-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #30363d;
+}
+
+.producer-table th {
+    background: #161b22;
+    color: #e6edf3;
+    font-weight: 600;
+}
+
+.producer-table td {
+    color: #8b949e;
+}
+
+.producer-table tbody tr:hover {
+    background: #161b22;
 }
 
 .stat-badge {
