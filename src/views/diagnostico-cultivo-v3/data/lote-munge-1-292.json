@@ -1368,5 +1368,16 @@
             ]
         }
     ],
-    "metadata": { "total_captures": 86, "filtered_captures": 86, "daily_points": 2648, "cycles_detected": 7, "complete_cycles": 7, "partial_cycles": 0, "satellite_images_count": 672 }
+    "metadata": { "total_captures": 86, "filtered_captures": 86, "daily_points": 2648, "cycles_detected": 7, "complete_cycles": 7, "partial_cycles": 0, "satellite_images_count": 672 },
+    "producer_data": [
+        ["19/20 (Verano)", "Alfa 18"],
+        ["20/21 (Verano)", "Maíz 2° grano"],
+        ["21/22 (Verano)", "Soja 1°"],
+        ["22/23 (Verano)", "Maíz 1° silo"],
+        ["23/24 (Invierno)", "Trigo"],
+        ["23/24 (Verano)", "Soja 2°"],
+        ["24/25 (Verano)", "Maíz 1° erlaje"],
+        ["25/26 (Invierno)", "Barbecho"],
+        ["25/26 (Verano)", "Maíz (primera)"]
+    ]
 }
