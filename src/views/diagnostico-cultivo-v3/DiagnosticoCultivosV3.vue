@@ -593,8 +593,27 @@ watch(
             <div class="section">
                 <h2 class="section-title">🌾 Ciclos de Cultivo</h2>
 
-                <!-- Tablas lado a lado: Detecciones y Datos del Productor -->
+                <!-- Tablas lado a lado: Datos del Productor y Detecciones -->
                 <div class="cycles-tables-container">
+                    <!-- Datos del Productor -->
+                    <div v-if="diagnosticoData.producer_data && diagnosticoData.producer_data.length > 0" class="producer-data-section">
+                        <h3 class="table-title">�‍🌾 Datos del Productor</h3>
+                        <table class="producer-table">
+                            <thead>
+                                <tr>
+                                    <th>Cultivo Reportado</th>
+                                    <th>Campaña</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="(data, index) in diagnosticoData.producer_data" :key="index">
+                                    <td>{{ data[1] }}</td>
+                                    <td>{{ data[0] }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
                     <!-- Tabla resumen de ciclos (siempre visible) -->
                     <div class="cycles-summary">
                         <h3 class="table-title">🔍 Ciclos Detectados</h3>
@@ -617,25 +636,6 @@ watch(
                                             {{ cycle.estado_salud }}
                                         </span>
                                     </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <!-- Datos del Productor -->
-                    <div v-if="diagnosticoData.producer_data && diagnosticoData.producer_data.length > 0" class="producer-data-section">
-                        <h3 class="table-title">👨‍🌾 Datos del Productor</h3>
-                        <table class="producer-table">
-                            <thead>
-                                <tr>
-                                    <th>Cultivo Reportado</th>
-                                    <th>Campaña</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr v-for="(data, index) in diagnosticoData.producer_data" :key="index">
-                                    <td>{{ data[1] }}</td>
-                                    <td>{{ data[0] }}</td>
                                 </tr>
                             </tbody>
                         </table>
