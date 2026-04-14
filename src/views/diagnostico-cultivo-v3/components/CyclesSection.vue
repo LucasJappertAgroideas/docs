@@ -1,7 +1,7 @@
 <template>
     <div class="section">
         <h2 class="section-title">? Ciclos de Cultivo</h2>
-        
+
         <!-- Resumen de ciclos -->
         <div class="cycles-summary">
             <div class="summary-card">
@@ -20,7 +20,7 @@
 
         <!-- Lista de ciclos -->
         <div class="cycles-list">
-            <div v-for="(cycle, index) in cycles" :key="index" class="cycle-card">
+            <div v-for="cycle in cycles" class="cycle-card">
                 <div class="cycle-header">
                     <div class="cycle-title">
                         <h3>{{ getCropName(cycle.cultivo) }}</h3>
@@ -28,9 +28,7 @@
                             {{ cycle.status }}
                         </div>
                     </div>
-                    <div class="cycle-confidence">
-                        Confianza: {{ (cycle.confidence * 100).toFixed(0) }}%
-                    </div>
+                    <div class="cycle-confidence">Confianza: {{ (cycle.confidence * 100).toFixed(0) }}%</div>
                 </div>
 
                 <div class="cycle-details">
@@ -60,7 +58,7 @@
                 <div v-if="cycle.eventos && cycle.eventos.length > 0" class="cycle-events">
                     <h4>Eventos Registrados</h4>
                     <div class="events-list">
-                        <div v-for="event in cycle.eventos" :key="event.fecha" class="event-item">
+                        <div v-for="event in cycle.eventos" class="event-item">
                             <div class="event-header">
                                 <span class="event-type" :class="getEventClass(event.tipo)">
                                     {{ getEventName(event.tipo) }}
@@ -86,9 +84,9 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
-import type { Cycle } from '../types-v3';
-import { formatDate } from '../composables-v3';
+import { computed } from "vue";
+import type { Cycle } from "../types-v3";
+import { formatDate } from "../composables-v3";
 
 interface Props {
     cycles: Cycle[];
@@ -96,67 +94,63 @@ interface Props {
 
 const props = defineProps<Props>();
 
-const completeCycles = computed(() => 
-    props.cycles.filter(cycle => cycle.status === 'COMPLETO').length
-);
+const completeCycles = computed(() => props.cycles.filter(cycle => cycle.status === "COMPLETO").length);
 
-const partialCycles = computed(() => 
-    props.cycles.filter(cycle => cycle.status === 'PARCIAL').length
-);
+const partialCycles = computed(() => props.cycles.filter(cycle => cycle.status === "PARCIAL").length);
 
 function getCropName(cropCode: string): string {
     const cropNames: Record<string, string> = {
-        'COBERTURA_MALEZA': 'Cobertura de Maleza',
-        'SOJA_1RA': 'Soja 1ra',
-        'MAIZ_TARDIO': 'Maíz Tardío',
-        'MAIZ_1RA': 'Maíz 1ra',
-        'TRIGO': 'Trigo',
-        'GIRASOL': 'Girasol',
-        'SORGO': 'Sorgo'
+        COBERTURA_MALEZA: "Cobertura de Maleza",
+        SOJA_1RA: "Soja 1ra",
+        MAIZ_TARDIO: "Maíz Tardío",
+        MAIZ_1RA: "Maíz 1ra",
+        TRIGO: "Trigo",
+        GIRASOL: "Girasol",
+        SORGO: "Sorgo",
     };
     return cropNames[cropCode] || cropCode;
 }
 
 function getEventName(eventType: string): string {
     const eventNames: Record<string, string> = {
-        'GOLPE_DE_CALOR': 'Golpe de Calor',
-        'HELADA': 'Helada',
-        'SEQUIA': 'Sequía',
-        'EXCESO_LLUVIA': 'Exceso de Lluvia',
-        'GRANIZO': 'Granizo',
-        'VIENTO': 'Viento Fuerte'
+        GOLPE_DE_CALOR: "Golpe de Calor",
+        HELADA: "Helada",
+        SEQUIA: "Sequía",
+        EXCESO_LLUVIA: "Exceso de Lluvia",
+        GRANIZO: "Granizo",
+        VIENTO: "Viento Fuerte",
     };
     return eventNames[eventType] || eventType;
 }
 
 function getHealthClass(health: string): string {
     const classes: Record<string, string> = {
-        'BUENO': 'health-good',
-        'REGULAR': 'health-regular',
-        'MALO': 'health-bad'
+        BUENO: "health-good",
+        REGULAR: "health-regular",
+        MALO: "health-bad",
     };
-    return classes[health] || '';
+    return classes[health] || "";
 }
 
 function getEventClass(eventType: string): string {
     const classes: Record<string, string> = {
-        'GOLPE_DE_CALOR': 'event-heat',
-        'HELADA': 'event-frost',
-        'SEQUIA': 'event-drought',
-        'EXCESO_LLUVIA': 'event-rain',
-        'GRANIZO': 'event-hail',
-        'VIENTO': 'event-wind'
+        GOLPE_DE_CALOR: "event-heat",
+        HELADA: "event-frost",
+        SEQUIA: "event-drought",
+        EXCESO_LLUVIA: "event-rain",
+        GRANIZO: "event-hail",
+        VIENTO: "event-wind",
     };
-    return classes[eventType] || '';
+    return classes[eventType] || "";
 }
 
 function getSeverityClass(severity: string): string {
     const classes: Record<string, string> = {
-        'BAJA': 'severity-low',
-        'MEDIA': 'severity-medium',
-        'ALTA': 'severity-high'
+        BAJA: "severity-low",
+        MEDIA: "severity-medium",
+        ALTA: "severity-high",
     };
-    return classes[severity] || '';
+    return classes[severity] || "";
 }
 </script>
 

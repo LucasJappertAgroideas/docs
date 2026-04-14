@@ -4,9 +4,6 @@ import { useRoute, useRouter } from "vue-router";
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, BarElement, BarController, LineController, Title, Tooltip, Legend, Filler, type ChartOptions, type ChartData } from "chart.js";
 import { Line } from "vue-chartjs";
 import { DIAGNOSTICO_LOTE_CONFIG_V4_LOCAL, getDiagnosticoLoteConfigV4 } from "@/config/diagnosticoLotes";
-import laQuerenciaData from "./data/lote-4-286.json";
-import laQuerenciaLote2Data from "./data/lote-2-288.json";
-import laQuerenciaLote20Data from "./data/lote-20-289.json";
 import IndicesInfoButton from "@/components/IndicesInfoButton.vue";
 import { useMonthlyData, useCapturesDetail, useSatelliteImages, DATASET_CONFIGS, formatDate } from "./composables-v4";
 import CyclesSection from "./components/CyclesSection.vue";
@@ -348,22 +345,9 @@ async function loadDiagnosticoData() {
         loading.value = true;
         error.value = null;
 
-        // Usar JSON importado directamente para cada lote
-        if (loteConfig.value.fieldId === "286") {
-            diagnosticoData.value = laQuerenciaData;
-        } else if (loteConfig.value.fieldId === "288") {
-            diagnosticoData.value = laQuerenciaLote2Data;
-        } else if (loteConfig.value.fieldId === "289") {
-            diagnosticoData.value = laQuerenciaLote20Data;
-        } else {
-            // Para otros lotes, usar fetch (fallback)
-            const response = await fetch(loteConfig.value.dataUrl);
-            if (!response.ok) {
-                throw new Error(`Error HTTP: ${response.status}`);
-            }
-            const data = await response.json();
-            diagnosticoData.value = data;
-        }
+        // V4 aún no tiene datos disponibles
+        diagnosticoData.value = null;
+        error.value = "Versión V4 en desarrollo - Datos no disponibles aún";
     } catch (err) {
         console.error("Error cargando datos de diagnóstico:", err);
         error.value = err instanceof Error ? err.message : "Error desconocido al cargar los datos";

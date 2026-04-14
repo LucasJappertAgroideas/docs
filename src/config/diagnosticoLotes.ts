@@ -86,17 +86,32 @@ export const DIAGNOSTICO_LOTE_CONFIG_V3_LOCAL: Record<string, DiagnosticoLoteCon
     '286': {
         fieldId: '286',
         title: 'La Querencia Lote 4',
-        dataUrl: '../views/diagnostico-cultivo-v3/data/lote-4-286.json'
+        dataUrl: '../views/diagnostico-cultivo-v3/data/forlin-lote-4-286.json'
     },
     '288': {
         fieldId: '288',
         title: 'La Querencia Lote 2',
-        dataUrl: '../views/diagnostico-cultivo-v3/data/lote-2-288.json'
+        dataUrl: '../views/diagnostico-cultivo-v3/data/la-querencia-lote-2-288.json'
     },
     '289': {
         fieldId: '289',
         title: 'La Querencia Lote 20',
-        dataUrl: '../views/diagnostico-cultivo-v3/data/lote-20-289.json'
+        dataUrl: '../views/diagnostico-cultivo-v3/data/querencia-lote-20-289.json'
+    },
+    '291': {
+        fieldId: '291',
+        title: 'H Y M Lomas Lote 2',
+        dataUrl: '../views/diagnostico-cultivo-v3/data/hym-lomas-pino-lote-2-291.json'
+    },
+    '292': {
+        fieldId: '292',
+        title: 'Munge Lote 1',
+        dataUrl: '../views/diagnostico-cultivo-v3/data/lote-munge-1-292.json'
+    },
+    '293': {
+        fieldId: '293',
+        title: 'Elmer Lote 8',
+        dataUrl: '../views/diagnostico-cultivo-v3/data/lote-elmer-8-293.json'
     }
 };
 
@@ -126,17 +141,17 @@ export const DIAGNOSTICO_LOTE_CONFIG_V4_LOCAL: Record<string, DiagnosticoLoteCon
     '286': {
         fieldId: '286',
         title: 'La Querencia Lote 4',
-        dataUrl: '../views/diagnostico-cultivo-v4/data/lote-4-286.json'
+        dataUrl: '../views/diagnostico-cultivo-v4/data/forlin-lote-4-286.json'
     },
     '288': {
         fieldId: '288',
         title: 'La Querencia Lote 2',
-        dataUrl: '../views/diagnostico-cultivo-v4/data/lote-2-288.json'
+        dataUrl: '../views/diagnostico-cultivo-v4/data/la-querencia-lote-2-288.json'
     },
     '289': {
         fieldId: '289',
         title: 'La Querencia Lote 20',
-        dataUrl: '../views/diagnostico-cultivo-v4/data/lote-20-289.json'
+        dataUrl: '../views/diagnostico-cultivo-v4/data/querencia-lote-20-289.json'
     }
 };
 

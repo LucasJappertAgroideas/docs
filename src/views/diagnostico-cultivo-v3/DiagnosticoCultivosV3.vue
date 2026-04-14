@@ -4,9 +4,12 @@ import { useRoute, useRouter } from "vue-router";
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, BarElement, BarController, LineController, Title, Tooltip, Legend, Filler, type ChartOptions, type ChartData } from "chart.js";
 import { Line } from "vue-chartjs";
 import { DIAGNOSTICO_LOTE_CONFIG_V3_LOCAL, getDiagnosticoLoteConfigV3 } from "@/config/diagnosticoLotes";
-import laQuerenciaData from "./data/lote-4-286.json";
-import laQuerenciaLote2Data from "./data/lote-2-288.json";
-import laQuerenciaLote20Data from "./data/lote-20-289.json";
+import laQuerenciaData from "./data/forlin-lote-4-286.json";
+import laQuerenciaLote2Data from "./data/la-querencia-lote-2-288.json";
+import laQuerenciaLote20Data from "./data/querencia-lote-20-289.json";
+import hymLomasLote2Data from "./data/hym-lomas-pino-lote-2-291.json";
+import mungeLote1Data from "./data/lote-munge-1-292.json";
+import elmerLote8Data from "./data/lote-elmer-8-293.json";
 import IndicesInfoButton from "@/components/IndicesInfoButton.vue";
 import { useMonthlyData, useCapturesDetail, useSatelliteImages, DATASET_CONFIGS, formatDate } from "./composables-v3";
 import { type TimelineSegment } from "./types-v3";
@@ -464,6 +467,12 @@ async function loadDiagnosticoData() {
             diagnosticoData.value = laQuerenciaLote2Data;
         } else if (loteConfig.value.fieldId === "289") {
             diagnosticoData.value = laQuerenciaLote20Data;
+        } else if (loteConfig.value.fieldId === "291") {
+            diagnosticoData.value = hymLomasLote2Data;
+        } else if (loteConfig.value.fieldId === "292") {
+            diagnosticoData.value = mungeLote1Data;
+        } else if (loteConfig.value.fieldId === "293") {
+            diagnosticoData.value = elmerLote8Data;
         } else {
             // Para otros lotes, usar fetch (fallback)
             const response = await fetch(loteConfig.value.dataUrl);
@@ -523,9 +532,7 @@ watch(
                     <div class="lote-selector">
                         <label for="lote-select">Cambiar Lote:</label>
                         <select id="lote-select" :value="loteConfig?.fieldId" @change="onLoteChange">
-                            <option v-for="lote in lotes" :key="lote.fieldId" :value="lote.fieldId">
-                                {{ lote.title }}
-                            </option>
+                            <option v-for="lote in lotes" :key="lote.fieldId" :value="lote.fieldId">{{ lote.title }} ({{ lote.fieldId }})</option>
                         </select>
                     </div>
                 </div>
