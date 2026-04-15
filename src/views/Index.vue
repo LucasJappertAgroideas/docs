@@ -39,6 +39,11 @@ import { RouterLink } from "vue-router";
                 <h2>🌱 Diagnóstico de Cultivos V4</h2>
                 <p>Lo creé pero no lo usé, lo dejo para cuando lo necesitemos</p>
             </RouterLink>
+
+            <RouterLink to="/comparativa-campos" class="nav-card">
+                <h2>📊 Comparativa de Campos</h2>
+                <p>Comparar evolución de índices entre todos los campos disponibles</p>
+            </RouterLink>
         </div>
     </div>
 </template>
