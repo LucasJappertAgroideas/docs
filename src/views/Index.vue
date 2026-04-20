@@ -44,6 +44,11 @@ import { RouterLink } from "vue-router";
                 <h2>📊 Comparativa de Campos</h2>
                 <p>Comparar evolución de índices entre todos los campos disponibles</p>
             </RouterLink>
+
+            <RouterLink to="/mapas-productividad" class="nav-card">
+                <h2>🗺️ Mapas de Productividad</h2>
+                <p>Visualizar mapas de productividad de los campos</p>
+            </RouterLink>
         </div>
     </div>
 </template>
