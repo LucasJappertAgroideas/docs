@@ -18,6 +18,7 @@ const fieldOptions: FieldOption[] = [
     { id: "288", name: "La Querencia - Lote 2", filename: "la-querencia-lote-2-288" },
     { id: "286", name: "Forlin - Lote 4", filename: "forlin-lote-4-286" },
     { id: "289", name: "Querencia - Lote 20", filename: "querencia-lote-20-289" },
+    { id: "296", name: "Los Claros - Lote 17", filename: "los-claros-lote-17-296" },
 ];
 
 // Obtener el campo seleccionado desde la URL o usar el primero por defecto
