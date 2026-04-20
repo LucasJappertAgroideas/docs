@@ -1,11 +1,15 @@
 <script setup lang="ts">
-import { ref, onMounted, computed } from "vue";
+import { ref, onMounted, computed, watch } from "vue";
+import { useRoute, useRouter } from "vue-router";
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, type ChartOptions } from "chart.js";
 import { Line } from "vue-chartjs";
 import { useProductivityMaps, getImageTypeColor, formatDate, imageMeetsThreshold } from "./composables/composables";
 import type { FieldOption } from "./types/types";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
+
+const route = useRoute();
+const router = useRouter();
 
 const { mapData, loading, error, loadMapDataAsync, indexTypes, chartLabels, chartDatasets, allSatelliteImagesFlat, getThresholdForIndex } = useProductivityMaps();
 
@@ -16,7 +20,14 @@ const fieldOptions: FieldOption[] = [
     { id: "289", name: "Querencia - Lote 20", filename: "querencia-lote-20-289" },
 ];
 
-const selectedField = ref<FieldOption>(fieldOptions[0]);
+// Obtener el campo seleccionado desde la URL o usar el primero por defecto
+const getFieldFromQuery = (): FieldOption => {
+    const fieldId = (route.query.field_id as string) || fieldOptions[0].id;
+    const field = fieldOptions.find(f => f.id === fieldId);
+    return field || fieldOptions[0];
+};
+
+const selectedField = ref<FieldOption>(getFieldFromQuery());
 const selectedImageFilter = ref<string>("all");
 const filterByThreshold = ref<boolean>(true);
 
@@ -77,6 +88,13 @@ const onFieldChange = (event: Event) => {
         loadMapDataAsync(field.filename);
     }
 };
+
+// Watcher para actualizar la URL cuando cambia el campo seleccionado
+watch(selectedField, newField => {
+    router.push({
+        query: { ...route.query, field_id: newField.id },
+    });
+});
 
 onMounted(() => {
     loadMapDataAsync(selectedField.value.filename);
