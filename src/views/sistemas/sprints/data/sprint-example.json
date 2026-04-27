@@ -1,0 +1,20 @@
+{
+  "id": "sprint-23",
+  "name": "Optimización de Login",
+  "description": "Mejorar la experiencia de usuario en el proceso de autenticación y reducir el tiempo de carga.",
+  "startDate": "2026-04-01",
+  "endDate": "2026-04-15",
+  "status": "completed",
+  "priority": "high",
+  "team": ["Juan Pérez", "María García", "Carlos López"],
+  "objectives": [
+    "Reducir tiempo de login en 30%",
+    "Implementar autenticación biométrica",
+    "Mejorar mensajes de error"
+  ],
+  "keyResults": [
+    "Tiempo de login reducido al 2.3 segundos",
+    "Autenticación biométrica implementada en iOS y Android",
+    "Tasa de errores reducida en 45%"
+  ]
+}
