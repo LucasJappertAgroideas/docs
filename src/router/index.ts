@@ -9,6 +9,7 @@ import ComparativaCampos from '@/views/comparativa-campos/ComparativaCampos.vue'
 import MapasProductividad from '@/views/mapas-productividad/MapasProductividad.vue';
 import Index from '@/views/Index.vue';
 import Sprints from '@/views/sistemas/sprints/Sprints.vue';
+import TechIANews from '@/views/TechIANews.vue';
 
 const router = createRouter({
     history: createWebHashHistory(),
@@ -80,6 +81,11 @@ const router = createRouter({
             path: '/sistemas/sprints',
             name: 'sprints',
             component: Sprints
+        },
+        {
+            path: '/tech-ia-news',
+            name: 'tech-ia-news',
+            component: TechIANews
         },
         // Redirecciones de rutas antiguas a nueva estructura
         {

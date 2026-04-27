@@ -49,6 +49,11 @@ import { RouterLink } from "vue-router";
                 <h2>🗺️ Mapas de Productividad</h2>
                 <p>Visualizar mapas de productividad de los campos</p>
             </RouterLink>
+
+            <RouterLink to="/tech-ia-news" class="nav-card">
+                <h2>🤖 Tech & IA News</h2>
+                <p>Noticias de tecnología e inteligencia artificial</p>
+            </RouterLink>
         </div>
     </div>
 </template>
