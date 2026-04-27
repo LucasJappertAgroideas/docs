@@ -8,6 +8,7 @@ import DiagnosticoCultivosV4 from '@/views/diagnostico-cultivo-v4/DiagnosticoCul
 import ComparativaCampos from '@/views/comparativa-campos/ComparativaCampos.vue';
 import MapasProductividad from '@/views/mapas-productividad/MapasProductividad.vue';
 import Index from '@/views/Index.vue';
+import Sprints from '@/views/sistemas/sprints/Sprints.vue';
 
 const router = createRouter({
     history: createWebHashHistory(),
@@ -74,6 +75,11 @@ const router = createRouter({
             path: '/mapas-productividad',
             name: 'mapas-productividad',
             component: MapasProductividad
+        },
+        {
+            path: '/sistemas/sprints',
+            name: 'sprints',
+            component: Sprints
         },
         // Redirecciones de rutas antiguas a nueva estructura
         {
