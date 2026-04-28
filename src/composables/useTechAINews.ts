@@ -2,7 +2,7 @@ import { ref, computed } from 'vue';
 import type { NewsItem, NewsResponse } from '@/types/news';
 
 const API_KEY = 'ak_prod_H7f9L2mP4vQ8xT1wN5yK3zR6bJ0cE4gD';
-const API_URL = 'https://core-api.agroideassa.com/dev/news-pipeline/news/tech_ai';
+const API_URL = 'https://core-api.agroideassa.com/api/v1/news-pipeline/news/tech_ai';
 
 export function useTechAINews() {
     const news = ref<NewsItem[]>([]);
