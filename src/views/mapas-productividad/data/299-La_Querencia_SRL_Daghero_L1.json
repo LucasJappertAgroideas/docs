@@ -1,0 +1,3009 @@
+{
+  "individual_maps": {
+    "RECI": {
+      "map_image_url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/productivity_maps/field_299/mapa_20260428_191308_RECI.png",
+      "total_area_hectares": 67.87,
+      "processed_images_count": 13,
+      "discarded_images_count": 66,
+      "dynamic_threshold_used": 2.7972,
+      "environments": [
+        {
+          "id": 1,
+          "name": "Bajo",
+          "color": "#FF0000",
+          "area_hectares": 0.43,
+          "area_percentage": 0.63,
+          "average_index_value": 0.33
+        },
+        {
+          "id": 2,
+          "name": "Medio",
+          "color": "#FFFF00",
+          "area_hectares": 1.05,
+          "area_percentage": 1.55,
+          "average_index_value": 0.67
+        },
+        {
+          "id": 3,
+          "name": "Alto",
+          "color": "#00FF00",
+          "area_hectares": 66.39,
+          "area_percentage": 97.82,
+          "average_index_value": 1.01
+        }
+      ],
+      "date_from": "2019-01-01",
+      "date_to": "2026-04-28",
+      "satellite_images": [
+        {
+          "month": "05-2019",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20190510.png",
+              "date": "2019-05-10",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.6381
+            }
+          ]
+        },
+        {
+          "month": "06-2019",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20190619.png",
+              "date": "2019-06-19",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.5904
+            }
+          ]
+        },
+        {
+          "month": "08-2019",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20190813.png",
+              "date": "2019-08-13",
+              "cloud_coverage": 0.0,
+              "average_index_value": 3.6406
+            }
+          ]
+        },
+        {
+          "month": "09-2019",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20190912.png",
+              "date": "2019-09-12",
+              "cloud_coverage": 0.0,
+              "average_index_value": 3.8034
+            }
+          ]
+        },
+        {
+          "month": "10-2019",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20191002.png",
+              "date": "2019-10-02",
+              "cloud_coverage": 0.0,
+              "average_index_value": 2.9992
+            }
+          ]
+        },
+        {
+          "month": "12-2019",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20191201.png",
+              "date": "2019-12-01",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2274
+            }
+          ]
+        },
+        {
+          "month": "01-2020",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20200105.png",
+              "date": "2020-01-05",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.9566
+            }
+          ]
+        },
+        {
+          "month": "02-2020",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20200204.png",
+              "date": "2020-02-04",
+              "cloud_coverage": 0.0,
+              "average_index_value": 2.8981
+            }
+          ]
+        },
+        {
+          "month": "03-2020",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20200305.png",
+              "date": "2020-03-05",
+              "cloud_coverage": 0.0,
+              "average_index_value": 2.9119
+            }
+          ]
+        },
+        {
+          "month": "04-2020",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20200414.png",
+              "date": "2020-04-14",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.3419
+            }
+          ]
+        },
+        {
+          "month": "05-2020",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20200514.png",
+              "date": "2020-05-14",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2735
+            }
+          ]
+        },
+        {
+          "month": "06-2020",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20200608.png",
+              "date": "2020-06-08",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2239
+            }
+          ]
+        },
+        {
+          "month": "07-2020",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20200703.png",
+              "date": "2020-07-03",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2434
+            }
+          ]
+        },
+        {
+          "month": "08-2020",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20200817.png",
+              "date": "2020-08-17",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2878
+            }
+          ]
+        },
+        {
+          "month": "10-2020",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20201026.png",
+              "date": "2020-10-26",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2493
+            }
+          ]
+        },
+        {
+          "month": "11-2020",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20201105.png",
+              "date": "2020-11-05",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1992
+            }
+          ]
+        },
+        {
+          "month": "12-2020",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20201205.png",
+              "date": "2020-12-05",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.9548
+            }
+          ]
+        },
+        {
+          "month": "01-2021",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20210119.png",
+              "date": "2021-01-19",
+              "cloud_coverage": 0.0,
+              "average_index_value": 3.9204
+            }
+          ]
+        },
+        {
+          "month": "02-2021",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20210218.png",
+              "date": "2021-02-18",
+              "cloud_coverage": 0.0,
+              "average_index_value": 3.04
+            }
+          ]
+        },
+        {
+          "month": "03-2021",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20210305.png",
+              "date": "2021-03-05",
+              "cloud_coverage": 0.0,
+              "average_index_value": 1.0007
+            }
+          ]
+        },
+        {
+          "month": "04-2021",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20210414.png",
+              "date": "2021-04-14",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.3615
+            }
+          ]
+        },
+        {
+          "month": "05-2021",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20210514.png",
+              "date": "2021-05-14",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.3173
+            }
+          ]
+        },
+        {
+          "month": "06-2021",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20210613.png",
+              "date": "2021-06-13",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2803
+            }
+          ]
+        },
+        {
+          "month": "07-2021",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20210723.png",
+              "date": "2021-07-23",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2054
+            }
+          ]
+        },
+        {
+          "month": "08-2021",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20210807.png",
+              "date": "2021-08-07",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2206
+            }
+          ]
+        },
+        {
+          "month": "09-2021",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20210916.png",
+              "date": "2021-09-16",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2657
+            }
+          ]
+        },
+        {
+          "month": "10-2021",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20211021.png",
+              "date": "2021-10-21",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2579
+            }
+          ]
+        },
+        {
+          "month": "11-2021",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20211120.png",
+              "date": "2021-11-20",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2247
+            }
+          ]
+        },
+        {
+          "month": "12-2021",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20211225.png",
+              "date": "2021-12-25",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.9757
+            }
+          ]
+        },
+        {
+          "month": "01-2022",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20220109.png",
+              "date": "2022-01-09",
+              "cloud_coverage": 0.0,
+              "average_index_value": 1.7364
+            }
+          ]
+        },
+        {
+          "month": "02-2022",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20220213.png",
+              "date": "2022-02-13",
+              "cloud_coverage": 0.0,
+              "average_index_value": 3.7277
+            }
+          ]
+        },
+        {
+          "month": "03-2022",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20220315.png",
+              "date": "2022-03-15",
+              "cloud_coverage": 0.0,
+              "average_index_value": 3.7617
+            }
+          ]
+        },
+        {
+          "month": "04-2022",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20220404.png",
+              "date": "2022-04-04",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.9313
+            }
+          ]
+        },
+        {
+          "month": "05-2022",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20220504.png",
+              "date": "2022-05-04",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.3893
+            }
+          ]
+        },
+        {
+          "month": "06-2022",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20220603.png",
+              "date": "2022-06-03",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.315
+            }
+          ]
+        },
+        {
+          "month": "07-2022",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20220713.png",
+              "date": "2022-07-13",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.6797
+            }
+          ]
+        },
+        {
+          "month": "08-2022",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20220822.png",
+              "date": "2022-08-22",
+              "cloud_coverage": 0.0,
+              "average_index_value": 1.3689
+            }
+          ]
+        },
+        {
+          "month": "09-2022",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20220906.png",
+              "date": "2022-09-06",
+              "cloud_coverage": 0.0,
+              "average_index_value": 1.066
+            }
+          ]
+        },
+        {
+          "month": "10-2022",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20221011.png",
+              "date": "2022-10-11",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.762
+            }
+          ]
+        },
+        {
+          "month": "11-2022",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20221115.png",
+              "date": "2022-11-15",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2708
+            }
+          ]
+        },
+        {
+          "month": "12-2022",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20221205.png",
+              "date": "2022-12-05",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2089
+            }
+          ]
+        },
+        {
+          "month": "01-2023",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20230104.png",
+              "date": "2023-01-04",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.3944
+            }
+          ]
+        },
+        {
+          "month": "02-2023",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20230218.png",
+              "date": "2023-02-18",
+              "cloud_coverage": 0.0,
+              "average_index_value": 1.651
+            }
+          ]
+        },
+        {
+          "month": "03-2023",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20230305.png",
+              "date": "2023-03-05",
+              "cloud_coverage": 0.0,
+              "average_index_value": 1.4385
+            }
+          ]
+        },
+        {
+          "month": "04-2023",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20230419.png",
+              "date": "2023-04-19",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.7246
+            }
+          ]
+        },
+        {
+          "month": "05-2023",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20230509.png",
+              "date": "2023-05-09",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.5817
+            }
+          ]
+        },
+        {
+          "month": "06-2023",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20230613.png",
+              "date": "2023-06-13",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.417
+            }
+          ]
+        },
+        {
+          "month": "07-2023",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20230718.png",
+              "date": "2023-07-18",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.3045
+            }
+          ]
+        },
+        {
+          "month": "08-2023",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20230822.png",
+              "date": "2023-08-22",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2823
+            }
+          ]
+        },
+        {
+          "month": "09-2023",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20230916.png",
+              "date": "2023-09-16",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2638
+            }
+          ]
+        },
+        {
+          "month": "10-2023",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20231001.png",
+              "date": "2023-10-01",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2581
+            }
+          ]
+        },
+        {
+          "month": "11-2023",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20231105.png",
+              "date": "2023-11-05",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2466
+            }
+          ]
+        },
+        {
+          "month": "12-2023",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20231210.png",
+              "date": "2023-12-10",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.3168
+            }
+          ]
+        },
+        {
+          "month": "01-2024",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20240129.png",
+              "date": "2024-01-29",
+              "cloud_coverage": 0.0,
+              "average_index_value": 3.5175
+            }
+          ]
+        },
+        {
+          "month": "03-2024",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20240304.png",
+              "date": "2024-03-04",
+              "cloud_coverage": 0.0,
+              "average_index_value": 3.9009
+            }
+          ]
+        },
+        {
+          "month": "04-2024",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20240418.png",
+              "date": "2024-04-18",
+              "cloud_coverage": 0.0,
+              "average_index_value": 1.7522
+            }
+          ]
+        },
+        {
+          "month": "05-2024",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20240508.png",
+              "date": "2024-05-08",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.5459
+            }
+          ]
+        },
+        {
+          "month": "07-2024",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20240707.png",
+              "date": "2024-07-07",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.3831
+            }
+          ]
+        },
+        {
+          "month": "08-2024",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20240826.png",
+              "date": "2024-08-26",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2977
+            }
+          ]
+        },
+        {
+          "month": "09-2024",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20240905.png",
+              "date": "2024-09-05",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.3005
+            }
+          ]
+        },
+        {
+          "month": "10-2024",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20241020.png",
+              "date": "2024-10-20",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2503
+            }
+          ]
+        },
+        {
+          "month": "11-2024",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20241109.png",
+              "date": "2024-11-09",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2578
+            }
+          ]
+        },
+        {
+          "month": "12-2024",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20241214.png",
+              "date": "2024-12-14",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2879
+            }
+          ]
+        },
+        {
+          "month": "01-2025",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20250113.png",
+              "date": "2025-01-13",
+              "cloud_coverage": 0.0,
+              "average_index_value": 1.8696
+            }
+          ]
+        },
+        {
+          "month": "02-2025",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20250202.png",
+              "date": "2025-02-02",
+              "cloud_coverage": 0.0,
+              "average_index_value": 3.9198
+            }
+          ]
+        },
+        {
+          "month": "03-2025",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20250319.png",
+              "date": "2025-03-19",
+              "cloud_coverage": 0.0,
+              "average_index_value": 3.8717
+            }
+          ]
+        },
+        {
+          "month": "04-2025",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20250403.png",
+              "date": "2025-04-03",
+              "cloud_coverage": 0.0,
+              "average_index_value": 2.394
+            }
+          ]
+        },
+        {
+          "month": "05-2025",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20250503.png",
+              "date": "2025-05-03",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.397
+            }
+          ]
+        },
+        {
+          "month": "06-2025",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20250602.png",
+              "date": "2025-06-02",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.3004
+            }
+          ]
+        },
+        {
+          "month": "07-2025",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20250702.png",
+              "date": "2025-07-02",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.3052
+            }
+          ]
+        },
+        {
+          "month": "08-2025",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20250821.png",
+              "date": "2025-08-21",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2584
+            }
+          ]
+        },
+        {
+          "month": "09-2025",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20250925.png",
+              "date": "2025-09-25",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.3109
+            }
+          ]
+        },
+        {
+          "month": "10-2025",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20251007.png",
+              "date": "2025-10-07",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.3652
+            }
+          ]
+        },
+        {
+          "month": "11-2025",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20251119.png",
+              "date": "2025-11-19",
+              "cloud_coverage": 0.0,
+              "average_index_value": 1.998
+            }
+          ]
+        },
+        {
+          "month": "12-2025",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20251204.png",
+              "date": "2025-12-04",
+              "cloud_coverage": 0.0,
+              "average_index_value": 2.7702
+            }
+          ]
+        },
+        {
+          "month": "01-2026",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20260103.png",
+              "date": "2026-01-03",
+              "cloud_coverage": 0.0,
+              "average_index_value": 1.3062
+            }
+          ]
+        },
+        {
+          "month": "02-2026",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20260207.png",
+              "date": "2026-02-07",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2797
+            }
+          ]
+        },
+        {
+          "month": "03-2026",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20260324.png",
+              "date": "2026-03-24",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.3746
+            }
+          ]
+        },
+        {
+          "month": "04-2026",
+          "images": [
+            {
+              "type": "RECI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/RECI/299_Imagen_20260423.png",
+              "date": "2026-04-23",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.3744
+            }
+          ]
+        }
+      ],
+      "index_types_used": [
+        "RECI"
+      ]
+    },
+    "EVI": {
+      "map_image_url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/productivity_maps/field_299/mapa_20260428_191310_EVI.png",
+      "total_area_hectares": 67.87,
+      "processed_images_count": 15,
+      "discarded_images_count": 64,
+      "dynamic_threshold_used": 0.5109,
+      "environments": [
+        {
+          "id": 1,
+          "name": "Bajo",
+          "color": "#FF0000",
+          "area_hectares": 0.51,
+          "area_percentage": 0.75,
+          "average_index_value": 0.57
+        },
+        {
+          "id": 2,
+          "name": "Medio",
+          "color": "#FFFF00",
+          "area_hectares": 25.02,
+          "area_percentage": 36.86,
+          "average_index_value": 0.94
+        },
+        {
+          "id": 3,
+          "name": "Alto",
+          "color": "#00FF00",
+          "area_hectares": 42.34,
+          "area_percentage": 62.39,
+          "average_index_value": 1.05
+        }
+      ],
+      "date_from": "2019-01-01",
+      "date_to": "2026-04-28",
+      "satellite_images": [
+        {
+          "month": "05-2019",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20190510.png",
+              "date": "2019-05-10",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2555
+            }
+          ]
+        },
+        {
+          "month": "06-2019",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20190619.png",
+              "date": "2019-06-19",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1519
+            }
+          ]
+        },
+        {
+          "month": "08-2019",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20190813.png",
+              "date": "2019-08-13",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.6633
+            }
+          ]
+        },
+        {
+          "month": "09-2019",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20190912.png",
+              "date": "2019-09-12",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.6548
+            }
+          ]
+        },
+        {
+          "month": "10-2019",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20191002.png",
+              "date": "2019-10-02",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.5211
+            }
+          ]
+        },
+        {
+          "month": "12-2019",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20191201.png",
+              "date": "2019-12-01",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1061
+            }
+          ]
+        },
+        {
+          "month": "01-2020",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20200105.png",
+              "date": "2020-01-05",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.3129
+            }
+          ]
+        },
+        {
+          "month": "02-2020",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20200204.png",
+              "date": "2020-02-04",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.5871
+            }
+          ]
+        },
+        {
+          "month": "03-2020",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20200305.png",
+              "date": "2020-03-05",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.5804
+            }
+          ]
+        },
+        {
+          "month": "04-2020",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20200414.png",
+              "date": "2020-04-14",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1525
+            }
+          ]
+        },
+        {
+          "month": "05-2020",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20200514.png",
+              "date": "2020-05-14",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1189
+            }
+          ]
+        },
+        {
+          "month": "06-2020",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20200608.png",
+              "date": "2020-06-08",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.0997
+            }
+          ]
+        },
+        {
+          "month": "07-2020",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20200703.png",
+              "date": "2020-07-03",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1029
+            }
+          ]
+        },
+        {
+          "month": "08-2020",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20200817.png",
+              "date": "2020-08-17",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.117
+            }
+          ]
+        },
+        {
+          "month": "10-2020",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20201026.png",
+              "date": "2020-10-26",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1159
+            }
+          ]
+        },
+        {
+          "month": "11-2020",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20201105.png",
+              "date": "2020-11-05",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1054
+            }
+          ]
+        },
+        {
+          "month": "12-2020",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20201205.png",
+              "date": "2020-12-05",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.3059
+            }
+          ]
+        },
+        {
+          "month": "01-2021",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20210119.png",
+              "date": "2021-01-19",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.6889
+            }
+          ]
+        },
+        {
+          "month": "02-2021",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20210218.png",
+              "date": "2021-02-18",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.5399
+            }
+          ]
+        },
+        {
+          "month": "03-2021",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20210305.png",
+              "date": "2021-03-05",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2588
+            }
+          ]
+        },
+        {
+          "month": "04-2021",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20210414.png",
+              "date": "2021-04-14",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.0882
+            }
+          ]
+        },
+        {
+          "month": "05-2021",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20210514.png",
+              "date": "2021-05-14",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.145
+            }
+          ]
+        },
+        {
+          "month": "06-2021",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20210613.png",
+              "date": "2021-06-13",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1241
+            }
+          ]
+        },
+        {
+          "month": "07-2021",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20210723.png",
+              "date": "2021-07-23",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1041
+            }
+          ]
+        },
+        {
+          "month": "08-2021",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20210807.png",
+              "date": "2021-08-07",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1148
+            }
+          ]
+        },
+        {
+          "month": "09-2021",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20210916.png",
+              "date": "2021-09-16",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1231
+            }
+          ]
+        },
+        {
+          "month": "10-2021",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20211021.png",
+              "date": "2021-10-21",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1301
+            }
+          ]
+        },
+        {
+          "month": "11-2021",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20211120.png",
+              "date": "2021-11-20",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1199
+            }
+          ]
+        },
+        {
+          "month": "12-2021",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20211225.png",
+              "date": "2021-12-25",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.3505
+            }
+          ]
+        },
+        {
+          "month": "01-2022",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20220109.png",
+              "date": "2022-01-09",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.444
+            }
+          ]
+        },
+        {
+          "month": "02-2022",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20220213.png",
+              "date": "2022-02-13",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.6889
+            }
+          ]
+        },
+        {
+          "month": "03-2022",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20220315.png",
+              "date": "2022-03-15",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.6554
+            }
+          ]
+        },
+        {
+          "month": "04-2022",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20220404.png",
+              "date": "2022-04-04",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.3649
+            }
+          ]
+        },
+        {
+          "month": "05-2022",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20220504.png",
+              "date": "2022-05-04",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.13
+            }
+          ]
+        },
+        {
+          "month": "06-2022",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20220603.png",
+              "date": "2022-06-03",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1095
+            }
+          ]
+        },
+        {
+          "month": "07-2022",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20220713.png",
+              "date": "2022-07-13",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2265
+            }
+          ]
+        },
+        {
+          "month": "08-2022",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20220822.png",
+              "date": "2022-08-22",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.3767
+            }
+          ]
+        },
+        {
+          "month": "09-2022",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20220906.png",
+              "date": "2022-09-06",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.3282
+            }
+          ]
+        },
+        {
+          "month": "10-2022",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20221011.png",
+              "date": "2022-10-11",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.243
+            }
+          ]
+        },
+        {
+          "month": "11-2022",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20221115.png",
+              "date": "2022-11-15",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1106
+            }
+          ]
+        },
+        {
+          "month": "12-2022",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20221205.png",
+              "date": "2022-12-05",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.118
+            }
+          ]
+        },
+        {
+          "month": "01-2023",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20230104.png",
+              "date": "2023-01-04",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1691
+            }
+          ]
+        },
+        {
+          "month": "02-2023",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20230218.png",
+              "date": "2023-02-18",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.4363
+            }
+          ]
+        },
+        {
+          "month": "03-2023",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20230305.png",
+              "date": "2023-03-05",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.3377
+            }
+          ]
+        },
+        {
+          "month": "04-2023",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20230419.png",
+              "date": "2023-04-19",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2087
+            }
+          ]
+        },
+        {
+          "month": "05-2023",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20230509.png",
+              "date": "2023-05-09",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1551
+            }
+          ]
+        },
+        {
+          "month": "06-2023",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20230613.png",
+              "date": "2023-06-13",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1239
+            }
+          ]
+        },
+        {
+          "month": "07-2023",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20230718.png",
+              "date": "2023-07-18",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1055
+            }
+          ]
+        },
+        {
+          "month": "08-2023",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20230822.png",
+              "date": "2023-08-22",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1123
+            }
+          ]
+        },
+        {
+          "month": "09-2023",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20230916.png",
+              "date": "2023-09-16",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1108
+            }
+          ]
+        },
+        {
+          "month": "10-2023",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20231001.png",
+              "date": "2023-10-01",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1154
+            }
+          ]
+        },
+        {
+          "month": "11-2023",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20231105.png",
+              "date": "2023-11-05",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1309
+            }
+          ]
+        },
+        {
+          "month": "12-2023",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20231210.png",
+              "date": "2023-12-10",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1522
+            }
+          ]
+        },
+        {
+          "month": "01-2024",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20240129.png",
+              "date": "2024-01-29",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.5712
+            }
+          ]
+        },
+        {
+          "month": "03-2024",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20240304.png",
+              "date": "2024-03-04",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.5562
+            }
+          ]
+        },
+        {
+          "month": "04-2024",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20240418.png",
+              "date": "2024-04-18",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2967
+            }
+          ]
+        },
+        {
+          "month": "05-2024",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20240508.png",
+              "date": "2024-05-08",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1384
+            }
+          ]
+        },
+        {
+          "month": "07-2024",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20240707.png",
+              "date": "2024-07-07",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1507
+            }
+          ]
+        },
+        {
+          "month": "08-2024",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20240826.png",
+              "date": "2024-08-26",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1272
+            }
+          ]
+        },
+        {
+          "month": "09-2024",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20240905.png",
+              "date": "2024-09-05",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1236
+            }
+          ]
+        },
+        {
+          "month": "10-2024",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20241020.png",
+              "date": "2024-10-20",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1216
+            }
+          ]
+        },
+        {
+          "month": "11-2024",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20241109.png",
+              "date": "2024-11-09",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1273
+            }
+          ]
+        },
+        {
+          "month": "12-2024",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20241214.png",
+              "date": "2024-12-14",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1384
+            }
+          ]
+        },
+        {
+          "month": "01-2025",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20250113.png",
+              "date": "2025-01-13",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.4925
+            }
+          ]
+        },
+        {
+          "month": "02-2025",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20250202.png",
+              "date": "2025-02-02",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.81
+            }
+          ]
+        },
+        {
+          "month": "03-2025",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20250319.png",
+              "date": "2025-03-19",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.7775
+            }
+          ]
+        },
+        {
+          "month": "04-2025",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20250403.png",
+              "date": "2025-04-03",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.663
+            }
+          ]
+        },
+        {
+          "month": "05-2025",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20250503.png",
+              "date": "2025-05-03",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1181
+            }
+          ]
+        },
+        {
+          "month": "06-2025",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20250602.png",
+              "date": "2025-06-02",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.096
+            }
+          ]
+        },
+        {
+          "month": "07-2025",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20250702.png",
+              "date": "2025-07-02",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.0999
+            }
+          ]
+        },
+        {
+          "month": "08-2025",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20250821.png",
+              "date": "2025-08-21",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.097
+            }
+          ]
+        },
+        {
+          "month": "09-2025",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20250925.png",
+              "date": "2025-09-25",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1314
+            }
+          ]
+        },
+        {
+          "month": "10-2025",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20251007.png",
+              "date": "2025-10-07",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1482
+            }
+          ]
+        },
+        {
+          "month": "11-2025",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20251119.png",
+              "date": "2025-11-19",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.4181
+            }
+          ]
+        },
+        {
+          "month": "12-2025",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20251204.png",
+              "date": "2025-12-04",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.5213
+            }
+          ]
+        },
+        {
+          "month": "01-2026",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20260103.png",
+              "date": "2026-01-03",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.392
+            }
+          ]
+        },
+        {
+          "month": "02-2026",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20260207.png",
+              "date": "2026-02-07",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1276
+            }
+          ]
+        },
+        {
+          "month": "03-2026",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20260324.png",
+              "date": "2026-03-24",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1243
+            }
+          ]
+        },
+        {
+          "month": "04-2026",
+          "images": [
+            {
+              "type": "EVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/EVI/299_Imagen_20260423.png",
+              "date": "2026-04-23",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1203
+            }
+          ]
+        }
+      ],
+      "index_types_used": [
+        "EVI"
+      ]
+    },
+    "NDVI": {
+      "map_image_url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/productivity_maps/field_299/mapa_20260428_191313_NDVI.png",
+      "total_area_hectares": 67.86,
+      "processed_images_count": 15,
+      "discarded_images_count": 64,
+      "dynamic_threshold_used": 0.703,
+      "environments": [
+        {
+          "id": 1,
+          "name": "Bajo",
+          "color": "#FF0000",
+          "area_hectares": 0.36,
+          "area_percentage": 0.53,
+          "average_index_value": 0.52
+        },
+        {
+          "id": 2,
+          "name": "Medio",
+          "color": "#FFFF00",
+          "area_hectares": 5.4,
+          "area_percentage": 7.96,
+          "average_index_value": 0.91
+        },
+        {
+          "id": 3,
+          "name": "Alto",
+          "color": "#00FF00",
+          "area_hectares": 62.1,
+          "area_percentage": 91.51,
+          "average_index_value": 1.02
+        }
+      ],
+      "date_from": "2019-01-01",
+      "date_to": "2026-04-28",
+      "satellite_images": [
+        {
+          "month": "05-2019",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20190510.png",
+              "date": "2019-05-10",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.4508
+            }
+          ]
+        },
+        {
+          "month": "06-2019",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20190619.png",
+              "date": "2019-06-19",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.3486
+            }
+          ]
+        },
+        {
+          "month": "08-2019",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20190813.png",
+              "date": "2019-08-13",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.8707
+            }
+          ]
+        },
+        {
+          "month": "09-2019",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20190912.png",
+              "date": "2019-09-12",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.8737
+            }
+          ]
+        },
+        {
+          "month": "10-2019",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20191002.png",
+              "date": "2019-10-02",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.7578
+            }
+          ]
+        },
+        {
+          "month": "12-2019",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20191201.png",
+              "date": "2019-12-01",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1536
+            }
+          ]
+        },
+        {
+          "month": "01-2020",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20200105.png",
+              "date": "2020-01-05",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.5069
+            }
+          ]
+        },
+        {
+          "month": "02-2020",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20200204.png",
+              "date": "2020-02-04",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.8053
+            }
+          ]
+        },
+        {
+          "month": "03-2020",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20200305.png",
+              "date": "2020-03-05",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.8209
+            }
+          ]
+        },
+        {
+          "month": "04-2020",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20200414.png",
+              "date": "2020-04-14",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2254
+            }
+          ]
+        },
+        {
+          "month": "05-2020",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20200514.png",
+              "date": "2020-05-14",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.192
+            }
+          ]
+        },
+        {
+          "month": "06-2020",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20200608.png",
+              "date": "2020-06-08",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1648
+            }
+          ]
+        },
+        {
+          "month": "07-2020",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20200703.png",
+              "date": "2020-07-03",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1707
+            }
+          ]
+        },
+        {
+          "month": "08-2020",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20200817.png",
+              "date": "2020-08-17",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1793
+            }
+          ]
+        },
+        {
+          "month": "10-2020",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20201026.png",
+              "date": "2020-10-26",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1547
+            }
+          ]
+        },
+        {
+          "month": "11-2020",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20201105.png",
+              "date": "2020-11-05",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1454
+            }
+          ]
+        },
+        {
+          "month": "12-2020",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20201205.png",
+              "date": "2020-12-05",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.4401
+            }
+          ]
+        },
+        {
+          "month": "01-2021",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20210119.png",
+              "date": "2021-01-19",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.8918
+            }
+          ]
+        },
+        {
+          "month": "02-2021",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20210218.png",
+              "date": "2021-02-18",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.816
+            }
+          ]
+        },
+        {
+          "month": "03-2021",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20210305.png",
+              "date": "2021-03-05",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.5121
+            }
+          ]
+        },
+        {
+          "month": "04-2021",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20210414.png",
+              "date": "2021-04-14",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2389
+            }
+          ]
+        },
+        {
+          "month": "05-2021",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20210514.png",
+              "date": "2021-05-14",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.201
+            }
+          ]
+        },
+        {
+          "month": "06-2021",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20210613.png",
+              "date": "2021-06-13",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.186
+            }
+          ]
+        },
+        {
+          "month": "07-2021",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20210723.png",
+              "date": "2021-07-23",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1564
+            }
+          ]
+        },
+        {
+          "month": "08-2021",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20210807.png",
+              "date": "2021-08-07",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.168
+            }
+          ]
+        },
+        {
+          "month": "09-2021",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20210916.png",
+              "date": "2021-09-16",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1777
+            }
+          ]
+        },
+        {
+          "month": "10-2021",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20211021.png",
+              "date": "2021-10-21",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1724
+            }
+          ]
+        },
+        {
+          "month": "11-2021",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20211120.png",
+              "date": "2021-11-20",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1569
+            }
+          ]
+        },
+        {
+          "month": "12-2021",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20211225.png",
+              "date": "2021-12-25",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.4602
+            }
+          ]
+        },
+        {
+          "month": "01-2022",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20220109.png",
+              "date": "2022-01-09",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.6171
+            }
+          ]
+        },
+        {
+          "month": "02-2022",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20220213.png",
+              "date": "2022-02-13",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.8714
+            }
+          ]
+        },
+        {
+          "month": "03-2022",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20220315.png",
+              "date": "2022-03-15",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.8759
+            }
+          ]
+        },
+        {
+          "month": "04-2022",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20220404.png",
+              "date": "2022-04-04",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.5794
+            }
+          ]
+        },
+        {
+          "month": "05-2022",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20220504.png",
+              "date": "2022-05-04",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2461
+            }
+          ]
+        },
+        {
+          "month": "06-2022",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20220603.png",
+              "date": "2022-06-03",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.209
+            }
+          ]
+        },
+        {
+          "month": "07-2022",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20220713.png",
+              "date": "2022-07-13",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.368
+            }
+          ]
+        },
+        {
+          "month": "08-2022",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20220822.png",
+              "date": "2022-08-22",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.5887
+            }
+          ]
+        },
+        {
+          "month": "09-2022",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20220906.png",
+              "date": "2022-09-06",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.5022
+            }
+          ]
+        },
+        {
+          "month": "10-2022",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20221011.png",
+              "date": "2022-10-11",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.3903
+            }
+          ]
+        },
+        {
+          "month": "11-2022",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20221115.png",
+              "date": "2022-11-15",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.191
+            }
+          ]
+        },
+        {
+          "month": "12-2022",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20221205.png",
+              "date": "2022-12-05",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1552
+            }
+          ]
+        },
+        {
+          "month": "01-2023",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20230104.png",
+              "date": "2023-01-04",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2408
+            }
+          ]
+        },
+        {
+          "month": "02-2023",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20230218.png",
+              "date": "2023-02-18",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.6438
+            }
+          ]
+        },
+        {
+          "month": "03-2023",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20230305.png",
+              "date": "2023-03-05",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.5789
+            }
+          ]
+        },
+        {
+          "month": "04-2023",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20230419.png",
+              "date": "2023-04-19",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.4137
+            }
+          ]
+        },
+        {
+          "month": "05-2023",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20230509.png",
+              "date": "2023-05-09",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.3555
+            }
+          ]
+        },
+        {
+          "month": "06-2023",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20230613.png",
+              "date": "2023-06-13",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2434
+            }
+          ]
+        },
+        {
+          "month": "07-2023",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20230718.png",
+              "date": "2023-07-18",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2018
+            }
+          ]
+        },
+        {
+          "month": "08-2023",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20230822.png",
+              "date": "2023-08-22",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1839
+            }
+          ]
+        },
+        {
+          "month": "09-2023",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20230916.png",
+              "date": "2023-09-16",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1788
+            }
+          ]
+        },
+        {
+          "month": "10-2023",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20231001.png",
+              "date": "2023-10-01",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1727
+            }
+          ]
+        },
+        {
+          "month": "11-2023",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20231105.png",
+              "date": "2023-11-05",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1858
+            }
+          ]
+        },
+        {
+          "month": "12-2023",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20231210.png",
+              "date": "2023-12-10",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2071
+            }
+          ]
+        },
+        {
+          "month": "01-2024",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20240129.png",
+              "date": "2024-01-29",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.7873
+            }
+          ]
+        },
+        {
+          "month": "03-2024",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20240304.png",
+              "date": "2024-03-04",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.8768
+            }
+          ]
+        },
+        {
+          "month": "04-2024",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20240418.png",
+              "date": "2024-04-18",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.6503
+            }
+          ]
+        },
+        {
+          "month": "05-2024",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20240508.png",
+              "date": "2024-05-08",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.3164
+            }
+          ]
+        },
+        {
+          "month": "07-2024",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20240707.png",
+              "date": "2024-07-07",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2311
+            }
+          ]
+        },
+        {
+          "month": "08-2024",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20240826.png",
+              "date": "2024-08-26",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1972
+            }
+          ]
+        },
+        {
+          "month": "09-2024",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20240905.png",
+              "date": "2024-09-05",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1947
+            }
+          ]
+        },
+        {
+          "month": "10-2024",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20241020.png",
+              "date": "2024-10-20",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1813
+            }
+          ]
+        },
+        {
+          "month": "11-2024",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20241109.png",
+              "date": "2024-11-09",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.186
+            }
+          ]
+        },
+        {
+          "month": "12-2024",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20241214.png",
+              "date": "2024-12-14",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1984
+            }
+          ]
+        },
+        {
+          "month": "01-2025",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20250113.png",
+              "date": "2025-01-13",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.6579
+            }
+          ]
+        },
+        {
+          "month": "02-2025",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20250202.png",
+              "date": "2025-02-02",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.9073
+            }
+          ]
+        },
+        {
+          "month": "03-2025",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20250319.png",
+              "date": "2025-03-19",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.9112
+            }
+          ]
+        },
+        {
+          "month": "04-2025",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20250403.png",
+              "date": "2025-04-03",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.8525
+            }
+          ]
+        },
+        {
+          "month": "05-2025",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20250503.png",
+              "date": "2025-05-03",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2549
+            }
+          ]
+        },
+        {
+          "month": "06-2025",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20250602.png",
+              "date": "2025-06-02",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2007
+            }
+          ]
+        },
+        {
+          "month": "07-2025",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20250702.png",
+              "date": "2025-07-02",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1904
+            }
+          ]
+        },
+        {
+          "month": "08-2025",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20250821.png",
+              "date": "2025-08-21",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.178
+            }
+          ]
+        },
+        {
+          "month": "09-2025",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20250925.png",
+              "date": "2025-09-25",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2044
+            }
+          ]
+        },
+        {
+          "month": "10-2025",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20251007.png",
+              "date": "2025-10-07",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2249
+            }
+          ]
+        },
+        {
+          "month": "11-2025",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20251119.png",
+              "date": "2025-11-19",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.6381
+            }
+          ]
+        },
+        {
+          "month": "12-2025",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20251204.png",
+              "date": "2025-12-04",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.7665
+            }
+          ]
+        },
+        {
+          "month": "01-2026",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20260103.png",
+              "date": "2026-01-03",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.5953
+            }
+          ]
+        },
+        {
+          "month": "02-2026",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20260207.png",
+              "date": "2026-02-07",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.1977
+            }
+          ]
+        },
+        {
+          "month": "03-2026",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20260324.png",
+              "date": "2026-03-24",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.245
+            }
+          ]
+        },
+        {
+          "month": "04-2026",
+          "images": [
+            {
+              "type": "NDVI",
+              "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/299_Imagen_20260423.png",
+              "date": "2026-04-23",
+              "cloud_coverage": 0.0,
+              "average_index_value": 0.2622
+            }
+          ]
+        }
+      ],
+      "index_types_used": [
+        "NDVI"
+      ]
+    }
+  },
+  "combined_map": {
+    "map_image_url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/productivity_maps/field_299/mapa_20260428_191316_RECI_EVI_NDVI.png",
+    "total_area_hectares": 67.87,
+    "processed_images_count": 43,
+    "discarded_images_count": 194,
+    "dynamic_threshold_used": 0.0,
+    "environments": [
+      {
+        "id": 1,
+        "name": "Bajo",
+        "color": "#FF0000",
+        "area_hectares": 0.48,
+        "area_percentage": 0.71,
+        "average_index_value": 0.5
+      },
+      {
+        "id": 2,
+        "name": "Medio",
+        "color": "#FFFF00",
+        "area_hectares": 4.75,
+        "area_percentage": 7.0,
+        "average_index_value": 0.87
+      },
+      {
+        "id": 3,
+        "name": "Alto",
+        "color": "#00FF00",
+        "area_hectares": 62.64,
+        "area_percentage": 92.29,
+        "average_index_value": 1.02
+      }
+    ],
+    "date_from": "2019-01-01",
+    "date_to": "2026-04-28",
+    "satellite_images": [],
+    "index_types_used": [
+      "RECI",
+      "EVI",
+      "NDVI"
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
-import { useTechAINews } from '@/composables/useTechAINews';
-import type { NewsItem } from '@/types/news';
+import { ref, onMounted } from "vue";
+import { useTechAINews } from "@/composables/useTechAINews";
+import type { NewsItem } from "@/types/news";
 
 const { news, loading, error, fetchNewsAsync } = useTechAINews();
 
@@ -10,11 +10,12 @@ const showDialog = ref(false);
 
 const formatDate = (dateString: string): string => {
     const date = new Date(dateString);
-    return date.toLocaleDateString('es-ES', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-    });
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
+    const hours = String(date.getHours()).padStart(2, "0");
+    const minutes = String(date.getMinutes()).padStart(2, "0");
+    return `${year}-${month}-${day} ${hours}:${minutes}`;
 };
 
 const openDialog = (newsItem: NewsItem): void => {
@@ -48,12 +49,7 @@ onMounted(() => {
         </div>
 
         <div v-else class="news-grid">
-            <div 
-                v-for="item in news" 
-                :key="item.id" 
-                class="news-card"
-                @click="openDialog(item)"
-            >
+            <div v-for="item in news" :key="item.id" class="news-card" @click="openDialog(item)">
                 <div v-if="item.image_url" class="news-image">
                     <img :src="item.image_url" :alt="item.title" />
                 </div>
@@ -71,30 +67,24 @@ onMounted(() => {
         <div v-if="showDialog && selectedNews" class="dialog-overlay" @click="closeDialog">
             <div class="dialog-content" @click.stop>
                 <button class="dialog-close" @click="closeDialog">✕</button>
-                
+
                 <div v-if="selectedNews.image_url" class="dialog-image">
                     <img :src="selectedNews.image_url" :alt="selectedNews.title" />
                 </div>
-                
+
                 <h2 class="dialog-title">{{ selectedNews.title }}</h2>
-                
+
                 <div class="dialog-meta">
                     <span class="dialog-date">{{ formatDate(selectedNews.published_date) }}</span>
                     <span v-if="selectedNews.category" class="dialog-category">{{ selectedNews.category }}</span>
                 </div>
-                
+
                 <div v-if="selectedNews.clean_content" class="dialog-body">
                     <p>{{ selectedNews.clean_content }}</p>
                 </div>
-                
-                <a 
-                    v-if="selectedNews.link" 
-                    :href="selectedNews.link" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    class="dialog-link"
-                >
-                    Leer fuente original →
+
+                <a v-if="selectedNews.link" :href="selectedNews.link" target="_blank" rel="noopener noreferrer" class="dialog-link">
+                    {{ selectedNews.link }}
                 </a>
             </div>
         </div>
@@ -227,8 +217,8 @@ onMounted(() => {
     background: #0d1117;
     border: 1px solid #30363d;
     border-radius: 12px;
-    max-width: 800px;
-    max-height: 90vh;
+    width: 98vw;
+    height: 98vh;
     overflow-y: auto;
     position: relative;
     padding: 30px;
@@ -337,6 +327,13 @@ onMounted(() => {
 
     .dialog-title {
         font-size: 1.3rem;
+    }
+
+    .dialog-link {
+        word-break: break-all;
+        white-space: normal;
+        padding: 10px 15px;
+        font-size: 0.85rem;
     }
 }
 </style>

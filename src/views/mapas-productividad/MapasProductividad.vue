@@ -15,10 +15,18 @@ const { mapData, loading, error, loadMapDataAsync, indexTypes, chartLabels, char
 
 // Lista de campos disponibles
 const fieldOptions: FieldOption[] = [
-    { id: "288", name: "La Querencia - Lote 2", filename: "la-querencia-lote-2-288" },
-    { id: "286", name: "Forlin - Lote 4", filename: "forlin-lote-4-286" },
-    { id: "289", name: "Querencia - Lote 20", filename: "querencia-lote-20-289" },
-    { id: "296", name: "Los Claros - Lote 17", filename: "los-claros-lote-17-296" },
+    { id: "286", name: "Forlin - Lote 4", filename: "286-forlin-lote-4" },
+    { id: "288", name: "La Querencia - Lote 2", filename: "288-la-querencia-lote-2" },
+    { id: "289", name: "Querencia - Lote 20", filename: "289-querencia-lote-20" },
+    { id: "296", name: "Los Claros - Lote 17", filename: "296-los-claros-lote-17" },
+    { id: "299", name: "La Querencia SRL Daghero L1", filename: "299-La_Querencia_SRL_Daghero_L1" },
+    { id: "301", name: "La Querencia SRL Munge 2", filename: "301-La_Querencia_SRL_Munge_2" },
+    { id: "302", name: "La Querencia SRL Lote 3", filename: "302-La_Querencia_SRL_Lote_3" },
+    { id: "303", name: "La Querencia SRL Lote 9", filename: "303-La_Querencia_SRL_Lote_9" },
+    { id: "304", name: "La Querencia SRL LQ L 17", filename: "304-La_Querencia_SRL_LQ_L_17" },
+    { id: "305", name: "La Querencia SRL ISOGLIO 1", filename: "305-La_Querencia_SRL_ISOGLIO_1" },
+    { id: "306", name: "La Querencia SRL Petronila 1", filename: "306-La_Querencia_SRL_Petronila_1" },
+    { id: "307", name: "La Querencia SRL RACCA L7", filename: "307-La_Querencia_SRL_RACCA_L7" },
 ];
 
 // Obtener el campo seleccionado desde la URL o usar el primero por defecto
