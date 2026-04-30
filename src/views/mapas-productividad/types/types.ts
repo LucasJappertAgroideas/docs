@@ -13,11 +13,26 @@ export interface SatelliteImage {
     date: string;
     cloud_coverage: number;
     average_index_value: number;
+    trend_direction?: "flat" | "up" | "down";
+    is_peak?: boolean;
+    streak?: number;
+    is_used_for_map?: boolean;
+    threshold_min?: number | null;
+    threshold_max?: number | null;
+}
+
+export interface ClimateData {
+    precipitation_mm: number;
+    temperature_max_c: number;
+    temperature_min_c: number;
+    temperature_avg_c: number;
+    [key: string]: number | undefined;
 }
 
 export interface SatelliteImagesByMonth {
     month: string;
     images: SatelliteImage[];
+    climate_data?: ClimateData;
 }
 
 export interface IndividualMap {

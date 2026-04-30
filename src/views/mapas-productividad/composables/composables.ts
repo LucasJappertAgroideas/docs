@@ -1,5 +1,5 @@
 import { ref, computed } from "vue";
-import type { ProductivityMapData, SatelliteImagesByMonth } from "../types/types";
+import type { ProductivityMapData, SatelliteImagesByMonth, ClimateData } from "../types/types";
 
 // Configuración de colores para tipos de imágenes
 const IMAGE_TYPE_COLORS: Record<string, string> = {
@@ -9,14 +9,41 @@ const IMAGE_TYPE_COLORS: Record<string, string> = {
     EVI: "#ffa657",
 };
 
+// Configuración de colores para series del gráfico
+const CHART_COLORS: Record<string, string> = {
+    RECI: "#FF6384",
+    EVI: "#36A2EB",
+    NDVI: "#19c80d",
+    precipitation_mm: "#3498db21",
+    precipitation_monthly_avg: "#0099ff",
+    temperature_max_c: "#e74c3c",
+    temperature_min_c: "#2ecc71",
+    temperature_avg_c: "#f39c12",
+};
+
 export function getImageTypeColor(type: string): string {
     return IMAGE_TYPE_COLORS[type.toUpperCase()] || "#58a6ff";
+}
+
+export function getChartColor(key: string): string {
+    return CHART_COLORS[key] || "#999999";
 }
 
 export function formatDate(dateString: string | null | undefined): string {
     if (!dateString) return "Sin definir";
     
-    // Si el formato es YYYY-MM-DD (ej: 2019-01-05)
+    // Si el formato es YYYY-MM-DD (ej: 2019-01-05), usar split directo para evitar problemas de zona horaria
+    if (dateString.includes("-") && dateString.length === 10) {
+        const parts = dateString.split("-");
+        if (parts.length === 3) {
+            const year = parts[0];
+            const month = parts[1];
+            const day = parts[2];
+            return `${day}-${month}-${year}`;
+        }
+    }
+    
+    // Para otros formatos, usar Date
     const date = new Date(dateString);
     if (isNaN(date.getTime())) return "Fecha inválida";
     
@@ -32,6 +59,10 @@ export function imageMeetsThreshold(image: any, mapData: ProductivityMapData | n
     const map = mapData.individual_maps[image.type];
     if (!map) return true;
     return image.average_index_value >= map.dynamic_threshold_used;
+}
+
+export function imageUsedForMap(image: any): boolean {
+    return image.is_used_for_map === true;
 }
 
 export const useProductivityMaps = () => {
@@ -86,6 +117,43 @@ export const useProductivityMaps = () => {
         return sum / monthData.images.length;
     };
 
+    const getClimateDataByMonth = (month: string): ClimateData | undefined => {
+        if (!mapData.value) return undefined;
+        // Buscar en cualquier mapa (todos tienen los mismos climate_data)
+        const firstMap = Object.values(mapData.value.individual_maps)[0];
+        if (!firstMap) return undefined;
+        const monthData = firstMap.satellite_images.find(m => m.month === month);
+        return monthData?.climate_data;
+    };
+
+    const getMonthlyRainfallAverage = (): number[] => {
+        if (!mapData.value) return Array(12).fill(0);
+        
+        const firstMap = Object.values(mapData.value.individual_maps)[0];
+        if (!firstMap) return Array(12).fill(0);
+        
+        // Arrays para acumular sumas y conteos por mes (índices 0-11 para meses 1-12)
+        const monthlySums = Array(12).fill(0);
+        const monthlyCounts = Array(12).fill(0);
+        
+        firstMap.satellite_images.forEach(monthData => {
+            if (monthData.climate_data && monthData.climate_data.precipitation_mm !== undefined) {
+                const monthParts = monthData.month.split("-");
+                const monthNum = parseInt(monthParts[0], 10) - 1; // Convertir a índice 0-11
+                
+                if (monthNum >= 0 && monthNum < 12) {
+                    monthlySums[monthNum] += monthData.climate_data.precipitation_mm;
+                    monthlyCounts[monthNum]++;
+                }
+            }
+        });
+        
+        // Calcular promedios
+        return monthlySums.map((sum, index) => 
+            monthlyCounts[index] > 0 ? sum / monthlyCounts[index] : 0
+        );
+    };
+
     const getThresholdForIndex = (indexType: string): number => {
         if (!mapData.value) return 0;
         const map = mapData.value.individual_maps[indexType];
@@ -100,39 +168,81 @@ export const useProductivityMaps = () => {
         const colors: Record<string, string> = {
             RECI: "#FF6384",
             EVI: "#36A2EB",
-            NDVI: "#4BC0C0",
+            NDVI: "#0dbe00",
+            precipitation_mm: "#3498db",
+            temperature_max_c: "#e74c3c",
+            temperature_min_c: "#2ecc71",
+            temperature_avg_c: "#f39c12",
         };
 
         const datasets: any[] = [];
         
         indexTypes.value.forEach((indexType) => {
-            const threshold = getThresholdForIndex(indexType);
             const color = colors[indexType] || "#999999";
+            const map = mapData.value!.individual_maps[indexType];
 
-            // Línea recta de threshold
-            datasets.push({
-                label: `${indexType} - Threshold`,
-                data: Array(allMonths.value.length).fill(threshold),
-                borderColor: color,
-                backgroundColor: `${color}20`,
-                borderWidth: 2,
-                borderDash: [5, 5],
-                fill: false,
-                tension: 0,
-                pointRadius: 0,
+            // Obtener información de puntos usados para el mapa
+            const usedForMapPoints = allMonths.value.map((month) => {
+                const monthData = map?.satellite_images.find((m) => m.month === month);
+                if (!monthData || monthData.images.length === 0) return false;
+                return monthData.images.some(img => img.is_used_for_map === true);
             });
 
-            // Curva de average_index_value
+            // Línea dashed con puntos destacados
             datasets.push({
-                label: `${indexType} - Promedio`,
+                label: `${indexType}`,
                 data: allMonths.value.map((month) => getAverageIndexValueByMonth(indexType, month)),
                 borderColor: color,
                 backgroundColor: `${color}40`,
-                borderWidth: 3,
+                borderWidth: 2,
+                borderDash: [5, 5], // Línea dashed
                 fill: false,
-                tension: 0.3,
-                pointRadius: 3,
+                tension: 0.1,
+                pointRadius: allMonths.value.map((_, index) => usedForMapPoints[index] ? 8 : 4),
+                pointHoverRadius: allMonths.value.map((_, index) => usedForMapPoints[index] ? 10 : 6),
+                pointBackgroundColor: allMonths.value.map((_, index) => usedForMapPoints[index] ? color : `${color}80`),
+                pointBorderColor: allMonths.value.map((_, index) => usedForMapPoints[index] ? '#ffffff' : color),
+                pointBorderWidth: allMonths.value.map((_, index) => usedForMapPoints[index] ? 3 : 1),
+                hidden: false, // Se controlará desde el componente
             });
+        });
+
+        // Series de datos climáticos (si existen)
+        const climateSeries = [
+            { key: 'precipitation_mm', label: 'Precipitación (mm)', color: colors.precipitation_mm },
+            { key: 'temperature_max_c', label: 'Temperatura Máx (°C)', color: colors.temperature_max_c },
+            { key: 'temperature_min_c', label: 'Temperatura Mín (°C)', color: colors.temperature_min_c },
+            { key: 'temperature_avg_c', label: 'Temperatura Prom (°C)', color: colors.temperature_avg_c },
+        ];
+
+        climateSeries.forEach(({ key, label, color }) => {
+            // Verificar si hay datos para esta serie
+            const hasData = allMonths.value.some(month => {
+                const climate = getClimateDataByMonth(month);
+                return climate && climate[key] !== undefined && climate[key] !== null;
+            });
+
+            if (hasData) {
+                datasets.push({
+                    label,
+                    data: allMonths.value.map(month => {
+                        const climate = getClimateDataByMonth(month);
+                        return climate && climate[key] !== undefined ? climate[key] : null;
+                    }),
+                    borderColor: color,
+                    backgroundColor: `${color}40`,
+                    borderWidth: 2,
+                    borderDash: [3, 3], // Línea más corta para diferenciar
+                    fill: false,
+                    tension: 0.1,
+                    pointRadius: 3,
+                    pointHoverRadius: 5,
+                    pointBackgroundColor: `${color}80`,
+                    pointBorderColor: color,
+                    pointBorderWidth: 1,
+                    hidden: false,
+                });
+            }
         });
 
         return datasets;
@@ -183,12 +293,22 @@ export const useProductivityMaps = () => {
             if (map) {
                 map.satellite_images.forEach((monthData) => {
                     monthData.images.forEach((img) => {
+                        // Usar threshold_min y threshold_max directamente del nuevo modelo
+                        const thresholdMin = img.threshold_min !== undefined && img.threshold_min !== null ? img.threshold_min : null;
+                        const thresholdMax = img.threshold_max !== undefined && img.threshold_max !== null ? img.threshold_max : null;
+                        
                         flatImages.push({
                             type: img.type,
                             url: img.url,
                             date: img.date,
                             cloud_coverage: img.cloud_coverage,
                             average_index_value: img.average_index_value,
+                            trend_direction: img.trend_direction,
+                            is_peak: img.is_peak,
+                            streak: img.streak,
+                            is_used_for_map: img.is_used_for_map,
+                            threshold_min: thresholdMin,
+                            threshold_max: thresholdMax,
                         });
                     });
                 });
@@ -211,5 +331,11 @@ export const useProductivityMaps = () => {
         allSatelliteImages,
         allSatelliteImagesFlat,
         getThresholdForIndex,
+        getClimateDataByMonth,
+        getMonthlyRainfallAverage,
+        getImageTypeColor,
+        getChartColor,
+        formatDate,
+        imageUsedForMap,
     };
 };

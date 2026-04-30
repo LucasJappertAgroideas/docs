@@ -91,7 +91,8 @@ const chartEviData = computed(() => {
 const maxPrecipitation = computed(() => {
     const data = useDailyData.value ? dailyPrecipitationData.value : precipitationData.value;
     if (!data.length) return 100;
-    return Math.ceil(Math.max(...data) * 1.1);
+    const maxVal = Math.max(...data);
+    return maxVal === 0 ? 100 : Math.ceil(maxVal * 1.1);
 });
 
 const maxTemperature = computed(() => {
