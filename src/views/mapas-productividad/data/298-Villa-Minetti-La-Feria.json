@@ -1,0 +1,504 @@
+{
+    "individual_maps": {
+        "NDVI": {
+            "map_image_url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/productivity_maps/field_298/mapa_20260501_150902_NDVI.png",
+            "total_area_hectares": 242.81,
+            "processed_images_count": 3,
+            "discarded_images_count": 77,
+            "dynamic_threshold_used": 0.0,
+            "environments": [
+                { "id": 1, "name": "Bajo", "color": "#FF0000", "area_hectares": 63.26, "area_percentage": 26.05, "average_index_value": 0.79 },
+                { "id": 2, "name": "Medio", "color": "#FFFF00", "area_hectares": 149.04, "area_percentage": 61.38, "average_index_value": 1.0 },
+                { "id": 3, "name": "Alto", "color": "#00FF00", "area_hectares": 30.51, "area_percentage": 12.56, "average_index_value": 1.34 }
+            ],
+            "date_from": "2019-01-01",
+            "date_to": "2026-05-01",
+            "satellite_images": [
+                {
+                    "month": "01-2019",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20190125.png", "date": "2019-01-25", "cloud_coverage": 0.0, "average_index_value": 0.47, "trend_direction": "flat", "is_peak": false, "streak": 0, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 39.8, "temperature_max_c": 38.0, "temperature_min_c": 24.6, "temperature_avg_c": 30.4 }
+                },
+                {
+                    "month": "03-2019",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20190301.png", "date": "2019-03-01", "cloud_coverage": 0.0, "average_index_value": 0.59, "trend_direction": "up", "is_peak": true, "streak": 1, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 166.8, "temperature_max_c": 35.0, "temperature_min_c": 15.3, "temperature_avg_c": 23.5 }
+                },
+                {
+                    "month": "06-2019",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20190619.png", "date": "2019-06-19", "cloud_coverage": 0.0, "average_index_value": 0.48, "trend_direction": "down", "is_peak": false, "streak": -1, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 15.6, "temperature_max_c": 27.6, "temperature_min_c": 2.2, "temperature_avg_c": 17.0 }
+                },
+                {
+                    "month": "07-2019",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20190704.png", "date": "2019-07-04", "cloud_coverage": 0.0, "average_index_value": 0.4, "trend_direction": "down", "is_peak": false, "streak": -2, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 22.9, "temperature_max_c": 30.1, "temperature_min_c": 2.4, "temperature_avg_c": 14.5 }
+                },
+                {
+                    "month": "08-2019",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20190828.png", "date": "2019-08-28", "cloud_coverage": 0.0, "average_index_value": 0.55, "trend_direction": "up", "is_peak": false, "streak": 1, "is_used_for_map": true, "threshold_min": 0.44, "threshold_max": 0.65 }],
+                    "climate_data": { "precipitation_mm": 5.9, "temperature_max_c": 35.2, "temperature_min_c": 3.1, "temperature_avg_c": 16.4 }
+                },
+                {
+                    "month": "09-2019",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20190927.png", "date": "2019-09-27", "cloud_coverage": 0.0, "average_index_value": 0.63, "trend_direction": "up", "is_peak": false, "streak": 2, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 15.8, "temperature_max_c": 39.4, "temperature_min_c": 6.7, "temperature_avg_c": 18.9 }
+                },
+                {
+                    "month": "10-2019",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20191007.png", "date": "2019-10-07", "cloud_coverage": 0.0, "average_index_value": 0.66, "trend_direction": "flat", "is_peak": true, "streak": 2, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 64.2, "temperature_max_c": 40.8, "temperature_min_c": 9.9, "temperature_avg_c": 21.5 }
+                },
+                {
+                    "month": "11-2019",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20191116.png", "date": "2019-11-16", "cloud_coverage": 0.0, "average_index_value": 0.48, "trend_direction": "down", "is_peak": false, "streak": -1, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 150.3, "temperature_max_c": 36.5, "temperature_min_c": 16.1, "temperature_avg_c": 25.6 }
+                },
+                {
+                    "month": "12-2019",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20191211.png", "date": "2019-12-11", "cloud_coverage": 0.0, "average_index_value": 0.26, "trend_direction": "down", "is_peak": false, "streak": -2, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 114.2, "temperature_max_c": 37.0, "temperature_min_c": 15.0, "temperature_avg_c": 26.3 }
+                },
+                {
+                    "month": "01-2020",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20200125.png", "date": "2020-01-25", "cloud_coverage": 0.0, "average_index_value": 0.72, "trend_direction": "up", "is_peak": false, "streak": 1, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 134.2, "temperature_max_c": 36.3, "temperature_min_c": 16.5, "temperature_avg_c": 27.2 }
+                },
+                {
+                    "month": "02-2020",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20200224.png", "date": "2020-02-24", "cloud_coverage": 0.0, "average_index_value": 0.88, "trend_direction": "up", "is_peak": true, "streak": 2, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 197.1, "temperature_max_c": 35.8, "temperature_min_c": 14.9, "temperature_avg_c": 26.3 }
+                },
+                {
+                    "month": "03-2020",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20200320.png", "date": "2020-03-20", "cloud_coverage": 0.0, "average_index_value": 0.71, "trend_direction": "down", "is_peak": false, "streak": -1, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 111.2, "temperature_max_c": 38.9, "temperature_min_c": 15.6, "temperature_avg_c": 26.6 }
+                },
+                {
+                    "month": "04-2020",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20200419.png", "date": "2020-04-19", "cloud_coverage": 0.0, "average_index_value": 0.37, "trend_direction": "down", "is_peak": false, "streak": -2, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 75.3, "temperature_max_c": 33.6, "temperature_min_c": 11.4, "temperature_avg_c": 21.3 }
+                },
+                {
+                    "month": "05-2020",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20200519.png", "date": "2020-05-19", "cloud_coverage": 0.0, "average_index_value": 0.32, "trend_direction": "down", "is_peak": false, "streak": -3, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 23.1, "temperature_max_c": 30.4, "temperature_min_c": 5.3, "temperature_avg_c": 18.1 }
+                },
+                {
+                    "month": "06-2020",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20200603.png", "date": "2020-06-03", "cloud_coverage": 0.0, "average_index_value": 0.29, "trend_direction": "flat", "is_peak": false, "streak": -3, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 21.9, "temperature_max_c": 30.6, "temperature_min_c": 4.0, "temperature_avg_c": 16.6 }
+                },
+                {
+                    "month": "07-2020",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20200718.png", "date": "2020-07-18", "cloud_coverage": 0.0, "average_index_value": 0.22, "trend_direction": "down", "is_peak": false, "streak": -4, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 14.5, "temperature_max_c": 32.3, "temperature_min_c": 2.4, "temperature_avg_c": 13.9 }
+                },
+                {
+                    "month": "08-2020",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20200817.png", "date": "2020-08-17", "cloud_coverage": 0.0, "average_index_value": 0.23, "trend_direction": "flat", "is_peak": false, "streak": -4, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 11.6, "temperature_max_c": 33.7, "temperature_min_c": 3.4, "temperature_avg_c": 18.9 }
+                },
+                {
+                    "month": "09-2020",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20200921.png", "date": "2020-09-21", "cloud_coverage": 0.0, "average_index_value": 0.24, "trend_direction": "flat", "is_peak": false, "streak": -4, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 24.5, "temperature_max_c": 39.2, "temperature_min_c": 5.8, "temperature_avg_c": 19.6 }
+                },
+                {
+                    "month": "10-2020",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20201011.png", "date": "2020-10-11", "cloud_coverage": 0.0, "average_index_value": 0.26, "trend_direction": "flat", "is_peak": false, "streak": -4, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 54.8, "temperature_max_c": 38.5, "temperature_min_c": 10.4, "temperature_avg_c": 23.2 }
+                },
+                {
+                    "month": "12-2020",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20201210.png", "date": "2020-12-10", "cloud_coverage": 0.0, "average_index_value": 0.74, "trend_direction": "up", "is_peak": true, "streak": 1, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 77.2, "temperature_max_c": 37.5, "temperature_min_c": 14.0, "temperature_avg_c": 26.7 }
+                },
+                {
+                    "month": "01-2021",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20210119.png", "date": "2021-01-19", "cloud_coverage": 0.0, "average_index_value": 0.63, "trend_direction": "down", "is_peak": false, "streak": -1, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 110.5, "temperature_max_c": 38.4, "temperature_min_c": 16.6, "temperature_avg_c": 27.7 }
+                },
+                {
+                    "month": "02-2021",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20210228.png", "date": "2021-02-28", "cloud_coverage": 0.0, "average_index_value": 0.44, "trend_direction": "down", "is_peak": false, "streak": -2, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 59.9, "temperature_max_c": 36.7, "temperature_min_c": 17.7, "temperature_avg_c": 25.8 }
+                },
+                {
+                    "month": "03-2021",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20210310.png", "date": "2021-03-10", "cloud_coverage": 0.0, "average_index_value": 0.44, "trend_direction": "flat", "is_peak": false, "streak": -2, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 99.0, "temperature_max_c": 35.7, "temperature_min_c": 13.7, "temperature_avg_c": 24.9 }
+                },
+                {
+                    "month": "04-2021",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20210419.png", "date": "2021-04-19", "cloud_coverage": 0.0, "average_index_value": 0.28, "trend_direction": "down", "is_peak": false, "streak": -3, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 132.6, "temperature_max_c": 32.8, "temperature_min_c": 9.8, "temperature_avg_c": 22.1 }
+                },
+                {
+                    "month": "05-2021",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20210524.png", "date": "2021-05-24", "cloud_coverage": 0.0, "average_index_value": 0.29, "trend_direction": "flat", "is_peak": false, "streak": -3, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 29.3, "temperature_max_c": 28.2, "temperature_min_c": 6.0, "temperature_avg_c": 16.7 }
+                },
+                {
+                    "month": "06-2021",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20210613.png", "date": "2021-06-13", "cloud_coverage": 0.0, "average_index_value": 0.33, "trend_direction": "up", "is_peak": false, "streak": 1, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 20.4, "temperature_max_c": 30.8, "temperature_min_c": 1.0, "temperature_avg_c": 14.7 }
+                },
+                {
+                    "month": "07-2021",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20210723.png", "date": "2021-07-23", "cloud_coverage": 0.0, "average_index_value": 0.64, "trend_direction": "up", "is_peak": false, "streak": 2, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 9.9, "temperature_max_c": 30.9, "temperature_min_c": 1.2, "temperature_avg_c": 15.5 }
+                },
+                {
+                    "month": "08-2021",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20210827.png", "date": "2021-08-27", "cloud_coverage": 0.0, "average_index_value": 0.68, "trend_direction": "up", "is_peak": true, "streak": 3, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 0.0, "temperature_max_c": 36.3, "temperature_min_c": 4.5, "temperature_avg_c": 18.4 }
+                },
+                {
+                    "month": "09-2021",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20210926.png", "date": "2021-09-26", "cloud_coverage": 0.0, "average_index_value": 0.5, "trend_direction": "down", "is_peak": false, "streak": -1, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 20.1, "temperature_max_c": 36.7, "temperature_min_c": 9.1, "temperature_avg_c": 21.2 }
+                },
+                {
+                    "month": "10-2021",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20211021.png", "date": "2021-10-21", "cloud_coverage": 0.0, "average_index_value": 0.22, "trend_direction": "down", "is_peak": false, "streak": -2, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 26.9, "temperature_max_c": 38.4, "temperature_min_c": 8.6, "temperature_avg_c": 23.3 }
+                },
+                {
+                    "month": "11-2021",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20211130.png", "date": "2021-11-30", "cloud_coverage": 0.0, "average_index_value": 0.25, "trend_direction": "flat", "is_peak": false, "streak": -2, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 164.7, "temperature_max_c": 35.9, "temperature_min_c": 13.1, "temperature_avg_c": 24.0 }
+                },
+                {
+                    "month": "12-2021",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20211230.png", "date": "2021-12-30", "cloud_coverage": 0.0, "average_index_value": 0.31, "trend_direction": "up", "is_peak": false, "streak": 1, "is_used_for_map": true, "threshold_min": 0.31, "threshold_max": 0.65 }],
+                    "climate_data": { "precipitation_mm": 45.0, "temperature_max_c": 38.6, "temperature_min_c": 19.1, "temperature_avg_c": 27.6 }
+                },
+                {
+                    "month": "01-2022",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20220109.png", "date": "2022-01-09", "cloud_coverage": 0.0, "average_index_value": 0.49, "trend_direction": "up", "is_peak": false, "streak": 2, "is_used_for_map": true, "threshold_min": 0.31, "threshold_max": 0.65 }],
+                    "climate_data": { "precipitation_mm": 97.8, "temperature_max_c": 41.9, "temperature_min_c": 18.4, "temperature_avg_c": 30.7 }
+                },
+                {
+                    "month": "02-2022",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20220218.png", "date": "2022-02-18", "cloud_coverage": 0.0, "average_index_value": 0.67, "trend_direction": "up", "is_peak": true, "streak": 3, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 50.4, "temperature_max_c": 41.0, "temperature_min_c": 15.1, "temperature_avg_c": 28.4 }
+                },
+                {
+                    "month": "03-2022",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20220325.png", "date": "2022-03-25", "cloud_coverage": 0.0, "average_index_value": 0.65, "trend_direction": "flat", "is_peak": false, "streak": 3, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 206.7, "temperature_max_c": 37.3, "temperature_min_c": 8.1, "temperature_avg_c": 23.2 }
+                },
+                {
+                    "month": "04-2022",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20220414.png", "date": "2022-04-14", "cloud_coverage": 0.0, "average_index_value": 0.52, "trend_direction": "down", "is_peak": false, "streak": -1, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 57.9, "temperature_max_c": 32.5, "temperature_min_c": 9.9, "temperature_avg_c": 20.5 }
+                },
+                {
+                    "month": "05-2022",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20220504.png", "date": "2022-05-04", "cloud_coverage": 0.0, "average_index_value": 0.34, "trend_direction": "down", "is_peak": false, "streak": -2, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 20.5, "temperature_max_c": 27.7, "temperature_min_c": 5.3, "temperature_avg_c": 16.4 }
+                },
+                {
+                    "month": "06-2022",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20220613.png", "date": "2022-06-13", "cloud_coverage": 0.0, "average_index_value": 0.29, "trend_direction": "down", "is_peak": false, "streak": -3, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 15.5, "temperature_max_c": 22.1, "temperature_min_c": 3.7, "temperature_avg_c": 13.3 }
+                },
+                {
+                    "month": "09-2022",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20220926.png", "date": "2022-09-26", "cloud_coverage": 0.0, "average_index_value": 0.2, "trend_direction": "down", "is_peak": false, "streak": -4, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 14.9, "temperature_max_c": 33.1, "temperature_min_c": 7.8, "temperature_avg_c": 18.6 }
+                },
+                {
+                    "month": "10-2022",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20221001.png", "date": "2022-10-01", "cloud_coverage": 0.0, "average_index_value": 0.2, "trend_direction": "flat", "is_peak": false, "streak": -4, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 71.8, "temperature_max_c": 39.0, "temperature_min_c": 10.1, "temperature_avg_c": 22.4 }
+                },
+                {
+                    "month": "11-2022",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20221125.png", "date": "2022-11-25", "cloud_coverage": 0.0, "average_index_value": 0.19, "trend_direction": "flat", "is_peak": false, "streak": -4, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 63.0, "temperature_max_c": 37.5, "temperature_min_c": 9.7, "temperature_avg_c": 25.5 }
+                },
+                {
+                    "month": "12-2022",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20221205.png", "date": "2022-12-05", "cloud_coverage": 0.0, "average_index_value": 0.19, "trend_direction": "flat", "is_peak": false, "streak": -4, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 109.7, "temperature_max_c": 41.8, "temperature_min_c": 19.4, "temperature_avg_c": 28.9 }
+                },
+                {
+                    "month": "01-2023",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20230124.png", "date": "2023-01-24", "cloud_coverage": 0.0, "average_index_value": 0.22, "trend_direction": "flat", "is_peak": false, "streak": -4, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 69.1, "temperature_max_c": 41.6, "temperature_min_c": 20.3, "temperature_avg_c": 30.4 }
+                },
+                {
+                    "month": "02-2023",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20230228.png", "date": "2023-02-28", "cloud_coverage": 0.2, "average_index_value": 0.78, "trend_direction": "up", "is_peak": false, "streak": 1, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 67.5, "temperature_max_c": 40.4, "temperature_min_c": 10.4, "temperature_avg_c": 28.9 }
+                },
+                {
+                    "month": "03-2023",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20230305.png", "date": "2023-03-05", "cloud_coverage": 0.0, "average_index_value": 0.79, "trend_direction": "flat", "is_peak": true, "streak": 1, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 107.2, "temperature_max_c": 37.8, "temperature_min_c": 20.1, "temperature_avg_c": 28.8 }
+                },
+                {
+                    "month": "04-2023",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20230419.png", "date": "2023-04-19", "cloud_coverage": 0.0, "average_index_value": 0.72, "trend_direction": "down", "is_peak": false, "streak": -1, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 110.0, "temperature_max_c": 31.3, "temperature_min_c": 13.0, "temperature_avg_c": 21.7 }
+                },
+                {
+                    "month": "05-2023",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20230509.png", "date": "2023-05-09", "cloud_coverage": 0.0, "average_index_value": 0.64, "trend_direction": "down", "is_peak": false, "streak": -2, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 43.4, "temperature_max_c": 30.2, "temperature_min_c": 11.6, "temperature_avg_c": 20.1 }
+                },
+                {
+                    "month": "06-2023",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20230618.png", "date": "2023-06-18", "cloud_coverage": 0.0, "average_index_value": 0.31, "trend_direction": "down", "is_peak": false, "streak": -3, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 21.5, "temperature_max_c": 29.7, "temperature_min_c": 2.7, "temperature_avg_c": 17.9 }
+                },
+                {
+                    "month": "07-2023",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20230728.png", "date": "2023-07-28", "cloud_coverage": 0.0, "average_index_value": 0.26, "trend_direction": "down", "is_peak": false, "streak": -4, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 14.4, "temperature_max_c": 31.7, "temperature_min_c": 4.7, "temperature_avg_c": 17.4 }
+                },
+                {
+                    "month": "08-2023",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20230827.png", "date": "2023-08-27", "cloud_coverage": 0.0, "average_index_value": 0.23, "trend_direction": "flat", "is_peak": false, "streak": -4, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 10.9, "temperature_max_c": 35.0, "temperature_min_c": 8.3, "temperature_avg_c": 20.6 }
+                },
+                {
+                    "month": "09-2023",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20230916.png", "date": "2023-09-16", "cloud_coverage": 0.0, "average_index_value": 0.22, "trend_direction": "flat", "is_peak": false, "streak": -4, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 30.4, "temperature_max_c": 36.6, "temperature_min_c": 9.3, "temperature_avg_c": 21.1 }
+                },
+                {
+                    "month": "10-2023",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20231006.png", "date": "2023-10-06", "cloud_coverage": 0.0, "average_index_value": 0.2, "trend_direction": "flat", "is_peak": false, "streak": -4, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 67.4, "temperature_max_c": 41.0, "temperature_min_c": 10.3, "temperature_avg_c": 23.7 }
+                },
+                {
+                    "month": "12-2023",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20231210.png", "date": "2023-12-10", "cloud_coverage": 0.0, "average_index_value": 0.27, "trend_direction": "up", "is_peak": false, "streak": 1, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 228.0, "temperature_max_c": 40.0, "temperature_min_c": 18.2, "temperature_avg_c": 26.9 }
+                },
+                {
+                    "month": "01-2024",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20240129.png", "date": "2024-01-29", "cloud_coverage": 0.0, "average_index_value": 0.65, "trend_direction": "up", "is_peak": true, "streak": 2, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 139.1, "temperature_max_c": 40.0, "temperature_min_c": 19.5, "temperature_avg_c": 27.9 }
+                },
+                {
+                    "month": "03-2024",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20240329.png", "date": "2024-03-29", "cloud_coverage": 0.0, "average_index_value": 0.56, "trend_direction": "down", "is_peak": false, "streak": -1, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 107.3, "temperature_max_c": 39.7, "temperature_min_c": 15.4, "temperature_avg_c": 28.6 }
+                },
+                {
+                    "month": "04-2024",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20240418.png", "date": "2024-04-18", "cloud_coverage": 0.0, "average_index_value": 0.48, "trend_direction": "down", "is_peak": false, "streak": -2, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 120.1, "temperature_max_c": 33.1, "temperature_min_c": 12.5, "temperature_avg_c": 21.9 }
+                },
+                {
+                    "month": "05-2024",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20240528.png", "date": "2024-05-28", "cloud_coverage": 0.0, "average_index_value": 0.33, "trend_direction": "down", "is_peak": false, "streak": -3, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 14.8, "temperature_max_c": 26.1, "temperature_min_c": 2.5, "temperature_avg_c": 14.4 }
+                },
+                {
+                    "month": "06-2024",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20240612.png", "date": "2024-06-12", "cloud_coverage": 0.0, "average_index_value": 0.26, "trend_direction": "down", "is_peak": false, "streak": -4, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 12.1, "temperature_max_c": 32.0, "temperature_min_c": 4.4, "temperature_avg_c": 19.0 }
+                },
+                {
+                    "month": "07-2024",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20240712.png", "date": "2024-07-12", "cloud_coverage": 0.0, "average_index_value": 0.26, "trend_direction": "flat", "is_peak": false, "streak": -4, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 0.0, "temperature_max_c": 29.1, "temperature_min_c": 1.1, "temperature_avg_c": 14.2 }
+                },
+                {
+                    "month": "08-2024",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20240811.png", "date": "2024-08-11", "cloud_coverage": 0.0, "average_index_value": 0.24, "trend_direction": "flat", "is_peak": false, "streak": -4, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 7.5, "temperature_max_c": 34.3, "temperature_min_c": 4.3, "temperature_avg_c": 16.8 }
+                },
+                {
+                    "month": "09-2024",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20240930.png", "date": "2024-09-30", "cloud_coverage": 0.0, "average_index_value": 0.18, "trend_direction": "down", "is_peak": false, "streak": -5, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 11.0, "temperature_max_c": 41.1, "temperature_min_c": 8.1, "temperature_avg_c": 23.0 }
+                },
+                {
+                    "month": "10-2024",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20241020.png", "date": "2024-10-20", "cloud_coverage": 0.0, "average_index_value": 0.22, "trend_direction": "up", "is_peak": false, "streak": 1, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 115.7, "temperature_max_c": 35.1, "temperature_min_c": 13.1, "temperature_avg_c": 24.1 }
+                },
+                {
+                    "month": "11-2024",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20241109.png", "date": "2024-11-09", "cloud_coverage": 0.0, "average_index_value": 0.24, "trend_direction": "flat", "is_peak": false, "streak": 1, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 126.0, "temperature_max_c": 38.6, "temperature_min_c": 14.0, "temperature_avg_c": 25.4 }
+                },
+                {
+                    "month": "12-2024",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20241229.png", "date": "2024-12-29", "cloud_coverage": 0.0, "average_index_value": 0.24, "trend_direction": "flat", "is_peak": false, "streak": 1, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 58.4, "temperature_max_c": 36.5, "temperature_min_c": 14.5, "temperature_avg_c": 25.4 }
+                },
+                {
+                    "month": "01-2025",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20250108.png", "date": "2025-01-08", "cloud_coverage": 0.0, "average_index_value": 0.23, "trend_direction": "flat", "is_peak": false, "streak": 1, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 43.8, "temperature_max_c": 38.9, "temperature_min_c": 19.5, "temperature_avg_c": 29.1 }
+                },
+                {
+                    "month": "02-2025",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20250222.png", "date": "2025-02-22", "cloud_coverage": 0.0, "average_index_value": 0.77, "trend_direction": "up", "is_peak": true, "streak": 2, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 51.8, "temperature_max_c": 41.3, "temperature_min_c": 20.7, "temperature_avg_c": 32.1 }
+                },
+                {
+                    "month": "03-2025",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20250319.png", "date": "2025-03-19", "cloud_coverage": 0.0, "average_index_value": 0.74, "trend_direction": "flat", "is_peak": false, "streak": 2, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 197.2, "temperature_max_c": 40.6, "temperature_min_c": 15.1, "temperature_avg_c": 27.5 }
+                },
+                {
+                    "month": "04-2025",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20250428.png", "date": "2025-04-28", "cloud_coverage": 0.0, "average_index_value": 0.7, "trend_direction": "down", "is_peak": false, "streak": -1, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 33.1, "temperature_max_c": 31.2, "temperature_min_c": 10.0, "temperature_avg_c": 21.4 }
+                },
+                {
+                    "month": "05-2025",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20250513.png", "date": "2025-05-13", "cloud_coverage": 0.0, "average_index_value": 0.58, "trend_direction": "down", "is_peak": false, "streak": -2, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 43.8, "temperature_max_c": 30.6, "temperature_min_c": 4.4, "temperature_avg_c": 20.3 }
+                },
+                {
+                    "month": "06-2025",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20250602.png", "date": "2025-06-02", "cloud_coverage": 0.0, "average_index_value": 0.35, "trend_direction": "down", "is_peak": false, "streak": -3, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 17.2, "temperature_max_c": 24.3, "temperature_min_c": 3.5, "temperature_avg_c": 13.6 }
+                },
+                {
+                    "month": "07-2025",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20250717.png", "date": "2025-07-17", "cloud_coverage": 0.0, "average_index_value": 0.3, "trend_direction": "down", "is_peak": false, "streak": -4, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 18.0, "temperature_max_c": 29.1, "temperature_min_c": 1.9, "temperature_avg_c": 16.3 }
+                },
+                {
+                    "month": "08-2025",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20250826.png", "date": "2025-08-26", "cloud_coverage": 0.0, "average_index_value": 0.24, "trend_direction": "down", "is_peak": false, "streak": -5, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 55.0, "temperature_max_c": 30.2, "temperature_min_c": 4.0, "temperature_avg_c": 17.3 }
+                },
+                {
+                    "month": "09-2025",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20250925.png", "date": "2025-09-25", "cloud_coverage": 0.0, "average_index_value": 0.24, "trend_direction": "flat", "is_peak": false, "streak": -5, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 48.8, "temperature_max_c": 34.7, "temperature_min_c": 6.6, "temperature_avg_c": 19.8 }
+                },
+                {
+                    "month": "10-2025",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20251010.png", "date": "2025-10-10", "cloud_coverage": 0.0, "average_index_value": 0.23, "trend_direction": "flat", "is_peak": false, "streak": -5, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 35.5, "temperature_max_c": 36.9, "temperature_min_c": 11.2, "temperature_avg_c": 22.8 }
+                },
+                {
+                    "month": "11-2025",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20251119.png", "date": "2025-11-19", "cloud_coverage": 0.0, "average_index_value": 0.22, "trend_direction": "flat", "is_peak": false, "streak": -5, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 89.0, "temperature_max_c": 38.3, "temperature_min_c": 12.4, "temperature_avg_c": 24.5 }
+                },
+                {
+                    "month": "12-2025",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20251204.png", "date": "2025-12-04", "cloud_coverage": 0.0, "average_index_value": 0.23, "trend_direction": "flat", "is_peak": false, "streak": -5, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 227.7, "temperature_max_c": 35.5, "temperature_min_c": 15.2, "temperature_avg_c": 26.2 }
+                },
+                {
+                    "month": "01-2026",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20260113.png", "date": "2026-01-13", "cloud_coverage": 0.0, "average_index_value": 0.29, "trend_direction": "up", "is_peak": false, "streak": 1, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 158.5, "temperature_max_c": 36.3, "temperature_min_c": 16.6, "temperature_avg_c": 26.9 }
+                },
+                {
+                    "month": "02-2026",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20260217.png", "date": "2026-02-17", "cloud_coverage": 0.0, "average_index_value": 0.68, "trend_direction": "up", "is_peak": false, "streak": 2, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 71.9, "temperature_max_c": 38.3, "temperature_min_c": 20.5, "temperature_avg_c": 28.6 }
+                },
+                {
+                    "month": "03-2026",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20260324.png", "date": "2026-03-24", "cloud_coverage": 0.0, "average_index_value": 0.84, "trend_direction": "up", "is_peak": true, "streak": 3, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 152.0, "temperature_max_c": 38.5, "temperature_min_c": 12.8, "temperature_avg_c": 25.8 }
+                },
+                {
+                    "month": "04-2026",
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/5/NDVI/298_Imagen_20260418.png", "date": "2026-04-18", "cloud_coverage": 0.0, "average_index_value": 0.71, "trend_direction": "down", "is_peak": false, "streak": -1, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
+                    "climate_data": { "precipitation_mm": 233.2, "temperature_max_c": 35.9, "temperature_min_c": 16.3, "temperature_avg_c": 23.1 }
+                }
+            ],
+            "index_types_used": ["NDVI"],
+            "monthly_summary": [
+                { "month": "01-2019", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 39.8, "temp_max_c": 38.0, "temp_min_c": 24.6, "temp_avg_c": 30.4, "num_captures": 1 },
+                { "month": "03-2019", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 166.8, "temp_max_c": 35.0, "temp_min_c": 15.3, "temp_avg_c": 23.5, "num_captures": 1 },
+                { "month": "06-2019", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 15.6, "temp_max_c": 27.6, "temp_min_c": 2.2, "temp_avg_c": 17.0, "num_captures": 1 },
+                { "month": "07-2019", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 22.9, "temp_max_c": 30.1, "temp_min_c": 2.4, "temp_avg_c": 14.5, "num_captures": 1 },
+                { "month": "08-2019", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 5.9, "temp_max_c": 35.2, "temp_min_c": 3.1, "temp_avg_c": 16.4, "num_captures": 1 },
+                { "month": "09-2019", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 15.8, "temp_max_c": 39.4, "temp_min_c": 6.7, "temp_avg_c": 18.9, "num_captures": 1 },
+                { "month": "10-2019", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 64.2, "temp_max_c": 40.8, "temp_min_c": 9.9, "temp_avg_c": 21.5, "num_captures": 1 },
+                { "month": "11-2019", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 150.3, "temp_max_c": 36.5, "temp_min_c": 16.1, "temp_avg_c": 25.6, "num_captures": 1 },
+                { "month": "12-2019", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 114.2, "temp_max_c": 37.0, "temp_min_c": 15.0, "temp_avg_c": 26.3, "num_captures": 1 },
+                { "month": "01-2020", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 134.2, "temp_max_c": 36.3, "temp_min_c": 16.5, "temp_avg_c": 27.2, "num_captures": 1 },
+                { "month": "02-2020", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 197.1, "temp_max_c": 35.8, "temp_min_c": 14.9, "temp_avg_c": 26.3, "num_captures": 1 },
+                { "month": "03-2020", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 111.2, "temp_max_c": 38.9, "temp_min_c": 15.6, "temp_avg_c": 26.6, "num_captures": 1 },
+                { "month": "04-2020", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 75.3, "temp_max_c": 33.6, "temp_min_c": 11.4, "temp_avg_c": 21.3, "num_captures": 1 },
+                { "month": "05-2020", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 23.1, "temp_max_c": 30.4, "temp_min_c": 5.3, "temp_avg_c": 18.1, "num_captures": 1 },
+                { "month": "06-2020", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 21.9, "temp_max_c": 30.6, "temp_min_c": 4.0, "temp_avg_c": 16.6, "num_captures": 1 },
+                { "month": "07-2020", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 14.5, "temp_max_c": 32.3, "temp_min_c": 2.4, "temp_avg_c": 13.9, "num_captures": 1 },
+                { "month": "08-2020", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 11.6, "temp_max_c": 33.7, "temp_min_c": 3.4, "temp_avg_c": 18.9, "num_captures": 1 },
+                { "month": "09-2020", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 24.5, "temp_max_c": 39.2, "temp_min_c": 5.8, "temp_avg_c": 19.6, "num_captures": 1 },
+                { "month": "10-2020", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 54.8, "temp_max_c": 38.5, "temp_min_c": 10.4, "temp_avg_c": 23.2, "num_captures": 1 },
+                { "month": "12-2020", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 77.2, "temp_max_c": 37.5, "temp_min_c": 14.0, "temp_avg_c": 26.7, "num_captures": 1 },
+                { "month": "01-2021", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 110.5, "temp_max_c": 38.4, "temp_min_c": 16.6, "temp_avg_c": 27.7, "num_captures": 1 },
+                { "month": "02-2021", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 59.9, "temp_max_c": 36.7, "temp_min_c": 17.7, "temp_avg_c": 25.8, "num_captures": 1 },
+                { "month": "03-2021", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 99.0, "temp_max_c": 35.7, "temp_min_c": 13.7, "temp_avg_c": 24.9, "num_captures": 1 },
+                { "month": "04-2021", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 132.6, "temp_max_c": 32.8, "temp_min_c": 9.8, "temp_avg_c": 22.1, "num_captures": 1 },
+                { "month": "05-2021", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 29.3, "temp_max_c": 28.2, "temp_min_c": 6.0, "temp_avg_c": 16.7, "num_captures": 1 },
+                { "month": "06-2021", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 20.4, "temp_max_c": 30.8, "temp_min_c": 1.0, "temp_avg_c": 14.7, "num_captures": 1 },
+                { "month": "07-2021", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 9.9, "temp_max_c": 30.9, "temp_min_c": 1.2, "temp_avg_c": 15.5, "num_captures": 1 },
+                { "month": "08-2021", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 0.0, "temp_max_c": 36.3, "temp_min_c": 4.5, "temp_avg_c": 18.4, "num_captures": 1 },
+                { "month": "09-2021", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 20.1, "temp_max_c": 36.7, "temp_min_c": 9.1, "temp_avg_c": 21.2, "num_captures": 1 },
+                { "month": "10-2021", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 26.9, "temp_max_c": 38.4, "temp_min_c": 8.6, "temp_avg_c": 23.3, "num_captures": 1 },
+                { "month": "11-2021", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 164.7, "temp_max_c": 35.9, "temp_min_c": 13.1, "temp_avg_c": 24.0, "num_captures": 1 },
+                { "month": "12-2021", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 45.0, "temp_max_c": 38.6, "temp_min_c": 19.1, "temp_avg_c": 27.6, "num_captures": 1 },
+                { "month": "01-2022", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 97.8, "temp_max_c": 41.9, "temp_min_c": 18.4, "temp_avg_c": 30.7, "num_captures": 1 },
+                { "month": "02-2022", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 50.4, "temp_max_c": 41.0, "temp_min_c": 15.1, "temp_avg_c": 28.4, "num_captures": 1 },
+                { "month": "03-2022", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 206.7, "temp_max_c": 37.3, "temp_min_c": 8.1, "temp_avg_c": 23.2, "num_captures": 1 },
+                { "month": "04-2022", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 57.9, "temp_max_c": 32.5, "temp_min_c": 9.9, "temp_avg_c": 20.5, "num_captures": 1 },
+                { "month": "05-2022", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 20.5, "temp_max_c": 27.7, "temp_min_c": 5.3, "temp_avg_c": 16.4, "num_captures": 1 },
+                { "month": "06-2022", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 15.5, "temp_max_c": 22.1, "temp_min_c": 3.7, "temp_avg_c": 13.3, "num_captures": 1 },
+                { "month": "09-2022", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 14.9, "temp_max_c": 33.1, "temp_min_c": 7.8, "temp_avg_c": 18.6, "num_captures": 1 },
+                { "month": "10-2022", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 71.8, "temp_max_c": 39.0, "temp_min_c": 10.1, "temp_avg_c": 22.4, "num_captures": 1 },
+                { "month": "11-2022", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 63.0, "temp_max_c": 37.5, "temp_min_c": 9.7, "temp_avg_c": 25.5, "num_captures": 1 },
+                { "month": "12-2022", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 109.7, "temp_max_c": 41.8, "temp_min_c": 19.4, "temp_avg_c": 28.9, "num_captures": 1 },
+                { "month": "01-2023", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 69.1, "temp_max_c": 41.6, "temp_min_c": 20.3, "temp_avg_c": 30.4, "num_captures": 1 },
+                { "month": "02-2023", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 67.5, "temp_max_c": 40.4, "temp_min_c": 10.4, "temp_avg_c": 28.9, "num_captures": 1 },
+                { "month": "03-2023", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 107.2, "temp_max_c": 37.8, "temp_min_c": 20.1, "temp_avg_c": 28.8, "num_captures": 1 },
+                { "month": "04-2023", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 110.0, "temp_max_c": 31.3, "temp_min_c": 13.0, "temp_avg_c": 21.7, "num_captures": 1 },
+                { "month": "05-2023", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 43.4, "temp_max_c": 30.2, "temp_min_c": 11.6, "temp_avg_c": 20.1, "num_captures": 1 },
+                { "month": "06-2023", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 21.5, "temp_max_c": 29.7, "temp_min_c": 2.7, "temp_avg_c": 17.9, "num_captures": 1 },
+                { "month": "07-2023", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 14.4, "temp_max_c": 31.7, "temp_min_c": 4.7, "temp_avg_c": 17.4, "num_captures": 1 },
+                { "month": "08-2023", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 10.9, "temp_max_c": 35.0, "temp_min_c": 8.3, "temp_avg_c": 20.6, "num_captures": 1 },
+                { "month": "09-2023", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 30.4, "temp_max_c": 36.6, "temp_min_c": 9.3, "temp_avg_c": 21.1, "num_captures": 1 },
+                { "month": "10-2023", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 67.4, "temp_max_c": 41.0, "temp_min_c": 10.3, "temp_avg_c": 23.7, "num_captures": 1 },
+                { "month": "12-2023", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 228.0, "temp_max_c": 40.0, "temp_min_c": 18.2, "temp_avg_c": 26.9, "num_captures": 1 },
+                { "month": "01-2024", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 139.1, "temp_max_c": 40.0, "temp_min_c": 19.5, "temp_avg_c": 27.9, "num_captures": 1 },
+                { "month": "03-2024", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 107.3, "temp_max_c": 39.7, "temp_min_c": 15.4, "temp_avg_c": 28.6, "num_captures": 1 },
+                { "month": "04-2024", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 120.1, "temp_max_c": 33.1, "temp_min_c": 12.5, "temp_avg_c": 21.9, "num_captures": 1 },
+                { "month": "05-2024", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 14.8, "temp_max_c": 26.1, "temp_min_c": 2.5, "temp_avg_c": 14.4, "num_captures": 1 },
+                { "month": "06-2024", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 12.1, "temp_max_c": 32.0, "temp_min_c": 4.4, "temp_avg_c": 19.0, "num_captures": 1 },
+                { "month": "07-2024", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 0.0, "temp_max_c": 29.1, "temp_min_c": 1.1, "temp_avg_c": 14.2, "num_captures": 1 },
+                { "month": "08-2024", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 7.5, "temp_max_c": 34.3, "temp_min_c": 4.3, "temp_avg_c": 16.8, "num_captures": 1 },
+                { "month": "09-2024", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 11.0, "temp_max_c": 41.1, "temp_min_c": 8.1, "temp_avg_c": 23.0, "num_captures": 1 },
+                { "month": "10-2024", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 115.7, "temp_max_c": 35.1, "temp_min_c": 13.1, "temp_avg_c": 24.1, "num_captures": 1 },
+                { "month": "11-2024", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 126.0, "temp_max_c": 38.6, "temp_min_c": 14.0, "temp_avg_c": 25.4, "num_captures": 1 },
+                { "month": "12-2024", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 58.4, "temp_max_c": 36.5, "temp_min_c": 14.5, "temp_avg_c": 25.4, "num_captures": 1 },
+                { "month": "01-2025", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 43.8, "temp_max_c": 38.9, "temp_min_c": 19.5, "temp_avg_c": 29.1, "num_captures": 1 },
+                { "month": "02-2025", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 51.8, "temp_max_c": 41.3, "temp_min_c": 20.7, "temp_avg_c": 32.1, "num_captures": 1 },
+                { "month": "03-2025", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 197.2, "temp_max_c": 40.6, "temp_min_c": 15.1, "temp_avg_c": 27.5, "num_captures": 1 },
+                { "month": "04-2025", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 33.1, "temp_max_c": 31.2, "temp_min_c": 10.0, "temp_avg_c": 21.4, "num_captures": 1 },
+                { "month": "05-2025", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 43.8, "temp_max_c": 30.6, "temp_min_c": 4.4, "temp_avg_c": 20.3, "num_captures": 1 },
+                { "month": "06-2025", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 17.2, "temp_max_c": 24.3, "temp_min_c": 3.5, "temp_avg_c": 13.6, "num_captures": 1 },
+                { "month": "07-2025", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 18.0, "temp_max_c": 29.1, "temp_min_c": 1.9, "temp_avg_c": 16.3, "num_captures": 1 },
+                { "month": "08-2025", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 55.0, "temp_max_c": 30.2, "temp_min_c": 4.0, "temp_avg_c": 17.3, "num_captures": 1 },
+                { "month": "09-2025", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 48.8, "temp_max_c": 34.7, "temp_min_c": 6.6, "temp_avg_c": 19.8, "num_captures": 1 },
+                { "month": "10-2025", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 35.5, "temp_max_c": 36.9, "temp_min_c": 11.2, "temp_avg_c": 22.8, "num_captures": 1 },
+                { "month": "11-2025", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 89.0, "temp_max_c": 38.3, "temp_min_c": 12.4, "temp_avg_c": 24.5, "num_captures": 1 },
+                { "month": "12-2025", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 227.7, "temp_max_c": 35.5, "temp_min_c": 15.2, "temp_avg_c": 26.2, "num_captures": 1 },
+                { "month": "01-2026", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 158.5, "temp_max_c": 36.3, "temp_min_c": 16.6, "temp_avg_c": 26.9, "num_captures": 1 },
+                { "month": "02-2026", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 71.9, "temp_max_c": 38.3, "temp_min_c": 20.5, "temp_avg_c": 28.6, "num_captures": 1 },
+                { "month": "03-2026", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 152.0, "temp_max_c": 38.5, "temp_min_c": 12.8, "temp_avg_c": 25.8, "num_captures": 1 },
+                { "month": "04-2026", "ndvi_avg": 0.0, "ndvi_max": 0.0, "reci_avg": 0.0, "reci_max": 0.0, "ndwi_avg": 0.0, "evi_avg": 0.0, "precipitation_mm": 233.2, "temp_max_c": 35.9, "temp_min_c": 16.3, "temp_avg_c": 23.1, "num_captures": 1 }
+            ]
+        }
+    },
+    "combined_map": null
+}

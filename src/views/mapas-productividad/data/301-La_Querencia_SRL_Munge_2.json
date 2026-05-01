@@ -1,15 +1,15 @@
 {
     "individual_maps": {
         "NDVI": {
-            "map_image_url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/productivity_maps/field_301/mapa_20260430_172303_NDVI.png",
-            "total_area_hectares": 94.7,
-            "processed_images_count": 4,
-            "discarded_images_count": 75,
+            "map_image_url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/productivity_maps/field_301/mapa_20260501_091318_NDVI.png",
+            "total_area_hectares": 94.71,
+            "processed_images_count": 1,
+            "discarded_images_count": 78,
             "dynamic_threshold_used": 0.0,
             "environments": [
-                { "id": 1, "name": "Bajo", "color": "#FF0000", "area_hectares": 5.08, "area_percentage": 5.37, "average_index_value": 0.82 },
-                { "id": 2, "name": "Medio", "color": "#FFFF00", "area_hectares": 46.05, "area_percentage": 48.63, "average_index_value": 0.96 },
-                { "id": 3, "name": "Alto", "color": "#00FF00", "area_hectares": 43.57, "area_percentage": 46.01, "average_index_value": 1.06 }
+                { "id": 1, "name": "Bajo", "color": "#FF0000", "area_hectares": 13.08, "area_percentage": 13.81, "average_index_value": 0.71 },
+                { "id": 2, "name": "Medio", "color": "#FFFF00", "area_hectares": 47.29, "area_percentage": 49.93, "average_index_value": 0.95 },
+                { "id": 3, "name": "Alto", "color": "#00FF00", "area_hectares": 34.34, "area_percentage": 36.26, "average_index_value": 1.18 }
             ],
             "date_from": "2019-01-01",
             "date_to": "2026-04-28",
@@ -51,12 +51,12 @@
                 },
                 {
                     "month": "02-2020",
-                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/301_Imagen_20200204.png", "date": "2020-02-04", "cloud_coverage": 0.0, "average_index_value": 0.73, "trend_direction": "up", "is_peak": false, "streak": 1, "is_used_for_map": true, "threshold_min": 0.38, "threshold_max": 0.83 }],
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/301_Imagen_20200204.png", "date": "2020-02-04", "cloud_coverage": 0.0, "average_index_value": 0.73, "trend_direction": "up", "is_peak": false, "streak": 1, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
                     "climate_data": { "precipitation_mm": 107.7, "temperature_max_c": 36.4, "temperature_min_c": 13.0, "temperature_avg_c": 24.7 }
                 },
                 {
                     "month": "03-2020",
-                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/301_Imagen_20200305.png", "date": "2020-03-05", "cloud_coverage": 0.0, "average_index_value": 0.82, "trend_direction": "up", "is_peak": false, "streak": 2, "is_used_for_map": true, "threshold_min": 0.38, "threshold_max": 0.83 }],
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/301_Imagen_20200305.png", "date": "2020-03-05", "cloud_coverage": 0.0, "average_index_value": 0.82, "trend_direction": "up", "is_peak": false, "streak": 2, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
                     "climate_data": { "precipitation_mm": 136.0, "temperature_max_c": 36.5, "temperature_min_c": 13.4, "temperature_avg_c": 24.9 }
                 },
                 {
@@ -381,7 +381,7 @@
                 },
                 {
                     "month": "11-2025",
-                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/301_Imagen_20251119.png", "date": "2025-11-19", "cloud_coverage": 0.0, "average_index_value": 0.82, "trend_direction": "up", "is_peak": false, "streak": 1, "is_used_for_map": true, "threshold_min": 0.32, "threshold_max": 0.83 }],
+                    "images": [{ "type": "NDVI", "url": "https://maizplus-storage.sfo3.cdn.digitaloceanspaces.com/DEV/MapaSatelital/2026/4/NDVI/301_Imagen_20251119.png", "date": "2025-11-19", "cloud_coverage": 0.0, "average_index_value": 0.82, "trend_direction": "up", "is_peak": false, "streak": 1, "is_used_for_map": false, "threshold_min": null, "threshold_max": null }],
                     "climate_data": { "precipitation_mm": 132.2, "temperature_max_c": 36.4, "temperature_min_c": 9.9, "temperature_avg_c": 22.5 }
                 },
                 {
