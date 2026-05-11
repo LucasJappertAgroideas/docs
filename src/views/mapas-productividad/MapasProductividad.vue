@@ -23,6 +23,7 @@ const fieldOptions: FieldOption[] = [
     { id: "292", name: "292 - La Querencia SRL Munge 1", filename: "292-La_Querencia_Munge_1" },
     { id: "293", name: "293 - La Querencia Elmer 8", filename: "293-La_Querencia_Elmer_8" },
     { id: "296", name: "296 - Los Claros - Lote 17", filename: "296-los-claros-lote-17" },
+    { id: "298", name: "298 - Villa Minetti La Feria", filename: "298-Villa-Minetti-La-Feria" },
     { id: "299", name: "299 - La Querencia SRL Daghero L1", filename: "299-La_Querencia_SRL_Daghero_L1" },
     { id: "301", name: "301 - La Querencia SRL Munge 2", filename: "301-La_Querencia_SRL_Munge_2" },
     { id: "302", name: "302 - La Querencia SRL Lote 3", filename: "302-La_Querencia_SRL_Lote_3" },

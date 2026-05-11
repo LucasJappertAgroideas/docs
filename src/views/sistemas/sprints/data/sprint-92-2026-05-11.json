@@ -1,0 +1,1786 @@
+{
+  "prompt": "Generame un resumen del sprint MUY breve (maximo 10-12 lineas por seccion), en formato ideal para WhatsApp, listo para copiar y pegar, asi que no hagas preguntas finales ni saludos o introducciones de ninguna manera.\n\nFormato requerido:\n- Usa el objeto projectEffortSummary para obtener las horas y porcentajes por proyecto (ya están calculados)\n- Organizar por secciones segun el projectName (ej: 🟢 APIX, 🔵 Agroideas-In, 🟡 Agroideas WEB, 🔴 Agroideas API, 🟠 Tracker, 📋 Dashboard, 🟣 Meetings)\n- Cada seccion debe mostrar: \"[emoji] [projectName]: [porcentaje]% ([horas]h) - [items] items, [tasks] tasks\"\n- Priorizar impacto funcional y de negocio por sobre detalles tecnicos\n- Redactar para colegas que no son del area de sistemas (claro, directo y simple)\n- Usar pocos emoticones solo para ayudar a la lectura (sin abusar)\n- Las tareas con esfuerzo 0 considerarlas como mejoras realizadas fuera de horario y mencionarlas como aportes de valor cuando corresponda\n- Agrupar y sintetizar tareas similares en un mismo bullet para evitar exceso de detalle\n- Evitar lenguaje tecnico innecesario",
+  "projectEffortSummary": [
+    {
+      "projectName": "🟢 APIX",
+      "totalHours": 82,
+      "percentage": 61.2,
+      "itemCount": 5,
+      "taskCount": 29
+    },
+    {
+      "projectName": "🟡 Agroideas WEB",
+      "totalHours": 29,
+      "percentage": 21.6,
+      "itemCount": 1,
+      "taskCount": 7
+    },
+    {
+      "projectName": "🟣 Meetings",
+      "totalHours": 14,
+      "percentage": 10.4,
+      "itemCount": 2,
+      "taskCount": 4
+    },
+    {
+      "projectName": "🔵 Agroideas-In",
+      "totalHours": 6,
+      "percentage": 4.5,
+      "itemCount": 1,
+      "taskCount": 5
+    },
+    {
+      "projectName": "🔴 Agroideas API",
+      "totalHours": 3,
+      "percentage": 2.2,
+      "itemCount": 1,
+      "taskCount": 1
+    }
+  ],
+  "totalSprintHours": 134,
+  "sprint": {
+    "fechaDesde": "2026-04-27T03:00:00.000Z",
+    "userWorkingDays": {},
+    "titulo": "Sprint 92",
+    "items": [
+      {
+        "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+        "state": "Done",
+        "order": 1,
+        "actualEffort": 4,
+        "detail": "",
+        "title": "Planning (Lunes 27 y Lunes 4)",
+        "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+        "id": "item-copy-1777282874472",
+        "deletedAt": null,
+        "projectName": "🟣 Meetings",
+        "priority": "Normal",
+        "createdAt": {
+          "type": "firestore/timestamp/1.0",
+          "seconds": 1777282874,
+          "nanoseconds": 472000000
+        },
+        "tasks": [
+          {
+            "projectName": "🟣 Meetings",
+            "priority": "Normal",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777282874,
+              "nanoseconds": 472000000
+            },
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "deletedAt": null,
+            "id": "task-copy-1777282874472-bj0meupol",
+            "detail": "",
+            "title": "Planning",
+            "actualEffort": 2,
+            "order": 1,
+            "state": "Done",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf"
+          },
+          {
+            "state": "Done",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "detail": "",
+            "title": "Planning",
+            "order": 2,
+            "actualEffort": 2,
+            "projectName": "🟣 Meetings",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777282874,
+              "nanoseconds": 472000000
+            },
+            "priority": "Normal",
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "deletedAt": null,
+            "id": "task-copy-1777282874472-t835rstoy"
+          }
+        ]
+      },
+      {
+        "tasks": [
+          {
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "deletedAt": null,
+            "id": "task-copy-1777282884650-f42vk0cvj",
+            "projectName": "🟣 Meetings",
+            "priority": "Normal",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777282884,
+              "nanoseconds": 650000000
+            },
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "state": "Done",
+            "actualEffort": 4,
+            "order": 1,
+            "detail": "",
+            "title": "Dailys"
+          },
+          {
+            "state": "Done",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "detail": "",
+            "title": "Dailys",
+            "actualEffort": 6,
+            "order": 2,
+            "projectName": "🟣 Meetings",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777282884,
+              "nanoseconds": 650000000
+            },
+            "priority": "Normal",
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "deletedAt": null,
+            "id": "task-copy-1777282884650-2ixx2qwhc"
+          }
+        ],
+        "priority": "Normal",
+        "createdAt": {
+          "type": "firestore/timestamp/1.0",
+          "seconds": 1777282884,
+          "nanoseconds": 650000000
+        },
+        "projectName": "🟣 Meetings",
+        "id": "item-copy-1777282884650",
+        "deletedAt": null,
+        "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+        "title": "Dailys Sprint 92",
+        "detail": "",
+        "order": 2,
+        "actualEffort": 10,
+        "state": "Done",
+        "createdBy": "9Iln8ZoXlwO1Tyb47yYf"
+      },
+      {
+        "tasks": [
+          {
+            "projectName": "🟢 APIX",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1776942773,
+              "nanoseconds": 867000000
+            },
+            "priority": "Normal",
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "deletedAt": null,
+            "id": "task-1776942773867",
+            "state": "Done",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "detail": "",
+            "title": "(Front) Implementar y unificar buscador de Establecimientos y Lotes",
+            "actualEffort": 4,
+            "order": 1
+          },
+          {
+            "projectName": "🟢 APIX",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777286048,
+              "nanoseconds": 276000000
+            },
+            "priority": "Normal",
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "deletedAt": null,
+            "id": "task-1777286048276",
+            "state": "Done",
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "detail": "<p>Debería permitir manejar los mapas de los lotes filtrados y con etiqueta.</p><p>Actualizar la forma de buscar la info de campaña, deberíamos tenerlo general al ingresar, que se obtenga la info de todos los lotes del productor.</p>",
+            "title": "Mejorar manejo de campaña",
+            "actualEffort": 10,
+            "order": 2
+          },
+          {
+            "actualEffort": 2,
+            "order": 3,
+            "title": "Generar PRs - Pasaje a Prod",
+            "detail": "",
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "state": "Done",
+            "id": "task-1777892347132",
+            "deletedAt": null,
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "priority": "Normal",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777892347,
+              "nanoseconds": 132000000
+            },
+            "projectName": "🟢 APIX"
+          }
+        ],
+        "id": "item-copy-1777283795815",
+        "deletedAt": null,
+        "assignedUser": "I7daif6FR7UAbtQgXPJq",
+        "createdAt": {
+          "type": "firestore/timestamp/1.0",
+          "seconds": 1777283795,
+          "nanoseconds": 815000000
+        },
+        "priority": "Normal",
+        "projectName": "🟢 APIX",
+        "actualEffort": 16,
+        "order": 4,
+        "title": "Permitir crear etiquetas para poder agrupar los lotes  (productor y admin) Parte 2",
+        "detail": "<p>La idea es dar la opción en la visualización de lotes para que tanto el productor como el admin pueda asociar etiquetas (libres en cuanto a contenido) y que después esas sirvan para poder filtrar en el mapa de google o bien también para los mapas globales.<br>Seguramente se necesiten cambios en front y back.</p>",
+        "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+        "state": "Done"
+      },
+      {
+        "state": "Done",
+        "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+        "title": "Detección de Cultivos + Mapas de Productividad",
+        "detail": "",
+        "actualEffort": 34,
+        "order": 5,
+        "priority": "Normal",
+        "createdAt": {
+          "type": "firestore/timestamp/1.0",
+          "seconds": 1777288413,
+          "nanoseconds": 148000000
+        },
+        "projectName": "🟢 APIX",
+        "id": "item-1777288413148",
+        "deletedAt": null,
+        "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+        "tasks": [
+          {
+            "priority": "High",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777643217,
+              "nanoseconds": 620000000
+            },
+            "projectName": "🟢 APIX",
+            "deletedAt": null,
+            "id": "task-1777643217620",
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "state": "Done",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "title": "Mejora en Cache Object Manager y GEE",
+            "detail": "<p></p>",
+            "order": 1,
+            "actualEffort": 2
+          },
+          {
+            "id": "task-1777289052368",
+            "deletedAt": null,
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "priority": "Normal",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777289052,
+              "nanoseconds": 368000000
+            },
+            "projectName": "🟢 APIX",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "state": "Done",
+            "actualEffort": 3,
+            "order": 2,
+            "title": "Generar set de datos para nuevos lotes",
+            "detail": "<p>Datos productor:</p><p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://docs.google.com/spreadsheets/d/1ZKphSptvtSkENuWdYAjKhAdJkfgzgD1B3oHbJDpOr9E/edit?gid=0#gid=0\">https://docs.google.com/spreadsheets/d/1ZKphSptvtSkENuWdYAjKhAdJkfgzgD1B3oHbJDpOr9E/edit?gid=0#gid=0</a><br>Resultados:<br><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://docs.google.com/spreadsheets/d/1qQNMMnP3D1Uu_f3Psd6_cbW2NH9yg4kAgSJyLTaTYEA/edit?gid=276973675#gid=276973675\">https://docs.google.com/spreadsheets/d/1qQNMMnP3D1Uu_f3Psd6_cbW2NH9yg4kAgSJyLTaTYEA/edit?gid=276973675#gid=276973675</a><br>Docs:<br><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://agroideas-docs.netlify.app/#/diagnostico-cultivos-v3\">https://agroideas-docs.netlify.app/#/diagnostico-cultivos-v3</a></p>"
+          },
+          {
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "state": "Done",
+            "actualEffort": 1,
+            "order": 3,
+            "detail": "<p>Ahora procesa imagenes de indices en paralelo (RECI, NDVI y EVI).<br>También descarga y procesa TIFs en paralelo (batchs de 10).<br>Con estas mejoras el dnpoint deberia ahora demorar unos 4 minutos por lote con fechas entre 2019 y 2026</p>",
+            "title": "Mejoras para el endpoint /productivity-map",
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "id": "task-1777550247301",
+            "deletedAt": null,
+            "projectName": "🟢 APIX",
+            "priority": "Normal",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777550247,
+              "nanoseconds": 301000000
+            }
+          },
+          {
+            "state": "Done",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "title": "Mejorar selección de imágenes para mapas de productividad",
+            "detail": "<p>Por lo que observamos, las imágenes que estan en el medio de la fecha de siembra y punto máximo de índices como RECI, son las que mejores se condicen con las características del lote</p>",
+            "actualEffort": 14,
+            "order": 4,
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777288626,
+              "nanoseconds": 869000000
+            },
+            "priority": "Normal",
+            "projectName": "🟢 APIX",
+            "deletedAt": null,
+            "id": "task-1777288626869",
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf"
+          },
+          {
+            "priority": "Normal",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777458797,
+              "nanoseconds": 128000000
+            },
+            "projectName": "🟢 APIX",
+            "deletedAt": null,
+            "id": "task-1777458797128",
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "title": "Info Munge 1",
+            "detail": "<p>asd</p>",
+            "order": 5,
+            "actualEffort": 1,
+            "state": "Done",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf"
+          },
+          {
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "state": "Done",
+            "actualEffort": 1,
+            "order": 6,
+            "detail": "<p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://agroideas-docs.netlify.app/\">https://agroideas-docs.netlify.app</a><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"http://localhost:5175/#/mapas-productividad?field_id=299\">/#/mapas-productividad?field_id=299</a></p>",
+            "title": "Info Daghero L1",
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "id": "task-1777637097274",
+            "deletedAt": null,
+            "projectName": "🟢 APIX",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777637097,
+              "nanoseconds": 274000000
+            },
+            "priority": "Normal"
+          },
+          {
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "deletedAt": null,
+            "id": "task-1777586087214",
+            "projectName": "🟢 APIX",
+            "priority": "Normal",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777586087,
+              "nanoseconds": 214000000
+            },
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "state": "Done",
+            "order": 7,
+            "actualEffort": 1,
+            "detail": "",
+            "title": "Info H Y M Lomas 2"
+          },
+          {
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "deletedAt": null,
+            "id": "task-1777587081230",
+            "projectName": "🟢 APIX",
+            "priority": "Normal",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777587081,
+              "nanoseconds": 230000000
+            },
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "state": "Done",
+            "order": 8,
+            "actualEffort": 1,
+            "detail": "",
+            "title": "Info La Querencia Isoglio Lote 1"
+          },
+          {
+            "id": "task-1777672336507",
+            "deletedAt": null,
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777672336,
+              "nanoseconds": 507000000
+            },
+            "priority": "Normal",
+            "projectName": "🟢 APIX",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "state": "Done",
+            "order": 9,
+            "actualEffort": 8,
+            "title": "Agregar serie de NDVI mensual en informes climatológicos + Nueva sección Mapas de Productividad",
+            "detail": "<ul><li><p>Ver de mejorar tiempos del endpoint productivity-map</p></li><li><p>Exponer endpoint de manera segura, asegurando solo 1 proceso en background por field_id.</p></li><li><p>Agregar en front seccion beta (solo para admin) en la cual podriamos visualizar toda la misma info que hoy vemos en los docs para mapas de productividad.</p></li></ul><p></p>"
+          },
+          {
+            "deletedAt": null,
+            "id": "task-1778245714974",
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "priority": "Normal",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778245714,
+              "nanoseconds": 974000000
+            },
+            "projectName": "🟢 APIX",
+            "order": 10,
+            "actualEffort": 1,
+            "title": "Info Querencia Elmer L8",
+            "detail": "",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "state": "Done"
+          },
+          {
+            "detail": "",
+            "title": "Info Querencia Daghero L1",
+            "actualEffort": 1,
+            "order": 11,
+            "state": "Done",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "projectName": "🟢 APIX",
+            "priority": "Normal",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778246494,
+              "nanoseconds": 372000000
+            },
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "id": "task-1778246494372",
+            "deletedAt": null
+          }
+        ]
+      },
+      {
+        "tasks": [
+          {
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "deletedAt": null,
+            "id": "task-1777288343426",
+            "projectName": "🟢 APIX",
+            "priority": "High",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777288343,
+              "nanoseconds": 426000000
+            },
+            "order": 1,
+            "actualEffort": 3,
+            "detail": "<p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://app.apix.ag/error-reports?id=42\">https://app.apix.ag/error-reports?id=42</a><br><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://app.apix.ag/error-reports?id=43\">https://app.apix.ag/error-reports?id=43</a></p>",
+            "title": "Errores al cargar Prescripción",
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "state": "Done"
+          },
+          {
+            "projectName": "🟢 APIX",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777118230,
+              "nanoseconds": 892000000
+            },
+            "priority": "High",
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "id": "task-1777118230892",
+            "deletedAt": null,
+            "detail": "<p>El reporte se crea pero si lo creaste desde la campaña 24/25 el informe se crea en la campaña actual 25/26 y queda re confuso, porque vos en la UI seguis viendo que no se creó nada.<br>Hay que verlo porque presta muchísimo a confusión</p>",
+            "title": "Problema UI cuando creas un informe climatológico (también pasa con otros seguro)",
+            "actualEffort": 2,
+            "order": 2,
+            "state": "Done",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf"
+          },
+          {
+            "priority": "High",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777120371,
+              "nanoseconds": 974000000
+            },
+            "projectName": "🟢 APIX",
+            "id": "task-1777120371974",
+            "deletedAt": null,
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "state": "Done",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "title": "Revisar la fuente que se usa para los pluviometros",
+            "detail": "<p>No se condice con info que mostramos en informes climatolocis por ej (esta está ok)</p>",
+            "order": 3,
+            "actualEffort": 3
+          },
+          {
+            "projectName": "🟢 APIX",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777120439,
+              "nanoseconds": 47000000
+            },
+            "priority": "Normal",
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "deletedAt": null,
+            "id": "task-1777120439047",
+            "detail": "",
+            "title": "Cuando cambias de lote hay que asegurar limpiar el parametro view",
+            "order": 4,
+            "actualEffort": 1,
+            "state": "Done",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf"
+          },
+          {
+            "state": "Done",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "detail": "",
+            "title": "En mobile mejorar la legibilidad/zooms de etiquetas de Lotes",
+            "actualEffort": 0,
+            "order": 5,
+            "projectName": "🟢 APIX",
+            "priority": "Normal",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777284968,
+              "nanoseconds": 685000000
+            },
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "id": "task-1777284968685",
+            "deletedAt": null
+          },
+          {
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777383836,
+              "nanoseconds": 344000000
+            },
+            "priority": "Normal",
+            "projectName": "🟢 APIX",
+            "deletedAt": null,
+            "id": "task-1777383836344",
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "title": "Generar PRs y pasaje a Prod",
+            "detail": "",
+            "order": 6,
+            "actualEffort": 1,
+            "state": "Done",
+            "createdBy": "I7daif6FR7UAbtQgXPJq"
+          }
+        ],
+        "priority": "Normal",
+        "createdAt": {
+          "type": "firestore/timestamp/1.0",
+          "seconds": 1777118126,
+          "nanoseconds": 922000000
+        },
+        "projectName": "🟢 APIX",
+        "deletedAt": null,
+        "id": "item-1777118126922",
+        "assignedUser": "I7daif6FR7UAbtQgXPJq",
+        "title": "Ajustes/Mejoras APIX",
+        "detail": "",
+        "actualEffort": 10,
+        "order": 6,
+        "state": "Done",
+        "createdBy": "9Iln8ZoXlwO1Tyb47yYf"
+      },
+      {
+        "state": "Done",
+        "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+        "detail": "<p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://docs.google.com/spreadsheets/d/1KVtuasHkZjrICn0OxnYNYHrL3W4iL8p2KPPL4cTZSa8/edit?usp=sharing\">https://docs.google.com/spreadsheets/d/1KVtuasHkZjrICn0OxnYNYHrL3W4iL8p2KPPL4cTZSa8/edit?usp=sharing</a></p>",
+        "title": "Nueva Web",
+        "actualEffort": 29,
+        "order": 7,
+        "projectName": "🟡 Agroideas WEB",
+        "createdAt": {
+          "type": "firestore/timestamp/1.0",
+          "seconds": 1777283921,
+          "nanoseconds": 571000000
+        },
+        "priority": "Normal",
+        "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+        "deletedAt": null,
+        "id": "item-1777283921570",
+        "tasks": [
+          {
+            "detail": "<p></p>",
+            "title": "Reunión Juani lunes 27",
+            "order": 1,
+            "actualEffort": 1,
+            "state": "Done",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "projectName": "🟡 Agroideas WEB",
+            "priority": "Normal",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777294776,
+              "nanoseconds": 74000000
+            },
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "id": "task-1777294776074",
+            "deletedAt": null
+          },
+          {
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "id": "task-1777469611967",
+            "deletedAt": null,
+            "projectName": "🟡 Agroideas WEB",
+            "priority": "Normal",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777469611,
+              "nanoseconds": 967000000
+            },
+            "actualEffort": 2,
+            "order": 2,
+            "detail": "",
+            "title": "Reunión en Ramona con German y Juani",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "state": "Done"
+          },
+          {
+            "detail": "",
+            "title": "Reunión Jueves 30",
+            "order": 3,
+            "actualEffort": 1,
+            "state": "Done",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "projectName": "🟡 Agroideas WEB",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777554085,
+              "nanoseconds": 97000000
+            },
+            "priority": "Normal",
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "id": "task-1777554085097",
+            "deletedAt": null
+          },
+          {
+            "order": 4,
+            "actualEffort": 2,
+            "detail": "",
+            "title": "Ajustes varios como modo claro/oscuro",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "state": "Done",
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "id": "task-1777762905021",
+            "deletedAt": null,
+            "projectName": "🟡 Agroideas WEB",
+            "priority": "Normal",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777762905,
+              "nanoseconds": 21000000
+            }
+          },
+          {
+            "order": 5,
+            "actualEffort": 7,
+            "detail": "<p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://docs.google.com/spreadsheets/d/1KVtuasHkZjrICn0OxnYNYHrL3W4iL8p2KPPL4cTZSa8/edit?usp=sharing\">https://docs.google.com/spreadsheets/d/1KVtuasHkZjrICn0OxnYNYHrL3W4iL8p2KPPL4cTZSa8/edit?usp=sharing</a></p><ol><li><p>✅Quitar barra header y mantener sólo el menú hamburguesa.</p></li><li><p>✅El logo de agroideas lo usariamos luego del \"Bienvenidos a \"</p></li><li><p>✅Eliminar botón de Comenzar el Futuro</p></li><li><p>✅Agregar texto que pasa juani abajo del \"Bienvenidos a ..\". El texto contendría un resúmen del quienes somos</p></li><li><p>✅Quitar sección del Quiénes Somos de home</p></li><li><p>✅Remodelar sección de las unidades de negocio. Ahora tendríamos 5. Y en mobile deberiamos mostrarlas en un formato de cards apiladas una debajo de la otra (imagen adjunta abajo)</p></li><li><p>Agregar localidades disponibles en el clima</p></li><li><p>Actualizar sección de Mercados ampliando la info mostrada</p></li><li><p>✅ Mostrar siempre menú hamburguesa en mobile</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/734cedea-bfe4-455d-91fe-77c6eac13621_image.png\" alt=\"\"><p></p></li></ol><p></p>",
+            "title": "Ajustar home de acuerdo a lo hablado con Juani",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "state": "Done",
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "id": "task-1777298678794",
+            "deletedAt": null,
+            "projectName": "🟡 Agroideas WEB",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777298678,
+              "nanoseconds": 795000000
+            },
+            "priority": "Normal"
+          },
+          {
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "state": "Done",
+            "order": 6,
+            "actualEffort": 1,
+            "detail": "<p>Quedamos en que todos iríamos agarrando ciertas secciones para acelerar los bocetos/diseños de cada una.</p>",
+            "title": "Reunión Miércoles 6",
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "deletedAt": null,
+            "id": "task-1778087645087",
+            "projectName": "🟡 Agroideas WEB",
+            "priority": "Normal",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778087645,
+              "nanoseconds": 87000000
+            }
+          },
+          {
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "id": "task-1778061480516",
+            "deletedAt": null,
+            "projectName": "🟡 Agroideas WEB",
+            "priority": "Normal",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778061480,
+              "nanoseconds": 516000000
+            },
+            "order": 7,
+            "actualEffort": 15,
+            "detail": "",
+            "title": "Crear sección Clima",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "state": "Done"
+          }
+        ]
+      },
+      {
+        "state": "Done",
+        "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+        "detail": "",
+        "title": "Ajustes API Core",
+        "actualEffort": 3,
+        "order": 8,
+        "projectName": "🔴 Agroideas API",
+        "priority": "Normal",
+        "createdAt": {
+          "type": "firestore/timestamp/1.0",
+          "seconds": 1777319503,
+          "nanoseconds": 131000000
+        },
+        "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+        "id": "item-1777319503131",
+        "deletedAt": null,
+        "tasks": [
+          {
+            "assignedUser": null,
+            "deletedAt": null,
+            "id": "task-1777320797819",
+            "projectName": "🔴 Agroideas API",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777320797,
+              "nanoseconds": 819000000
+            },
+            "priority": "Normal",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "state": "Done",
+            "order": 1,
+            "actualEffort": 0,
+            "detail": "<p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://openrouter.ai/compare/qwen/qwen3.6-35b-a3b/google/gemini-3.1-flash-lite-preview/google/gemini-2.5-flash-lite\">https://openrouter.ai/compare/qwen/qwen3.6-35b-a3b/google/gemini-3.1-flash-lite-preview/google/gemini-2.5-flash-lite</a><br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/4e3c9f80-1e0d-4e37-8bb9-661fd39f0bf5_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/a34d9ab8-fab1-4e13-92c8-21ec0975a6cb_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/871ab073-972c-43d9-83f4-0f90cceea866_image.png\" alt=\"\"><p></p>",
+            "title": "Comparaciones nuevos modelos qwen"
+          },
+          {
+            "title": "Ajustes para filtrado de noticias repetidas",
+            "detail": "<p>También estuve viendo que los audios se guardan siempre con id 0.<br>Tambien vi que no se retornan las noticias en orden descendente.</p>",
+            "actualEffort": 3,
+            "order": 2,
+            "state": "Done",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777379419,
+              "nanoseconds": 233000000
+            },
+            "priority": "Normal",
+            "projectName": "🔴 Agroideas API",
+            "deletedAt": null,
+            "id": "task-1777379419233",
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf"
+          }
+        ]
+      },
+      {
+        "tasks": [
+          {
+            "title": "Revisar redireccion de estados ya que se pierde el filtro",
+            "detail": "<p>Por ejemplo cuando se confirma una orden se pierde el filtro.</p>",
+            "order": 1,
+            "actualEffort": 1,
+            "state": "Done",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "priority": "Normal",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777283499,
+              "nanoseconds": 43000000
+            },
+            "projectName": "🔵 Agroideas-In",
+            "deletedAt": null,
+            "id": "task-copy-1777283499043-y1qh0wjl3",
+            "assignedUser": "I7daif6FR7UAbtQgXPJq"
+          },
+          {
+            "projectName": "🔵 Agroideas-In",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777283499,
+              "nanoseconds": 43000000
+            },
+            "priority": "Normal",
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "id": "task-copy-1777283499043-pqpsvdot8",
+            "deletedAt": null,
+            "state": "Done",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "detail": "",
+            "title": "Agregar una columna nueva con pendiente liquidar en la tabla principal",
+            "order": 2,
+            "actualEffort": 1
+          },
+          {
+            "projectName": "🔵 Agroideas-In",
+            "priority": "Normal",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777283499,
+              "nanoseconds": 43000000
+            },
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "deletedAt": null,
+            "id": "task-copy-1777283499043-cf3va65pm",
+            "state": "Done",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "detail": "",
+            "title": "En los filtros de fecha rapido agregar uno nuevo que sea los dos ultimos dias",
+            "order": 3,
+            "actualEffort": 0
+          },
+          {
+            "projectName": "🔵 Agroideas-In",
+            "priority": "Normal",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777283499,
+              "nanoseconds": 43000000
+            },
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "id": "task-copy-1777283499043-3u18qwim8",
+            "deletedAt": null,
+            "detail": "",
+            "title": "Agregar icono para visualizar el detalle resumen y que deje descargar en pdf",
+            "order": 4,
+            "actualEffort": 4,
+            "state": "Done",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf"
+          },
+          {
+            "detail": "<img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/e97642c5-7f06-441b-b34c-3c173b032dd1_image.png\" alt=\"\"><p></p>",
+            "title": "Permitir que los vendedores puedan seleccionar distintas campañas al crear orden",
+            "actualEffort": 0,
+            "order": 5,
+            "state": "Done",
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "projectName": "🔵 Agroideas-In",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777920754,
+              "nanoseconds": 424000000
+            },
+            "priority": "Normal",
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "deletedAt": null,
+            "id": "task-1777920754424"
+          }
+        ],
+        "id": "item-copy-1777283499043",
+        "deletedAt": null,
+        "assignedUser": "I7daif6FR7UAbtQgXPJq",
+        "priority": "Normal",
+        "createdAt": {
+          "type": "firestore/timestamp/1.0",
+          "seconds": 1777283499,
+          "nanoseconds": 43000000
+        },
+        "projectName": "🔵 Agroideas-In",
+        "actualEffort": 9,
+        "order": 9,
+        "title": "Ajustes Órdenes de Venta",
+        "detail": "",
+        "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+        "state": "Done"
+      },
+      {
+        "tasks": [
+          {
+            "order": 1,
+            "actualEffort": 1,
+            "detail": "",
+            "title": "Refinar",
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "state": "Done",
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "id": "task-1778089817286",
+            "deletedAt": null,
+            "projectName": "🟢 APIX",
+            "priority": "Normal",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778089817,
+              "nanoseconds": 286000000
+            }
+          },
+          {
+            "deletedAt": null,
+            "id": "task-1778091396171",
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778091396,
+              "nanoseconds": 171000000
+            },
+            "priority": "Normal",
+            "projectName": "🟢 APIX",
+            "order": 2,
+            "actualEffort": 6,
+            "title": "Front",
+            "detail": "<ul><li><p>(3 horas)Adaptar análisis nutricional para permitir cargar los archivos. La idea es agregar un tipo nuevo que sea Mapa de Picados, este funciona muy parecido a Mapa de rendimiento, solo que cambia los campos a validar.</p></li><li><p>(4 horas )Agregar un informe nuevo que sea Mapas de Picados para visualizar la info. La idea es que sea como Mapa de rendimiento, pero mas simple, sin el tema de fecha de siembra.</p></li></ul><p></p>",
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "state": "Done"
+          },
+          {
+            "projectName": "🟢 APIX",
+            "priority": "Normal",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778091598,
+              "nanoseconds": 200000000
+            },
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "id": "task-1778091598200",
+            "deletedAt": null,
+            "state": "Done",
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "detail": "<p>Back APIX:</p><ul><li><p>(1 hora) Nuevos endpoint para el Informe de Mapa de Picado (GET, POST, PATCH y DELETE)</p></li></ul><p></p><p>Back A:</p><ul><li><p>Adaptar DB para guardar el nuevo tipo.</p></li><li><p>(3 horas) Agregar endpoint nuevos para Informe de Picado (GET, POST, PATCH y DELETE)</p></li><li><p>(3 horas) Agregar Mapa de Picado nueva al proceso de ambientación (análisis nutricional)</p></li></ul><p></p>",
+            "title": "Back",
+            "actualEffort": 6,
+            "order": 3
+          }
+        ],
+        "assignedUser": "I7daif6FR7UAbtQgXPJq",
+        "deletedAt": null,
+        "id": "item-1777286514062",
+        "projectName": "🟢 APIX",
+        "priority": "Normal",
+        "createdAt": {
+          "type": "firestore/timestamp/1.0",
+          "seconds": 1777286514,
+          "nanoseconds": 62000000
+        },
+        "actualEffort": 13,
+        "order": 10,
+        "detail": "<p>Agregar una opción nueva en análisis nutricional:</p><ul><li><p>Mapa de picado/herlaje</p></li></ul><p>Al igual que en mapa de rendimiento se debe permitir seleccionar el campo a ambientar y también el/los campos a usar para limpieza usando desvió estándar. Tener en cuenta también este documento que indica otras cuestiones a tener en cuenta en la limpieza:<br><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://docs.google.com/document/d/1HNbzUecEb37_7RuyD6McGdKbGfF_BBbdkD1sFw1fyd4/edit?tab=t.0#heading=h.agod4sudkywk\"><u>https://docs.google.com/document/d/1HNbzUecEb37_7RuyD6McGdKbGfF_BBbdkD1sFw1fyd4/edit?tab=t.0#heading=h.agod4sudkywk</u></a></p><p>Después seria agregar un informe nuevo que muestre la info como Mapa de rendimiento.</p><p>En el informe manejarlo como MR y la unidad en Tn/Ha</p>",
+        "title": "Mapas de Picado",
+        "createdBy": "I7daif6FR7UAbtQgXPJq",
+        "state": "Done"
+      },
+      {
+        "title": "Ajustes/Mejoras APIX (parte 3)",
+        "detail": "",
+        "actualEffort": 9,
+        "order": 11,
+        "state": "Done",
+        "createdBy": "I7daif6FR7UAbtQgXPJq",
+        "tasks": [
+          {
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "deletedAt": null,
+            "id": "task-1777902518756",
+            "projectName": "🟢 APIX",
+            "priority": "Medium",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777902518,
+              "nanoseconds": 756000000
+            },
+            "actualEffort": 2,
+            "order": 1,
+            "detail": "",
+            "title": "Mejorar tiempos al obtener todos los procesos de los lotes del productor",
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "state": "Done"
+          },
+          {
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "id": "task-1778005914854",
+            "deletedAt": null,
+            "projectName": "🟢 APIX",
+            "priority": "Medium",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778005914,
+              "nanoseconds": 854000000
+            },
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "state": "Done",
+            "actualEffort": 2,
+            "order": 2,
+            "detail": "<p>Hay que sacar el parencField de la URL (no se debería usar mas)</p><p>Hay que dejar todos los marker activos de los lotes siempre y solo ir jugando con el zoom.</p><p>Ver cuando se limpia el lote, debería hacer zoom y mostrar todos los lotes del productor.</p>",
+            "title": "Mejoras manejo lotes mapa de google"
+          },
+          {
+            "state": "Done",
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "title": "Informe NItratos - agregar cultivos",
+            "detail": "<img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/35c5d7b3-5351-4890-b640-98b03f27961a_image.png\" alt=\"\"><p>Los 4 cultivos por debajo de soja, habría que agregar</p>",
+            "actualEffort": 2,
+            "order": 3,
+            "priority": "Medium",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777981309,
+              "nanoseconds": 746000000
+            },
+            "projectName": "🟢 APIX",
+            "deletedAt": null,
+            "id": "task-1777981309746",
+            "assignedUser": "I7daif6FR7UAbtQgXPJq"
+          },
+          {
+            "projectName": "🟢 APIX",
+            "priority": "Medium",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778066545,
+              "nanoseconds": 727000000
+            },
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "id": "task-1778066545727",
+            "deletedAt": null,
+            "state": "Done",
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "detail": "<p>Esto entiendo que debería hacerse por base de datos, es lo mas rápido.</p>",
+            "title": "Asignar por defecto la etiqueta del establecimiento a cada lote",
+            "order": 4,
+            "actualEffort": 1
+          },
+          {
+            "deletedAt": null,
+            "id": "task-1777902561031",
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "priority": "Medium",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1777902561,
+              "nanoseconds": 31000000
+            },
+            "projectName": "🟢 APIX",
+            "actualEffort": 2,
+            "order": 5,
+            "title": "Mapas globales - zoom mapa de google",
+            "detail": "<p>Parece que en algunos casos retorna mas de una imagen y se superponen. Revisar el back para ver que retorna.<br>Con las ultimas mejoras de zoom, parendfield, marker, etc quedo mal el funcionamiento en cuanto a los marker, revisar y también ver como se comporta cuando navegas teniendo un mapa global seleccionado.</p><p>Agregar a nivel informativo (icono con info) como funciona los mapas globales, mas que nada que lote tiene en cuenta.</p><p>Revisar también el zoom del mapa de Google, no debería tener en cuenta la Header Bar.</p>",
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "state": "Done"
+          },
+          {
+            "detail": "",
+            "title": "Generar PRs - Pasaje a producción",
+            "order": 6,
+            "actualEffort": 0,
+            "state": "Done",
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "projectName": "🟢 APIX",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778087787,
+              "nanoseconds": 419000000
+            },
+            "priority": "Normal",
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "id": "task-1778087787419",
+            "deletedAt": null
+          }
+        ],
+        "priority": "Normal",
+        "createdAt": {
+          "type": "firestore/timestamp/1.0",
+          "seconds": 1776874524,
+          "nanoseconds": 217000000
+        },
+        "projectName": "🟢 APIX",
+        "id": "item-1776874524217",
+        "deletedAt": null,
+        "assignedUser": "I7daif6FR7UAbtQgXPJq"
+      }
+    ],
+    "fechaHasta": "2026-05-11T03:00:00.000Z",
+    "workingDays": [
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "id": "sprint-92"
+  },
+  "comments": [
+    {
+      "id": "30wWACmgTsQwrnRyGDdB",
+      "associatedId": "task-1777637097274",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Prescripcion/Mapa rendimiento:</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/630ab3e6-b0e4-4f42-bcb5-7a148d6d623c_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/d9340803-be1b-421f-86c0-4ba3acff5bfe_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/fff558b0-2acf-4931-811a-4b238f6678bf_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/c63cd827-3723-496b-aa35-06400f7b4ca4_image.png\" alt=\"\">",
+      "createdAt": "2026-05-01T12:06:43.010Z",
+      "updatedAt": "2026-05-01T12:06:43.010Z"
+    },
+    {
+      "id": "35EB0rEcWJNOn03BTOrd",
+      "associatedId": "task-1777288626869",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Por el momento estuve corrigiendo los endpoints para que tomen correctamente las lluvias con los últimos ajustes que tenemos en main.<br>También incluir tal info d elluvias en los jsons de mapas de productividad.<br>Ahora queda pendiente editar la lógica de selección de imágenes para que considere aquellas (en el caso de NDVI) que tengan un promedio mayor a 0.35 y que estén anteriores al pico (incluyendolo) de las crestas que marcan los cultivos (sólo 1 o 2 anteiores)</p>",
+      "createdAt": "2026-04-29T13:32:51.850Z",
+      "updatedAt": "2026-04-29T13:32:51.850Z"
+    },
+    {
+      "id": "38fD9l2fAwKcH9BfJ1sN",
+      "associatedId": "task-1778091396171",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Adaptado análisis nutricional:<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/b554e2bd-88a8-45a1-b7ae-0108255ae45a_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/9cc2362b-fc3f-43d9-b65e-a0879c4082ea_image.png\" alt=\"\"><p>También ya se creo la sección del informe en la app:</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/bed73fa5-ff02-48b9-a0d3-a4b7d074c431_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/095217f9-c1c5-482e-b493-8ef6b64bc853_image.png\" alt=\"\"><p>Falta terminar back y ya se empiezan las pruebas.</p>",
+      "createdAt": "2026-05-07T17:10:42.554Z",
+      "updatedAt": "2026-05-07T17:10:42.554Z"
+    },
+    {
+      "id": "3XyGctm7uBGYygapnTQ5",
+      "associatedId": "item-copy-1777283499043",
+      "associatedType": "item",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Rama:<br>\"sprint-92-adjustment\" </p>",
+      "createdAt": "2026-04-30T18:47:50.811Z",
+      "updatedAt": "2026-04-30T18:47:50.811Z"
+    },
+    {
+      "id": "5M29wSfawXCmGDNTSSvs",
+      "associatedId": "task-1777920754424",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "Tarea completada, así quedó el detalle en el changelog:<br>- **Vendedor - Alta orden de venta**: Permitir que el vendedor pueda seleccionar la campaña al crear una orden.",
+      "createdAt": "2026-05-04T19:00:27.182Z",
+      "updatedAt": "2026-05-04T19:00:27.182Z"
+    },
+    {
+      "id": "5UKMenEkdjoqfBVF53Rv",
+      "associatedId": "task-1777120371974",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "Tarea completada, así quedó el detalle en el changelog:<br>-   **Registro pluviométrico mensual**: Cambiada la fuente de datos para obtener la información directamente desde Google Earth Engine (GEE).",
+      "createdAt": "2026-04-28T12:08:21.512Z",
+      "updatedAt": "2026-04-28T12:08:21.512Z"
+    },
+    {
+      "id": "6dtn6RwIMOKz5A5EkjnU",
+      "associatedId": "task-1776942773867",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Quedo todo funcional, tanto en mobile como en desktop (Discutir diseño a lo sumo).</p><p>El buscador (botón flotante que teníamos antes) se comento de momento, ver de borrar si no lo vamos a usar mas.<br>Ahora se permite buscar y a su ves se va mostrando en el mapa de google solo las opciones sugeridas:<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/e235908d-c626-44bf-ae19-85ddd7184ad8_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/1352873a-920f-47ee-a089-73a2994224db_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/87d8e5d6-361f-48a7-ad07-7aa446691f08_image.png\" alt=\"\"><p>En mobile deje siempre visible los de Myselect, ver si gusta o no:<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/0fce6a6d-2305-4163-98d3-5b8a53b8ec3f_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/0c0c2e3b-5ed8-44de-ac24-320b4a5007e5_image.png\" alt=\"\"><p></p>",
+      "createdAt": "2026-04-28T19:47:25.319Z",
+      "updatedAt": "2026-04-28T19:49:08.400Z"
+    },
+    {
+      "id": "7Apthbu7vCZnRqoVhTAH",
+      "associatedId": "task-1776942773867",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "Tarea completada, así quedó el detalle en el changelog:<br>-   **Buscador de lotes unificado**: Se unificó la selección de establecimiento y lote en un solo selector con formato \"Establecimiento - Lote\".<br>    -   Ahora solo se seleccionan lotes (no establecimientos individualmente).<br>    -   Se agregó buscador inteligente que filtra tanto por nombre de establecimiento como por nombre de lote.<br>    -   Al escribir en el buscador, el mapa muestra solo los lotes que coinciden con la búsqueda.<br>    -   El buscador mantiene el texto al cerrar y reabrir, facilitando búsquedas repetidas.<br>    -   Al limpiar el buscador, el mapa muestra automáticamente todos los lotes.<br>    -   Mejora en móviles: los selects se muestran uno al lado del otro sin botón de filtros adicional.<br>    -   Corrección de selección cuando hay lotes con nombres duplicados en diferentes establecimientos.",
+      "createdAt": "2026-04-28T19:48:01.856Z",
+      "updatedAt": "2026-04-28T19:48:01.856Z"
+    },
+    {
+      "id": "7xrkYnErngyPnbuJreIn",
+      "associatedId": "task-1777379419233",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Quedó todo solucionado y funcionando mejor.<br>1. Ahora se filtran mejor las noticias repetidas. Aunque vi que en la generacion de las noticias del agro hubo 2 que hablan del aceite de girasol y son muy similares. Podría mejorarse el filtro que hacemos con IA.<br>2. Los audios se generan ok.<br>3. Las noticias se retornan en orden desc.</p>",
+      "createdAt": "2026-04-28T13:58:03.326Z",
+      "updatedAt": "2026-04-28T13:58:03.326Z"
+    },
+    {
+      "id": "9zTxLby4qLZq6BApCq1x",
+      "associatedId": "task-1777643217620",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>El endpoint de mapas de productividad paso de demorar 120 segundos a 50 segundos. La demora que tiene ahora es por otras cosas propias del endpoint, que tambien pueden mejorarse.<br>La idea es seguir mejorándolo porque este endpoint podriamos llevarlo a prod en breves.</p>",
+      "createdAt": "2026-05-01T13:49:27.198Z",
+      "updatedAt": "2026-05-01T13:49:27.198Z"
+    },
+    {
+      "id": "BC6c0UIXDfnb9JYHEIGy",
+      "associatedId": "task-1777289052368",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/4d44997b-760d-4b23-81f6-75733ccc1645_image.png\" alt=\"\">",
+      "createdAt": "2026-04-27T21:08:51.170Z",
+      "updatedAt": "2026-04-27T21:08:51.170Z"
+    },
+    {
+      "id": "C1flUsy65yUCMjr6vRm0",
+      "associatedId": "task-1777288626869",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Va quedando con bastante pinta.<br>Asi con esta regla:<br>threshold_min = min_value + (max_value - min_value) * 0.15</p><p>threshold_max = max_value - (max_value - min_value) * 0.05</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/0fde5c02-3288-48fb-9be5-0bbc46b82f80_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/4df71926-40a0-4b1f-818f-720cab333e79_image.png\" alt=\"\"><p>Asi con estas (filtra las que estan bien cerca del pico):<br>threshold_min = min_value + (max_value - min_value) * 0.15</p><p>threshold_max = max_value - (max_value - min_value) * 0.15<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/9305567d-eaba-43ee-aa16-69a9209d6f3d_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/d6941efd-1487-417c-b488-75dfe83305be_image.png\" alt=\"\"><p></p>",
+      "createdAt": "2026-04-30T18:30:20.821Z",
+      "updatedAt": "2026-04-30T18:33:21.755Z"
+    },
+    {
+      "id": "DXybQlfNFeJD6JV1RP8K",
+      "associatedId": "task-1777920754424",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Listo:</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/2037f1f6-39f9-4983-926e-aa76545b9d20_image.png\" alt=\"\">",
+      "createdAt": "2026-05-04T18:58:04.046Z",
+      "updatedAt": "2026-05-04T18:58:04.046Z"
+    },
+    {
+      "id": "E1cQyznY6TcwbQXT8ZUq",
+      "associatedId": "task-copy-1777283499043-y1qh0wjl3",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "Tarea completada, así quedó el detalle en el changelog:<br>- **Filtros en órdenes de venta**: Mejorada la experiencia de filtrado en el listado de órdenes.<br>    - Los filtros ahora se mantienen al navegar entre crear, editar o confirmar órdenes.<br>    - Al expandir y contraer el panel de filtros, se conservan las selecciones realizadas.<br>    - Corregido el comportamiento del paginador para una mejor visualización en espacios reducidos.",
+      "createdAt": "2026-04-30T20:45:57.262Z",
+      "updatedAt": "2026-04-30T20:45:57.262Z"
+    },
+    {
+      "id": "EEIpiJbxxERmqlptWXco",
+      "associatedId": "task-1778061480516",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Hizo renegar de lo lindo pero ya quedó una primera versión funcionable tanto para mobile y desktop y en ambos modos oscuro/claro. Se lo pasé a a Milagros así que seguramente dsp sigamos trabajándolo, pero por el momento ya cierro la task:<br><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://web-dev-agroideas.netlify.app/clima\">https://web-dev-agroideas.netlify.app/clima</a></p>",
+      "createdAt": "2026-05-07T22:41:38.755Z",
+      "updatedAt": "2026-05-07T22:41:38.755Z"
+    },
+    {
+      "id": "ElDeRDlPpJ5hRLtklubY",
+      "associatedId": "task-1777643217620",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Para GEE vi que al consultar datos del clima (lluvia y temp) siempre se intentaba iniciar la conexion al servicio, aunque los datos los tenemos en db (cache). Esto fue una mejora importante tambien, primero solucionando posibles bloqueos de GEE (que me pasó) y segundo por tema de velocidad.<br><strong>✅ Cambios Realizados</strong></p><p><strong>Archivo</strong>:</p><p>d:\\agroideas\\maizplus_ambientaciones_api\\src\\models\\google_earth_engine\\google_earth_engine_data_<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"http://model.py\">model.py</a></p><p></p><p><strong>Antes</strong> (Búsqueda lineal O(n)):</p><pre><code>python</code></pre><pre><code># Escaneaba TODOS los registros para cada búsqueda</code></pre><p>for record in all_records:</p><p>if <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"http://record.date\">record.date</a> == target_date:</p><p>if abs(record.latitude - latitude) &lt; COORDINATE_TOLERANCE:</p><p>if abs(record.longitude - longitude) &lt; COORDINATE_TOLERANCE:</p><p>return record</p><p><strong>Ahora</strong> (Búsqueda indexada O(log n)):</p><pre><code>python</code></pre><pre><code># Usa índice por coordenadas + búsqueda binaria</code></pre><p>coord_key = (round(latitude, 4), round(longitude, 4))</p><p>if coord_key not in <em>COORDINATE</em>INDEX:</p><p>return None</p><p>&nbsp;</p><p>records_at_coord = <em>COORDINATE</em>INDEX[coord_key]</p><p>idx = bisect.bisect_left([<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"http://r.date\">r.date</a> for r in records_at_coord], target_date)</p><p>&nbsp;</p><p>if idx &lt; len(records_at_coord) and records_at_coord[idx].date == target_date:</p><p>return records_at_coord[idx]</p><h2><strong>🚀 Impacto Esperado</strong></h2><ul><li><p><strong>Reducción de 102.8s a ~5-10s</strong> (&gt;90% de mejora)</p></li></ul><p></p>",
+      "createdAt": "2026-05-01T14:26:48.348Z",
+      "updatedAt": "2026-05-01T14:28:16.459Z"
+    },
+    {
+      "id": "GRsrtnL4iw8S3ppQUzGB",
+      "associatedId": "task-1778091598200",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Listos los endpoint de Back de APix.</p>",
+      "createdAt": "2026-05-07T17:22:27.103Z",
+      "updatedAt": "2026-05-07T17:22:27.103Z"
+    },
+    {
+      "id": "H1Mgkjyd3BO6s21hZ42K",
+      "associatedId": "task-copy-1777283499043-y1qh0wjl3",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Listo, ya mantiene los filtros y la url en todos los casos. Además hice correcciones en los filtros, cunado se expandía y después se contraía se perdía el filtro, esto esta solucionado.</p>",
+      "createdAt": "2026-04-30T20:32:43.274Z",
+      "updatedAt": "2026-04-30T20:32:43.274Z"
+    },
+    {
+      "id": "JZbImGbm2WzWW7R31M7j",
+      "associatedId": "task-1777288343426",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Se hicieron los ajustes sobre ambos casos y ya quedo resuelto:<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/0c00f697-599b-4e31-8c73-828587f1897d_image.png\" alt=\"\">",
+      "createdAt": "2026-04-27T14:14:05.718Z",
+      "updatedAt": "2026-04-27T14:14:05.718Z"
+    },
+    {
+      "id": "Jf4VVqJ7veMlHdEnTaho",
+      "associatedId": "task-1777118230892",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "Tarea completada, así quedó el detalle en el changelog:<br>-   **Refresco de Informes**: Unificada la lógica de actualización de datos al cargar o editar informes en todas las secciones, mejorando el rendimiento, la consistencia y el control del manejo de campañas al crear nuevos informes.",
+      "createdAt": "2026-04-27T17:19:21.833Z",
+      "updatedAt": "2026-04-27T17:19:21.833Z"
+    },
+    {
+      "id": "Lsyt1E6tDVwvewZiD5Jr",
+      "associatedId": "task-1777637097274",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Mapa productividad:</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/85e36b34-d729-4e31-8ce3-03f0d36ca760_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/0bb25c92-e7f4-4f36-86f7-41348aa9c8a4_image.png\" alt=\"\">",
+      "createdAt": "2026-05-01T12:07:27.516Z",
+      "updatedAt": "2026-05-01T12:07:27.516Z"
+    },
+    {
+      "id": "MFYsccSESz7crmKqcO6i",
+      "associatedId": "task-1778087787419",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>05/05/2026 -🌽Mejorar manejo lotes mapa de google:<br>Front --&gt;&nbsp; <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://dev.azure.com/agroideassa/Sistemas/_git/apix-front/pullrequest/1770\">https://dev.azure.com/agroideassa/Sistemas/_git/apix-front/pullrequest/1770</a><br>Front --&gt; <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://dev.azure.com/agroideassa/Sistemas/_git/apix-front/pullrequest/1771\">https://dev.azure.com/agroideassa/Sistemas/_git/apix-front/pullrequest/1771</a><br><br>06/05/2026 -🌽Ajustes/Mejoras APIX :<br>Front --&gt;&nbsp; <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://dev.azure.com/agroideassa/Sistemas/_git/apix-front/pullrequest/1775\">https://dev.azure.com/agroideassa/Sistemas/_git/apix-front/pullrequest/1775</a><br>Back-A --&gt;&nbsp; <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://dev.azure.com/agroideassa/Sistemas/_git/maizplus-ambientaciones-api/pullrequest/1774\">https://dev.azure.com/agroideassa/Sistemas/_git/maizplus-ambientaciones-api/pullrequest/1774</a></p>",
+      "createdAt": "2026-05-06T17:49:35.793Z",
+      "updatedAt": "2026-05-06T17:49:35.793Z"
+    },
+    {
+      "id": "O85UybrQjb8TOCaItxfW",
+      "associatedId": "task-1777586087214",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Así poniendo filtro de NDVI MAX y MIN de 0.6 y 0.31:<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/36c4af16-4a1a-44ba-a574-f7143ea0c424_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/0baf9560-b6fb-4a1f-b857-e2df2fb2c0f9_image.png\" alt=\"\">",
+      "createdAt": "2026-04-30T22:08:13.303Z",
+      "updatedAt": "2026-04-30T22:08:13.303Z"
+    },
+    {
+      "id": "OiYt4efodxa7oHAcZ8t2",
+      "associatedId": "task-1777118230892",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Listo, quedo funcional para que se actualice la campaña al cargar un informe nuevo, además se unifico código repetido referente a la función de refrescar info, se encapsulo todo en una función para que sea mas sencillo de mantener.</p>",
+      "createdAt": "2026-04-27T17:19:18.413Z",
+      "updatedAt": "2026-04-27T17:19:18.413Z"
+    },
+    {
+      "id": "P3RoBTO443n4j9ku4p9c",
+      "associatedId": "task-copy-1777283499043-3u18qwim8",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "Tarea completada, así quedó el detalle en el changelog:<br>- **Visualización de resumen de órdenes**: Nuevo ícono de ojo en el listado de órdenes para visualizar resumen detallado.<br>    - Disponible para órdenes en estado \"Confirmada\" o \"Pagado\".<br>    - Modal con diseño idéntico a la página completa de orden de venta, incluyendo logos y estilos.<br>    - Opción para compartir enlace directo al resumen.<br>    - Opción para descargar PDF con el resumen completo (incluyendo logos, bandera y estilos).",
+      "createdAt": "2026-05-04T18:51:57.797Z",
+      "updatedAt": "2026-05-04T18:51:57.797Z"
+    },
+    {
+      "id": "PREeY7ZJkPIM4WZuyscd",
+      "associatedId": "task-1777286048276",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Esta funcional con o sin lotes seleccionados, controlando si hay lotes filtrados o bien alguna etiqueta seleccionada:<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/ed0e790c-cdad-4c9e-8b0d-13a2e69a0729_image.png\" alt=\"\"><p>Se hicieron muchos cambios por atrás, principalmente a la hora de obtener la info de cada lote. al ingresar junto a la info de lotes ahora también viene la información de los procesos asociados, ya no consulta por cada lote para completar la campaña, y por ende arma todo de una en una única pegada, demora un poquito mas, pero no es mucho porque esta en cache todo. Estos cambios son necesarios para poder aplicar después cambios en el manejo de los mapas porque necesitamos solicitar campaña. Sinceramente renegué bastante y todavía no esta finalizado.</p>",
+      "createdAt": "2026-04-29T19:31:22.740Z",
+      "updatedAt": "2026-04-29T19:31:22.740Z"
+    },
+    {
+      "id": "PSMiptHmmD2yIoZlS09e",
+      "associatedId": "task-1777383836344",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>28/04/2026 -🌽 Ajustes/Mejoras APIX:<br>Front --&gt; <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://dev.azure.com/agroideassa/Sistemas/_git/apix-front/pullrequest/1758\">https://dev.azure.com/agroideassa/Sistemas/_git/apix-front/pullrequest/1758</a></p><p>Back-Apix --&gt; <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://dev.azure.com/agroideassa/Sistemas/_git/maizplus-api/pullrequest/1756\">https://dev.azure.com/agroideassa/Sistemas/_git/maizplus-api/pullrequest/1756</a><br>Back-A --&gt; <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://dev.azure.com/agroideassa/Sistemas/_git/maizplus-ambientaciones-api/pullrequest/1757\">https://dev.azure.com/agroideassa/Sistemas/_git/maizplus-ambientaciones-api/pullrequest/1757</a></p>",
+      "createdAt": "2026-04-28T15:37:00.767Z",
+      "updatedAt": "2026-04-28T15:37:00.767Z"
+    },
+    {
+      "id": "PW2SUHJctWyJuvdqXPJB",
+      "associatedId": "task-1777586087214",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Mapa rendimiento:</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/fe08a5db-a9ee-480f-9d1f-c99a5417eaeb_image.png\" alt=\"\">",
+      "createdAt": "2026-04-30T21:55:54.264Z",
+      "updatedAt": "2026-04-30T21:55:54.264Z"
+    },
+    {
+      "id": "PXhZujUYJ7Ckz8rjxeTD",
+      "associatedId": "task-1777458797128",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Mapa rendimiento:</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/df5d234e-1d48-445d-8224-10bbbad15af7_image.png\" alt=\"\">",
+      "createdAt": "2026-04-29T10:33:46.873Z",
+      "updatedAt": "2026-04-29T10:33:46.873Z"
+    },
+    {
+      "id": "Q78RsIKfW2LPRyNWkydM",
+      "associatedId": "task-1777902518756",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "Tarea completada, así quedó el detalle en el changelog:<br>- **Optimización de rendimiento para endpoint de procesos múltiples**: Se implementó batch query optimization en `get_processes_list_of_reports_by_fields` para reducir consultas N+1. Los cambios incluyen:<br>  - Agregado métodos batch `get_records_by_field_ids()` en todos los modelos de reportes (DiagnosticReportModel, RecommendationReportModel, UsefulWaterReportModel, etc.)<br>  - Implementado batch queries para modelos anidados en performance_maps_processes, prescription_reports y penetrometry_reports<br>  - Refactorizado `_get_processes_list_by_field_ids()` para procesar múltiples lotes en una sola ejecución<br>  - Actualizado endpoint `/generals/processes-list-of-reports-by-fields` para usar lógica batch<br>  - Mejora de tipificación en métodos batch para evitar errores de Pyright",
+      "createdAt": "2026-05-05T15:26:10.310Z",
+      "updatedAt": "2026-05-05T15:26:10.310Z"
+    },
+    {
+      "id": "QwItCmFiSaxOYOM6LA5j",
+      "associatedId": "task-1777120371974",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Se cambio la lógica para que ya no use las tablas de pluviómetro. En el back de Apix se habilito un endpoint nuevo para solicitar por fieldId y fecha desde y hasta la info mensualmente. Este por atrás consulta a un endpoint que ya teníamos de GEE que retorna por mes la info.<br>Al ingresar busca los ultimos 12 meses (esto puede demorar la primera ves si consulta a GEE, estoy viendo si se puede mejorar) y muestra la info. Además te arma hasta 7 periodos atrás para visualizar, pero solo solicita la info si se hace click:<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/20a1b70a-2bb7-4405-ac0b-12fec6485c40_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/a1830372-8f57-4f96-89b5-f0028240905e_image.png\" alt=\"\"><p>Con estos cambios no estamos mas atados a tener que tener info en las tablas de pluviómetros, ya que funciona a demanda, pero se vuelve mas pesado y lento la petición, siempre y cuando no tengamos la info en DB.</p>",
+      "createdAt": "2026-04-27T19:39:53.502Z",
+      "updatedAt": "2026-04-27T19:41:42.443Z"
+    },
+    {
+      "id": "SFQzMfOsh4y9QJvlvD4Y",
+      "associatedId": "task-1777587081230",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Mapa rendimiento y prescri:<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/35404dc1-f682-42f7-ae2a-aa80d69c104c_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/1806a12c-3217-4278-94fa-62af5ef0d421_image.png\" alt=\"\">",
+      "createdAt": "2026-04-30T22:11:55.831Z",
+      "updatedAt": "2026-04-30T22:11:55.831Z"
+    },
+    {
+      "id": "TBIQLJDBnC21pceQ604O",
+      "associatedId": "task-1777289052368",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Generé info de todos estos lotes nuevos:<br>###</p><p># Endpoint de diagnóstico agronómico avanzado - La Querencia SRL Daghero L 1</p><p>GET <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"http://127.0.0.1:8000/v1/field-crop-diagnostic?field_id=299&amp;date_from=2019-01-01&amp;date_to=2026-04-27\">http://127.0.0.1:8000/v1/field-crop-diagnostic?field_id=299&amp;date_from=2019-01-01&amp;date_to=2026-04-27</a></p><p>Content-Type: application/json</p><p>###</p><p># Endpoint de diagnóstico agronómico avanzado - La Querencia SRL Munge 2</p><p>GET <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"http://127.0.0.1:8000/v1/field-crop-diagnostic?field_id=301&amp;date_from=2019-01-01&amp;date_to=2026-04-27\">http://127.0.0.1:8000/v1/field-crop-diagnostic?field_id=301&amp;date_from=2019-01-01&amp;date_to=2026-04-27</a></p><p>Content-Type: application/json</p><p>###</p><p># Endpoint de diagnóstico agronómico avanzado - La Querencia SRL Lote 3</p><p>GET <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"http://127.0.0.1:8000/v1/field-crop-diagnostic?field_id=302&amp;date_from=2019-01-01&amp;date_to=2026-04-27\">http://127.0.0.1:8000/v1/field-crop-diagnostic?field_id=302&amp;date_from=2019-01-01&amp;date_to=2026-04-27</a></p><p>Content-Type: application/json</p><p>###</p><p># Endpoint de diagnóstico agronómico avanzado - La Querencia SRL Lote 9</p><p>GET <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"http://127.0.0.1:8000/v1/field-crop-diagnostic?field_id=303&amp;date_from=2019-01-01&amp;date_to=2026-04-27\">http://127.0.0.1:8000/v1/field-crop-diagnostic?field_id=303&amp;date_from=2019-01-01&amp;date_to=2026-04-27</a></p><p>Content-Type: application/json<br>###</p><p># Endpoint de diagnóstico agronómico avanzado - La Querencia SRL LQ L 17</p><p>GET <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"http://127.0.0.1:8000/v1/field-crop-diagnostic?field_id=304&amp;date_from=2019-01-01&amp;date_to=2026-04-27\">http://127.0.0.1:8000/v1/field-crop-diagnostic?field_id=304&amp;date_from=2019-01-01&amp;date_to=2026-04-27</a></p><p>Content-Type: application/json</p>",
+      "createdAt": "2026-04-27T18:27:19.316Z",
+      "updatedAt": "2026-04-27T20:30:53.982Z"
+    },
+    {
+      "id": "TFV2rRRj8rMDp7w7rQZ5",
+      "associatedId": "task-1778005914854",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "Tarea completada, así quedó el detalle en el changelog:<br>-   **URL de lotes simplificada y consistente**: Se elimina el uso de `parentField` en query params y se unifica el contrato de URL usando solo `fieldId`, `campaign` y `view`.<br><br>    -   Al cambiar de lote se limpia `view` automáticamente y se conserva la última `campaign` seleccionada.<br>    -   Al deseleccionar lote se limpian `fieldId`, `campaign` y `view` para evitar estado residual en la navegación.<br>    -   Se mantiene compatibilidad con URLs históricas que incluyan `parentField` (se ignora sin romper el flujo).<br><br>-   **Mapa con labels siempre activos (excepto overlays temáticos)**: Se ajusta la lógica de filtros y búsquedas para priorizar solo el viewport sin desmontar labels/markers base.<br><br>    -   Buscar lotes o filtrar por tags ahora reencuadra el mapa sin ocultar/recrear labels de campos.<br>    -   El ocultado/restauración de labels queda acotado a capas temáticas de agua/lluvia para evitar superposición visual.<br>    -   Se corrige el foco por etiquetas para que el zoom use correctamente los lotes filtrados por tag cuando hay selección activa.<br><br>-   **Convivencia entre buscador y etiquetas**: Se unifica el comportamiento para evitar conflictos de interpretación entre filtros.<br>    -   Si se usa el buscador con un tag activo, el tag se limpia automáticamente y el zoom pasa a los resultados de búsqueda.<br>    -   Si se selecciona un tag con búsqueda activa, se limpia la búsqueda y el zoom pasa a los lotes del tag.<br>    -   El mapa alterna de forma consistente entre ambas fuentes de filtro según la última interacción del usuario.<br><br>-   **Restauración de contorno KMZ al seleccionar lote**: Se mejora la visualización del perímetro del lote seleccionado con ajuste de zoom correcto.<br>    -   Al cambiar de lote se limpia el KMZ anterior y se muestra solo el del nuevo lote.<br>    -   Al deseleccionar lote se remueve el perímetro KMZ activo.",
+      "createdAt": "2026-05-05T20:01:40.419Z",
+      "updatedAt": "2026-05-05T20:01:40.419Z"
+    },
+    {
+      "id": "TFpp5IE2kc4lOIHcUOFi",
+      "associatedId": "task-1778005914854",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>05/05/2026 -🌽Mejorar manejo lotes mapa de google:<br>Front --&gt;&nbsp; <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://dev.azure.com/agroideassa/Sistemas/_git/apix-front/pullrequest/1770\">https://dev.azure.com/agroideassa/Sistemas/_git/apix-front/pullrequest/1770</a><br>Front --&gt; <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://dev.azure.com/agroideassa/Sistemas/_git/apix-front/pullrequest/1771\">https://dev.azure.com/agroideassa/Sistemas/_git/apix-front/pullrequest/1771</a></p>",
+      "createdAt": "2026-05-05T20:30:17.641Z",
+      "updatedAt": "2026-05-05T20:30:17.641Z"
+    },
+    {
+      "id": "TJjue110mzluJ6GeiI5t",
+      "associatedId": "task-1777892347132",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>04/05/2026 -🌽Permitir crear etiquetas para poder agrupar los lotes (productor y admin):<br>Front --&gt; <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://dev.azure.com/agroideassa/Sistemas/_git/apix-front/pullrequest/1761\">https://dev.azure.com/agroideassa/Sistemas/_git/apix-front/pullrequest/1761</a><br>Back-Apix --&gt; <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://dev.azure.com/agroideassa/Sistemas/_git/maizplus-api/pullrequest/1763\">https://dev.azure.com/agroideassa/Sistemas/_git/maizplus-api/pullrequest/1763</a><br>Back-A --&gt; <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://dev.azure.com/agroideassa/Sistemas/_git/maizplus-ambientaciones-api/pullrequest/1762\">https://dev.azure.com/agroideassa/Sistemas/_git/maizplus-ambientaciones-api/pullrequest/1762</a></p>",
+      "createdAt": "2026-05-04T13:51:27.385Z",
+      "updatedAt": "2026-05-04T13:52:58.147Z"
+    },
+    {
+      "id": "TgJOjDTU8Sb383BxdV2r",
+      "associatedId": "task-1778246494372",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>MP (analisis) / Prescri / MP nuestro:<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/c81b24ab-a613-42e2-89e7-b684e57b4c76_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/9caa0fce-0876-43e2-8d0c-f3e12d37e57a_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/d01d32cc-00cc-454a-adc7-7f846dc4ddd5_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/ae6fd585-6f5f-4593-9262-d295f83f8f7a_image.png\" alt=\"\">",
+      "createdAt": "2026-05-08T14:05:33.114Z",
+      "updatedAt": "2026-05-08T14:05:33.114Z"
+    },
+    {
+      "id": "UIwTENsbtPEeJ1pCLgHQ",
+      "associatedId": "task-1777288626869",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Hasta ahora renegué bastante haciendo mejoras para que funcione todo más rapido y poder acelerar generacion de jsons.<br>Estoy casi terminando la regla de considerar o no imagenes para los mapas.</p>",
+      "createdAt": "2026-04-30T16:32:52.532Z",
+      "updatedAt": "2026-04-30T16:32:52.532Z"
+    },
+    {
+      "id": "UeYnEf6ahHlLXoGCz6xk",
+      "associatedId": "task-copy-1777283499043-pqpsvdot8",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Listo, se ajusto también los anchos de las columnas de las tablas. Para Los tipos de contrato Fijación no se muestra (sale con \"-\"). El campo se visualiza solo para Acopio y vendedor.<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/ea0ce200-fa21-4aba-b653-904b7a2a49aa_image.png\" alt=\"\"><p></p>",
+      "createdAt": "2026-05-04T14:37:49.900Z",
+      "updatedAt": "2026-05-04T14:38:55.051Z"
+    },
+    {
+      "id": "W03HvPyMufLD8jcQsPdh",
+      "associatedId": "task-copy-1777283499043-pqpsvdot8",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "Tarea completada, así quedó el detalle en el changelog:<br>- **Columna \"Pendiente liquidar\" en listado de órdenes**: Agregada nueva columna \"Pendiente liquidar\" en la tabla de órdenes de venta para roles Acopio y Vendedor.<br>    - Muestra la cantidad restante por liquidar (total del contrato menos total liquidado) en kilogramos.<br>    - Para órdenes de tipo \"Fijación\" muestra \"-\" ya que no aplica.<br>    - Incluida en la exportación a Excel con el mismo formato.",
+      "createdAt": "2026-05-04T14:41:31.569Z",
+      "updatedAt": "2026-05-04T14:41:31.569Z"
+    },
+    {
+      "id": "WzOZAesMNvuG1RMV0vlL",
+      "associatedId": "task-copy-1777283499043-cf3va65pm",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Listo, se agrego el nuevo filtro, tiene en cuenta el día actual y el anterior:<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/e0404917-ed6a-45f9-8d74-12e6e1946979_image.png\" alt=\"\">",
+      "createdAt": "2026-05-04T14:48:01.113Z",
+      "updatedAt": "2026-05-04T14:48:01.113Z"
+    },
+    {
+      "id": "XWKZb9JCvY5XZ3WCTdYk",
+      "associatedId": "task-1777288626869",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Agregué la propiedad monthly_summary a la info de /productivity-map. Ahora resta armar un plan para poder armar una propiedad mas, algo como que tenga una lista de las campanas que forman los puntos de cada indice. Así de esta manera luego podremos filtrar imagenes que estan en los picos o cosas asi</p>",
+      "createdAt": "2026-04-29T17:20:09.204Z",
+      "updatedAt": "2026-04-29T17:20:09.204Z"
+    },
+    {
+      "id": "Yf4gqpgOTbZI7uWLSzOM",
+      "associatedId": "task-1777672336507",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Ajusté el menú de opciones para que por defecto abra los Informes, dandole un alto maximo de 300 con scroll a las opciones:<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/3a2e544c-f7ac-4418-8507-288c7a65b8b0_image.png\" alt=\"\">",
+      "createdAt": "2026-05-05T11:21:33.812Z",
+      "updatedAt": "2026-05-05T11:21:33.812Z"
+    },
+    {
+      "id": "Z2SOHfoTjPDGQl6gWNho",
+      "associatedId": "task-1777902561031",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Se hicieron varias mejoras en filtros y también una corrección en al back con respecto a los mapa de rendimientos. Si el proceso tenia mas de un mapa cargado que cumplía con la parámetros de filtro, este terminaba retornando varios, por lo que se superponían varias ambientaciones sobre un mismo lote. Ahora ya retorna uno solo, y el ultimo en esos casos.<br>También se controla si los lotes filtrados tiene información para mostrar en mapas globales, de no cumplir se deshabilita:<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/a9546267-dbc2-4823-82da-b2408a9796a8_image.png\" alt=\"\"><p>Se agrego también información sobre el funcionamiento de pas globales, si se toca el icono abajo a la izquierda te salta la informacion:</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/1ff83b46-17b6-46ad-82db-b1075b5da630_image.png\" alt=\"\"><p></p>",
+      "createdAt": "2026-05-06T16:45:40.525Z",
+      "updatedAt": "2026-05-06T17:06:13.555Z"
+    },
+    {
+      "id": "ZBAzmJWk69AZ9pTfWK5T",
+      "associatedId": "task-1777587081230",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Así poniendo filtro de NDVI MAX y MIN de 0.6 y 0.31:</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/becfd06d-9e9d-4e7d-9008-4068b465f7e8_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/e021c42b-2346-4480-b69b-d64024a6bd11_image.png\" alt=\"\"><p></p>",
+      "createdAt": "2026-04-30T22:14:10.127Z",
+      "updatedAt": "2026-04-30T22:14:23.225Z"
+    },
+    {
+      "id": "a34HgFHPF6T9MW6m5VQw",
+      "associatedId": "task-1778245714974",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>MP (de analisis) / prescri / MP (nuestro)</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/405ef6a9-d37c-47e4-8a20-114e7b9244dd_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/edaf6204-19f4-4ba5-a7b4-6f3eb34d5eb8_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/87c0fe19-4e14-4119-b53a-84fe7600efdc_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/8cf45cb7-a6e9-4975-b03b-3c804f1e7164_image.png\" alt=\"\">",
+      "createdAt": "2026-05-08T13:21:11.362Z",
+      "updatedAt": "2026-05-08T13:21:11.362Z"
+    },
+    {
+      "id": "aEPuS2yTLD2v20rkFjF1",
+      "associatedId": "item-1777286514062",
+      "associatedType": "item",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Rama:<br>\"sprint-92-chopping-maps\"</p>",
+      "createdAt": "2026-05-07T10:58:29.014Z",
+      "updatedAt": "2026-05-07T10:58:29.014Z"
+    },
+    {
+      "id": "eZq2YDyeUHBxWyLyzLgy",
+      "associatedId": "task-1777320797819",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>El de DeepSeek v4 Flash también tiene muy buenos resultados:<br><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://openrouter.ai/compare/qwen/qwen3.6-35b-a3b/qwen/qwen3.6-flash/deepseek/deepseek-v4-flash\">https://openrouter.ai/compare/qwen/qwen3.6-35b-a3b/qwen/qwen3.6-flash/deepseek/deepseek-v4-flash</a> </p>",
+      "createdAt": "2026-04-27T20:19:51.117Z",
+      "updatedAt": "2026-04-27T20:19:51.117Z"
+    },
+    {
+      "id": "euQSA2EA0fOuC4ctfJJo",
+      "associatedId": "task-1777981309746",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Listo, se agregaron los cultivos y también los requerimientos para los cálculos. Además como hay cultivos nuevos, también se probo que el cambio funcione en toda la app (los cultivos se seleccionan en varios reportes).</p><p>También se hizo un ajuste al crear y editar para que actualice todos los reportes mas rápido (en algunos casos fallaba).<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/c871011c-e3ee-427c-a4a0-be7ea9a9150c_image.png\" alt=\"\">",
+      "createdAt": "2026-05-06T12:59:21.878Z",
+      "updatedAt": "2026-05-06T12:59:21.878Z"
+    },
+    {
+      "id": "hlzUDD3Q0p9b3qXBUTP4",
+      "associatedId": "task-1778066545727",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Listo, ya quedo en producción, ahora se puede elegir las etiquetas en los lotes (establecimientos):<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/cca3eca7-da2c-4975-a243-e30e029dcdac_image.png\" alt=\"\"><p> Al final lo mas practico fue ejecutar una query para esto:<br>UPDATE [dbo].[Establecimientos]</p><p>SET [Tags] =</p><p>    CASE</p><p>        -- Si Tags es NULL o vacío</p><p>        WHEN [Tags] IS NULL OR LTRIM(RTRIM([Tags])) = ''</p><p>            THEN '[\"' + LOWER([ParentField]) + '\"]'</p><p>        -- Si ya tiene datos tipo JSON array</p><p>        ELSE STUFF(</p><p>            [Tags],</p><p>            LEN([Tags]),</p><p>            1,</p><p>            ',\"' + LOWER([ParentField]) + '\"]'</p><p>        )</p><p>    END</p><p>WHERE [FechaBaja] IS NULL</p><p>    AND [ParentField] IS NOT NULL</p><p>    AND LTRIM(RTRIM([ParentField])) &lt;&gt; '';</p>",
+      "createdAt": "2026-05-06T14:24:36.428Z",
+      "updatedAt": "2026-05-06T14:24:36.428Z"
+    },
+    {
+      "id": "htfQPI7wTLVDFwEJJiuK",
+      "associatedId": "task-1777981309746",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "Tarea completada, así quedó el detalle en el changelog:<br>-   **Mejoramos la actualización de informes**: Ahora, al crear o editar un reporte, la información se actualiza automáticamente para mostrar siempre los datos más recientes.<br>-   **Nuevos cultivos en informes de nitratos**: Agregamos soporte para los cultivos colza, carinata, camelina y centeno en los informes de nitratos.<br>-   **Cultivo camelina en todos los procesos**: Ahora puedes usar el cultivo camelina en cualquier proceso de la aplicación.",
+      "createdAt": "2026-05-06T13:07:43.511Z",
+      "updatedAt": "2026-05-06T13:07:43.511Z"
+    },
+    {
+      "id": "iMk7l27ZyreHjQlcm12B",
+      "associatedId": "task-1777289052368",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>###</p><p># Endpoint de diagnóstico agronómico avanzado - La Querencia SRL ISOGLIO 1</p><p>GET <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"http://127.0.0.1:8000/v1/field-crop-diagnostic?field_id=305&amp;date_from=2019-01-01&amp;date_to=2026-04-27\">http://127.0.0.1:8000/v1/field-crop-diagnostic?field_id=305&amp;date_from=2019-01-01&amp;date_to=2026-04-27</a></p><p>Content-Type: application/json</p><p>###</p><p># Endpoint de diagnóstico agronómico avanzado - La Querencia SRL Petronila 1</p><p>GET <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"http://127.0.0.1:8000/v1/field-crop-diagnostic?field_id=306&amp;date_from=2019-01-01&amp;date_to=2026-04-27\">http://127.0.0.1:8000/v1/field-crop-diagnostic?field_id=306&amp;date_from=2019-01-01&amp;date_to=2026-04-27</a></p><p>Content-Type: application/json</p><p>###</p><p># Endpoint de diagnóstico agronómico avanzado - La Querencia SRL RACCA L7</p><p>GET <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"http://127.0.0.1:8000/v1/field-crop-diagnostic?field_id=307&amp;date_from=2019-01-01&amp;date_to=2026-04-27\">http://127.0.0.1:8000/v1/field-crop-diagnostic?field_id=307&amp;date_from=2019-01-01&amp;date_to=2026-04-27</a></p><p>Content-Type: application/json</p>",
+      "createdAt": "2026-04-28T17:09:24.590Z",
+      "updatedAt": "2026-04-28T17:09:24.590Z"
+    },
+    {
+      "id": "ifJiYZmlsTMt7TyonsEn",
+      "associatedId": "task-1777672336507",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Hice algunas mejoras en GEE para consultar los datos climaticos de prec y temp por mes (antes lo haciamos por dia, si bien lo haciamos por lotes en paralelo igual demoraba). Ahora lo unico malo es que al consultar por mes no persistimos los datos en DB, pero bueno, por el momento sirve que sea más rápido.<br>Teniendo ya las IS en DB, el proceso demora 30 segundos, antes demoraba 2 minutos.<br>Teniendo que buscar las IS demora unos 10 minutos. Quizas pueda seguir mejorandose pero por el momento safa.<br>Voy a integrarlo con el front para mencionar esta demora y hacer algo automatico para que la app se quede esperando o validando cuando el proceso termine y se actualice sola.</p>",
+      "createdAt": "2026-05-04T16:07:31.160Z",
+      "updatedAt": "2026-05-04T16:07:31.160Z"
+    },
+    {
+      "id": "j60FGJORHGPkB0a6JKml",
+      "associatedId": "task-1777643217620",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p># 🚀 Optimización Crítica de Cache Object Manager</p><p>## 📊 <strong>Problema Identificado</strong></p><p>- <strong>42.56s</strong> consumidos por list comprehension en [get_all_cached_objects()](cci:1://file:///d:/agroideas/maizplus_ambientaciones_api/src/cache/cache_object_manager.py:103:4-108:39)</p><p>- Múltiples llamadas repetitivas generando el mismo resultado</p><p>- Impacto directo en endpoints como <code>productivity-map</code></p><p>## 🔧 <strong>Solución Implementada</strong></p><p>### <strong>Cache del Resultado</strong></p><p>```python</p><p># Antes (O(n) cada llamada)</p><p>def get_all_cached_objects(self):</p><p>    return [cached_object.object for cached_object in self.cache.values()]</p><p># Ahora (O(1) después de primera llamada)</p><p>def get_all_cached_objects(self):</p><p>    if self._cached_all_objects is None or self._cache_changed():</p><p>        self._cached_all_objects = [cached_object.object for cached_object in self.cache.values()]</p><p>        self._last_cache_size = len(self.cache)</p><p>    return self._cached_all_objects</p><p>```</p><p>### <strong>Invalidación Automática</strong></p><p>- [_invalidate_cache()](cci:1://file:///d:/agroideas/maizplus_ambientaciones_api/src/cache/cache_object_manager.py:114:4-117:34) se ejecuta en todas las operaciones que modifican el cache</p><p>- Detección de cambios mediante comparación de tamaño</p><p>- Cache se regenera solo cuando es necesario</p><p>## 📈 <strong>Impacto de Performance</strong></p><p>| Métrica | Antes | Después | Mejora |</p><p>|---------|-------|---------|--------|</p><p>| Tiempo [get_all_cached_objects()](cci:1://file:///d:/agroideas/maizplus_ambientaciones_api/src/cache/cache_object_manager.py:103:4-108:39) | 42.56s | ~0s | <strong>99.9%</strong> |</p><p>| Llamadas subsiguientes | O(n) | O(1) | <strong>∞</strong> |</p><p>| Memory overhead | Mínimo | +lista cacheada | <strong>Aceptable</strong> |</p><p>## ✅ <strong>Beneficios</strong></p><p>- <strong>Reducción drástica</strong> en tiempo de respuesta del API</p><p>- <strong>Eliminación total</strong> de procesamiento redundante</p><p>- <strong>Transparencia completa</strong> - sin cambios en la interfaz pública</p><p>- <strong>Mantenimiento automático</strong> del cache</p>",
+      "createdAt": "2026-05-01T13:47:07.280Z",
+      "updatedAt": "2026-05-01T13:48:02.575Z"
+    },
+    {
+      "id": "jAk866VaE8feGiem0S6z",
+      "associatedId": "task-1777458797128",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/1ad7aa23-83f3-4eed-bee5-c6cbc2067d93_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/597dfd18-f713-4de4-abf5-24f7e4d1f748_image.png\" alt=\"\">",
+      "createdAt": "2026-04-30T22:25:56.934Z",
+      "updatedAt": "2026-04-30T22:25:56.934Z"
+    },
+    {
+      "id": "jUj6PTDgjYsQrEUxZp8h",
+      "associatedId": "task-1777298678794",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Ver mensajes Juani</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/add41931-2c1a-4149-a395-da48647a41ef_image.png\" alt=\"\">",
+      "createdAt": "2026-04-29T13:34:29.041Z",
+      "updatedAt": "2026-04-29T13:34:29.041Z"
+    },
+    {
+      "id": "jYIMsquvRjZ3K0mRkFZ2",
+      "associatedId": "task-1777288626869",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Ahora dejé corriendo para que genere todos estos lotes con todas las nuevas reglas y ajustes:</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/e84c0b42-002a-4351-9268-c1dd1c02e16c_image.png\" alt=\"\">",
+      "createdAt": "2026-04-30T18:32:19.085Z",
+      "updatedAt": "2026-04-30T18:32:19.085Z"
+    },
+    {
+      "id": "lnIEFY9kladiB9jkC5Du",
+      "associatedId": "task-copy-1777283499043-cf3va65pm",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "Tarea completada, así quedó el detalle en el changelog:<br>- **Filtro rápido de fechas mejorado**: Agregada nueva opción \"Últimos 2 días\" al filtro rápido de fechas en el listado de órdenes de venta.<br>    - Filtra órdenes desde ayer hasta hoy para una consulta más específica.<br>    - Las opciones disponibles ahora son: Hoy, Últimos 2 días, Última semana, Último mes y Últimos 6 meses.",
+      "createdAt": "2026-05-04T14:49:17.874Z",
+      "updatedAt": "2026-05-04T14:49:17.874Z"
+    },
+    {
+      "id": "lvqCrLfDFvl9zmkTvN40",
+      "associatedId": "task-1777288626869",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Por el momento regeneré y formateé los jsons para varios lotes mas:<br><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://agroideas-docs.netlify.app/#/mapas-productividad\">https://agroideas-docs.netlify.app/#/mapas-productividad</a><br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/048c436a-4720-45bb-87c5-ef6ad0b48bdd_image.png\" alt=\"\">",
+      "createdAt": "2026-04-28T22:32:03.265Z",
+      "updatedAt": "2026-04-28T22:32:03.265Z"
+    },
+    {
+      "id": "mHQM2iX7QyF7Ykn3ENEB",
+      "associatedId": "task-1777902561031",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "Tarea completada, así quedó el detalle en el changelog:<br>-   **Mejoras en mapas globales**: Ajustamos el comportamiento del menú para que sea más claro y estable al usar mapas por lote.<br>    -   El mapa ahora tiene mejor ajuste visual al abrir lotes, evitando que queden ocultos al inicio.<br>    -   También mejoramos el zoom de los lotes para que se encuadren mejor en pantalla desde el primer ingreso.<br>    -   Si los lotes seleccionados no tienen información cargada, el botón de mapas se bloquea y muestra un mensaje explicativo.<br>    -   Se agregó un ícono de información en el menú para explicar cómo se toman los lotes en mapas globales.<br>    -   Se mejoraron estilos del menú para que la selección activa se vea más clara y consistente.",
+      "createdAt": "2026-05-06T17:09:48.848Z",
+      "updatedAt": "2026-05-06T17:09:48.848Z"
+    },
+    {
+      "id": "nAjGlyLj8ijpweeM5PwD",
+      "associatedId": "task-1778091396171",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Estaría todo, faltan pruebas y verificar con Euge.</p>",
+      "createdAt": "2026-05-08T19:48:57.538Z",
+      "updatedAt": "2026-05-08T19:48:57.538Z"
+    },
+    {
+      "id": "oaWST6xCpRF5ms3wLKbQ",
+      "associatedId": "task-1777286048276",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Creo que quedo todo, se controla los zoom, el manejo de lotes filtrados, se habilita solo los mapas cuando se tiene menos de 30 lotes, se permite seleccionar campaña en el menu de los mapas, se mejoraron tiempos para obtener info de procesos de cada lote en el back.<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/abb57cb3-0dd4-4a0d-89dc-be4e282c43d2_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/3e54dfd7-b44b-4014-bf61-e083c3cf3387_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/64de4fc8-e451-4bfe-b401-93ed1faf0a36_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/2dac4a3d-4652-441f-837c-dcaaf741e855_image.png\" alt=\"\"><p>Entiendo que esta todo, pero termine muy quemado, por lo que el finde lo vuelvo a probar y después lo paso.</p>",
+      "createdAt": "2026-04-30T18:25:42.972Z",
+      "updatedAt": "2026-04-30T18:27:18.634Z"
+    },
+    {
+      "id": "oexKsQrGZVqf7eIez3RV",
+      "associatedId": "task-1776942773867",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>En Mobile activar de nuevo el botón de Filtrar y que ahí despliegue los myselect.</p><p>Cambiar el placeholder inicial de Lote a Establecimientos y Lotes<br>Dentro poner Buscar por establecimiento y lote.</p>",
+      "createdAt": "2026-04-29T11:23:09.098Z",
+      "updatedAt": "2026-04-29T11:23:18.105Z"
+    },
+    {
+      "id": "qFuZRW7CaJYqgvBwlGAF",
+      "associatedId": "task-1778091598200",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Ya esta funcional todo el circuito de Análisis nutricional:<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/88b312e8-18f0-462f-91ef-db944b9c8271_image.png\" alt=\"\"><p>También ya esta la visualización del informe:<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/4c483d90-8e2e-4fe4-b4d5-2052c73f012f_image.png\" alt=\"\">",
+      "createdAt": "2026-05-08T19:48:26.601Z",
+      "updatedAt": "2026-05-08T19:48:26.601Z"
+    },
+    {
+      "id": "rDWFayikk3ANrzy0Cgme",
+      "associatedId": "task-1777672336507",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>En el back de A tengo todo lo de mapas de productividad, en el que reutilizo funciones para incluir el ndvi en los informes climatológicos.<br>Tengo que revisar todo para no romper nada cuando pase a PROD.<br>El front ya estaría.</p>",
+      "createdAt": "2026-05-01T21:53:15.399Z",
+      "updatedAt": "2026-05-01T21:53:15.399Z"
+    },
+    {
+      "id": "rGMBbwD0tY76RwPOfTFA",
+      "associatedId": "task-1777120439047",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Se hicieron varios cambios para mejorar el funcionamiento, igualmente cuando se unifique establecimiento y lote seguramente haya que revisarlo y hacer mas cambios.</p>",
+      "createdAt": "2026-04-28T13:37:55.065Z",
+      "updatedAt": "2026-04-28T13:37:55.065Z"
+    },
+    {
+      "id": "scCl4UVvuQJzOCakWeWD",
+      "associatedId": "task-1777458797128",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Prescripcion Maiz y Mapa rendi:</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/9e24b550-fcef-4578-96da-6ce5a0e8bfb8_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/df5d234e-1d48-445d-8224-10bbbad15af7_image.png\" alt=\"\"><p></p>",
+      "createdAt": "2026-04-29T10:34:19.967Z",
+      "updatedAt": "2026-04-30T22:23:24.698Z"
+    },
+    {
+      "id": "scN8lVey6gClt4MWbGue",
+      "associatedId": "task-1777288343426",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Se terminaron haciendo varios ajustes:<br></p><ul><li><p>Calculo de semillas totales: No se tenia en cuenta que una de las unidades eta en m, por lo que faltaba hacer la conversión a ha, teniendo en cuenta la distancia entre surcos.</p></li><li><p>Ahora la distancia entre surcos es obligatorio, si no se coloca un valor mayor a 0 no deja guardar.</p></li><li><p>El valor por defecto del campo \"Remover área\" se llevo a 0 (las prescripciones normalmente son de geometrías y ya vienen sin polígonos chicos).</p></li><li><p>Se mejoro el control al validar los archivos SHP. El endpoint que retorna los campos, también ahora valida si tiene valores que se repiten, no sirve de nada tener un archivo donde en cada polígono tiene valores 0 siempre.<br></p></li></ul>",
+      "createdAt": "2026-04-27T15:02:35.280Z",
+      "updatedAt": "2026-04-27T15:02:35.280Z"
+    },
+    {
+      "id": "vPo26rWVuOZaSD6uqXKH",
+      "associatedId": "item-1777118126922",
+      "associatedType": "item",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Rama:<br>sprint-92-apix-settings</p>",
+      "createdAt": "2026-04-27T15:42:13.977Z",
+      "updatedAt": "2026-04-27T15:42:13.977Z"
+    },
+    {
+      "id": "vrJHxBLAwDE6IhUIkL8C",
+      "associatedId": "task-1777284968685",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "Tarea completada, así quedó el detalle en el changelog:<br>-   **Mapa de lotes más claro al navegar**: Mejorada la visualización de los lotes según el nivel de zoom para facilitar la selección en el mapa.",
+      "createdAt": "2026-04-28T13:43:39.420Z",
+      "updatedAt": "2026-04-28T13:43:39.420Z"
+    },
+    {
+      "id": "w0n1pYYBhrlb1CTYyB6i",
+      "associatedId": "task-1777892347132",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Se realizaron correcciones rápidas (error en migración y corrección al probar en producción). Hay cositas que vi y agregue en la Ajustes de Apix. En la brevedad lo voy a ver, son mejoras mas que nada.</p>",
+      "createdAt": "2026-05-04T13:52:38.935Z",
+      "updatedAt": "2026-05-04T13:52:38.935Z"
+    },
+    {
+      "id": "w5qnwsteHzG1DQywjeCk",
+      "associatedId": "task-1777902561031",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Tema zoom, ya se tiene en cuenta la headerbar, ahora lo ajusta mejor.<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/01191df5-7824-42fe-9476-2103b230c99c_image.png\" alt=\"\">",
+      "createdAt": "2026-05-06T14:55:00.285Z",
+      "updatedAt": "2026-05-06T14:55:00.285Z"
+    },
+    {
+      "id": "xrBtNOWAeONxUYCilfJC",
+      "associatedId": "task-copy-1777283499043-3u18qwim8",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Ahí quedo, se agrego un icono para visualizar la orden:<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/b648ee3f-d941-4f77-af54-8e5d9b1b5082_image.png\" alt=\"\"><p>Se abre un modal con las opciones de compartir y de descargar pdf<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/0f97760b-725c-4393-94cd-c204e4cfce1d_image.png\" alt=\"\"><p>Ejemplo pdf:<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/10ae0ca2-9ed6-4888-97d3-3ad2e95b6aca_image.png\" alt=\"\">",
+      "createdAt": "2026-05-04T18:50:10.790Z",
+      "updatedAt": "2026-05-04T18:50:10.790Z"
+    },
+    {
+      "id": "yyyq2XI7jpEB2OFcsvr4",
+      "associatedId": "task-1778091598200",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Se adapto el proceso de análisis nutricional para aceptar mapas de picada (con la lógica de limpieza). Falta probar todo el circuito.</p>",
+      "createdAt": "2026-05-07T19:18:55.158Z",
+      "updatedAt": "2026-05-07T19:18:55.158Z"
+    },
+    {
+      "id": "zrc8RWg3FdffKpH8hIUk",
+      "associatedId": "task-1777902561031",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>El segundo punto debería estar mucho mejor después de los últimos cambios, igualmente ver de probar todo.</p>",
+      "createdAt": "2026-05-06T11:23:32.348Z",
+      "updatedAt": "2026-05-06T11:23:32.348Z"
+    }
+  ],
+  "exportedAt": "2026-05-11T10:36:56.885Z"
+}
