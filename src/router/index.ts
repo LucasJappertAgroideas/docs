@@ -9,7 +9,7 @@ import ComparativaCampos from '@/views/comparativa-campos/ComparativaCampos.vue'
 import MapasProductividad from '@/views/mapas-productividad/MapasProductividad.vue';
 import Index from '@/views/Index.vue';
 import Sprints from '@/views/sistemas/sprints/Sprints.vue';
-import TechIANews from '@/views/TechIANews.vue';
+import TechIANews from '@/views/tech-ai-news/TechIANews.vue';
 
 const router = createRouter({
     history: createWebHashHistory(),
