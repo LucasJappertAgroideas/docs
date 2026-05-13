@@ -1,28 +1,18 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
-import LoteView from '@/views/LoteView.vue';
-import Comparativas from '@/views/Comparativas.vue';
-import DiagnosticoCultivos from '@/views/DiagnosticoCultivos.vue';
-import DiagnosticoCultivosV2 from '@/views/DiagnosticoCultivosV2.vue';
-import DiagnosticoCultivosV3 from '@/views/diagnostico-cultivo-v3/DiagnosticoCultivosV3.vue';
-import DiagnosticoCultivosV4 from '@/views/diagnostico-cultivo-v4/DiagnosticoCultivosV4.vue';
-import ComparativaCampos from '@/views/comparativa-campos/ComparativaCampos.vue';
-import MapasProductividad from '@/views/mapas-productividad/MapasProductividad.vue';
-import Index from '@/views/Index.vue';
-import Sprints from '@/views/sistemas/sprints/Sprints.vue';
-import TechIANews from '@/views/tech-ai-news/TechIANews.vue';
 
+/** Rutas con import dinámico: cada vista (y dependencias pesadas) va a su propio chunk. */
 const router = createRouter({
     history: createWebHashHistory(),
     routes: [
         {
             path: '/',
             name: 'home',
-            component: Index
+            component: () => import('@/views/Index.vue')
         },
         {
             path: '/lotes',
             name: 'lotes',
-            component: LoteView
+            component: () => import('@/views/LoteView.vue')
         },
         {
             path: '/lote',
@@ -45,47 +35,47 @@ const router = createRouter({
         {
             path: '/comparativas',
             name: 'comparativas',
-            component: Comparativas
+            component: () => import('@/views/Comparativas.vue')
         },
         {
             path: '/diagnostico-cultivos',
             name: 'diagnostico-cultivos',
-            component: DiagnosticoCultivos
+            component: () => import('@/views/DiagnosticoCultivos.vue')
         },
         {
             path: '/diagnostico-cultivos-v2',
             name: 'diagnostico-cultivos-v2',
-            component: DiagnosticoCultivosV2
+            component: () => import('@/views/DiagnosticoCultivosV2.vue')
         },
         {
             path: '/diagnostico-cultivos-v3',
             name: 'diagnostico-cultivos-v3',
-            component: DiagnosticoCultivosV3
+            component: () => import('@/views/diagnostico-cultivo-v3/DiagnosticoCultivosV3.vue')
         },
         {
             path: '/diagnostico-cultivos-v4',
             name: 'diagnostico-cultivos-v4',
-            component: DiagnosticoCultivosV4
+            component: () => import('@/views/diagnostico-cultivo-v4/DiagnosticoCultivosV4.vue')
         },
         {
             path: '/comparativa-campos',
             name: 'comparativa-campos',
-            component: ComparativaCampos
+            component: () => import('@/views/comparativa-campos/ComparativaCampos.vue')
         },
         {
             path: '/mapas-productividad',
             name: 'mapas-productividad',
-            component: MapasProductividad
+            component: () => import('@/views/mapas-productividad/MapasProductividad.vue')
         },
         {
             path: '/sistemas/sprints',
             name: 'sprints',
-            component: Sprints
+            component: () => import('@/views/sistemas/sprints/Sprints.vue')
         },
         {
             path: '/tech-ia-news',
             name: 'tech-ia-news',
-            component: TechIANews
+            component: () => import('@/views/tech-ai-news/TechIANews.vue')
         },
         // Redirecciones de rutas antiguas a nueva estructura
         {
