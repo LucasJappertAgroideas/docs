@@ -1,0 +1,1923 @@
+{
+  "prompt": "Generame un resumen del sprint MUY breve (maximo 10-12 lineas por seccion), en formato ideal para WhatsApp, listo para copiar y pegar, asi que no hagas preguntas finales ni saludos o introducciones de ninguna manera.\n\nFormato requerido:\n- Usa el objeto projectEffortSummary para obtener las horas y porcentajes por proyecto (ya están calculados)\n- Organizar por secciones segun el projectName (ej: 🟢 APIX, 🔵 Agroideas-In, 🟡 Agroideas WEB, 🔴 Agroideas API, 🟠 Tracker, 📋 Dashboard, 🟣 Meetings)\n- Cada seccion debe mostrar: \"[emoji] [projectName]: [porcentaje]% ([horas]h) - [items] items, [tasks] tasks\"\n- Priorizar impacto funcional y de negocio por sobre detalles tecnicos\n- Redactar para colegas que no son del area de sistemas (claro, directo y simple)\n- Usar pocos emoticones solo para ayudar a la lectura (sin abusar)\n- Las tareas con esfuerzo 0 considerarlas como mejoras realizadas fuera de horario y mencionarlas como aportes de valor cuando corresponda\n- Agrupar y sintetizar tareas similares en un mismo bullet para evitar exceso de detalle\n- Evitar lenguaje tecnico innecesario",
+  "projectEffortSummary": [
+    {
+      "projectName": "🟢 APIX",
+      "totalHours": 70,
+      "percentage": 45.5,
+      "itemCount": 5,
+      "taskCount": 25
+    },
+    {
+      "projectName": "🔵 Agroideas-In",
+      "totalHours": 43,
+      "percentage": 27.9,
+      "itemCount": 2,
+      "taskCount": 21
+    },
+    {
+      "projectName": "🟣 Meetings",
+      "totalHours": 21,
+      "percentage": 13.6,
+      "itemCount": 2,
+      "taskCount": 5
+    },
+    {
+      "projectName": "🟡 Agroideas WEB",
+      "totalHours": 14,
+      "percentage": 9.1,
+      "itemCount": 1,
+      "taskCount": 3
+    },
+    {
+      "projectName": "🔴 Agroideas API",
+      "totalHours": 6,
+      "percentage": 3.9,
+      "itemCount": 1,
+      "taskCount": 1
+    }
+  ],
+  "totalSprintHours": 154,
+  "sprint": {
+    "fechaHasta": "2026-05-25T03:00:00.000Z",
+    "items": [
+      {
+        "createdAt": {
+          "type": "firestore/timestamp/1.0",
+          "seconds": 1778494790,
+          "nanoseconds": 440000000
+        },
+        "state": "Done",
+        "order": 1,
+        "tasks": [
+          {
+            "detail": "",
+            "projectName": "🟣 Meetings",
+            "priority": "Normal",
+            "id": "task-copy-1778494790440-qiukmzae6",
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "actualEffort": 2,
+            "deletedAt": null,
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "title": "Planning",
+            "order": 1,
+            "state": "Done",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778494790,
+              "nanoseconds": 440000000
+            }
+          },
+          {
+            "title": "Planning",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "deletedAt": null,
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "actualEffort": 2,
+            "id": "task-copy-1778494790440-6ghz3or7r",
+            "priority": "Normal",
+            "projectName": "🟣 Meetings",
+            "detail": "",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778494790,
+              "nanoseconds": 440000000
+            },
+            "state": "Done",
+            "order": 2
+          }
+        ],
+        "title": "Planning (Lunes 11 y Lunes 18)",
+        "deletedAt": null,
+        "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+        "actualEffort": 4,
+        "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+        "priority": "Normal",
+        "id": "item-copy-1778494790440",
+        "projectName": "🟣 Meetings",
+        "detail": ""
+      },
+      {
+        "createdAt": {
+          "type": "firestore/timestamp/1.0",
+          "seconds": 1778494793,
+          "nanoseconds": 892000000
+        },
+        "order": 2,
+        "state": "Done",
+        "tasks": [
+          {
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778494793,
+              "nanoseconds": 892000000
+            },
+            "order": 1,
+            "state": "Done",
+            "priority": "Normal",
+            "id": "task-copy-1778494793892-av13kot4x",
+            "actualEffort": 8,
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "deletedAt": null,
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "title": "Dailys",
+            "detail": "",
+            "projectName": "🟣 Meetings"
+          },
+          {
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778494793,
+              "nanoseconds": 892000000
+            },
+            "state": "Done",
+            "order": 2,
+            "title": "Dailys",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "deletedAt": null,
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "actualEffort": 8,
+            "priority": "Normal",
+            "id": "task-copy-1778494793892-6p3rkkiuj",
+            "projectName": "🟣 Meetings",
+            "detail": ""
+          }
+        ],
+        "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+        "deletedAt": null,
+        "title": "Dailys Sprint 93",
+        "id": "item-copy-1778494793892",
+        "priority": "Normal",
+        "actualEffort": 16,
+        "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+        "projectName": "🟣 Meetings",
+        "detail": ""
+      },
+      {
+        "detail": "",
+        "projectName": "🟢 APIX",
+        "actualEffort": 6,
+        "assignedUser": "I7daif6FR7UAbtQgXPJq",
+        "priority": "Normal",
+        "id": "item-1778495777070",
+        "title": "Mapas de Picado",
+        "createdBy": "I7daif6FR7UAbtQgXPJq",
+        "deletedAt": null,
+        "tasks": [
+          {
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778495817,
+              "nanoseconds": 5000000
+            },
+            "order": 1,
+            "state": "Done",
+            "id": "task-1778495817005",
+            "priority": "Normal",
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "actualEffort": 4,
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "deletedAt": null,
+            "title": "Pruebas finales - Revisión con Euge",
+            "detail": "",
+            "projectName": "🟢 APIX"
+          },
+          {
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778525693,
+              "nanoseconds": 643000000
+            },
+            "state": "Done",
+            "order": 2,
+            "title": "Agregar en Informe de Margen Bruto la posibilidad de usar los mapa de picado",
+            "deletedAt": null,
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "actualEffort": 1,
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "id": "task-1778525693643",
+            "priority": "Normal",
+            "projectName": "🟢 APIX",
+            "detail": ""
+          },
+          {
+            "order": 3,
+            "state": "Done",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778495839,
+              "nanoseconds": 449000000
+            },
+            "projectName": "🟢 APIX",
+            "detail": "",
+            "deletedAt": null,
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "title": "Generar PRs - Pasaje Producción",
+            "id": "task-1778495839449",
+            "priority": "Normal",
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "actualEffort": 1
+          }
+        ],
+        "state": "Done",
+        "order": 4,
+        "createdAt": {
+          "type": "firestore/timestamp/1.0",
+          "seconds": 1778495777,
+          "nanoseconds": 70000000
+        }
+      },
+      {
+        "tasks": [
+          {
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1779302698,
+              "nanoseconds": 526000000
+            },
+            "order": 1,
+            "state": "Done",
+            "deletedAt": null,
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "title": "Eliminar espacios vacios en username y password en login",
+            "id": "task-1779302698526",
+            "priority": "Normal",
+            "actualEffort": 1,
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "projectName": "🔵 Agroideas-In",
+            "detail": "<p>Tambien mejorar la impresion del body en los logs, actualmente se ve Object Object</p>"
+          }
+        ],
+        "state": "Done",
+        "order": 7,
+        "createdAt": {
+          "type": "firestore/timestamp/1.0",
+          "seconds": 1779302651,
+          "nanoseconds": 345000000
+        },
+        "detail": "",
+        "projectName": "🔵 Agroideas-In",
+        "actualEffort": 1,
+        "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+        "priority": "Normal",
+        "id": "item-1779302651345",
+        "title": "Ajustes plataforma AgroideasIn",
+        "deletedAt": null,
+        "createdBy": "9Iln8ZoXlwO1Tyb47yYf"
+      },
+      {
+        "projectName": "🟢 APIX",
+        "detail": "<p>Mejorar la estimación de rendimiento cuando se usa una IS. Usar lo nuevo de mapa de productividad.</p>",
+        "title": "Informe de Margen Bruto",
+        "createdBy": "I7daif6FR7UAbtQgXPJq",
+        "deletedAt": null,
+        "assignedUser": "I7daif6FR7UAbtQgXPJq",
+        "actualEffort": 15,
+        "id": "item-1778249871020",
+        "priority": "Medium",
+        "state": "Done",
+        "order": 8,
+        "tasks": [
+          {
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778513230,
+              "nanoseconds": 415000000
+            },
+            "order": 1,
+            "state": "Done",
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "deletedAt": null,
+            "title": "Refinar",
+            "id": "task-1778513230415",
+            "priority": "Normal",
+            "actualEffort": 2,
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "projectName": "🟢 APIX",
+            "detail": "<p></p>"
+          },
+          {
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "deletedAt": null,
+            "title": "Back - A",
+            "priority": "Normal",
+            "id": "task-1778520713562",
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "actualEffort": 10,
+            "projectName": "🟢 APIX",
+            "detail": "<p>Ver de aplicar esta logica:<br><strong>Viabilidad general</strong></p><ul><li><p><strong>Obtener IS</strong>: ya está resuelto en gran parte en la lógica de productividad.</p></li><li><p><strong>Calcular rendimiento por píxel</strong>: totalmente posible con lo que ya tienen (arrays raster recortados por lote).</p></li><li><p><strong>Promediar por ambiente de prescripción</strong>: también viable; ya hacen cruces espaciales en otros flujos (postcosecha/performance).</p></li></ul><h2><strong>Qué ya existe y se puede reutilizar (alto valor)</strong></h2><ol><li><p><strong>Adquisición de imágenes satelitales</strong></p><ul><li><p><code>satelital_image_cache.get_satelital_images_async(...)</code></p></li><li><p>fallback DB + Sentinel ya implementado.</p></li></ul></li><li><p><strong>Filtrado de registros</strong></p><ul><li><p><code>_filter_records(...)</code> en <code>productivity_map_service.py</code></p></li><li><p>filtra por tipo, fecha, cloud coverage.</p></li></ul></li><li><p><strong>Descarga batch de TIFs</strong></p><ul><li><p><code>download_files_batch(...)</code></p></li></ul></li><li><p><strong>Recorte por geometría de lote</strong></p><ul><li><p><code>clip_raster_by_geometry_from_memory(...)</code></p></li><li><p>ya maneja CRS, nodata→NaN, metadatos de transform.</p></li></ul></li><li><p><strong>Calidad temporal / selección de IS</strong></p><ul><li><p><code>_analyze_trend_sequence(...)</code></p></li><li><p>lógica de selección por racha/pico ya existe en <code>_process_index_data_async</code>.</p></li></ul></li><li><p><strong>Composición temporal robusta por píxel</strong></p><ul><li><p>ya hacen <code>np.nanmedian(stack, axis=0)</code> para mapa histórico.</p></li><li><p>esto sirve directo como base para “índice representativo de cosecha por píxel”.</p></li></ul></li></ol><hr><h2><strong>Qué falta implementar (núcleo nuevo)</strong></h2><ol><li><p><strong>Selector específico “momento de cosecha”</strong></p><ul><li><p>hoy hay filtro temporal general; falta priorizar ventana cosecha (ej. -60/+10 días respecto harvest_date).</p></li><li><p>ranking por cercanía a cosecha + calidad.</p></li></ul></li><li><p><strong>Conversión índice→rendimiento por píxel</strong></p><ul><li><p>función nueva <code>yield_px = f(index_px, crop, campaña)</code>.</p></li><li><p>con clamps agronómicos por cultivo.</p></li></ul></li><li><p><strong>Agregación zonal por ambiente de prescripción</strong></p><ul><li><p>cruzar raster de rendimiento con polígonos de prescripción.</p></li><li><p>devolver <code>yield_by_ambient</code> (media robusta + métricas de calidad opcionales).</p></li></ul></li></ol><hr><h2><strong>Riesgos y cómo mitigarlos</strong></h2><ul><li><p><strong>Mayor riesgo</strong>: calibración índice→kg/ha.</p><ul><li><p>Mitigar con parámetros por cultivo/campaña y límites min/max.</p></li></ul></li><li><p><strong>Riesgo medio</strong>: mala selección temporal de IS.</p><ul><li><p>Mitigar con ventana de cosecha y scoring de calidad.</p></li></ul></li><li><p><strong>Riesgo bajo</strong>: CRS/resolución/nodata.</p><ul><li><p>Ya tienen base sólida en el recorte; solo estandarizar antes del zonal.</p></li></ul></li></ul><hr><h2><strong>Conclusión práctica</strong></h2><ul><li><p><strong>Sí, es viable y recomendable</strong>.</p></li><li><p><strong>Sí, hay bastante reutilizable</strong> de <code>ProductivityMapService</code> para la parte IS.</p></li><li><p>El trabajo nuevo real está en:</p><ol><li><p>selector de IS orientado a cosecha,</p></li><li><p>función de rendimiento por píxel,</p></li><li><p>zonal stats por ambiente de prescripción.</p></li></ol></li></ul><p>Con eso, <code>calculate_gross_margin</code> puede pasar a usar <code>yield_by_ambient</code> derivado de raster, manteniendo fallback al método actual.</p>",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778520713,
+              "nanoseconds": 562000000
+            },
+            "order": 2,
+            "state": "Done"
+          },
+          {
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1779116428,
+              "nanoseconds": 362000000
+            },
+            "order": 3,
+            "state": "Done",
+            "deletedAt": null,
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "title": "Preparar procesos de back para poder generar la relacion entre rendimiento e IS",
+            "priority": "Normal",
+            "id": "task-1779116428362",
+            "actualEffort": 3,
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "projectName": "🟢 APIX",
+            "detail": "<p>Rama:<br>sprint-92-Gross-Margin-Report</p>"
+          }
+        ],
+        "createdAt": {
+          "type": "firestore/timestamp/1.0",
+          "seconds": 1778249871,
+          "nanoseconds": 20000000
+        }
+      },
+      {
+        "tasks": [
+          {
+            "state": "Done",
+            "order": 1,
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778676972,
+              "nanoseconds": 402000000
+            },
+            "detail": "",
+            "projectName": "🟣 Meetings",
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "actualEffort": 1,
+            "priority": "Normal",
+            "id": "task-1778676972402",
+            "title": "Reunion Acopio",
+            "deletedAt": null,
+            "createdBy": "I7daif6FR7UAbtQgXPJq"
+          },
+          {
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778494141,
+              "nanoseconds": 860000000
+            },
+            "order": 2,
+            "state": "Done",
+            "deletedAt": null,
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "title": "Liquidacion parcial",
+            "id": "task-copy-1778494141860-6sw9eoorc",
+            "priority": "Normal",
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "actualEffort": 3,
+            "projectName": "🔵 Agroideas-In",
+            "detail": "<p>El vendedor debe tener la opción de pesificar (tilde)</p><p>El vendedor debe tener la opción de tildar eso, ahi debe pedir la fecha ( actual) los kilos controlando que no supero lo pendiente de liquidar y el tipo de pago (canje por ejemplo)</p>"
+          },
+          {
+            "state": "Done",
+            "order": 3,
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778758009,
+              "nanoseconds": 422000000
+            },
+            "detail": "<p>En la misma sección se debe poder cargar una o varias pesificaciones (solo vendedor) y a su vez también se puede cargar una liquidación parcial.<br>Se debe habilitar solo después de que se confirma la orden (acopio la confirma).</p><p>Circuito Pesificación (solo vendedor):</p><ul><li><p>El vendedor carga la pesificación, cargando fecha de pago (por defecto la actual y con la opción de modificarla), la condición de pago y la cantidad (debe controlarse que no se supere el restante por liquidar). Esa liquidación cuando se carga queda por aprobar (se manda notificaciones a Acopio). Solo se debe permitir si el tipo de orden es \"Nuevo contrato\".</p></li><li><p>Acopio va a ingresar para aceptarla o bien modificar algún dato.</p></li><li><p>Cuando Acopio la acepta se le notifica al vendedor y también esa pesificación pasa a mostrarse como una liquidación parcial (con la aclaración de que es pesificación).</p></li></ul><p></p><p>Circuito de Liquidación Parcial:</p><ul><li><p>Además de la pesificación, se puede cargar una liquidación parcial manual (solo Rol Acopio). Se puede hacer en ambos tipos de ordenes (Fijación y Nuevo contrato). Se debe solicitar también los datos de fecha, condición de pago y cantidad. Esta no necesita aprobación, una ves que se carga ya se debe visualizar. Dar la opción de poder eliminar, solo a estas, la pesificación no.</p></li></ul><p></p>",
+            "projectName": "🔵 Agroideas-In",
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "actualEffort": 6,
+            "id": "task-1778758009422",
+            "priority": "Normal",
+            "title": "Front - Unificar Liquidacion parcial y pesificacion",
+            "deletedAt": null,
+            "createdBy": "I7daif6FR7UAbtQgXPJq"
+          },
+          {
+            "detail": "<ul><li><p>Cuando se carga la pesificación se debe notificar a Acopio.</p></li><li><p>Cuando confirman la pesificación desde acopio se debe notificar al vendedor.</p></li><li><p>Ajustar los endpoint para guardar y editar las liquidaciones parciales, ya sean las manuales como las pesificaciones.</p></li></ul><p></p>",
+            "projectName": "🔵 Agroideas-In",
+            "id": "task-1778758022358",
+            "priority": "Normal",
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "actualEffort": 6,
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "deletedAt": null,
+            "title": "Back - Unificar Liquidacion parcial y pesificacion",
+            "order": 4,
+            "state": "Done",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778758022,
+              "nanoseconds": 358000000
+            }
+          },
+          {
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778759276,
+              "nanoseconds": 763000000
+            },
+            "state": "Done",
+            "order": 5,
+            "title": "Revisar edicion fecha de pago",
+            "deletedAt": null,
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "actualEffort": 0,
+            "priority": "Normal",
+            "id": "task-1778759276763",
+            "projectName": "🔵 Agroideas-In",
+            "detail": "<p>Cuando se esta por vencer (fecha de pago) no permite editar la forma de pago.</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/e0e04ed6-4099-4c78-ac7d-678757f39d84_image.png\" alt=\"\"><p></p>"
+          },
+          {
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778759319,
+              "nanoseconds": 685000000
+            },
+            "state": "Done",
+            "order": 6,
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "actualEffort": 1,
+            "priority": "Normal",
+            "id": "task-1778759319685",
+            "title": "Revisar filtros de fecha",
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "deletedAt": null,
+            "detail": "<p>Revisar filtro de fecha de pago para que no funciona al seleccionar una sola fecha:</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/40c23bfc-6196-4e7f-918d-b58a2f1ab854_image.png\" alt=\"\"><p></p>",
+            "projectName": "🔵 Agroideas-In"
+          },
+          {
+            "projectName": "🔵 Agroideas-In",
+            "detail": "",
+            "title": "Generar PRs - Pasaje a Prod",
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "deletedAt": null,
+            "actualEffort": 1,
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "priority": "Normal",
+            "id": "task-1778871008665",
+            "state": "Done",
+            "order": 7,
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778871008,
+              "nanoseconds": 665000000
+            }
+          },
+          {
+            "deletedAt": null,
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "title": "Quitar las notificaciones y usuarios de prueba en produccion",
+            "priority": "Normal",
+            "id": "task-copy-1778494141860-ehyi2w5jd",
+            "actualEffort": 0,
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "projectName": "🔵 Agroideas-In",
+            "detail": "",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778494141,
+              "nanoseconds": 860000000
+            },
+            "order": 8,
+            "state": "Done"
+          },
+          {
+            "title": "Sacar notificacion que le llegan a  los vendedores de Liquidacion Parcial",
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "deletedAt": null,
+            "actualEffort": 1,
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "id": "task-1779299225176",
+            "priority": "Normal",
+            "projectName": "🔵 Agroideas-In",
+            "detail": "",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1779299225,
+              "nanoseconds": 176000000
+            },
+            "state": "Done",
+            "order": 9
+          },
+          {
+            "detail": "<p>Se debería habilitar para todos los estados, post confirmación.</p>",
+            "projectName": "🔵 Agroideas-In",
+            "id": "task-1779299284763",
+            "priority": "Normal",
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "actualEffort": 0,
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "deletedAt": null,
+            "title": "Revisar la opcion de visualizar orden para descargar pdf",
+            "order": 10,
+            "state": "Done",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1779299284,
+              "nanoseconds": 763000000
+            }
+          }
+        ],
+        "order": 9,
+        "state": "Done",
+        "createdAt": {
+          "type": "firestore/timestamp/1.0",
+          "seconds": 1778757615,
+          "nanoseconds": 811000000
+        },
+        "detail": "",
+        "projectName": "🟢 APIX",
+        "priority": "Normal",
+        "id": "item-1778757615811",
+        "actualEffort": 18,
+        "assignedUser": "I7daif6FR7UAbtQgXPJq",
+        "deletedAt": null,
+        "createdBy": "I7daif6FR7UAbtQgXPJq",
+        "title": "Acopio - Ordenes de venta"
+      },
+      {
+        "state": "Done",
+        "order": 10,
+        "tasks": [
+          {
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778494183,
+              "nanoseconds": 779000000
+            },
+            "state": "Done",
+            "order": 1,
+            "title": "Ajustes para buscador de establecimientos y lotes",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "deletedAt": null,
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "actualEffort": 3,
+            "priority": "Normal",
+            "id": "task-copy-1778494183779-4ndgd0g00",
+            "projectName": "🟢 APIX",
+            "detail": "<ul><li><p>✅ Prevenir esa sugerencia del browser en negro.</p></li><li><p>✅El borde del buscar tiene que ser bastante menos llamativo, ahora compite con el propio del select. Debe ser un verde mas transparente</p></li><li><p>✅El zoom al lote no queda centrado. Incluso si hay un solo lote deberia hacer mas zoom para que se vea la etiqueta completa con las ha</p></li><li><p>✅Al presionar escape que cierre el select</p></li></ul><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/81ab7018-460f-487f-810b-b434a6c4944b_image.png\" alt=\"\"><p></p>"
+          },
+          {
+            "priority": "Normal",
+            "id": "task-1778580471214",
+            "actualEffort": 0,
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "deletedAt": null,
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "title": "Al refrescar la página de lotes se pierde en la url el parametro view",
+            "detail": "",
+            "projectName": "🟢 APIX",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778580471,
+              "nanoseconds": 214000000
+            },
+            "order": 2,
+            "state": "Done"
+          },
+          {
+            "deletedAt": null,
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "title": "Hacer que el div de nueva version se oculte solo luego de 2 o 3 refrescos de pagina",
+            "priority": "Normal",
+            "id": "task-copy-1778494183779-kyr0uz86t",
+            "actualEffort": 1,
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "projectName": "🟢 APIX",
+            "detail": "<p>Actualmente cada vez que actualizamos version, la ventanita que informa de la nueva version (la de abajo a la derecha) se mantiene visible por siempre hasta que el usuario la cierre.<br>La idea es cerrarla luego de x tiempo.</p>",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778494183,
+              "nanoseconds": 779000000
+            },
+            "order": 3,
+            "state": "Done"
+          },
+          {
+            "order": 5,
+            "state": "Done",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778583836,
+              "nanoseconds": 740000000
+            },
+            "detail": "",
+            "projectName": "🟢 APIX",
+            "priority": "Normal",
+            "id": "task-1778583836740",
+            "actualEffort": 1,
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "deletedAt": null,
+            "title": "Usar punto como separador de miles y la coma para decimales"
+          },
+          {
+            "title": "Revisar paddings en analisis nutricional",
+            "deletedAt": null,
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "actualEffort": 0,
+            "priority": "Normal",
+            "id": "task-1778593838305",
+            "projectName": "🟢 APIX",
+            "detail": "<img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/d824d478-11e6-4277-922f-3a5d863c9e63_image.png\" alt=\"\"><p></p>",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778593838,
+              "nanoseconds": 305000000
+            },
+            "state": "Done",
+            "order": 6
+          },
+          {
+            "detail": "",
+            "projectName": "🟢 APIX",
+            "priority": "Normal",
+            "id": "task-1778595438471",
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "actualEffort": 1,
+            "deletedAt": null,
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "title": "Resolver vulnerabilidades de librerías",
+            "order": 7,
+            "state": "Done",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778595438,
+              "nanoseconds": 471000000
+            }
+          },
+          {
+            "order": 8,
+            "state": "Done",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778692246,
+              "nanoseconds": 576000000
+            },
+            "projectName": "🟢 APIX",
+            "detail": "<p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://app.apix.ag/error-reports?id=46\">https://app.apix.ag/error-reports?id=46</a></p>",
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "deletedAt": null,
+            "title": "Error al crear monitor, no toma todos los tipos",
+            "id": "task-1778692246576",
+            "priority": "Normal",
+            "actualEffort": 1,
+            "assignedUser": "I7daif6FR7UAbtQgXPJq"
+          },
+          {
+            "title": "Agregar imagen satelital original",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "deletedAt": null,
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "actualEffort": 2,
+            "priority": "Medium",
+            "id": "task-copy-1778494183779-7e6aacovy",
+            "projectName": "🟢 APIX",
+            "detail": "<p>No se si se podra, pero la idea es agregar otro tipo de imagen como NDVI, EVI, etc, pero que muestre el mapa satelital original que tenia en esa fecha.<br>Lo pidió Juampi porque quiere ver si se pueden distinguir cosas con eso</p>",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778494183,
+              "nanoseconds": 779000000
+            },
+            "state": "Done",
+            "order": 9
+          }
+        ],
+        "createdAt": {
+          "type": "firestore/timestamp/1.0",
+          "seconds": 1778494183,
+          "nanoseconds": 779000000
+        },
+        "projectName": "🟢 APIX",
+        "detail": "",
+        "title": "Ajustes/Mejoras APIX",
+        "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+        "deletedAt": null,
+        "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+        "actualEffort": 9,
+        "priority": "Normal",
+        "id": "item-copy-1778494183779"
+      },
+      {
+        "projectName": "🔵 Agroideas-In",
+        "detail": "",
+        "title": "Ajustes para Juani en Ordenes de pedido",
+        "deletedAt": null,
+        "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+        "assignedUser": "I7daif6FR7UAbtQgXPJq",
+        "actualEffort": 24,
+        "priority": "Normal",
+        "id": "item-1777288134001",
+        "state": "Done",
+        "order": 12,
+        "tasks": [
+          {
+            "title": "Reunión con Juan 19-05-2026",
+            "deletedAt": null,
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "actualEffort": 1,
+            "id": "task-1779191605590",
+            "priority": "Normal",
+            "projectName": "🔵 Agroideas-In",
+            "detail": "",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1779191605,
+              "nanoseconds": 590000000
+            },
+            "state": "Done",
+            "order": 1
+          },
+          {
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1779194936,
+              "nanoseconds": 582000000
+            },
+            "state": "Done",
+            "order": 2,
+            "title": "Alta orden",
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "deletedAt": null,
+            "actualEffort": 4,
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "id": "task-1779194936582",
+            "priority": "Normal",
+            "projectName": "🔵 Agroideas-In",
+            "detail": "<p>En el alta:</p><ul><li><p>En los depósitos ver solo los que tengan productos, los que estén en 0 no.</p></li><li><p>Para Josefina se tiene que mostrar los dos depósitos.</p></li><li><p>Cuando se carga un producto ver de cargar también el lote (opcional porque no todos los productos tiene lotes). Cuando se carga la cantidad debe traer los lotes asociados al deposito y producto, ahí debe el usuario elegir los lotes, mostrando lote, cantidad y fecha de vencimiento.</p></li><li><p>Después abajo después de cantidad mostrar el lote en la grilla de abajo.</p></li></ul><p></p>"
+          },
+          {
+            "projectName": "🔵 Agroideas-In",
+            "detail": "<p>Preparación stockFiller</p><ul><li><p>Para stockFiller cuando prepara mostrar el lote sugerido que se cargo en el alta. Al ingresar que te seleccione por defecto lo que se cargo, pero que pueda editarse.</p></li><li><p>Revisar error, se completa el segundo producto pero manda todo al primero:</p><p></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/3a2e4870-ec00-485a-92af-b11b3f407402_image.png\" alt=\"\"></li></ul><p></p>",
+            "deletedAt": null,
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "title": "Preparación StockFiller",
+            "id": "task-1779194965690",
+            "priority": "Normal",
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "actualEffort": 2,
+            "order": 3,
+            "state": "Done",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1779194965,
+              "nanoseconds": 690000000
+            }
+          },
+          {
+            "detail": "<p>Visualizar orden:</p><ul><li><p>Por producto mostrar la observación, cambiar descripción por observación.</p></li><li><p>La observación general mostrar abajo del destino (grilla principal).</p></li></ul><p></p>",
+            "projectName": "🔵 Agroideas-In",
+            "id": "task-1779195075086",
+            "priority": "Normal",
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "actualEffort": 1,
+            "deletedAt": null,
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "title": "Visualizar orden",
+            "order": 4,
+            "state": "Done",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1779195075,
+              "nanoseconds": 86000000
+            }
+          },
+          {
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1779195084,
+              "nanoseconds": 97000000
+            },
+            "order": 5,
+            "state": "Done",
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "deletedAt": null,
+            "title": "Generar PDF",
+            "priority": "Normal",
+            "id": "task-1779195084097",
+            "actualEffort": 5,
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "projectName": "🔵 Agroideas-In",
+            "detail": "<ul><li><p>Agregar la opción de generar pdf de la visualización de la orden. La idea es agregar un check para seleccionar 1 o varios ordenes para que se habilite un botón de genera pdf y se agregue en un pdf todas las ordenes, separadas entre si para imprimir en una hoja a4 vertical. Agregar por cada orden el estado de la orden.</p></li></ul><p></p>"
+          },
+          {
+            "title": "Sacar el menu y agregar las opciones en la grilla",
+            "deletedAt": null,
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "actualEffort": 2,
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "id": "task-1779288491326",
+            "priority": "Normal",
+            "projectName": "🔵 Agroideas-In",
+            "detail": "<img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/0798cbc6-ab53-4eae-802c-3e7efbe08b26_image.png\" alt=\"\"><p></p>",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1779288491,
+              "nanoseconds": 326000000
+            },
+            "state": "Done",
+            "order": 6
+          },
+          {
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1779305568,
+              "nanoseconds": 32000000
+            },
+            "state": "Done",
+            "order": 7,
+            "title": "Revisar porque no se pueden usar los dos depositos de josefina",
+            "deletedAt": null,
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "actualEffort": 2,
+            "id": "task-1779305568032",
+            "priority": "Normal",
+            "projectName": "🔵 Agroideas-In",
+            "detail": "<p>Juani comenta que hay dos depósitos:<br>DEPOSITO PLANTA JOSEFINA</p><p>DEPOSITO MAIZ PLANTA JOSEFINA<br><br>Pero solo figura el primero al momento de crear una orden.</p>"
+          },
+          {
+            "state": "Done",
+            "order": 8,
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1779359798,
+              "nanoseconds": 290000000
+            },
+            "detail": "",
+            "projectName": "🔵 Agroideas-In",
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "actualEffort": 1,
+            "id": "task-1779359798290",
+            "priority": "Normal",
+            "title": "Generar PRs - Pasaje a Producción",
+            "deletedAt": null,
+            "createdBy": "I7daif6FR7UAbtQgXPJq"
+          },
+          {
+            "order": 9,
+            "state": "Done",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1779382830,
+              "nanoseconds": 210000000
+            },
+            "projectName": "🔵 Agroideas-In",
+            "detail": "<p>Revisar Depósitos de Josefina, los productos que figuran en el de Maiz josefina deberían estar en el de Josefina.</p>",
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "deletedAt": null,
+            "title": "Revisar Depósitos de Josefina",
+            "priority": "Normal",
+            "id": "task-1779382830210",
+            "actualEffort": 1,
+            "assignedUser": "I7daif6FR7UAbtQgXPJq"
+          },
+          {
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "deletedAt": null,
+            "title": "Corecciones post pasaje a prod",
+            "id": "task-1779391365047",
+            "priority": "Normal",
+            "actualEffort": 4,
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "projectName": "🔵 Agroideas-In",
+            "detail": "<ul><li><p>La columna debería llamarse \"Stock\", no \"Disponible\". Los valores deben tener separador de miles.<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/cc37f82b-a5b1-4112-85c2-0251583a1d94_image.png\" alt=\"\"></li><li><p>Agregar fecha de vencimiento del lote en el pdf y en la visualización de la orden.</p></li><li><p>Al crear o editar la orden que no sea obligatorio seleccionar un lote asociado al producto.</p></li></ul><p></p>",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1779391365,
+              "nanoseconds": 47000000
+            },
+            "order": 10,
+            "state": "Done"
+          },
+          {
+            "deletedAt": null,
+            "createdBy": "I7daif6FR7UAbtQgXPJq",
+            "title": "Generar PRs y pasaje a producción",
+            "priority": "Normal",
+            "id": "task-1779462190347",
+            "actualEffort": 1,
+            "assignedUser": "I7daif6FR7UAbtQgXPJq",
+            "projectName": "🔵 Agroideas-In",
+            "detail": "",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1779462190,
+              "nanoseconds": 347000000
+            },
+            "order": 11,
+            "state": "Done"
+          }
+        ],
+        "createdAt": {
+          "type": "firestore/timestamp/1.0",
+          "seconds": 1777288134,
+          "nanoseconds": 1000000
+        }
+      },
+      {
+        "order": 14,
+        "state": "Done",
+        "tasks": [
+          {
+            "order": 1,
+            "state": "Done",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778496992,
+              "nanoseconds": 223000000
+            },
+            "projectName": "🟡 Agroideas WEB",
+            "detail": "",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "deletedAt": null,
+            "title": "Ajustes para sección Clima",
+            "id": "task-1778496992223",
+            "priority": "Normal",
+            "actualEffort": 7,
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf"
+          },
+          {
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778684358,
+              "nanoseconds": 156000000
+            },
+            "state": "Done",
+            "order": 2,
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "actualEffort": 3,
+            "id": "task-1778684358156",
+            "priority": "Normal",
+            "title": "Meet jueves 13 y 20",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "deletedAt": null,
+            "detail": "<p>Se revisaron muchas cosas, casi todas las secciones</p>",
+            "projectName": "🟡 Agroideas WEB"
+          },
+          {
+            "state": "Done",
+            "order": 3,
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1779285937,
+              "nanoseconds": 998000000
+            },
+            "detail": "<p>La idea es retocar un poco estilos para lograr algo similar a esto</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/b6db60e7-803a-4c95-a49d-6ba33e036c36_ChatGPT%20Image%20May%2020,%202026,%2011_10_31%20AM.png\" alt=\"\"><p></p>",
+            "projectName": "🟡 Agroideas WEB",
+            "actualEffort": 4,
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "id": "task-1779285937998",
+            "priority": "Normal",
+            "title": "Boceto para el nuevo estilado similar a apix",
+            "deletedAt": null,
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf"
+          }
+        ],
+        "createdAt": {
+          "type": "firestore/timestamp/1.0",
+          "seconds": 1778494160,
+          "nanoseconds": 522000000
+        },
+        "projectName": "🟡 Agroideas WEB",
+        "detail": "<p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://docs.google.com/spreadsheets/d/1KVtuasHkZjrICn0OxnYNYHrL3W4iL8p2KPPL4cTZSa8/edit?usp=sharing\">https://docs.google.com/spreadsheets/d/1KVtuasHkZjrICn0OxnYNYHrL3W4iL8p2KPPL4cTZSa8/edit?usp=sharing</a></p>",
+        "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+        "deletedAt": null,
+        "title": "Nueva Web",
+        "id": "item-copy-1778494160522",
+        "priority": "Normal",
+        "actualEffort": 14,
+        "assignedUser": "9Iln8ZoXlwO1Tyb47yYf"
+      },
+      {
+        "createdAt": {
+          "type": "firestore/timestamp/1.0",
+          "seconds": 1778753990,
+          "nanoseconds": 339000000
+        },
+        "tasks": [
+          {
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778754126,
+              "nanoseconds": 158000000
+            },
+            "order": 1,
+            "state": "Done",
+            "deletedAt": null,
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "title": "Refinar",
+            "id": "task-1778754126158",
+            "priority": "Normal",
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "actualEffort": 1,
+            "projectName": "🟢 APIX",
+            "detail": ""
+          },
+          {
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778755272,
+              "nanoseconds": 562000000
+            },
+            "order": 2,
+            "state": "Done",
+            "deletedAt": null,
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "title": "Analizar y definir qué/cómo mostrar la info",
+            "id": "task-1778755272562",
+            "priority": "Normal",
+            "actualEffort": 1,
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "projectName": "🟢 APIX",
+            "detail": ""
+          },
+          {
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778755317,
+              "nanoseconds": 202000000
+            },
+            "order": 3,
+            "state": "Done",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "deletedAt": null,
+            "title": "Back - Crear endpoint en back A (pasamano con MP) para retornar info organizada",
+            "priority": "Normal",
+            "id": "task-1778755317202",
+            "actualEffort": 7,
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "projectName": "🟢 APIX",
+            "detail": ""
+          },
+          {
+            "state": "Done",
+            "order": 4,
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778764652,
+              "nanoseconds": 214000000
+            },
+            "projectName": "🟢 APIX",
+            "detail": "<p>La idea es mejorar la seguridad de la API, actualmente sólo se usa una api-key para consumirla (si bien tenemos reglas en nginx). También la idea es poder luego monitorear quién usa cada cosa.<br>Por el momento deberíamos seguir permitiendo que sólo se consuma con el api-key, así no rompemos integración con otros proyectos, pero de a poco la idea es solicitar siempre el usuario autenticado.</p>",
+            "title": "Integrar consumo con usuarios autenticados en API-CORE",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "deletedAt": null,
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "actualEffort": 4,
+            "priority": "Normal",
+            "id": "task-1778764652214"
+          },
+          {
+            "projectName": "🟢 APIX",
+            "detail": "",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "deletedAt": null,
+            "title": "Corregir header en nginx",
+            "id": "task-1778782126188",
+            "priority": "Normal",
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "actualEffort": 1,
+            "order": 5,
+            "state": "Done",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778782126,
+              "nanoseconds": 188000000
+            }
+          },
+          {
+            "order": 6,
+            "state": "Done",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778755357,
+              "nanoseconds": 331000000
+            },
+            "detail": "",
+            "projectName": "🟢 APIX",
+            "priority": "Normal",
+            "id": "task-1778755357331",
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "actualEffort": 11,
+            "deletedAt": null,
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "title": "Front - Agregar diseño en Lotes con info nueva que solicitamos al back"
+          },
+          {
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1779102537,
+              "nanoseconds": 592000000
+            },
+            "order": 7,
+            "state": "Done",
+            "id": "task-1779102537592",
+            "priority": "Normal",
+            "actualEffort": 1,
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "deletedAt": null,
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "title": "Ver tiempos prescripciones",
+            "detail": "<img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/0bed53b8-1404-44ee-9af8-02b50ff2b744_image.png\" alt=\"\"><p></p>",
+            "projectName": "🟢 APIX"
+          },
+          {
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1779277966,
+              "nanoseconds": 48000000
+            },
+            "state": "Done",
+            "order": 8,
+            "title": "PRs, code review y pasaje a PROD",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "deletedAt": null,
+            "actualEffort": 1,
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "priority": "Normal",
+            "id": "task-1779277966048",
+            "projectName": "🟢 APIX",
+            "detail": ""
+          },
+          {
+            "order": 9,
+            "state": "Done",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1779285661,
+              "nanoseconds": 407000000
+            },
+            "projectName": "🟢 APIX",
+            "detail": "",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "deletedAt": null,
+            "title": "Corregir temperaturas para el dia de ayer",
+            "id": "task-1779285661407",
+            "priority": "Normal",
+            "actualEffort": 1,
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf"
+          },
+          {
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778755558,
+              "nanoseconds": 784000000
+            },
+            "state": "Done",
+            "order": 10,
+            "title": "Crear sección de métricas en APIX para mostrar info similar a lo que hicimos con las de IA",
+            "deletedAt": null,
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "actualEffort": 11,
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "priority": "Normal",
+            "id": "task-1778755558784",
+            "projectName": "🟢 APIX",
+            "detail": "<p>La idea es por el momento trackear todo consumo de info como IS, lluvias, temp, organizada por usuario. Así con esta info podemos monitorear mejor todas estas peticiones con la nueva sección de clima en Lotes. También viene bien para monitorear el uso de la sección de IS y otras.<br>Pendientes:</p><ul><li><p>✅ Cuando haces clicks en los filtros por horas, se ejecutan en paralelo las llamadas y luego segun respondan se renderizan. Ver como manejar eso.</p></li><li><p>✅ Ajustar colores de las series de Llamadas HTTP en el tiempo (apix python amarillo, apix node azul, api-core rojo, api-in azul verdoso)</p></li><li><p>✅ Agregar info de consumo por usuarios</p></li><li><p>✅ Agregar una tabla/grafico donde muestre los ultimos registros, quizas los ultimos 100 o 200 por proyecto/endpoint</p></li><li><p>✅ Agregar opcion de info de las ultimas 8 horas</p></li><li><p>✅ La seccion de Satélite (Sentinel Hub) encapsularla en una card</p></li><li><p>✅ Agregar opcion de Live para que el front se actualice solo</p></li><li><p>✅ Agregar filtro por proyectos</p></li><li><p>✅ Revisar si es necesario crear indices para que el endpoints de metricas funcione mejor.</p></li></ul><p></p>"
+          },
+          {
+            "detail": "<p>Me paso que estaba armando en APIX el dashboard de clima, y el endpoint nuevo de metricas de api-core quedo como colgado. Seguramente porque estaba corriendo la parte del retorno que usa apix de pronostico</p>",
+            "projectName": "🟢 APIX",
+            "actualEffort": 1,
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "priority": "Medium",
+            "id": "task-1779383994263",
+            "title": "Ver demoras con endpoint metrica",
+            "deletedAt": null,
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "state": "Done",
+            "order": 12,
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1779383994,
+              "nanoseconds": 263000000
+            }
+          }
+        ],
+        "order": 15,
+        "state": "Done",
+        "id": "item-1778753990339",
+        "priority": "Normal",
+        "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+        "actualEffort": 40,
+        "deletedAt": null,
+        "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+        "title": "Sección clima en Lotes",
+        "detail": "<img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/d03ce44f-fd77-4d62-b056-ce5a06966dbd_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/0ba6fc88-4bd2-41a1-9e8b-87d1c7e53931_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/d6156171-1bf2-4a94-98be-c97c42633afa_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/946a72e2-db33-4519-864d-face3677c8a5_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/4a2d055e-bd48-4cf9-a77c-289c9836b0e9_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/2f9da34e-37af-489c-9024-7a5424d06c7f_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/0a6a7b0e-85a8-4aa9-b947-9e8fbbfe4821_image.png\" alt=\"\"><p></p>",
+        "projectName": "🟢 APIX"
+      },
+      {
+        "state": "Done",
+        "order": 16,
+        "tasks": [
+          {
+            "order": 1,
+            "state": "Done",
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778494096,
+              "nanoseconds": 334000000
+            },
+            "detail": "",
+            "projectName": "🔴 Agroideas API",
+            "id": "task-copy-1778494096334-7nvh428k7",
+            "priority": "High",
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "actualEffort": 0,
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "deletedAt": null,
+            "title": "Mejorar seguridad ya que el API-KEY se ve en cuando hacemos peticiones desde el front"
+          },
+          {
+            "projectName": "🔴 Agroideas API",
+            "detail": "<ul><li><p>✅(1h) Crear imagen en Podman para levantar la base de DBDatosDEV en local</p></li><li><p>✅(1h) Crear endpoint en api core para retornar info de métricas de uso de IA</p></li><li><p>✅(3h) En plataforma agregar sección para visualizar tales métricas</p></li><li><p>✅(1h) Automatizar funcionamiento de sql server con podman desde local (con mi pc por el moment) + Pasaje a PROD</p></li></ul><p></p>",
+            "title": "Crear sección de métricas de uso de IA en Agroideas In",
+            "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+            "deletedAt": null,
+            "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+            "actualEffort": 6,
+            "priority": "Normal",
+            "id": "task-1778667356339",
+            "state": "Done",
+            "order": 2,
+            "createdAt": {
+              "type": "firestore/timestamp/1.0",
+              "seconds": 1778667356,
+              "nanoseconds": 339000000
+            }
+          }
+        ],
+        "createdAt": {
+          "type": "firestore/timestamp/1.0",
+          "seconds": 1778494096,
+          "nanoseconds": 334000000
+        },
+        "projectName": "🔴 Agroideas API",
+        "detail": "",
+        "title": "Ajustes API Core",
+        "createdBy": "9Iln8ZoXlwO1Tyb47yYf",
+        "deletedAt": null,
+        "assignedUser": "9Iln8ZoXlwO1Tyb47yYf",
+        "actualEffort": 6,
+        "id": "item-copy-1778494096334",
+        "priority": "Normal"
+      }
+    ],
+    "id": "sprint-93",
+    "fechaDesde": "2026-05-11T03:00:00.000Z",
+    "titulo": "Sprint 93",
+    "workingDays": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "userWorkingDays": {}
+  },
+  "comments": [
+    {
+      "id": "0PoHryz09uc5efUQYb0b",
+      "associatedId": "task-1778758022358",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Se ajustaron todos los endpoint, se probo el circuito completo junto a las notificaciones.</p>",
+      "createdAt": "2026-05-15T18:20:16.059Z",
+      "updatedAt": "2026-05-15T18:20:16.059Z"
+    },
+    {
+      "id": "0owuzt6HiPNM3WNt2XKR",
+      "associatedId": "task-1778692246576",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "Tarea completada, así quedó el detalle en el changelog:<br>Monitor de Prescripción - Selector de tipo<br>Se corrigió el selector de tipos de monitor en el modal de creación. Ahora cada tipo (Manual, Genérico, TIM, AG fusión, etc.) muestra correctamente sus columnas específicas sin confundirse con Genérico.",
+      "createdAt": "2026-05-13T17:58:45.294Z",
+      "updatedAt": "2026-05-13T17:58:45.294Z"
+    },
+    {
+      "id": "0vYcqxoSUAYB5d9sF2JC",
+      "associatedId": "task-1778495839449",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>PRs:<br>Front: <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://dev.azure.com/agroideassa/Sistemas/_git/apix-front/pullrequest/1787\">https://dev.azure.com/agroideassa/Sistemas/_git/apix-front/pullrequest/1787</a><br>Back-Apix: <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://dev.azure.com/agroideassa/Sistemas/_git/maizplus-api/pullrequest/1786\">https://dev.azure.com/agroideassa/Sistemas/_git/maizplus-api/pullrequest/1786</a><br>Back-A: <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://dev.azure.com/agroideassa/Sistemas/_git/maizplus-ambientaciones-api/pullrequest/1785\">https://dev.azure.com/agroideassa/Sistemas/_git/maizplus-ambientaciones-api/pullrequest/1785</a></p>",
+      "createdAt": "2026-05-11T21:32:37.762Z",
+      "updatedAt": "2026-05-11T21:32:37.762Z"
+    },
+    {
+      "id": "1HU7PNLxVSTU5Pdj1iDp",
+      "associatedId": "task-1778513230415",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>En cuanto a lo analizado, el tema seria así:<br><strong>Viabilidad general</strong></p><ul><li><p><strong>Obtener IS</strong>: ya está resuelto en gran parte en la lógica de productividad.</p></li><li><p><strong>Calcular rendimiento por píxel</strong>: totalmente posible con lo que ya tienen (arrays raster recortados por lote).</p></li><li><p><strong>Promediar por ambiente de prescripción</strong>: también viable; ya hacen cruces espaciales en otros flujos (postcosecha/performance).</p></li></ul><h2><strong>Qué ya existe y se puede reutilizar (alto valor)</strong></h2><ol><li><p><strong>Adquisición de imágenes satelitales</strong></p><ul><li><p><code>satelital_image_cache.get_satelital_images_async(...)</code></p></li><li><p>fallback DB + Sentinel ya implementado.</p></li></ul></li><li><p><strong>Filtrado de registros</strong></p><ul><li><p><code>_filter_records(...)</code> en <code>productivity_map_service.py</code></p></li><li><p>filtra por tipo, fecha, cloud coverage.</p></li></ul></li><li><p><strong>Descarga batch de TIFs</strong></p><ul><li><p><code>download_files_batch(...)</code></p></li></ul></li><li><p><strong>Recorte por geometría de lote</strong></p><ul><li><p><code>clip_raster_by_geometry_from_memory(...)</code></p></li><li><p>ya maneja CRS, nodata→NaN, metadatos de transform.</p></li></ul></li><li><p><strong>Calidad temporal / selección de IS</strong></p><ul><li><p><code>_analyze_trend_sequence(...)</code></p></li><li><p>lógica de selección por racha/pico ya existe en <code>_process_index_data_async</code>.</p></li></ul></li><li><p><strong>Composición temporal robusta por píxel</strong></p><ul><li><p>ya hacen <code>np.nanmedian(stack, axis=0)</code> para mapa histórico.</p></li><li><p>esto sirve directo como base para “índice representativo de cosecha por píxel”.</p></li></ul></li></ol><hr><h2><strong>Qué falta implementar (núcleo nuevo)</strong></h2><ol><li><p><strong>Selector específico “momento de cosecha”</strong></p><ul><li><p>hoy hay filtro temporal general; falta priorizar ventana cosecha (ej. -60/+10 días respecto harvest_date).</p></li><li><p>ranking por cercanía a cosecha + calidad.</p></li></ul></li><li><p><strong>Conversión índice→rendimiento por píxel</strong></p><ul><li><p>función nueva <code>yield_px = f(index_px, crop, campaña)</code>.</p></li><li><p>con clamps agronómicos por cultivo.</p></li></ul></li><li><p><strong>Agregación zonal por ambiente de prescripción</strong></p><ul><li><p>cruzar raster de rendimiento con polígonos de prescripción.</p></li><li><p>devolver <code>yield_by_ambient</code> (media robusta + métricas de calidad opcionales).</p></li></ul></li></ol><hr><h2><strong>Riesgos y cómo mitigarlos</strong></h2><ul><li><p><strong>Mayor riesgo</strong>: calibración índice→kg/ha.</p><ul><li><p>Mitigar con parámetros por cultivo/campaña y límites min/max.</p></li></ul></li><li><p><strong>Riesgo medio</strong>: mala selección temporal de IS.</p><ul><li><p>Mitigar con ventana de cosecha y scoring de calidad.</p></li></ul></li><li><p><strong>Riesgo bajo</strong>: CRS/resolución/nodata.</p><ul><li><p>Ya tienen base sólida en el recorte; solo estandarizar antes del zonal.</p></li></ul></li></ul><hr><h2><strong>Conclusión práctica</strong></h2><ul><li><p><strong>Sí, es viable y recomendable</strong>.</p></li><li><p><strong>Sí, hay bastante reutilizable</strong> de <code>ProductivityMapService</code> para la parte IS.</p></li><li><p>El trabajo nuevo real está en:</p><ol><li><p>selector de IS orientado a cosecha,</p></li><li><p>función de rendimiento por píxel,</p></li><li><p>zonal stats por ambiente de prescripción.</p></li></ol></li></ul><p>Con eso, <code>calculate_gross_margin</code> puede pasar a usar <code>yield_by_ambient</code> derivado de raster, manteniendo fallback al método actual.</p>",
+      "createdAt": "2026-05-11T17:29:56.876Z",
+      "updatedAt": "2026-05-11T17:29:56.876Z"
+    },
+    {
+      "id": "1ukPWxN7xxG3kwT87LlP",
+      "associatedId": "task-1778496992223",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Ya quedó todo en prod y avisé a los demás para que lo vayan mirando:<br><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://web-dev-agroideas.netlify.app/clima\">https://web-dev-agroideas.netlify.app/clima</a></p>",
+      "createdAt": "2026-05-11T16:29:02.611Z",
+      "updatedAt": "2026-05-11T16:29:02.611Z"
+    },
+    {
+      "id": "4Kd5wCjJWYdm6euFnVJ5",
+      "associatedId": "task-1778520713562",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Después de varias idas y vueltas, cambios en lógica, quedo algo funcional, pero tampoco perfecto.<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/117b755f-0350-4a7d-af17-01dcb25a32fb_image.png\" alt=\"\"><p>El problema que queda es el calculo de rendimiento, para que realmente podamos tener info buena y que mostremos valores lo mas precisos posibles, lo ideal es analizar muchos archivos de mapa de rendimiento con imágenes satelitales (NDVI), mas de 100 en lo posible y de distintas zonas, para de estar forma poder realmente armar/entrenar un modelo o lógica que tenga la relación del índice con el rendimiento.</p><ul><li><p>Tomar tu imagen procesada (la del NDVI máximo interpolado).</p></li><li><p>Tomar el mapa de rendimiento (limpio de errores de la máquina) de ese mismo lote.</p></li><li><p>Extraer los valores: tomas varios miles de puntos y armas una tabla con dos columnas: Valor_NDVI y Rinde_kg_ha.</p></li><li><p>Hacer una regresión estadística (con Python). Esto te dará una fórmula matemática, por ejemplo:$$Rendimiento = (m \\times NDVI) + b$$</p></li></ul><p>Este proceso hay que repetirlo para cada cultivo, es la única forma en la que vamos a poder presentar buenos datos.</p>",
+      "createdAt": "2026-05-13T19:18:18.493Z",
+      "updatedAt": "2026-05-13T19:18:18.493Z"
+    },
+    {
+      "id": "4T8wx2qqhXLGuQKkudER",
+      "associatedId": "task-1779359798290",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>PRs:<br>Back --&gt; <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://dev.azure.com/agroideassa/Sistemas/_git/agroideas-in-api/pullrequest/1816\">https://dev.azure.com/agroideassa/Sistemas/_git/agroideas-in-api/pullrequest/1816</a></p><p>Front --&gt; <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://dev.azure.com/agroideassa/Sistemas/_git/agroideas-in-front/pullrequest/1815\">https://dev.azure.com/agroideassa/Sistemas/_git/agroideas-in-front/pullrequest/1815</a></p>",
+      "createdAt": "2026-05-21T14:29:36.062Z",
+      "updatedAt": "2026-05-21T14:29:36.062Z"
+    },
+    {
+      "id": "5KqgVwq8RgFK069B0B60",
+      "associatedId": "task-1779116428362",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Quedo la lógica y un endpoint nuevo para usar ejecutar el proceso una vez Euge deje los archivos.</p>",
+      "createdAt": "2026-05-18T18:25:35.831Z",
+      "updatedAt": "2026-05-18T18:25:35.831Z"
+    },
+    {
+      "id": "5NEgRegOUxaEYKDoFbw8",
+      "associatedId": "task-1778755357331",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "Tarea completada, así quedó el detalle en el changelog:<br>### Nuevas funciones<br><br>-   🌦️ **Dashboard del lote en Lotes**<br>    -   En la computadora, al elegir un lote se abre un panel a un costado con información del lote; el mapa se ajusta para que sigas viendo el lote entero.<br>    -   En la pestaña **Clima** podés cargar los datos cuando los necesites: tiempo actual, lluvia de la última semana y del mes, y un gráfico de los últimos 14 días con temperatura, lluvia y pronóstico.<br>    -   **Balance de agua** con dos formas de verlo: lluvia y evaporación, o el balance del período.<br>    -   **Grados día del cultivo** con un resumen y su evolución en el gráfico.<br>    -   **Vegetación reciente (NDVI)**: curva de los últimos días; al elegir una fecha, esa imagen se muestra en el mapa del lote.<br>    -   Mientras se cargan los datos, se muestra el avance de la preparación.<br>    -   Podés **actualizar** la información, ver si puede estar desactualizada y consultar las fuentes al pie del panel.<br>    -   Hay un **botón en el mapa** para abrir o cerrar el panel cuando querés más espacio.<br><br>### Ajustes UX/UI<br><br>-   ✨ **Avisos para descubrir funciones nuevas**<br>    -   En Lotes, al seleccionar un lote aparece una etiqueta que señala el botón del dashboard para que puedas probarlo.<br>    -   La etiqueta desaparece al usar ese botón o al cerrarla con la cruz, y no vuelve a mostrarse.",
+      "createdAt": "2026-05-19T18:39:27.729Z",
+      "updatedAt": "2026-05-19T18:39:27.729Z"
+    },
+    {
+      "id": "6LQUpWYB3nnM426xL3G5",
+      "associatedId": "task-1778782126188",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Renegué un poquito para agregar unas reglas en nginx para que acepte ciertos headers nuevos en OPTIONS.</p>",
+      "createdAt": "2026-05-14T18:09:12.959Z",
+      "updatedAt": "2026-05-14T18:09:12.959Z"
+    },
+    {
+      "id": "8E1jn0zWeGf2TtVjVP27",
+      "associatedId": "task-1779194936582",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>El punto 1 (En los depósitos ver solo los que tengan productos, los que estén en 0 no) me genero dudas porque justamente va de la mano con el otro deposito de Josefina (MAIZ), ya que no trae productos, y por lo que vi es por la configuración de disponibilidad de productos (sección donde se habilitan o no productos).<br>Los demás cambios ya estan:</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/39b0e850-a3a0-4b2b-b0d4-3ee4165cdc70_image.png\" alt=\"\"><p>Se hicieron mejoras en el manejo de las pool a base de datos, estaban generando problemas al consultar varias veces (se cortaba la conexión).</p>",
+      "createdAt": "2026-05-19T17:00:50.785Z",
+      "updatedAt": "2026-05-19T17:00:58.832Z"
+    },
+    {
+      "id": "8sMaoXkOoFrrZBlNQ13A",
+      "associatedId": "task-1779288491326",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "Tarea completada, así quedó el detalle en el changelog:<br>- **Opciones visibles por fila en órdenes de pedido**: Se reemplazó el menú de clic derecho por una columna de acciones con íconos en la grilla, manteniendo permisos por estado/rol y mejorando la usabilidad; además, se reordenaron columnas para priorizar selección, acciones y estado.",
+      "createdAt": "2026-05-20T19:45:11.057Z",
+      "updatedAt": "2026-05-20T19:45:11.057Z"
+    },
+    {
+      "id": "8vmbbPV6aJKu2RsEl3Up",
+      "associatedId": "task-1779195084097",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "Tarea completada, así quedó el detalle en el changelog:<br>### Nuevas funcionalidades<br><br>- **Exportación a PDF en Órdenes de Pedido**: Se agregó la generación de PDF en formato A4 vertical desde el listado, con selección múltiple de órdenes, diseño optimizado para impresión y separación visual entre órdenes.",
+      "createdAt": "2026-05-20T16:57:40.314Z",
+      "updatedAt": "2026-05-20T16:57:40.314Z"
+    },
+    {
+      "id": "9HQuvyem1vaCGhnPls6Q",
+      "associatedId": "task-copy-1778494183779-7e6aacovy",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>La conclusión rápida es que no es posible obtener una imagen mejor que la RGB actual, y esta es lo mas cercano a la original. Se puede conseguir algo como el mapa de google, pero los costos son muy elevados, y aplica para todos los proveedores (Planet, sentinel, GEE, etc).</p>",
+      "createdAt": "2026-05-18T14:16:05.168Z",
+      "updatedAt": "2026-05-18T14:16:05.168Z"
+    },
+    {
+      "id": "9MtM7hfMPn9FpnGB4SSb",
+      "associatedId": "task-1779391365047",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "Tarea completada, así quedó el detalle en el changelog:<br>### Mejoras<br><br>- **Órdenes de pedido más claras:** Se mejoró la visualización general en alta, edición, preparación y vista previa, con fechas en formato `DD/MM/AAAA` y números en formato argentino.<br>- **Lotes mejor ordenados:** Ahora los lotes se muestran priorizando los que vencen antes, para facilitar la preparación.<br>- **Selección más flexible:** Al crear o editar, el lote dejó de ser obligatorio al cargar un producto.<br><br>### Arreglos<br><br>- **Vencimiento visible en todo el flujo:** Se agregó el vencimiento junto al lote en la carga, preparación, vista de la orden y PDF.<br>- **Preparación con lotes duplicados:** Se corrigió un caso donde podía aparecer error de stock al repartir cantidades entre lotes.<br>- **Ajustes visuales del listado y modal:** Se mejoraron anchos de columnas y se agregó botón `X` en el modal de visualización para cerrar más rápido.",
+      "createdAt": "2026-05-22T14:36:45.041Z",
+      "updatedAt": "2026-05-22T14:36:45.041Z"
+    },
+    {
+      "id": "9sty5EZDjsgiQvwgqgg5",
+      "associatedId": "task-1778520713562",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Solicitar archivos a Euge de Mapa de rendimiento para poder hacer la correlación.</p>",
+      "createdAt": "2026-05-14T11:23:51.472Z",
+      "updatedAt": "2026-05-14T11:23:51.472Z"
+    },
+    {
+      "id": "AWcNB1KfDTIEnZf7X0sj",
+      "associatedId": "task-1778755357331",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Así quedó el badge para destacar una nueva funcionalidad:</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/af9eba7e-064e-4d4a-b2a7-712037f38801_image.png\" alt=\"\">",
+      "createdAt": "2026-05-20T11:50:12.850Z",
+      "updatedAt": "2026-05-20T11:50:12.850Z"
+    },
+    {
+      "id": "AhkAgqxRM6vD6rcH0nP9",
+      "associatedId": "task-1778525693643",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Listo:</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/90ab0de6-b7a8-44a7-a5c6-4c8bcf43728f_image.png\" alt=\"\">",
+      "createdAt": "2026-05-11T19:54:18.101Z",
+      "updatedAt": "2026-05-11T19:54:18.101Z"
+    },
+    {
+      "id": "BAeVACGDDUwFkjpQrQ2z",
+      "associatedId": "task-copy-1778494183779-kyr0uz86t",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "Tarea completada, así quedó el detalle en el changelog:<br>- 🔔 **Aviso cuando hay una versión nueva**<br>    - En la parte superior del recuadro hay una barra fina que se va vaciando: sirve para ver de un vistazo cuánto falta para que el aviso desaparezca solo.<br>    - Pasado aproximadamente un minuto, el mensaje se oculta automáticamente; la cruz sigue disponible si preferís cerrarlo antes.",
+      "createdAt": "2026-05-12T13:40:11.744Z",
+      "updatedAt": "2026-05-12T13:40:11.744Z"
+    },
+    {
+      "id": "CuA10zFktmIfpeoaFBAn",
+      "associatedId": "task-1778520713562",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Quedo un proceso nuevo para esto, básicamente la lógica aplicada es la que se detalla en la task, igualmente todavía faltan prueba, por lo que me va a demorar mucho mas esta task.<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/52ddac98-11d3-47d5-8ed8-e26c97e20260_image.png\" alt=\"\">",
+      "createdAt": "2026-05-12T18:11:44.692Z",
+      "updatedAt": "2026-05-12T18:11:44.692Z"
+    },
+    {
+      "id": "DQIP9hc9lmQqEuS8fqxK",
+      "associatedId": "task-1779462190347",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>PRs:</p><p>Front --&gt; <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://dev.azure.com/agroideassa/Sistemas/_git/agroideas-in-front/pullrequest/1826\">https://dev.azure.com/agroideassa/Sistemas/_git/agroideas-in-front/pullrequest/1826</a><br>Back --&gt; <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://dev.azure.com/agroideassa/Sistemas/_git/agroideas-in-api/pullrequest/1825\">https://dev.azure.com/agroideassa/Sistemas/_git/agroideas-in-api/pullrequest/1825</a></p>",
+      "createdAt": "2026-05-22T15:03:34.284Z",
+      "updatedAt": "2026-05-22T15:03:34.284Z"
+    },
+    {
+      "id": "GAsbmg5dtYFU2ezAk0sc",
+      "associatedId": "task-copy-1778494183779-7e6aacovy",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Se realizaron varias pruebas y también se investigo el funcionamiento al momento de hacer las peticiones a Sentinel. Lo mas cercano a una imagen original es el tipo RGB, que si bien este aplica un filtro, es el único que hoy en día puede generar algo parecido, pero nunca va a ser igual porque se manejan tamaños muchos mas altos en cuanto a los metros que representa un pixel (10 metros  de sentinel contra 0.3 metros de google map).<br>Por mas que ajustemos los pixel que se solicita a sentinel o el bbox, no hay forma de mejorar la calidad que ya manejamos. <br>Actual:<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/3aaef02f-adc8-4fe6-8abe-0df9379104ff_image.png\" alt=\"\"><p>Prueba llevando la resolución a 5000*5000:<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/e1e7ddfc-ed91-428b-aa9e-8844be223573_image.png\" alt=\"\"><p>A su vez, sentinel (aunque ahora es de planet), ofrece otros satelites o datos a usar, pero estos ya no entran en el plan actual, tampoco en el que sigue, ya que hay que contratar un paquete de datos, además del que tenemos, pero este tiene precios ilógicos, ya que cobran por km² entre 5 y 15 dólares. por lo que solicitar una imagen de un lote de 40 ha costaría aproximadamente 100 dólares.</p>",
+      "createdAt": "2026-05-18T14:13:51.078Z",
+      "updatedAt": "2026-05-18T14:13:51.078Z"
+    },
+    {
+      "id": "GdZxOJtdEL4muYRUsECN",
+      "associatedId": "task-1779382830210",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/7d051a57-018e-4eb6-bc8f-98583b85238c_image.png\" alt=\"\">",
+      "createdAt": "2026-05-21T18:42:06.755Z",
+      "updatedAt": "2026-05-21T18:42:06.755Z"
+    },
+    {
+      "id": "GloHFhpsZ9Q1vGqp3C8f",
+      "associatedId": "task-1778755317202",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Por el momento dejé una primera versión del plan de integración (en A) para retornar toda la info que necesitaría el front:<br><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"http://plan-integracion-dashboard-clima-lote.md\">plan-integracion-dashboard-clima-lote.md</a><br>En este plan se incluye la integracion con API-CORE, en donde utilizaríamos la info de días a futuro.<br>Ahora pauso acá porque voy a seguir con integrar en API-CORE el consumo con usuarios autenticados, asi esto nos permite mejorar la seguridad actual y ademas poder trackear quién usa cada cosa.</p>",
+      "createdAt": "2026-05-14T13:16:06.034Z",
+      "updatedAt": "2026-05-15T10:14:29.665Z"
+    },
+    {
+      "id": "I0JcEel21o9TqjrCFcC5",
+      "associatedId": "task-1779102537592",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Probe algunas cosas pero es medio lío por cómo tenemos todo, mejor lo dejamos para otra ocasión.</p>",
+      "createdAt": "2026-05-20T10:47:28.551Z",
+      "updatedAt": "2026-05-20T10:47:28.551Z"
+    },
+    {
+      "id": "IzjGgOsRLtkP7WP3Qeac",
+      "associatedId": "task-1778755357331",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Seguramente falten retoques pero por el momento como primera versión estaría.</p>",
+      "createdAt": "2026-05-19T18:39:11.540Z",
+      "updatedAt": "2026-05-19T18:39:11.540Z"
+    },
+    {
+      "id": "JjQpcYbfJqd88K33GYVr",
+      "associatedId": "task-1779285937998",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/39fc920a-c799-4349-92f8-9d25ada5d0ee_image.png\" alt=\"\">",
+      "createdAt": "2026-05-21T11:54:18.005Z",
+      "updatedAt": "2026-05-21T11:54:18.005Z"
+    },
+    {
+      "id": "LIkJdBTOumWAF4jkBkBr",
+      "associatedId": "task-1778495817005",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Se hicieron varias correcciones, actualización, fecha de informe, cambio en calculo, etc.<br>Debería estar todo, pero espero que Euge me confirme bien.<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/d5f7e85c-4ee3-4ca4-bd0f-4961d10d4cb9_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/1e1b9fee-2c96-4987-8f07-66e0b67adbdc_image.png\" alt=\"\">",
+      "createdAt": "2026-05-11T14:24:17.494Z",
+      "updatedAt": "2026-05-11T14:24:17.494Z"
+    },
+    {
+      "id": "LrRhiU8k8E9dS7BTXKy0",
+      "associatedId": "task-1778871008665",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>PRs:<br>Front: <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://dev.azure.com/agroideassa/Sistemas/_git/agroideas-in-front/pullrequest/1805\">https://dev.azure.com/agroideassa/Sistemas/_git/agroideas-in-front/pullrequest/1805</a><br>Back: <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://dev.azure.com/agroideassa/Sistemas/_git/agroideas-in-api/pullrequest/1804\">https://dev.azure.com/agroideassa/Sistemas/_git/agroideas-in-api/pullrequest/1804</a></p>",
+      "createdAt": "2026-05-15T19:27:29.031Z",
+      "updatedAt": "2026-05-15T19:27:29.031Z"
+    },
+    {
+      "id": "Lu55ntL5NEPEmZlM17DZ",
+      "associatedId": "task-1779194936582",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Además se hicieron varias correcciones en el front, de por si mostraba mal la info de los productos y en la edición no cargaba los datos de la orden.</p>",
+      "createdAt": "2026-05-19T17:02:15.806Z",
+      "updatedAt": "2026-05-19T17:02:15.806Z"
+    },
+    {
+      "id": "MnhAcfBDHWwo18efTppW",
+      "associatedId": "task-1779191605590",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>REVISAR ERROR QUE MANDA TODO AL PRIMER PRODUCTO:<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/3a2e4870-ec00-485a-92af-b11b3f407402_image.png\" alt=\"\">",
+      "createdAt": "2026-05-19T12:17:34.400Z",
+      "updatedAt": "2026-05-19T12:17:34.400Z"
+    },
+    {
+      "id": "NOqUYWuoISDjyq7YEGVp",
+      "associatedId": "task-copy-1778494183779-kyr0uz86t",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/11154764-0a2c-409b-9047-c4744cb843b4_image.png\" alt=\"\">",
+      "createdAt": "2026-05-12T13:38:54.081Z",
+      "updatedAt": "2026-05-12T13:38:54.081Z"
+    },
+    {
+      "id": "OZHROzFMa1WwfjThNMNh",
+      "associatedId": "task-1778764652214",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Ya dejé adjunto el plan para la primera integracion.</p>",
+      "createdAt": "2026-05-14T14:27:57.136Z",
+      "updatedAt": "2026-05-14T14:27:57.136Z"
+    },
+    {
+      "id": "OnROcECT68XzWWg1tTTU",
+      "associatedId": "task-1778583836740",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "Tarea completada, así quedó el detalle en el changelog:<br>- 🔢 **Mismo criterio para los números en pantalla**<br>    - En gráficos, mapas, tablas y varios informes, los valores se leen con coma en decimales y punto en miles, de forma uniforme en toda la aplicación.<br>    - También aplica a la tabla de resultados del análisis de suelo en informes de diagnóstico.",
+      "createdAt": "2026-05-12T14:13:23.835Z",
+      "updatedAt": "2026-05-12T14:13:23.835Z"
+    },
+    {
+      "id": "SJGYuNdPlZE2Lg5LV456",
+      "associatedId": "task-1779391365047",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Se realizaron todos los cambios:</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/d636f8cb-c45c-41e8-b117-7c12e5b1fd23_image.png\" alt=\"\"><p>Pdf:</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/ca3e93dc-23d7-4bb1-b4fc-a4ef1dbccff2_image.png\" alt=\"\">",
+      "createdAt": "2026-05-22T14:27:28.819Z",
+      "updatedAt": "2026-05-22T14:27:28.819Z"
+    },
+    {
+      "id": "SzapprATgfTWLulQsg5h",
+      "associatedId": "task-1778676972402",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Revisar filtro de fecha de pago para que no funciona al seleccionar una sola fecha:</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/3549eca2-9837-4de5-8339-9adeb871eaed_image.png\" alt=\"\">",
+      "createdAt": "2026-05-13T13:37:26.458Z",
+      "updatedAt": "2026-05-13T13:37:26.458Z"
+    },
+    {
+      "id": "TEDccpoKJuaa7ujVnNLv",
+      "associatedId": "task-1779191605590",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Reunión Juan 19-05</p><p>Ordenes de pedido</p><p>En el alta:</p><ul><li><p>En los depósitos ver solo los que tengan productos, los que estén en 0 no.</p></li><li><p>Para Josefina se tiene que mostrar los dos depósitos.</p></li><li><p>Cuando se carga un producto ver de cargar también el lote (opcional porque no todos los productos tiene lotes). Cuando se carga la cantidad debe traer los lotes asociados al deposito y producto, ahí debe el usuario elegir los lotes, mostrando lote, cantidad y fecha de vencimiento.</p></li><li><p>Después abajo después de cantidad mostrar el lote en la grilla de abajo.</p></li></ul><p>Preparación stockFiller</p><ul><li><p>Para stockFiller cuando prepara mostrar el lote sugerido que se cargo en el alta. Al ingresar que te seleccione por defecto lo que se cargo, pero que pueda editarse.</p></li><li><p>Ver error en comentario de abajo.</p></li></ul><p>Visualizar orden:</p><ul><li><p>Por producto mostrar la observación, cambiar descripción por observación.</p></li><li><p>La observación general mostrar abajo del destino (grilla principal).</p></li></ul><p>Nuevo:</p><ul><li><p>Agregar la opción de generar pdf de la visualización de la orden. La idea es agregar un check para seleccionar 1 o varios ordenes para que se habilite un botón de genera pdf y se agregue en un pdf todas las ordenes, separadas entre si para imprimir en una hoja a4 vertical. Agregar por cada orden el estado de la orden.</p></li></ul>",
+      "createdAt": "2026-05-19T12:33:31.296Z",
+      "updatedAt": "2026-05-19T12:33:31.296Z"
+    },
+    {
+      "id": "TNvAdGEhq7Sn7PjLSRhr",
+      "associatedId": "task-1778755558784",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Pendientes:</p><ul><li><p>Cuando haces clicks en los filtros por horas, se ejecutan en paralelo las llamadas y luego segun respondan se renderizan. Ver como manejar eso.</p></li><li><p>Ajustar colores de las series de Llamadas HTTP en el tiempo (apix python y node color similar, api-core rojo, api-in azul)</p></li><li><p>Agregar info de consumo por usuarios</p></li><li><p>Agregar una tabla/grafico donde muestre los ultimos registros, quizas los ultimos 100 o 200 por proyecto/endpoint</p></li><li><p>Agregar opcion de info de las ultimas 8 horas</p></li><li><p>La seccion de Satélite (Sentinel Hub) encapsularla en una card</p></li><li><p>Agregar opcion de autoupdate</p></li><li><p>Agregar filtro por proyectos</p></li></ul><p></p>",
+      "createdAt": "2026-05-21T19:02:38.460Z",
+      "updatedAt": "2026-05-21T23:04:25.459Z"
+    },
+    {
+      "id": "UZ7AeKgd4CgkoOC8dADD",
+      "associatedId": "task-1779383994263",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Hice mejoras en indices, querys, peticiones, etc. En dev demora unos 3 o 4 segundos (con filtro de las ultimas 24 h). Hay que revisar en prod</p>",
+      "createdAt": "2026-05-22T14:48:37.334Z",
+      "updatedAt": "2026-05-22T14:48:37.334Z"
+    },
+    {
+      "id": "UcgMblzWXpUy5SWE9mh7",
+      "associatedId": "task-copy-1778494183779-4ndgd0g00",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "Tarea completada, así quedó el detalle en el changelog:<br>### Ajustes UX/UI<br><br>-   🔍 **Buscador dentro de los selectores**<br>    -   Se sumó un ícono de lupa para reconocer la caja de búsqueda de un vistazo.<br>    -   El borde quedó más prolijo: ya no se ve tan marcado al hacer clic.<br>    -   Se puede recorrer la lista con las flechas, elegir con **Enter** y cerrar con **Esc**.<br>    -   Al escribir, se resalta la coincidencia dentro de cada resultado para encontrarla más rápido.<br>    -   Cuando hay muchas coincidencias, se indica cuántas se están mostrando y se invita a refinar la búsqueda.<br>    -   Si no aparece nada, se muestra un mensaje más claro sugiriendo probar con otro término.",
+      "createdAt": "2026-05-12T12:38:16.771Z",
+      "updatedAt": "2026-05-12T12:38:16.771Z"
+    },
+    {
+      "id": "UvPcUfRILv8CNupmTJIv",
+      "associatedId": "task-1779195084097",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Se agro la opción de generar PDF, este boton se habilita cuando se selecciona uno o varias ordenes. Se adapto el formato para que se puedan agregar varias ordenes en una hoja A4.<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/a2ec6b24-db4f-4eb6-9b1d-2545b88183c0_image.png\" alt=\"\"><p>Ejemplo PDF:</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/8d2687d6-ff28-4bb1-8f1b-24f4fbb0ffec_image.png\" alt=\"\"><p>Después de varias pruebas con Juani, quedo ese modelo que se adapta para la impresión.</p>",
+      "createdAt": "2026-05-20T16:38:59.487Z",
+      "updatedAt": "2026-05-20T16:58:12.381Z"
+    },
+    {
+      "id": "UyRSsTdbHcM86DEudNcq",
+      "associatedId": "task-1778755357331",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Va quedando mas ordenado. Ahora voy a seguir con backend para agregar info del ndvi así podemos volver al front y mostrar algun grafico con esto</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/b096221d-9403-4415-bb95-eab303197837_image.png\" alt=\"\">",
+      "createdAt": "2026-05-18T13:06:41.558Z",
+      "updatedAt": "2026-05-18T13:06:41.558Z"
+    },
+    {
+      "id": "VE6zUXFOClzLMKPo7yOC",
+      "associatedId": "task-1778758009422",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Quedo todo, se mandan las notificaciones y se permite la carga tanto vendedor como acopio, de liquidación parcial y de pesificación.</p><p>Notificaciones (correo):</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/dc93db61-93b5-478c-b671-4206d04250c9_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/f4426167-25c9-4a92-89cf-6972d00d2309_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/01f613c8-dd32-4409-be0a-c7049ebf04ed_image.png\" alt=\"\"><p></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/60994eea-4c18-470f-8abb-1212d1dcd0fe_image.png\" alt=\"\"><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/793fbea2-d18d-4b14-839f-2d8c7611b408_image.png\" alt=\"\"><p></p>",
+      "createdAt": "2026-05-15T17:39:38.417Z",
+      "updatedAt": "2026-05-15T18:07:37.818Z"
+    },
+    {
+      "id": "VJMt3b7Wd2KBbycJ8FJm",
+      "associatedId": "task-1778496992223",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Hice unas pruebas generando el resumen semanal con IA, pero para evitar demoras terminé dejándolo en el front, total se puede generar un resumen similar configurando un par de reglas, y así queda mas rápido. En db quedó el campo del resumen por si en algun momento queremos volver a generarlo con IA.</p>",
+      "createdAt": "2026-05-11T15:56:09.418Z",
+      "updatedAt": "2026-05-11T15:56:09.418Z"
+    },
+    {
+      "id": "VfTOukZoyoopQZzZOd85",
+      "associatedId": "task-1779382830210",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>PR:<br>Front --&gt; <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://dev.azure.com/agroideassa/Sistemas/_git/agroideas-in-front/pullrequest/1821\">https://dev.azure.com/agroideassa/Sistemas/_git/agroideas-in-front/pullrequest/1821</a></p>",
+      "createdAt": "2026-05-21T18:35:18.933Z",
+      "updatedAt": "2026-05-21T18:35:18.933Z"
+    },
+    {
+      "id": "WXFCNVxdpGliZOJfgo5h",
+      "associatedId": "task-1778667356339",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/8af25d65-e345-40f6-a9d8-e7b87fcfc96d_localhost_2023_%20(2).png\" alt=\"\">",
+      "createdAt": "2026-05-13T12:59:47.585Z",
+      "updatedAt": "2026-05-13T12:59:47.585Z"
+    },
+    {
+      "id": "XaERF2kzjXjMyo8vKmgv",
+      "associatedId": "task-1778755272562",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Luego de la revisión con Euge nos quedamos con un diseño de chatGPT bastante bueno, en la mitad derecha de la pestaña podríamos disponibilizar toda la info de esta manera:</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/40ec0cf4-272e-482e-8096-1bd061cd0931_ChatGPT%20Image%20May%2014,%202026,%2008_31_26%20AM.png\" alt=\"\">",
+      "createdAt": "2026-05-14T12:01:52.003Z",
+      "updatedAt": "2026-05-14T12:01:52.003Z"
+    },
+    {
+      "id": "YdYpb1Bc2ckh2H0iBolU",
+      "associatedId": "task-1779305568032",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Renegué pensando que había un problema en en los endpoint que obtiene el stock, pero en realidad el tema venia por configuración, el sistema usa los depósitos activos, y solamente teníamos que agregarlo acá.<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/447d4724-d783-473c-9a0c-8e0b722715bf_image.png\" alt=\"\">",
+      "createdAt": "2026-05-21T12:35:28.925Z",
+      "updatedAt": "2026-05-21T12:35:28.925Z"
+    },
+    {
+      "id": "d8EvElvdbecGue6Pqtya",
+      "associatedId": "task-1778764652214",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Queda pendiente (lo agrego en otra task), agregar una seccion exclusiva para imagenes satelitales y GEE. Tambien una general para monitorear el uso de todo API-CORE.</p>",
+      "createdAt": "2026-05-14T17:00:26.450Z",
+      "updatedAt": "2026-05-14T17:00:26.450Z"
+    },
+    {
+      "id": "diKvPkXen2d8TP8f54MT",
+      "associatedId": "task-1779195075086",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "Tarea completada, así quedó el detalle en el changelog:<br>- **Terminología más clara en órdenes de pedido**: Se unificó el uso de la palabra **Observación** en lugar de **Descripción** en creación, edición, preparación y visualización de productos.<br>- **Más contexto en la vista de la orden**: En la visualización, ahora se muestra la **Observación general** de la orden debajo de “Destino”, para facilitar la lectura rápida.",
+      "createdAt": "2026-05-20T12:33:50.607Z",
+      "updatedAt": "2026-05-20T12:33:50.607Z"
+    },
+    {
+      "id": "fdUN27ZC1ejzWmykXe1O",
+      "associatedId": "item-1777288134001",
+      "associatedType": "item",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Rama:</p><p>\"sprint-93-adjustments-to-purchase-orders\"</p>",
+      "createdAt": "2026-05-19T13:08:13.595Z",
+      "updatedAt": "2026-05-19T13:08:13.595Z"
+    },
+    {
+      "id": "geI8fJWSmcKWbjiktFI5",
+      "associatedId": "task-1778758022358",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Se modifico el back para permitir guardar y actualizar toda las liquidación y pesificaciones que se carguen, queda solamente enviar las notificaciones a los usuario.</p>",
+      "createdAt": "2026-05-14T18:46:48.493Z",
+      "updatedAt": "2026-05-14T18:46:48.493Z"
+    },
+    {
+      "id": "h97PhaTA85sGKnbbEEWF",
+      "associatedId": "task-1778755357331",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Asi va quedando, agregué tambien una funcionalidad para destacar con etiquetas botones u opciones de nuevas funcionalidades que vayamos agregando.</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/8b8bf528-5d31-414a-bed2-6235e14cf43c_image.png\" alt=\"\"><p><br></p>",
+      "createdAt": "2026-05-19T18:38:37.153Z",
+      "updatedAt": "2026-05-19T18:38:37.153Z"
+    },
+    {
+      "id": "iPWkWebZoxxF6bpsyox4",
+      "associatedId": "task-1779285937998",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Ya hice ajustes pero me falta seguir</p>",
+      "createdAt": "2026-05-20T18:45:56.185Z",
+      "updatedAt": "2026-05-20T18:45:56.185Z"
+    },
+    {
+      "id": "ip28VqxH2KzAZRrE94A1",
+      "associatedId": "task-1778520713562",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Resumen de como quedo el proceso actual (faltan pruebas y seguramente se van a hacer mas cambios):<br>Si el reporte usa <strong>Mapa de Rendimiento</strong> o <strong>Mapa de Picado</strong>, sigue funcionando como antes (no se cambió esa lógica).</p><ul><li><p>Si el reporte usa <strong>Imagen Satelital</strong>, ahora se calcula un rendimiento más realista por ambiente:</p><ul><li><p>se buscan imágenes NDVI del lote,</p></li><li><p>se eligen las mejores cerca del “pico” del cultivo,</p></li><li><p>con esas imágenes se estima el rendimiento por cada ambiente de prescripción.</p></li></ul></li><li><p>Ese rendimiento calculado se usa directamente en el <strong>margen bruto</strong> de cada ambiente.</p></li><li><p>Si no hay imágenes satelitales válidas, el sistema cae al comportamiento anterior (fallback), así no se rompe el flujo.</p></li><li><p>También se cuidó la consistencia de unidades (todo termina en <strong>kg/ha</strong> para el margen).</p></li><li><p>Las rutas de creación/edición de reportes siguen devolviendo lo mismo hacia afuera (mismo contrato), solo se ajustó el flujo interno para soportar este cálculo nuevo.</p></li></ul>",
+      "createdAt": "2026-05-12T18:23:42.311Z",
+      "updatedAt": "2026-05-12T18:23:42.311Z"
+    },
+    {
+      "id": "j6qklqcm70lAv198JahE",
+      "associatedId": "task-1778758009422",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Va quedando todo.<br>El vendedor puede cargar una pesificación:</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/4390ab08-595d-48f1-a696-ee8a9dc03b64_image.png\" alt=\"\"><p>Esta se muestra en el listado de liquidación parcial como pendiente de aprobación:</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/3c32338c-6998-4105-bbe5-380c1d6dc3d3_image.png\" alt=\"\"><p>Al rol acopio le va a aparecer lo cargado por el vendedor para que la aprueben o no:</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/21907f88-9fd1-4991-a4e1-5bc5afa34937_image.png\" alt=\"\"><p><br>Internamente por atrás se controla siempre que no se liquide mas de lo cargado (cantidad)</p>",
+      "createdAt": "2026-05-14T18:45:53.975Z",
+      "updatedAt": "2026-05-14T18:45:53.975Z"
+    },
+    {
+      "id": "j7wHNJC9XHcZWcvuk0hP",
+      "associatedId": "task-copy-1778494141860-6sw9eoorc",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Consultas:<br>- La opción de pesificar para el vendedor se debe habilitar una vez confirman desde acopio la orden?</p><p>- Una vez que el vendedor carga la opción de pesificar, ya no se puede editar mas? </p><p>- Los tipos/condición de pago a mostrar son esos? Canje, pago y otros.</p><p>- Luego de que el vendedor cargue la pesificación, ustedes (acopio) como procede, lo cargan como liquidación parcial?</p><p>Respuesta:</p><p>- la opción de pesificar para el vendedor tiene que estar siempre habilitada (siempre que ese contrato tenga kg disponibles para vender).</p><p>- cuando el vendedor carga la pesificacion, solamente nosotros como acopio te gamos la opción de hacer modificaciones tanto de fecha, los kg y el tipo de negocio, pero el vendedor NO lo pueda modificar más.</p><p>- para la pesificacion de un contrato si, poner las tres opciones canje, pago y otros!</p><p>- una vez que el vendedor cargue la pesificacion, nosotros como acopio tenemos que confirmar esa vta como si fuera otra normal, y ahí es donde tenemos que ver como nos aparece a nosotros y en la parte de arriba como una carga nueva, eso lo podemos ir viendo, algo charlamos el otro día!</p>",
+      "createdAt": "2026-05-13T13:00:57.863Z",
+      "updatedAt": "2026-05-13T13:00:57.863Z"
+    },
+    {
+      "id": "kvCK3qgpRWsTvyzx7Hcl",
+      "associatedId": "task-1778764652214",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Bueno quedo lista una seccion nueva en la plataforma para monitorear info de clima exclusivamente /weather-usage-metrics?range=1h:</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/d110b9cf-92aa-4735-9116-8a97e0900dee_localhost_2023_%20(3).png\" alt=\"\">",
+      "createdAt": "2026-05-14T16:59:44.498Z",
+      "updatedAt": "2026-05-14T16:59:44.498Z"
+    },
+    {
+      "id": "lOczEmiWdMYdZqvaLDQx",
+      "associatedId": "task-1778496992223",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Para el clima en home reducimos la info mostrada, destacando más la opción de Ver más que lleva a /clima, ahí sí mostramos la info mas completa</p>",
+      "createdAt": "2026-05-12T00:05:24.910Z",
+      "updatedAt": "2026-05-12T00:05:24.910Z"
+    },
+    {
+      "id": "mfnGYyWMQlSXeZGbTI7w",
+      "associatedId": "task-1779359798290",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Veo si se puede pasar a la siesta cuando no estén usando la app.</p>",
+      "createdAt": "2026-05-21T14:38:21.198Z",
+      "updatedAt": "2026-05-21T14:38:21.198Z"
+    },
+    {
+      "id": "nub9aY7S8Q7miZwOuG9k",
+      "associatedId": "task-1779299225176",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Listo, se sacaron las notificaciones.</p>",
+      "createdAt": "2026-05-21T13:58:44.687Z",
+      "updatedAt": "2026-05-21T13:58:44.687Z"
+    },
+    {
+      "id": "olv4iNcy7iQnukBW3zHx",
+      "associatedId": "task-1779195075086",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Listo ambos:</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/15e5fc8f-42a1-4e1a-babb-fd73645f2006_image.png\" alt=\"\">",
+      "createdAt": "2026-05-20T12:16:17.949Z",
+      "updatedAt": "2026-05-20T12:16:17.949Z"
+    },
+    {
+      "id": "qqdBOaD3eDfjvtFsR6bX",
+      "associatedId": "task-1778676972402",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Siempre en el tipo de contrato Nuevo contrato.</p><p>Cuando se carga la pesificación se debe notificar a Acopio.</p><p>Cuando confirman la pesificación desde acopio se debe notificar al vendedor.</p><p>Se debería cambiar la lógica de liquidación parcial para que se unifique con la pesificación. La idea es que se unifique ambos temas, se deberia permitir la liquidación parcial tambien a tipo fijacion.</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/a01f9555-682c-4096-bb4a-a1ee79ead663_image.png\" alt=\"\"><p>Cuando se esta por vencer (fecha de pago) no permite editar la forma de pago.</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/2445d787-96df-4fad-bd65-3d9019053d79_image.png\" alt=\"\"><p>Recién cuándo se confirma se debe permitir cargar la liquidacion parcial y fijacion:</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/31949008-ee9e-4318-985b-c9e377fd94ae_image.png\" alt=\"\"><p><br></p>",
+      "createdAt": "2026-05-13T13:27:58.092Z",
+      "updatedAt": "2026-05-13T13:31:15.258Z"
+    },
+    {
+      "id": "smspt2TQpHwBFzBewJw1",
+      "associatedId": "task-1778755317202",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>en backend quedó todo listo y pulido, aunque falta integrar lo de indice ndvi aún. Todo lo demas ya esta hecho con varias pruebas que hice para ir puliendo el endpoint, actualmente demora casi 30 segundos (al principio demoraba 120) cuando es la primera vez (no tenemos nada de GEE ni en db).<br>Dejé todo dentro de una carpeta features tanto en node como python (patron que esta bueno empezar a seguir, facilita tener mas ordenado por funcionalidades). En python dentro de esa carpeta deje varios .md de pruebas y mejoras.<br>Ahora cierro esta task pero luego voy a crear otra para agregar lo de ndvi, que va a aumentar el tiempo un poco pero ya debería ser mas facil de integrar.</p>",
+      "createdAt": "2026-05-15T16:24:48.470Z",
+      "updatedAt": "2026-05-15T16:24:48.470Z"
+    },
+    {
+      "id": "unqgIDWJ6tEGX9E793Ry",
+      "associatedId": "task-1778755357331",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Va quedando como primera prueba, el backend respondio. Falta pulir cosas del front pero lo grueso esta:</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/1d3f155a-6778-45a2-8674-5a5bbf6f51e4_image.png\" alt=\"\">",
+      "createdAt": "2026-05-15T17:38:50.058Z",
+      "updatedAt": "2026-05-15T17:38:50.058Z"
+    },
+    {
+      "id": "vRYfgnIlsUeQJC91KeKx",
+      "associatedId": "task-1779299284763",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Listo, ahora se ve en todos los estados el resumen para descargar el pdf.</p>",
+      "createdAt": "2026-05-21T13:59:07.866Z",
+      "updatedAt": "2026-05-21T13:59:07.866Z"
+    },
+    {
+      "id": "xeLJPqOwZ2sEuNFmFIBS",
+      "associatedId": "task-1779288491326",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Para stockFiller:<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/cc93d713-40fd-4189-a844-d44d46fed9bd_image.png\" alt=\"\"><p>Stock Admin:</p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/9637e8fe-22f4-46f0-b7cd-14c042051eae_image.png\" alt=\"\"><p>Se mantuvo la funcionalidad tal como estaba antes.</p>",
+      "createdAt": "2026-05-20T19:29:54.380Z",
+      "updatedAt": "2026-05-20T19:30:09.398Z"
+    },
+    {
+      "id": "xsTl5LmVzpL7rHKbtcLH",
+      "associatedId": "task-1779285661407",
+      "associatedType": "task",
+      "userId": "9Iln8ZoXlwO1Tyb47yYf",
+      "description": "<p>Ahora se usa meteo-blue para los ultimos 5 dias</p>",
+      "createdAt": "2026-05-20T14:43:06.569Z",
+      "updatedAt": "2026-05-20T14:43:06.569Z"
+    },
+    {
+      "id": "xxOGiETaK6lKChwoAA1V",
+      "associatedId": "task-1778513230415",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Aun con las funciones y lógicas que hay, se deben calcular el rendimiento y ver que se tomen las imágenes que correspondan. Hay que hacer varias pruebas, pero debería ser factible.</p>",
+      "createdAt": "2026-05-11T17:31:28.181Z",
+      "updatedAt": "2026-05-11T17:31:28.181Z"
+    },
+    {
+      "id": "zjsPbFyQWGvtAvXPUOwB",
+      "associatedId": "task-1779194965690",
+      "associatedType": "task",
+      "userId": "I7daif6FR7UAbtQgXPJq",
+      "description": "<p>Ahora autoselecciona el lote sugerido y la cantidad, pero sigue permitiendo cambiarlo.<br></p><img src=\"https://jwumqqzeopwhuqwnnuyj.supabase.co/storage/v1/object/public/sprint-it/detalles/6e38be14-46dc-4674-b0bf-35a37afc0d59_image.png\" alt=\"\"><p>Te permite también cambiar lo sugerido y aplicar varios lotes cada ítem.</p><p>Se soluciono el error y también un problema en cache.</p>",
+      "createdAt": "2026-05-19T19:09:14.131Z",
+      "updatedAt": "2026-05-19T19:09:47.800Z"
+    }
+  ],
+  "exportedAt": "2026-05-26T10:24:59.404Z"
+}
