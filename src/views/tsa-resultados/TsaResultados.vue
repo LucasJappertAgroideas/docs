@@ -577,11 +577,11 @@ onMounted(async () => {
 
         <section class="panel campaigns-panel">
             <div class="campaigns-header">
-                <h2>Campanas por lote</h2>
+                <h2>Campañas por lote</h2>
                 <p>Resumen productivo por campana y cultivo con indicadores TSA.</p>
             </div>
 
-            <div v-if="campaignSummaries.length === 0" class="state">No hay campanas cargadas para este lote.</div>
+            <div v-if="campaignSummaries.length === 0" class="state">No hay campañas cargadas para este lote.</div>
 
             <div v-else class="campaign-list">
                 <article v-for="campaign in campaignSummaries" :key="campaign.key" class="campaign-card">
