@@ -1,0 +1,105 @@
+{
+    "type": "FeatureCollection",
+    "name": "la-petronila-lote-7",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "ambientacion": "Muy alta"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -61.991,
+                            -29.151
+                        ],
+                        [
+                            -61.987,
+                            -29.151
+                        ],
+                        [
+                            -61.987,
+                            -29.148
+                        ],
+                        [
+                            -61.991,
+                            -29.148
+                        ],
+                        [
+                            -61.991,
+                            -29.151
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "ambientacion": "Media"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -61.987,
+                            -29.151
+                        ],
+                        [
+                            -61.984,
+                            -29.151
+                        ],
+                        [
+                            -61.984,
+                            -29.148
+                        ],
+                        [
+                            -61.987,
+                            -29.148
+                        ],
+                        [
+                            -61.987,
+                            -29.151
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "ambientacion": "Baja"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -61.991,
+                            -29.154
+                        ],
+                        [
+                            -61.984,
+                            -29.154
+                        ],
+                        [
+                            -61.984,
+                            -29.151
+                        ],
+                        [
+                            -61.991,
+                            -29.151
+                        ],
+                        [
+                            -61.991,
+                            -29.154
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}

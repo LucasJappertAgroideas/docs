@@ -54,6 +54,11 @@ import { RouterLink } from "vue-router";
                 <h2>🤖 Tech & IA News</h2>
                 <p>Noticias de tecnología e inteligencia artificial</p>
             </RouterLink>
+
+            <RouterLink to="/tsa-resultados" class="nav-card">
+                <h2>🛰️ Resultados TSA</h2>
+                <p>Visualizar ambientacion por establecimiento y lote con archivos GeoJSON</p>
+            </RouterLink>
         </div>
     </div>
 </template>

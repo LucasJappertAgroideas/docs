@@ -77,6 +77,11 @@ const router = createRouter({
             name: 'tech-ia-news',
             component: () => import('@/views/tech-ai-news/TechIANews.vue')
         },
+        {
+            path: '/tsa-resultados',
+            name: 'tsa-resultados',
+            component: () => import('@/views/tsa-resultados/TsaResultados.vue')
+        },
         // Redirecciones de rutas antiguas a nueva estructura
         {
             path: '/comparativas-inta.html',
